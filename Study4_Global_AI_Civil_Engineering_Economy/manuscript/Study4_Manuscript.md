@@ -25,7 +25,7 @@ The novelty is a **civil-specific stack**—Eloundou exposure × Eurostat M vs F
 
 ## 1. Introduction and novelty
 
-The IJCM file in this repository (`Data_IJCM/`) belongs to a *previous* UK occupation-exposure paper (50 jobs × 3 models × 20 LLM runs). **This paper does not use those LLM scores as data.** What is reused from the same disk is only the ONS APS extract (an official survey). All other series were downloaded for this study on 16 September 2026.
+The desktop Study 4 folder and `Data_IJCM/04_external_indices/` already contained Felten AIOE, language-modelling AIOE, and ONS automation. Those files are **used** in this paper as extra instruments (Table 12, Figures 10–11). LLM 1–5 scores appear only as a comparison column, not as the identification sample.
 
 The research question is global and civil-specific: when professional establishments in country *A* adopt AI, do Mode-1 engineering-related imports from country *B* rise, and does *A*’s own M71 engineering GVA move? The occupation-to-occupation GDP story is not identified.
 
@@ -75,6 +75,16 @@ For EU importers *i*, Mode-1 partners *j* ∈ {IND, PHL, VNM}, *t* = 2018…2024
 ### 4.1 UK polarisation (Figure 2, Table 2)
 
 Among 16 APS civil-adjacent unit groups, the largest declines are quality-control/planning engineers (−25.3%), CAD/drawing technicians (−23.9%), chartered surveyors (−21.7%), and civil engineers (−14.3%). The largest increase is building and civil engineering technicians (+214.5%). CAD technicians are the high-Eloundou match (0.52) and contracted more than civil engineers (0.375).
+
+### 4.1b Instruments already in the previous Study 4 / IJCM external folder (Figures 10–11, Table 12)
+
+The desktop Study 4 folder and `Data_IJCM/04_external_indices/` already contained Felten AIOE, language-modelling AIOE, and ONS automation probabilities. Those files are copied into `data/from_legacy_study4/` and used as **additional instruments**, not as a substitute for Eloundou.
+
+They do not all rank occupations the same way. Felten AIOE (2021, pre-ChatGPT applications) scores civil engineers **higher** (1.283) than architectural and civil drafters (0.923) and civil engineering technicians (0.932). Eloundou GPT exposure, ONS automation probability, and the earlier LLM panel rank drafters/CAD **above** licensed civil engineers. UK APS 2021–25 follows the GenAI ranking for CAD versus 2121 (CAD −23.9%, engineers −14.3%), not the 2021 AIOE ranking. Technicians are high on Eloundou and ONS automation but **rose** 214.5%—a reminder that exposure is not incidence.
+
+Felten **industry** scores (AIIE) for NAICS 23 construction are mostly **negative** (highway construction −1.30; other heavy civil −1.10; building exterior contractors −1.76). That matches Eurostat: construction enterprises barely use AI. The civil *professional* story is not the on-site construction story.
+
+The previous LLM panel is reported in Table 12 only as a robustness column (civil engineer 3.0, CAD 4.33). It is not the identification sample.
 
 ### 4.2 Trade corridors (Figure 3, Table 4)
 
@@ -137,6 +147,10 @@ Files in `figures/`.
 **Figure 8.** Leave-one-importer-out coefficients (`figure8_loo.png`).
 
 **Figure 9.** NACE M71 vs F GVA, 2019–2023, current EUR (`figure9_m71_vs_F_gva.png`).
+
+**Figure 10.** UK APS employment change versus Eloundou β_human and versus Felten AIOE for matched SOC codes (`figure10_instruments_vs_aps.png`).
+
+**Figure 11.** Felten AIIE for US construction NAICS 23 (`figure11_aiie_construction.png`).
 
 ---
 

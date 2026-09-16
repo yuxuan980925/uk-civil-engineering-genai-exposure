@@ -201,3 +201,15 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | PRT | — | 2.74 | 10.38 | 1.06 | — | 1.68 | — | Portugal |
 | ROU | 9.06 | 0.18 | 6.68 | 0.05 | 2.38 | 0.13 | 8.88 | Romania |
 | SWE | 53.71 | 13.15 | 16.47 | 2.32 | 37.24 | 10.83 | 40.56 | Sweden |
+
+### Table 12. Multi-instrument exposure (legacy Study 4 / IJCM external files) vs APS change
+
+| SOC2020 | occupation | Eloundou | Felten AIOE | LM AIOE | ONS automation | LLM (prev. paper) | APS % 2021–25 |
+|---|---|---|---|---|---|---|---|
+| 2121 | Civil engineers | 0.375 | 1.283 | 0.927 | 0.252 | 3.00 | −14.3 |
+| 3114 | Building and civil engineering technicians | 0.477 | 0.932 | 0.553 | 0.378 | 2.67 | +214.5 |
+| 3120 | CAD, drawing and architectural technicians | 0.520 | 0.923 | 0.554 | 0.387 | 4.33 | −23.9 |
+| 2453 | Quantity surveyors | — | — | — | 0.274 | 4.00 | −14.0 |
+| 2455 | Construction project managers | — | — | — | 0.257 | 2.67 | +4.5 |
+
+Felten AIOE ranks civil engineers above drafters; Eloundou, ONS automation and the earlier LLM panel rank CAD/drafters above licensed engineers. APS 2021–25 follows the GenAI ranking for 3120 vs 2121.

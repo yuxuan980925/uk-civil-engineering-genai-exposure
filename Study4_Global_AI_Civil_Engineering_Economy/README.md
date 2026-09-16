@@ -9,6 +9,7 @@ Rebuild:
 ```bash
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_analysis.py
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_novelty_layer.py
+python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/inherit_legacy_instruments.py
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/build_article_assets.py
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/build_release_zip.py
 ```
