@@ -19,9 +19,9 @@ Second, OECD–WTO BaTIS balanced imports of SJ3 (technical, trade-related and o
 
 Third, a 17-country European panel that matches Eurostat NACE M versus F enterprise AI to BaTIS SJ3 from India, the Philippines and Viet Nam does **not** yield a significant post-2023 × ΔM-AI coefficient (0.000, s.e. 0.006, *N* = 336). The same specification on an eight-country subsample is 0.019 (s.e. 0.006). Event-study coefficients on year × ΔM are already positive in 2018 relative to 2022. The EU-8 interaction is therefore sample-dependent and fails a pre-trend check on the expanded panel. Placebos (computer services, Chinese SE/SJ3, construction AI) are also null.
 
-The contribution is a civil-specific measurement design—occupation exposure × sectoral adoption × GATS mode—and an honest robustness result: **Mode-1 trade and UK task substitution are in the data; a stable causal spillover from importer professional AI to partner SJ3 is not.**
+The contribution is a civil-specific **five-layer stack**—exposure × sectoral adoption × **NACE M71 industry** × GATS mode × placebos—and an honest robustness result: **Mode-1 trade and UK task substitution are in the data; a stable causal spillover from importer professional AI to partner SJ3 or to domestic M71 GVA is not.**
 
-**Keywords:** generative AI; civil engineering; Mode 1; BaTIS; Eurostat; India; China.
+**Keywords:** generative AI; civil engineering; NACE M71; Mode 1; BaTIS; Eurostat; India; China.
 
 ---
 
@@ -35,7 +35,9 @@ What *can* be measured, with public data, is a three-layer object:
 2. **Adoption** differs by NACE: Eurostat enterprise AI in professional services (M) versus construction (F).
 3. **Delivery mode** differs by partner: India/Philippines/Viet Nam as Mode-1 SJ3 exporters; China as Mode-3 SE contractors.
 
-Relative to an eight-country first pass, this draft **expands Eurostat–BaTIS coverage to 17 EU importers**, adds leave-one-out and pre-trend placebos, and widens the UK APS bundle to CAD technicians, quantity surveyors and construction project managers.
+Relative to an eight-country first pass, this draft **expands Eurostat–BaTIS coverage to 17 EU importers**, adds leave-one-out and pre-trend placebos, widens the UK APS bundle to CAD technicians, quantity surveyors and construction project managers, and adds the **NACE M71** national-accounts layer (architectural and engineering activities) plus BaTIS **SJ1/SJ2** placebos. BaTIS does **not** publish SJ311/SJ312; SJ3 is the official ceiling. Eurostat does **not** publish M71 in the AI survey.
+
+The full have / missing catalogue is `DATA_INVENTORY.md`.
 
 ---
 
@@ -126,6 +128,20 @@ Event study (year × ΔM, omit 2022): 2018 = 0.017 (*p*=0.049); 2023 = 0.011 (*p
 
 **Reading.** The eight-country coefficient is real in that sample and matches the first-pass study. It does not survive adding Austria, Belgium, Czechia, Denmark, Finland, Greece, Hungary, Spain’s neighbours, Sweden. A paper that stopped at EU-8 would over-claim. This draft treats (17)–(18) as a **fragility result**, not a headline causal estimate.
 
+### 4.6 NACE M71: the civil-industry object (not ISIC F, not all of M)
+
+NACE M71 is architectural and engineering activities. It is the closest official industry to civil consultancies. Eurostat national accounts provide M71 GVA and employment; the UK series stops in **2018**, so it cannot overlap GenAI. For EU members with 2019 and 2023:
+
+Spain’s M71 GVA rose 47.1% while construction F rose 6.8%; Germany’s M71 rose 14.7% while F rose 30.5%; Italy’s F outpaced M71. These are current-euro changes (inflation included).
+
+On 2018–2023, country and year FE, Post×ΔM on log M71 GVA is **−0.006 (0.005), N=90**. The same specification on construction GVA is **−0.008 (0.004)**. Time-varying M AI in 2021/23 on M71 is 0.000 (0.004). Domestic engineering GVA is not the channel through which the 2023–24 professional-AI jump shows up.
+
+Eloundou occupation file (official `occ_level.csv`): civil engineers β_human **0.375**; architectural and civil drafters **0.52**; civil engineering technologists **0.477**. That ranking matches the UK APS polarisation (CAD −23.9% vs 2121 −14.3%).
+
+### 4.7 SJ1 and SJ2 placebos
+
+BaTIS service list for GBR←IND contains SJ, SJ1, SJ2, SJ3 but **not** SJ311/SJ312. Post×ΔM on log SJ2 (consulting) = 0.007 (0.007); SJ1 (R&D) = 0.003 (0.009); N=336. Neighbouring EBOPS headings do not restore a trade effect.
+
 ### 4.4 Exporter labour markets (ILO, 2019–2024)
 
 Professional (M) versus construction (F) employment: Philippines +39.9% / +12.8%; Viet Nam +28.5% / −1.4%; Poland +30.4% / +0.3%; India +13.0% / +33.0%. India expanded on-site construction faster than professional services—the opposite of a Mode-1-only story. China remains missing from ILO F/M.
@@ -146,7 +162,7 @@ Professional (M) versus construction (F) employment: Philippines +39.9% / +12.8%
 
 ## 6. Limitations
 
-SJ3 is broader than M71 engineering. Eight clusters in the EU-8 spec are few. Event-study pre-trends fail on the 17-country panel. APS cells have sampling error. BaTIS ends 2024; Eurostat continues to 2025; Microsoft is 2025–26. Balanced BaTIS includes modelled cells (we keep adjustment B only). No bilateral civil-engineer census exists.
+SJ3 is broader than M71 engineering; SJ311/SJ312 are not in BaTIS. M71 GVA is current prices. UK M71 national accounts end in 2018. M71 AI adoption is unpublished. Eight clusters in the EU-8 spec are few. Event-study pre-trends fail on the 17-country panel. APS cells have sampling error. BaTIS ends 2024; Eurostat continues to 2025; Microsoft is 2025–26. Balanced BaTIS includes modelled cells (we keep adjustment B only). No bilateral civil-engineer census exists.
 
 ---
 
@@ -158,4 +174,4 @@ Enough novelty remains without a forced causal spillover. The civil family is no
 
 ## Figures and tables
 
-`figures/figure1`–`figure8`; `tables/table_*.csv`. Sources: Eurostat, OECD–WTO BaTIS, ILOSTAT, ONS APS, World Bank, Microsoft AI Diffusion Report, Study 1 occupation panel.
+`figures/figure1`–`figure9`; `tables/table_*.csv`; `DATA_INVENTORY.md`. Sources: Eurostat (including `nama_10_a64` M71), OECD–WTO BaTIS, ILOSTAT, ONS APS, World Bank, Microsoft AI Diffusion Report, Eloundou `occ_level.csv`, Study 1 occupation panel.
