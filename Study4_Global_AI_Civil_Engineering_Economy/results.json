@@ -269,6 +269,28 @@
       "clusters": NaN,
       "note": "No FE; one obs per importer",
       "display": "0.007 (0.004)"
+    },
+    {
+      "spec": "(17) EU-8 only: Post \u00d7 \u0394M 2021\u201324",
+      "coef": 0.019018918801101774,
+      "se": 0.005739390866290705,
+      "p": 0.0009205306654945804,
+      "n": 168,
+      "r2": 0.9599833811960868,
+      "clusters": 8,
+      "note": "DEU FRA NLD POL ITA ESP IRL ROU; fragility check",
+      "display": "0.019*** (0.006)"
+    },
+    {
+      "spec": "(18) EU-8 only: time-varying M-AI",
+      "coef": 0.02336607543560734,
+      "se": 0.009845861930364713,
+      "p": 0.017635313992580733,
+      "n": 72,
+      "r2": 0.9670450130727632,
+      "clusters": 8,
+      "note": "Same 8 importers, 2021/23/24",
+      "display": "0.023** (0.010)"
     }
   ],
   "cannot_identify": "A-country civil-engineer headcount causing B-country GDP or engineer counts",

@@ -428,7 +428,10 @@ def main():
     inten.assign(country=inten.iso3.map(ISO2NAME)).to_csv(TAB / "table_ai_intensity.csv", index=False)
 
     # APS
-    aps = pd.read_csv("/workspace/Data_IJCM/04_external_indices/aps_employment_2021_2025.csv")
+    aps_path = DATA / "from_study1" / "aps_employment_2021_2025.csv"
+    if not aps_path.exists():
+        aps_path = Path("/workspace/Data_IJCM/04_external_indices/aps_employment_2021_2025.csv")
+    aps = pd.read_csv(aps_path)
     aps["soc"] = aps.SOC2020_FULL_NAME.str.extract(r"^(\d{4})")
     aps["name"] = aps.SOC2020_FULL_NAME.str.replace(r"^\d{4}\s*:\s*", "", regex=True)
     aps = aps[aps.soc.isin(SOC_KEEP) & (aps.OBS_STATUS == "A")].copy()
@@ -515,7 +518,22 @@ def main():
     if len(chg_in) >= 8:
         rA = sm.OLS(chg_in.dlog, sm.add_constant(chg_in["dM"])).fit(cov_type="HC1")
         results.append(row("(16) Cross-section Δlog IN SJ3 22–24 on ΔM", rA, "dM", len(chg_in), "No FE; one obs per importer"))
-        pd.DataFrame(results).to_csv(TAB / "table_identification.csv", index=False)
+
+    eu8 = ["DEU", "FRA", "NLD", "POL", "ITA", "ESP", "IRL", "ROU"]
+    run_spec(
+        results,
+        "(17) EU-8 only: Post × ΔM 2021–24",
+        panel[panel.importer.isin(eu8)],
+        "post_x_dM",
+        ["post_x_dM"],
+        "DEU FRA NLD POL ITA ESP IRL ROU; fragility check",
+    )
+    tv8 = panel[panel.importer.isin(eu8) & panel.year.isin([2021, 2023, 2024])]
+    out = fit_fe(tv8, "logv", ["ai_M"], ["importer", "year", "partner"], "importer")
+    if out:
+        res, used = out
+        results.append(row("(18) EU-8 only: time-varying M-AI", res, "ai_M", len(used), "Same 8 importers, 2021/23/24"))
+    pd.DataFrame(results).to_csv(TAB / "table_identification.csv", index=False)
 
     # Figures
     years = [2021, 2023, 2024, 2025]
