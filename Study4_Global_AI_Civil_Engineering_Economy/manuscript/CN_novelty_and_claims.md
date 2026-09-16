@@ -1,19 +1,11 @@
-# 第四篇：数据清单与创新点（对照）
+# 与 IJCM 旧稿的关系
 
-目录：`DATA_INVENTORY.md`。英文学术稿：`manuscript/Study4_Manuscript.md`。
+`Data_IJCM/` 是上一篇英国职业暴露论文的 LLM 面板。**本篇（跨境土木、Mode-1/Mode-3、M71）不使用那些 1–5 分。**
 
-## 创新点（五层叠加，不是再估一条 GDP）
+本篇只用：
+- ONS APS（官方就业，从旧文件夹拷出以便复制）
+- Eloundou `occ_level.csv`（土木/绘图员/技术员）
+- 新下载的 Eurostat / BaTIS / ILO / 世界银行 / 微软
 
-1. **职业内部暴露**：绘图员 0.52 > 技术员 0.48 > 土木工程师 0.375（Eloundou 原文件）；英国 CAD −23.9% 大于 2121 −14.3%，技术员 +214.5%。
-2. **行业采用**：Eurostat NACE M vs F。**M71 的 AI 调查不存在**，不能编。
-3. **行业结果用 M71**：建筑与工程活动增加值/就业，不是把工地 F 当成土木工程。英国 M71 国民账户只到 **2018**，接不上生成式 AI。欧盟 M71 的 Post×ΔM 为 **−0.006（不显著）**。
-4. **跨境按模式**：BaTIS **没有** SJ312 工程服务细项，最细是 SJ3。印度 SJ3 +128% vs 中国 SE +52%。
-5. **安慰剂**：SI、SJ1、SJ2、F AI、F GVA、中国 SJ3/SE。SJ2 同样不显著。
-
-## 仍找不到、因此不能声称的
-
-- 双边 ISCO 2142 人数（A 国工程师 → B 国工程师）
-- 用 APS 2121 识别 B 国 GDP
-- 世界银行建筑增加值 `NV.IND.CONS.ZS`
-- 中国 ILO F/M
-- 微软用户渗透率作为 2015–2024 冲击（年份错位）
+全文、图、表：`manuscript/Study4_Manuscript.md` 与 `manuscript/figures/`、`tables/`。
+完整 zip：`release/Study4_complete_package_YYYY-MM-DD.zip`。

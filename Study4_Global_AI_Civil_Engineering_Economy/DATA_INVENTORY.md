@@ -18,7 +18,7 @@ If a series is missing, the inventory says so. That missingness is part of the c
 |---|---|---|---|
 | ILO–NASK ISCO 2142 | Task potential of civil engineers | Cite ILO WP 140 (0.30, Not Exposed); appendix not re-downloaded here | manuscript |
 | Eloundou β_human 17-2051 / 17-3011 / 17-3022 | Drafter vs engineer gap | **Have** | `data/eloundou_occ_level.csv`; 0.375 / 0.52 / 0.477 |
-| Study 1 LLM panel | UK civil family 1–5 scores | **Have** (repo) | `Data_IJCM/06_derived/occupation_scores_20run.csv` |
+| Study 1 LLM panel | UK civil family 1–5 scores | **Not used in this paper** (IJCM previous study). APS extract is kept as ONS data only. | — |
 | Eurostat E_AI_TANY NACE **M** | Professional-services AI (contains M71 firms) | **Have** 2021/23/24/25, 18 geos | `data/eurostat_ai_raw.csv` |
 | Eurostat E_AI_TANY NACE **F** | On-site construction placebo | **Have** | same |
 | Eurostat E_AI_TANY NACE **M71** | Engineering-consultancy AI | **Does not exist** in `isoc_eb_ain2` (HTTP 400) | — |
