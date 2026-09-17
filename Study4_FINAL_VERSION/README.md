@@ -1,6 +1,8 @@
 # Study 4: GenAI and the cross-country civil engineering industry economy
 
-**Do not open `.zip` files in the editor** (Cursor shows “binary file is not supported”). Open Markdown and CSV instead.
+The **complete English Article 4 folder** (article + figures 1–21 + tables + zip inside that folder) is [`../Study4_COMPLETE_ENGLISH/`](../Study4_COMPLETE_ENGLISH/). Zip path: [`../Study4_COMPLETE_ENGLISH/Study4_Article4_complete_2026-09-17.zip`](../Study4_COMPLETE_ENGLISH/Study4_Article4_complete_2026-09-17.zip).
+
+This folder is the working copy. Do not open `.zip` in the editor.
 
 Start here: [`00_OPEN_IN_EDITOR.md`](00_OPEN_IN_EDITOR.md)
 
