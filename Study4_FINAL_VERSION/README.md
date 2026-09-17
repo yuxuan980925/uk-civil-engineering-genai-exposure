@@ -1,29 +1,30 @@
-# Study 4: GenAI and the cross-border civil engineering economy
+# Study 4: GenAI and the cross-country civil engineering industry economy
 
-**This folder is the final version** (repository root: `Study4_FINAL_VERSION/`).
+**Open this folder.** It replaces the old working directory `Study4_Global_AI_Civil_Engineering_Economy/`.
 
-Unpacked data, tables, figures 1–21, manuscripts, scripts, and `zips/` live here.
+Title: *How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack* / 跨国背景下，受 AI 冲击的土木工程行业经济如何变动.
 
-Duplicate zip copies: `Study4_zip_packages/` and `Study4_zip_packages/Study4_FINAL_VERSION/`. Working files: `Study4_Global_AI_Civil_Engineering_Economy/`.
+Preferred shock: Eurostat **E_AI_TNLG** (NLG, NACE M). Industry outcome: NACE **M71**. Trade: BaTIS **SJ3** Mode 1. LLM occupation scores are not the shock.
 
-Rebuild:
+| Path | Contents |
+|---|---|
+| [`data/`](data/) | Official series (no interpolated cells) |
+| [`tables/`](tables/) | All CSV tables |
+| [`figures/`](figures/) | Figures 1–21 |
+| [`manuscript/Study4_Manuscript.md`](manuscript/Study4_Manuscript.md) | English article |
+| [`manuscript/CN_full_article.md`](manuscript/CN_full_article.md) | Chinese article |
+| [`scripts/`](scripts/) | Replication |
+| [`zips/`](zips/) | Zip copies of the same materials |
+| [`HOW_TO_OPEN.md`](HOW_TO_OPEN.md) | Short open/replicate note |
 
 ```bash
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_analysis.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_novelty_layer.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/download_ai_shocks.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/download_m71_economy.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_nlg_shock.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_industry_economy.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/inherit_legacy_instruments.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/build_article_assets.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/build_release_zip.py
+python3 scripts/run_analysis.py
+python3 scripts/run_novelty_layer.py
+python3 scripts/run_nlg_shock.py
+python3 scripts/run_industry_economy.py
+python3 scripts/build_article_assets.py
 ```
 
 Requires pandas, numpy, statsmodels, matplotlib.
 
-Catalogue of have / missing series: `DATA_INVENTORY.md`.
-
-Full article (title: how the civil engineering industry economy changes under an AI shock, cross-country): `manuscript/Study4_Manuscript.md`. Chinese full text: `manuscript/CN_full_article.md`. This article does **not** use IJCM LLM scores as the shock.
-
-**Preferred shock is Eurostat E_AI_TNLG.** Trade: Post×ΔTNLG 0.009 (0.005); India 0.021***. **Industry:** SBS log M71 turnover Post-2024×ΔTNLG −0.007**; employment 0.000. Do not claim A-country 2121 causes B-country GDP.
+Catalogue: `DATA_INVENTORY.md`. Do **not** claim APS SOC 2121 causes partner-country GDP or bilateral ISCO 2142.

@@ -23,9 +23,11 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
-Study 4 **final version** (open this folder): [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
+## Study 4 (final)
 
-Zip copies: [`Study4_zip_packages/`](Study4_zip_packages/). Working files: [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/).
+Open [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). That folder **replaces** the old `Study4_Global_AI_Civil_Engineering_Economy/` tree. It contains all data, tables, figures 1–21, English and Chinese articles, scripts, and zips. Estimates are generated from the official CSVs in `Study4_FINAL_VERSION/data/`.
+
+Zip copies: [`Study4_zip_packages/`](Study4_zip_packages/).
 
 ## Licence
 

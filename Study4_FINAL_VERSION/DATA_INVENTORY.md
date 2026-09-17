@@ -88,8 +88,9 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 ## E. Replication
 
 ```bash
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_analysis.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_novelty_layer.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_nlg_shock.py
-python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_industry_economy.py
+cd Study4_FINAL_VERSION
+python3 scripts/run_analysis.py
+python3 scripts/run_novelty_layer.py
+python3 scripts/run_nlg_shock.py
+python3 scripts/run_industry_economy.py
 ```

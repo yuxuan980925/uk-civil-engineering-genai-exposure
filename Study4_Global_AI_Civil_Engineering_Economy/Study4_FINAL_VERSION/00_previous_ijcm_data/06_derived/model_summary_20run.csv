@@ -1,4 +1,0 @@
-model,runs,n_occupations,occupation_mean,between_occupation_sd,median
-ChatGPT,20,50,3.56,0.95,4.0
-DeepSeek,20,50,2.76,0.62,3.0
-Gemini 3 Pro,20,50,3.02,0.84,3.0
