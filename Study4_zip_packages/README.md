@@ -1,6 +1,6 @@
 # Study 4 zip packages
 
-This folder holds **only** the finished zip archives for Study 4 (cross-country AI shock and the civil engineering industry economy).
+This folder holds finished zip archives. **Final version copies** are in `Study4_FINAL_VERSION/`.
 
 | File | Contents |
 |---|---|
