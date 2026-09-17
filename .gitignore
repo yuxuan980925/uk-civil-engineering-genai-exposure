@@ -4,6 +4,5 @@
 !Study4_zip_packages/*.zip
 !Study4_zip_packages/Study4_FINAL_VERSION/*.zip
 !Study4_FINAL_VERSION/zips/*.zip
-!Study4_FINAL_VERSION/*.zip
 Study4_FINAL_VERSION/data/batis_chunk_*.csv
 Study4_FINAL_VERSION/release/

@@ -120,6 +120,8 @@ def main():
         "README.md",
         "00_THIS_IS_THE_FINAL_VERSION.md",
         "HOW_TO_OPEN.md",
+        "00_OPEN_IN_EDITOR.md",
+        "FIGURES.md",
         "README_PACKAGE.txt",
         "results.json",
         "results_nlg.json",
@@ -195,8 +197,8 @@ Do not treat APS SOC 2121 as causing partner-country GDP.
     ]
     zip_index = [
         "# All Study 4 zip files\n",
-        "Complete archive (open this): `Study4_complete_package_*.zip`\n",
-        "Also copied to `Study4_FINAL_VERSION/` and `Study4_FINAL_VERSION/zips/`.\n",
+        "Complete archive for download (do not open in the IDE): `zips/Study4_complete_package_*.zip`\n",
+        "To read in Cursor, open `00_OPEN_IN_EDITOR.md`, `FIGURES.md`, and `manuscript/`.\n",
     ]
     for fname, src, arc in parts:
         dest = ZIP_OUT / fname
@@ -210,9 +212,7 @@ Do not treat APS SOC 2121 as causing partner-country GDP.
         for p in PACK.rglob("*"):
             if p.is_file():
                 z.write(p, arcname=str(Path(PACK_NAME) / p.relative_to(PACK)))
-    # Also place the complete zip in the folder the user opens
     shutil.copy2(zip_path, zips_dir / zip_path.name)
-    shutil.copy2(zip_path, ROOT / zip_path.name)
 
     with zipfile.ZipFile(zip_path) as z:
         names = z.namelist()

@@ -1,6 +1,8 @@
 # Study 4 zip packages
 
-Zip copies of the materials that live, unpacked, in [`../Study4_FINAL_VERSION/`](../Study4_FINAL_VERSION/). Open that folder for data, tables, figures, and manuscripts.
+These are **download/unzip backups only**. The editor cannot preview zip files.
+
+To read the paper, tables, and figures, open [`../Study4_FINAL_VERSION/00_OPEN_IN_EDITOR.md`](../Study4_FINAL_VERSION/00_OPEN_IN_EDITOR.md).
 
 | File | Contents |
 |---|---|

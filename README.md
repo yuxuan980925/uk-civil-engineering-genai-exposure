@@ -25,7 +25,7 @@ See `Data_IJCM/README.txt` for the file-level inventory.
 
 ## Study 4 (final)
 
-Open [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). That folder **replaces** the old `Study4_Global_AI_Civil_Engineering_Economy/` tree. Complete zip (all data, tables, figures 1–21, manuscripts): [`Study4_FINAL_VERSION/Study4_complete_package_2026-09-17.zip`](Study4_FINAL_VERSION/Study4_complete_package_2026-09-17.zip). Estimates are generated from the official CSVs in `Study4_FINAL_VERSION/data/`.
+Open [`Study4_FINAL_VERSION/00_OPEN_IN_EDITOR.md`](Study4_FINAL_VERSION/00_OPEN_IN_EDITOR.md) (Markdown). Do **not** open `.zip` files in the editor — they are binary. Articles: [`Study4_FINAL_VERSION/manuscript/CN_full_article.md`](Study4_FINAL_VERSION/manuscript/CN_full_article.md) and [`Study4_FINAL_VERSION/manuscript/Study4_Manuscript.md`](Study4_FINAL_VERSION/manuscript/Study4_Manuscript.md). Figures: [`Study4_FINAL_VERSION/FIGURES.md`](Study4_FINAL_VERSION/FIGURES.md). Zip backups live only in [`Study4_FINAL_VERSION/zips/`](Study4_FINAL_VERSION/zips/).
 
 Zip copies: [`Study4_zip_packages/`](Study4_zip_packages/).
 
