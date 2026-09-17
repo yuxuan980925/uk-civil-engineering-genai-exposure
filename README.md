@@ -25,11 +25,9 @@ See `Data_IJCM/README.txt` for the file-level inventory.
 
 ## Study 4 (main text, slim)
 
-Open [`Study4_COMPLETE_ENGLISH/`](Study4_COMPLETE_ENGLISH/). Main-text package: **AI exposure** and the **cross-country civil engineering industry economy** (8 figures, 6 tables). Zip **inside the folder**:
+Open [`Study4_COMPLETE_ENGLISH/Study4_Manuscript.md`](Study4_COMPLETE_ENGLISH/Study4_Manuscript.md) (English) or [`CN_full_article.md`](Study4_COMPLETE_ENGLISH/CN_full_article.md). Figures: [`FIGURES.md`](Study4_COMPLETE_ENGLISH/FIGURES.md).
 
-[`Study4_COMPLETE_ENGLISH/Study4_Article4_maintext_2026-09-17.zip`](Study4_COMPLETE_ENGLISH/Study4_Article4_maintext_2026-09-17.zip)
-
-English: [`Study4_COMPLETE_ENGLISH/Study4_Manuscript.md`](Study4_COMPLETE_ENGLISH/Study4_Manuscript.md). Figures: [`FIGURES.md`](Study4_COMPLETE_ENGLISH/FIGURES.md).
+Do **not** open the zip in the editor. Download and unzip **`Study4_COMPLETE_ENGLISH/Study4.zip`** in Finder/Explorer if you need a single archive.
 
 Full working copy (all experiments): [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
 
