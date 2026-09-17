@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pack Study4_FINAL_VERSION (working tree) into zip archives. Never deletes this folder."""
+"""Pack every data file, table, figure, and manuscript into one complete zip."""
 from __future__ import annotations
 
 import csv
@@ -16,6 +16,7 @@ REL = ROOT / "release"
 ZIP_OUT = REPO / "Study4_zip_packages"
 PACK_NAME = f"Study4_complete_package_{STAMP}"
 PACK = REL / PACK_NAME
+SKIP_DIR_NAMES = {"release", "zips", "__pycache__"}
 
 
 def sha256(p: Path) -> str:
@@ -32,7 +33,7 @@ def copy_tree(src: Path, dst: Path, skip_substrings=()):
         if p.is_dir():
             continue
         rel = p.relative_to(src)
-        s = str(rel)
+        s = str(rel).replace("\\", "/")
         if any(x in s for x in skip_substrings):
             continue
         if s.endswith(".zip"):
@@ -53,140 +54,195 @@ def zip_folder(src: Path, zip_path: Path, arc_root: str):
             z.write(p, arcname=str(Path(arc_root) / p.relative_to(src)))
 
 
+def write_tree_into_zip(zf: zipfile.ZipFile, src: Path, arc_root: str, skip_substrings=()):
+    for p in src.rglob("*"):
+        if not p.is_file():
+            continue
+        rel = str(p.relative_to(src)).replace("\\", "/")
+        if any(x in rel for x in skip_substrings):
+            continue
+        if rel.endswith(".zip"):
+            continue
+        zf.write(p, arcname=f"{arc_root}/{rel}")
+
+
 def main():
+    fig_dir = ROOT / "figures"
+    ms_fig = ROOT / "manuscript" / "figures"
+    ms_fig.mkdir(parents=True, exist_ok=True)
+    pngs = sorted(fig_dir.glob("*.png"))
+    tables = sorted((ROOT / "tables").glob("*.csv"))
+    ms_files = sorted((ROOT / "manuscript").glob("*.md"))
+    if len(pngs) < 21:
+        raise SystemExit(f"expected 21 figures, found {len(pngs)}")
+    if len(tables) < 30:
+        raise SystemExit(f"expected 30+ tables, found {len(tables)}")
+    required_ms = {
+        "Study4_Manuscript.md",
+        "CN_full_article.md",
+        "article_body.md",
+        "tables_for_article.md",
+        "CN_novelty_and_claims.md",
+    }
+    have_ms = {p.name for p in ms_files}
+    missing = required_ms - have_ms
+    if missing:
+        raise SystemExit(f"missing manuscripts: {missing}")
+    for p in pngs:
+        shutil.copy2(p, ms_fig / p.name)
+
     if REL.exists():
         shutil.rmtree(REL)
     PACK.mkdir(parents=True)
 
-    copy_tree(ROOT / "data", PACK / "01_data", skip_substrings=("batis_chunk",))
-    copy_tree(ROOT / "tables", PACK / "02_tables")
-    copy_tree(ROOT / "figures", PACK / "03_figures")
-    copy_tree(ROOT / "manuscript", PACK / "04_manuscript")
-    copy_tree(ROOT / "scripts", PACK / "05_scripts")
+    # Native layout (what you open locally)
+    copy_tree(ROOT / "data", PACK / "data", skip_substrings=("batis_chunk",))
+    copy_tree(ROOT / "tables", PACK / "tables")
+    copy_tree(ROOT / "figures", PACK / "figures")
+    copy_tree(ROOT / "manuscript", PACK / "manuscript")
+    copy_tree(ROOT / "scripts", PACK / "scripts")
     ijcm = ROOT / "00_previous_ijcm_data"
     if not ijcm.exists():
         ijcm = REPO / "Data_IJCM"
     if ijcm.exists():
         copy_tree(ijcm, PACK / "00_previous_ijcm_data")
+
+    # Numbered aliases so older unzip instructions still work
+    copy_tree(PACK / "data", PACK / "01_data")
+    copy_tree(PACK / "tables", PACK / "02_tables")
+    copy_tree(PACK / "figures", PACK / "03_figures")
+    copy_tree(PACK / "manuscript", PACK / "04_manuscript")
+    copy_tree(PACK / "scripts", PACK / "05_scripts")
+
     for name in [
         "DATA_INVENTORY.md",
         "DATA_SOURCES.md",
         "README.md",
         "00_THIS_IS_THE_FINAL_VERSION.md",
         "HOW_TO_OPEN.md",
+        "README_PACKAGE.txt",
         "results.json",
         "results_nlg.json",
         "results_industry.json",
+        "EXPERIMENTS_RUN.md",
     ]:
         src = ROOT / name
         if src.exists():
             shutil.copy2(src, PACK / name)
 
-    fig_index = ["# Figures\n"]
-    for p in sorted((PACK / "03_figures").glob("*.png")):
-        fig_index.append(f"- `{p.name}`")
-    (PACK / "03_figures" / "README.md").write_text("\n".join(fig_index) + "\n")
+    (PACK / "03_figures" / "README.md").write_text(
+        "# Figures\n\n" + "\n".join(f"- `{p.name}`" for p in pngs) + "\n"
+    )
+    (PACK / "figures" / "README.md").write_text(
+        "# Figures\n\n" + "\n".join(f"- `{p.name}`" for p in pngs) + "\n"
+    )
+    (PACK / "02_tables" / "README.md").write_text(
+        "# Tables\n\n" + "\n".join(f"- `{p.name}`" for p in tables) + "\n"
+    )
+    (PACK / "tables" / "README.md").write_text(
+        "# Tables\n\n" + "\n".join(f"- `{p.name}`" for p in tables) + "\n"
+    )
 
-    tab_index = ["# Tables\n"]
-    for p in sorted((PACK / "02_tables").glob("*.csv")):
-        tab_index.append(f"- `{p.name}`")
-    (PACK / "02_tables" / "README.md").write_text("\n".join(tab_index) + "\n")
-
-    readme = f"""Study 4 complete package
+    (PACK / "README_PACKAGE.txt").write_text(
+        f"""Study 4 COMPLETE package
 ========================
 Built: {STAMP}
 
-Open the git folder Study4_FINAL_VERSION/ (data/, tables/, figures/, manuscript/, scripts/).
-This zip uses numbered folders for a portable snapshot.
+This zip contains ALL data, ALL tables, ALL figures 1-21, ALL manuscripts,
+scripts, and machine-readable results. Tables and figures were generated by
+running the experiment scripts on the official CSVs in data/.
 
-00_previous_ijcm_data/  Occupation-paper files (Felten, ONS, APS, LLM panel). LLM scores are NOT the shock.
-01_data/         Official Study 4 downloads + analysis panels (no fabricated cells)
-02_tables/       All regression and descriptive tables (CSV)
-03_figures/      All figures 1-21 (PNG)
-04_manuscript/   Full English article + Chinese full article + tables
-05_scripts/      Replication scripts
+Layout (same as Study4_FINAL_VERSION/)
+--------------------------------------
+data/          Official series + analysis panels
+tables/        Every CSV table
+figures/       Figures 1-21 PNG
+manuscript/    Study4_Manuscript.md, article_body.md, CN_full_article.md,
+               CN_novelty_and_claims.md, tables_for_article.md, plus figures/
+scripts/       Replication (run_all_experiments.py)
+00_previous_ijcm_data/  Occupation-paper files (not the DiD shock)
+results*.json  Estimates
+01_data ... 05_scripts  Numbered copies of the same files
 
-How to replicate (from Study4_FINAL_VERSION/)
----------------------------------------------
-python3 scripts/run_analysis.py
-python3 scripts/run_novelty_layer.py
-python3 scripts/run_nlg_shock.py
-python3 scripts/run_industry_economy.py
+python3 scripts/run_all_experiments.py
 
 Do not treat APS SOC 2121 as causing partner-country GDP.
-NACE M71 AI survey and BaTIS SJ312 do not exist.
 """
-    (PACK / "README_PACKAGE.txt").write_text(readme)
-
-    ZIP_OUT.mkdir(parents=True, exist_ok=True)
-    zips_dir = ROOT / "zips"
-    zips_dir.mkdir(parents=True, exist_ok=True)
-    parts = [
-        ("Study4_00_previous_ijcm_data.zip", PACK / "00_previous_ijcm_data", "00_previous_ijcm_data"),
-        ("Study4_01_data.zip", PACK / "01_data", "01_data"),
-        ("Study4_02_tables.zip", PACK / "02_tables", "02_tables"),
-        ("Study4_03_figures.zip", PACK / "03_figures", "03_figures"),
-        ("Study4_04_manuscript.zip", PACK / "04_manuscript", "04_manuscript"),
-        ("Study4_05_scripts.zip", PACK / "05_scripts", "05_scripts"),
-    ]
-    zip_index = [
-        "# All Study 4 zip files\n",
-        "Unpacked working tree: `Study4_FINAL_VERSION/`\n",
-        "Standalone zip folder: `Study4_zip_packages/`\n",
-    ]
-    for fname, src, arc in parts:
-        if not src.exists():
-            continue
-        dest = ZIP_OUT / fname
-        zip_folder(src, dest, arc)
-        shutil.copy2(dest, zips_dir / fname)
-        zip_index.append(f"- `{fname}` ({dest.stat().st_size} bytes)")
-        print("part zip", dest, dest.stat().st_size)
+    )
 
     rows = []
     for p in sorted(PACK.rglob("*")):
         if p.is_file():
-            rel = p.relative_to(PACK)
-            rows.append(
-                {
-                    "path": str(rel).replace("\\", "/"),
-                    "bytes": p.stat().st_size,
-                    "sha256": sha256(p),
-                }
-            )
+            rel = str(p.relative_to(PACK)).replace("\\", "/")
+            rows.append({"path": rel, "bytes": p.stat().st_size, "sha256": sha256(p)})
     with (PACK / "MANIFEST.csv").open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["path", "bytes", "sha256"])
         w.writeheader()
         w.writerows(rows)
     shutil.copy2(PACK / "MANIFEST.csv", ROOT / "MANIFEST.csv")
 
+    ZIP_OUT.mkdir(parents=True, exist_ok=True)
+    zips_dir = ROOT / "zips"
+    zips_dir.mkdir(parents=True, exist_ok=True)
+
+    parts = [
+        ("Study4_00_previous_ijcm_data.zip", PACK / "00_previous_ijcm_data", "00_previous_ijcm_data"),
+        ("Study4_01_data.zip", PACK / "data", "data"),
+        ("Study4_02_tables.zip", PACK / "tables", "tables"),
+        ("Study4_03_figures.zip", PACK / "figures", "figures"),
+        ("Study4_04_manuscript.zip", PACK / "manuscript", "manuscript"),
+        ("Study4_05_scripts.zip", PACK / "scripts", "scripts"),
+    ]
+    zip_index = [
+        "# All Study 4 zip files\n",
+        "Complete archive (open this): `Study4_complete_package_*.zip`\n",
+        "Also copied to `Study4_FINAL_VERSION/` and `Study4_FINAL_VERSION/zips/`.\n",
+    ]
+    for fname, src, arc in parts:
+        dest = ZIP_OUT / fname
+        zip_folder(src, dest, arc)
+        shutil.copy2(dest, zips_dir / fname)
+        zip_index.append(f"- `{fname}` ({dest.stat().st_size} bytes)")
+        print("part zip", dest.name, dest.stat().st_size)
+
     zip_path = ZIP_OUT / f"{PACK_NAME}.zip"
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
         for p in PACK.rglob("*"):
             if p.is_file():
                 z.write(p, arcname=str(Path(PACK_NAME) / p.relative_to(PACK)))
+    # Also place the complete zip in the folder the user opens
     shutil.copy2(zip_path, zips_dir / zip_path.name)
-    print("files", len(rows))
-    print("zip", zip_path, zip_path.stat().st_size)
-    zip_index.append(f"- `{PACK_NAME}.zip` ({zip_path.stat().st_size} bytes)  **complete package**")
+    shutil.copy2(zip_path, ROOT / zip_path.name)
+
+    with zipfile.ZipFile(zip_path) as z:
+        names = z.namelist()
+    n_png = sum(1 for n in names if n.endswith(".png") and "/figures/" in n and "/manuscript/" not in n and "/03_" not in n)
+    n_tab = sum(1 for n in names if n.endswith(".csv") and "/tables/" in n and "/02_" not in n)
+    n_ms = sum(1 for n in names if n.endswith(".md") and "/manuscript/" in n and "/04_" not in n)
+    if n_png < 21:
+        raise SystemExit(f"complete zip missing figures: {n_png}")
+    if n_tab < 30:
+        raise SystemExit(f"complete zip missing tables: {n_tab}")
+    for req in required_ms:
+        if not any(n.endswith("/manuscript/" + req) for n in names):
+            raise SystemExit(f"complete zip missing {req}")
+
+    zip_index.append(
+        f"- `{PACK_NAME}.zip` ({zip_path.stat().st_size} bytes)  **COMPLETE: data+tables+figures+manuscripts**"
+    )
     index_text = "\n".join(zip_index) + "\n"
     (ZIP_OUT / "ZIP_INDEX.md").write_text(index_text)
     (zips_dir / "ZIP_INDEX.md").write_text(index_text)
+    (ROOT / "ZIP_INDEX.md").write_text(index_text)
 
     zip_final = ZIP_OUT / "Study4_FINAL_VERSION"
     zip_final.mkdir(parents=True, exist_ok=True)
     for p in sorted(ZIP_OUT.glob("*.zip")):
         shutil.copy2(p, zip_final / p.name)
     shutil.copy2(ZIP_OUT / "ZIP_INDEX.md", zip_final / "ZIP_INDEX.md")
-    (zip_final / "00_THIS_IS_THE_FINAL_VERSION.md").write_text(
-        """# Zip copies only
-
-The folder to open is the repository-root directory `Study4_FINAL_VERSION/`
-(data, tables, figures, manuscript, scripts). This subfolder only stores zip files.
-"""
-    )
-    print("zip folder", ZIP_OUT)
-    print("local zips", zips_dir)
+    print("complete zip", zip_path, zip_path.stat().st_size)
+    print("native figures in zip", n_png, "tables", n_tab, "manuscript md", n_ms)
+    print("files packed", len(rows))
 
 
 if __name__ == "__main__":

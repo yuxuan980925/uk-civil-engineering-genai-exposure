@@ -15,15 +15,13 @@ Open this folder in Finder, Explorer, or the IDE. Do not look for the old name `
 | `scripts/` | Replication code. `ROOT/data` is this folder’s `data/`. |
 | `00_previous_ijcm_data/` | Previous occupation-paper files (instruments only; LLM scores are **not** the shock) |
 | `zips/` | Complete and component zip archives |
+| **`Study4_complete_package_YYYY-MM-DD.zip`** | **One archive with all data, tables, figures 1–21, and all manuscripts** |
 | `results.json`, `results_nlg.json`, `results_industry.json` | Machine-readable estimates written by the scripts |
+| `EXPERIMENTS_RUN.md` | Log of the experiment scripts that produced tables and figures |
 
-Regenerate tables and figures from the CSVs in `data/`:
+Regenerate everything from the CSVs in `data/` and rebuild the complete zip:
 
 ```bash
 cd Study4_FINAL_VERSION
-python3 scripts/run_analysis.py
-python3 scripts/run_novelty_layer.py
-python3 scripts/run_nlg_shock.py
-python3 scripts/run_industry_economy.py
-python3 scripts/build_article_assets.py
+python3 scripts/run_all_experiments.py
 ```

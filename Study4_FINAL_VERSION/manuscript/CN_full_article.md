@@ -118,84 +118,84 @@ J/C/N 的 TNLG 也预测 SJ3，限制了贸易冲击的土木专一性。SJ3 宽
 
 **图 1.** Eurostat enterprise AI use, EU-27, NACE M vs NACE F, 2021–2025.
 
-![图 1](../figures/figure1_eurostat_M_vs_F.png)
+![图 1](figures/figure1_eurostat_M_vs_F.png)
 
 **图 2.** UK APS employment change, 16 civil-adjacent SOC 2020 unit groups, Dec 2021–Sep 2025.
 
-![图 2](../figures/figure2_uk_aps_bundle.png)
+![图 2](figures/figure2_uk_aps_bundle.png)
 
 **图 3.** UK BaTIS balanced imports: India SJ3, China SE, India SI.
 
-![图 3](../figures/figure3_uk_trade.png)
+![图 3](figures/figure3_uk_trade.png)
 
 **图 4.** Event study, year × importer ΔM TANY, omit 2022.
 
-![图 4](../figures/figure4_event_study.png)
+![图 4](figures/figure4_event_study.png)
 
 **图 5.** ILO ISIC M vs F employment growth, 2019–2024.
 
-![图 5](../figures/figure5_ilo_M_vs_F.png)
+![图 5](figures/figure5_ilo_M_vs_F.png)
 
 **图 6.** EU-importer sums: Mode-1 SJ3 vs China SE.
 
-![图 6](../figures/figure6_eu_mode1_vs_china.png)
+![图 6](figures/figure6_eu_mode1_vs_china.png)
 
 **图 7.** Cross-section: ΔM TANY vs Δ log India SJ3, 2022–24.
 
-![图 7](../figures/figure7_cross_section.png)
+![图 7](figures/figure7_cross_section.png)
 
 **图 8.** Leave-one-importer-out, TANY.
 
-![图 8](../figures/figure8_loo.png)
+![图 8](figures/figure8_loo.png)
 
 **图 9.** NACE M71 vs F GVA, 2019–2023, current EUR.
 
-![图 9](../figures/figure9_m71_vs_F_gva.png)
+![图 9](figures/figure9_m71_vs_F_gva.png)
 
 **图 10.** UK APS change versus Eloundou β_human and versus Felten AIOE.
 
-![图 10](../figures/figure10_instruments_vs_aps.png)
+![图 10](figures/figure10_instruments_vs_aps.png)
 
 **图 11.** Felten AIIE, US construction NAICS 23.
 
-![图 11](../figures/figure11_aiie_construction.png)
+![图 11](figures/figure11_aiie_construction.png)
 
 **图 12.** EU-27 AI types: M NLG vs ML vs text mining vs construction NLG.
 
-![图 12](../figures/figure12_tnlg_vs_tml.png)
+![图 12](figures/figure12_tnlg_vs_tml.png)
 
 **图 13.** 2024 NLG use, NACE M versus F, by country.
 
-![图 13](../figures/figure13_tnlg_2024_MF.png)
+![图 13](figures/figure13_tnlg_2024_MF.png)
 
 **图 14.** Event study, year × ΔM TNLG 2023–24, omit 2022.
 
-![图 14](../figures/figure14_event_study_tnlg.png)
+![图 14](figures/figure14_event_study_tnlg.png)
 
 **图 15.** ΔM TNLG 2023–24 vs Δ log India SJ3, 2022–24.
 
-![图 15](../figures/figure15_cross_section_tnlg.png)
+![图 15](figures/figure15_cross_section_tnlg.png)
 
 **图 16.** EU-27 NLG by NACE M, J, C, N, F.
 
-![图 16](../figures/figure16_tnlg_by_nace.png)
+![图 16](figures/figure16_tnlg_by_nace.png)
 
 **图 17.** SBS net turnover growth 2021–24, M71 vs F.
 
-![图 17](../figures/figure17_sbs_turnover_m71_vs_F.png)
+![图 17](figures/figure17_sbs_turnover_m71_vs_F.png)
 
 **图 18.** SBS employment growth 2021–24, M71 vs F.
 
-![图 18](../figures/figure18_sbs_emp_m71_vs_F.png)
+![图 18](figures/figure18_sbs_emp_m71_vs_F.png)
 
 **图 19.** ΔTNLG 2023–24 vs M71 turnover change 2023–24.
 
-![图 19](../figures/figure19_tnlg_vs_m71_turnover.png)
+![图 19](figures/figure19_tnlg_vs_m71_turnover.png)
 
 **图 20.** M71 net turnover levels, selected members.
 
-![图 20](../figures/figure20_m71_turnover_levels.png)
+![图 20](figures/figure20_m71_turnover_levels.png)
 
 **图 21.** US CES NAICS 54 only (not engineering 54133).
 
-![图 21](../figures/figure21_bls_naics54.png)
+![图 21](figures/figure21_bls_naics54.png)

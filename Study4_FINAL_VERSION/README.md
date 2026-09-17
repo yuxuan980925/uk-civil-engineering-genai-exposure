@@ -14,15 +14,12 @@ Preferred shock: Eurostat **E_AI_TNLG** (NLG, NACE M). Industry outcome: NACE **
 | [`manuscript/Study4_Manuscript.md`](manuscript/Study4_Manuscript.md) | English article |
 | [`manuscript/CN_full_article.md`](manuscript/CN_full_article.md) | Chinese article |
 | [`scripts/`](scripts/) | Replication |
-| [`zips/`](zips/) | Zip copies of the same materials |
+| [`zips/`](zips/) | Zip copies |
+| [`Study4_complete_package_2026-09-17.zip`](Study4_complete_package_2026-09-17.zip) | **Complete zip: data + tables + figures + manuscripts** |
 | [`HOW_TO_OPEN.md`](HOW_TO_OPEN.md) | Short open/replicate note |
 
 ```bash
-python3 scripts/run_analysis.py
-python3 scripts/run_novelty_layer.py
-python3 scripts/run_nlg_shock.py
-python3 scripts/run_industry_economy.py
-python3 scripts/build_article_assets.py
+python3 scripts/run_all_experiments.py
 ```
 
 Requires pandas, numpy, statsmodels, matplotlib.
