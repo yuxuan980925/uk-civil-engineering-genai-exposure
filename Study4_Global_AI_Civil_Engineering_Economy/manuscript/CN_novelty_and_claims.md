@@ -7,4 +7,4 @@ GitHub 上没有桌面里的 `Study4_…_2026-09-09/` 整包，但仓库里 **�
 - AIIE 建筑业 NAICS 23：多为负，对上 Eurostat 工地几乎不用 AI
 - 旧 LLM 分只作 Table 12 对照列，不当识别冲击
 
-新下载的 Eurostat / BaTIS / M71 / ILO 仍是跨境识别的主数据。
+新下载的 Eurostat TNLG（生成式文本）才是冲击主变量；TANY 只作对照。TNLG 2023–24 与 Mode-1 SJ3 弱正相关（印度走廊显著）；工地/计算机/SJ1/SJ2 安慰剂不显著；J/C/N 的 NLG 同样显著，故不能写成“只有土木咨询业的 AI”在推贸易。M71 增加值仍不升。APS 2121 不能识别伙伴国 GDP。

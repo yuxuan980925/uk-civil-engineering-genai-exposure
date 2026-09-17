@@ -202,14 +202,76 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | ROU | 9.06 | 0.18 | 6.68 | 0.05 | 2.38 | 0.13 | 8.88 | Romania |
 | SWE | 53.71 | 13.15 | 16.47 | 2.32 | 37.24 | 10.83 | 40.56 | Sweden |
 
-### Table 12. Multi-instrument exposure (legacy Study 4 / IJCM external files) vs APS change
+### Table 13. Generative NLG shock (log SJ3 unless noted)
 
-| SOC2020 | occupation | Eloundou | Felten AIOE | LM AIOE | ONS automation | LLM (prev. paper) | APS % 2021–25 |
-|---|---|---|---|---|---|---|---|
-| 2121 | Civil engineers | 0.375 | 1.283 | 0.927 | 0.252 | 3.00 | −14.3 |
-| 3114 | Building and civil engineering technicians | 0.477 | 0.932 | 0.553 | 0.378 | 2.67 | +214.5 |
-| 3120 | CAD, drawing and architectural technicians | 0.520 | 0.923 | 0.554 | 0.387 | 4.33 | −23.9 |
-| 2453 | Quantity surveyors | — | — | — | 0.274 | 4.00 | −14.0 |
-| 2455 | Construction project managers | — | — | — | 0.257 | 2.67 | +4.5 |
+| Specification | Coefficient (s.e.) | N | Note |
+|---|---|---|---|
+| (N1) Post×ΔM TNLG 2023–24 [preferred GenAI shock] | 0.009 (0.005) | 357 | NLG jump is the ChatGPT window; EU × IND/PHL/VNM |
+| (N2) Post2024×ΔM TNLG 2023–24 | 0.007** (0.003) | 357 | Treat only 2024 as post (BaTIS ends 2024) |
+| (N3) Post×ΔM TNLG 2021–24 | 0.007 (0.005) | 357 | Comparable window to generic TANY ΔM |
+| (N4) Post× TNLG M 2024 level | 0.006 (0.004) | 357 | Level not change |
+| (N5) Placebo Post×ΔF TNLG 2023–24 | 0.015 (0.020) | 357 | Construction enterprises using NLG |
+| (N6) Horse: Post×ΔM TNLG | 0.015*** (0.004) | 357 | Same regression as N7 |
+| (N7) Horse: Post×ΔM TML (ML placebo) | -0.026* (0.014) | 357 | Machine learning, not generative NLG |
+| (N8) Placebo Post×ΔM TTM 2023–24 | 0.004 (0.008) | 357 | Text mining (also jumped; not NLG) |
+| (N9) Placebo Post×ΔM TIR 2023–24 | -0.010 (0.020) | 357 | Image recognition |
+| (N10) Comparison Post×ΔM TANY 2021–24 | 0.000 (0.006) | 336 | Generic any-AI; mixes ML and GenAI |
+| (N11) Placebo SI Post×ΔM TNLG | -0.002 (0.006) | 357 | Computer services from same partners |
+| (N12) Placebo China SE Post×ΔM TNLG | -0.008 (0.009) | 119 | Mode-3 construction from China |
+| (N13) Placebo China SJ3 Post×ΔM TNLG | 0.005 (0.010) | 119 | SJ3 from China |
+| (N14) Placebo Post×ΔJ TNLG 2023–24 | 0.009** (0.004) | 357 | ICT sector NLG (NACE J), not M71-containing M |
+| (N15) Placebo Post×ΔC TNLG 2023–24 | 0.017** (0.008) | 357 | Manufacturing NLG |
+| (N16) Placebo Post×ΔN TNLG 2023–24 | 0.015** (0.007) | 357 | Administrative/support NLG |
+| (NH) India only Post×ΔM TNLG 2023–24 | 0.021*** (0.008) | 119 | Partner = IND |
+| (NH) Philippines only Post×ΔM TNLG 2023–24 | -0.007 (0.015) | 119 | Partner = PHL |
+| (NH) Viet Nam only Post×ΔM TNLG 2023–24 | 0.011 (0.008) | 119 | Partner = VNM |
+| (N17) EU-8 Post×ΔM TNLG 2023–24 | 0.029*** (0.006) | 168 | Same fragile eight-country sample as TANY EU-8 |
+| (N18) Cross-section Δlog IN SJ3 22–24 on ΔTNLG 23–24 | 0.017*** (0.004) | 17 | No FE; one obs per importer |
+| (N19) log M71 GVA Post×ΔM TNLG 2023–24 | -0.007* (0.004) | 96 | Domestic architectural & engineering GVA; GVA only to 2023 |
+| (N20) SJ2 consulting Post×ΔM TNLG | 0.006 (0.011) | 357 | Same importers/partners as SJ3 |
+| (N20) SJ1 R&D Post×ΔM TNLG | 0.007 (0.011) | 357 | Same importers/partners as SJ3 |
 
-Felten AIOE ranks civil engineers above drafters; Eloundou, ONS automation and the earlier LLM panel rank CAD/drafters above licensed engineers. APS 2021–25 follows the GenAI ranking for 3120 vs 2121.
+### Table 14. Event study: year × ΔM TNLG 2023–24 (omit 2022)
+
+| year | coef | se | p |
+|---|---|---|---|
+| 2018.0 | 0.007 | 0.014 | 0.606 |
+| 2019.0 | 0.003 | 0.012 | 0.779 |
+| 2020.0 | 0.014 | 0.013 | 0.294 |
+| 2021.0 | 0.009 | 0.011 | 0.409 |
+| 2022.0 | 0.0 | 0.0 | 1.0 |
+| 2023.0 | 0.016 | 0.008 | 0.041 |
+| 2024.0 | 0.015 | 0.008 | 0.072 |
+
+### Table 15. EU-27 Eurostat AI types by NACE (% of enterprises, 10+)
+
+| nace | indic | 2021 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|
+| C | E_AI_TANY | 6.93 | 6.79 | 10.57 | 17.27 |
+| C | E_AI_TIR | 2.16 | 2.23 | 2.74 | 3.14 |
+| C | E_AI_TML | 1.67 | 1.73 | 2.73 | 3.66 |
+| C | E_AI_TNLG | 0.85 | 1.19 | 3.53 | 7.09 |
+| C | E_AI_TPVSG | — | — | — | 7.54 |
+| C | E_AI_TTM | 1.62 | 1.82 | 4.58 | 9.42 |
+| F | E_AI_TIR | 1.17 | 0.82 | 1.49 | 2.27 |
+| F | E_AI_TML | 0.68 | 0.43 | 0.83 | 1.62 |
+| F | E_AI_TNLG | 0.99 | 0.58 | 2.42 | 3.25 |
+| F | E_AI_TPVSG | — | — | — | 4.47 |
+| F | E_AI_TTM | 1.43 | 0.98 | 2.81 | 6.09 |
+| J | E_AI_TANY | 25.37 | 29.53 | 48.72 | 62.52 |
+| J | E_AI_TIR | 8.56 | 9.87 | 13.54 | 15.97 |
+| J | E_AI_TML | 15.14 | 16.28 | 25.66 | 28.58 |
+| J | E_AI_TNLG | 6.34 | 11.14 | 25.83 | 42.23 |
+| J | E_AI_TPVSG | — | — | — | 35.53 |
+| J | E_AI_TTM | 11.54 | 14.25 | 30.11 | 42.22 |
+| M | E_AI_TIR | 3.98 | 4.18 | 7.35 | 6.81 |
+| M | E_AI_TML | 6.46 | 6.82 | 11.35 | 12.46 |
+| M | E_AI_TNLG | 2.6 | 4.55 | 11.51 | 17.74 |
+| M | E_AI_TPVSG | — | — | — | 18.72 |
+| M | E_AI_TTM | 6.13 | 6.92 | 15.61 | 25.22 |
+| N | E_AI_TANY | 7.19 | 8.33 | 14.33 | 19.86 |
+| N | E_AI_TIR | 1.88 | 1.9 | 2.96 | 4.01 |
+| N | E_AI_TML | 1.63 | 2.31 | 3.96 | 4.43 |
+| N | E_AI_TNLG | 1.11 | 2.52 | 4.96 | 8.58 |
+| N | E_AI_TPVSG | — | — | — | 9.48 |
+| N | E_AI_TTM | 2.35 | 3.56 | 8.06 | 12.2 |

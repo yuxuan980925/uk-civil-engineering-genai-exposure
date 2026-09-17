@@ -1,11 +1,11 @@
 # Study 4 data inventory: what the design needs, what we have, what does not exist
 
-Retrieved 16 September 2026. No interpolated occupation, M71, or GDP cells.
+Retrieved 17 September 2026. No interpolated occupation, M71, or GDP cells.
 
 The innovation is **not** “more countries in a generic AI-GDP regression.” It is a **civil-specific stack** that other AI-labour papers do not use together:
 
 1. **Task exposure inside civil engineering** (drafters / technicians / licensed engineers)
-2. **Sectoral GenAI adoption** (Eurostat NACE M vs F; M71 AI is unpublished)
+2. **Sectoral GenAI adoption** — preferred **E_AI_TNLG**, not generic TANY; M vs F vs J/C/N; M71 AI unpublished
 3. **Industry outcome at NACE M71** (architectural and engineering activities), not all of ISIC M and not ISIC F
 4. **Cross-border delivery by GATS mode** (Mode-1 SJ3 from India/PH/VN vs Mode-3 SE from China)
 5. **Placebos on the same importers** (SI computer, SJ1 R&D, SJ2 consulting, F AI, F GVA)
@@ -21,9 +21,18 @@ If a series is missing, the inventory says so. That missingness is part of the c
 | Felten AIOE / LM-AIOE / AIIE | Pre-GenAI occupation and construction-industry exposure | **Have** (copied from Data_IJCM, used in Table 12 / Fig 10–11) | `data/from_legacy_study4/` |
 | ONS automation probability | Pre-GenAI routine-task proxy | **Have** | same |
 | Previous LLM 1–5 panel | Robustness column only | Copied, not used as the shock | `occupation_scores_20run.csv` |
-| Eurostat E_AI_TANY NACE **M** | Professional-services AI (contains M71 firms) | **Have** 2021/23/24/25, 18 geos | `data/eurostat_ai_raw.csv` |
+| Eurostat E_AI_TANY NACE **M** | Professional-services AI (contains M71 firms); **generic**, mixes ML and GenAI | **Have** 2021/23/24/25, 18 geos | `data/eurostat_ai_raw.csv` |
 | Eurostat E_AI_TANY NACE **F** | On-site construction placebo | **Have** | same |
+| Eurostat **E_AI_TNLG** NACE M/F | **Preferred GenAI shock**: natural-language generation | **Have** 2021/23/24/25 | `data/eurostat_ai_genai_types.csv` (611 rows) |
+| Eurostat E_AI_TML / TTM / TIR | Technology placebos (ML, text mining, image recognition) | **Have** | same |
+| Eurostat E_AI_TPVSG | Pictures/video/sound GenAI | **Have 2025 only** (no 2023–24 change) | same |
+| Eurostat TNLG NACE **C/J/N** | Sector placebos (manufacturing, ICT, admin) | **Have** | `data/eurostat_ai_nace_placebos.csv` |
+| Eurostat TNLG NACE **K** | Finance placebo | **Does not exist** (empty API) | — |
 | Eurostat E_AI_TANY NACE **M71** | Engineering-consultancy AI | **Does not exist** in `isoc_eb_ain2` (HTTP 400) | — |
+| OWID ChatGPT users | Global GenAI diffusion timeline | **404** on catalog/grapher CSVs | `data/owid_fetch_log.csv` |
+| IMF AI Preparedness Index | Cross-country snapshot | Datamapper API returned empty JSON | `data/imf_aipi_fetch_log.csv` |
+| OECD ICT_BUS AI | Non-EU enterprise AI | SDMX 404 | `data/oecd_ict_fetch_log.csv` |
+| World Bank internet / broadband / R&D | Digital context, **not** a GenAI shock | **Have** | `data/wb_IT_NET_*.csv`, `wb_GB_XPD_*.csv` |
 | Microsoft AI User Share | 2025–26 cross-country snapshot only | **Have** | `data/ms_ai_diffusion_q1_2026.csv` |
 | Microsoft as 2015–24 shock | Overlap with BaTIS | **Cannot** — years do not overlap | — |
 
@@ -69,8 +78,8 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 | A’s civil engineers fall because of GenAI | UK APS 2121 −14.3%; CAD 3120 −23.9%; technicians 3114 +214.5%. Consistent with **task polarisation**, not identified as caused by GenAI (no occupation-level AI adoption). |
 | That fall causes B’s civil-engineer counts to change | **Cannot test.** No bilateral ISCO 2142. |
 | That fall causes B’s GDP to change | **Cannot test** with APS 2121 as a shock (reverse causality / joint trends). |
-| A’s professional AI adoption raises Mode-1 engineering-related imports from B | Testable with Eurostat M × BaTIS SJ3. **EU-16: null.** EU-8: 0.019*** but fails pre-trends / expansion. |
-| A’s professional AI raises A’s own M71 GVA | Testable. **Null** (slightly negative). |
+| A’s professional AI adoption raises Mode-1 engineering-related imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. SI, China SE/SJ3, SJ1/SJ2, construction TNLG remain null. |
+| A’s professional AI raises A’s own M71 GVA | Testable. TANY −0.006 (0.005); TNLG −0.007* (0.004). Domestic engineering GVA is **not** rising with the NLG jump. |
 | India Mode 1 vs China Mode 3 | **Have contrast** in levels (+128% vs +52%), not in the DiD. |
 
 ## E. Replication
@@ -78,4 +87,5 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 ```bash
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_analysis.py
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_novelty_layer.py
+python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_nlg_shock.py
 ```

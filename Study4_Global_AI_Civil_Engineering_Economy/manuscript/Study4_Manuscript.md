@@ -2,8 +2,8 @@
 
 **Occupation exposure, NACE M71, Mode-1 versus Mode-3 trade, and a 17-country robustness check**
 
-Working paper · 16 September 2026  
-This article is **not** a reuse of the IJCM LLM occupation panel. Exposure comes from Eloundou et al. (`occ_level.csv`). UK employment comes from ONS APS (status A). AI adoption, M71 accounts, and trade come from Eurostat, OECD–WTO BaTIS, ILOSTAT, and the World Bank. Replication: `scripts/run_analysis.py`, `run_novelty_layer.py`, `build_article_assets.py`.
+Working paper · 17 September 2026  
+This article is **not** a reuse of the IJCM LLM occupation panel. Exposure comes from Eloundou et al. (`occ_level.csv`). UK employment comes from ONS APS (status A). The **preferred AI shock** is Eurostat `E_AI_TNLG` (natural-language generation) in NACE M, 2024 minus 2023. Generic `E_AI_TANY` is the comparison that mixes machine learning with GenAI. M71 accounts and trade come from Eurostat, OECD–WTO BaTIS, ILOSTAT, and the World Bank. Replication: `scripts/run_analysis.py`, `run_novelty_layer.py`, `run_nlg_shock.py`, `build_article_assets.py`.
 
 **Claim boundary.** A fall in UK SOC 2121 does **not** identify a change in another country’s civil-engineer counts or GDP. ILO does not publish bilateral ISCO 2142.
 
@@ -15,9 +15,9 @@ Generative AI is uneven *inside* civil engineering. Eloundou β_human is 0.52 fo
 
 OECD–WTO BaTIS balanced UK imports of SJ3 (technical, trade-related and other business services) from India rose from USD 2.19 billion (2019) to 4.98 billion (2024). UK imports of construction services (SE) from China rose 52%. Log UK 2121 employment and log India SJ3 imports move in opposite directions (correlation −0.89, *n* = 4).
 
-On 16 EU importers, post-2023 × the 2021–24 *change* in Eurostat NACE M AI does **not** predict log Mode-1 SJ3 imports (0.000, s.e. 0.006, *N* = 336). An eight-country subsample is 0.019 (s.e. 0.006) but fails when the sample expands and when pre-trends are inspected. Domestic NACE M71 GVA (architectural and engineering activities) yields −0.006 (0.005). Placebos (SI, SJ1, SJ2, Chinese SE/SJ3, construction AI) are null.
+Generic Eurostat “any AI” (E_AI_TANY) in NACE M does **not** predict log Mode-1 SJ3 (0.000, s.e. 0.006, *N* = 336). The **generative** item does. EU-27 professional NLG use rose 4.55% (2023) → 11.51% (2024) → 17.74% (2025); construction stayed 0.58 → 2.42 → 3.25. Post-2023 × ΔM TNLG 2023–24 is 0.009 (0.005), *p*=0.108, *N*=357. Restricting post to 2024 (the year BaTIS still covers after the NLG jump) gives 0.007**. The India corridor is 0.021***. In a horse race, TNLG remains 0.015*** while machine-learning TML is −0.026*. Event-study year × ΔTNLG is insignificant in 2018–21 (unlike TANY, which already failed in 2018). Construction NLG, SI computer services, Chinese SE/SJ3, and SJ1/SJ2 are null. ICT, manufacturing, and admin NLG *also* predict SJ3: the trade association is a **national GenAI wave**, not an M71-only shock. Domestic M71 GVA is −0.007* (0.004).
 
-The novelty is a **civil-specific stack**—Eloundou exposure × Eurostat M vs F adoption × M71 industry × GATS mode × placebos—not a recycled IJCM score.
+The novelty is a **civil-specific stack**—Eloundou exposure × **generative NLG versus older AI types** × Eurostat M vs F vs J/C/N × M71 industry × GATS mode × placebos—not a recycled IJCM score and not a generic any-AI DiD.
 
 **Keywords:** generative AI; civil engineering; NACE M71; Mode 1; BaTIS; Eurostat.
 
@@ -35,7 +35,8 @@ Novelty relative to generic AI-labour papers and relative to the IJCM draft:
 2. **UK employment for the full APS civil-adjacent SOC list** (16 unit groups, Table 2), not five LLM labels.
 3. **NACE M71** national accounts as the engineering-consultancy industry, distinct from construction (F) and from all of professional services (M).
 4. **GATS mode:** India/Philippines/Viet Nam as Mode-1 SJ3; China as Mode-3 SE. BaTIS has no SJ312.
-5. **A 17-country robustness check that overturns an eight-country coefficient.**
+5. **A 17-country robustness check that overturns an eight-country TANY coefficient.**
+6. **A GenAI-specific shock (TNLG) with technology and sector placebos.** Generic TANY is a null; NLG is a borderline/positive association with Mode-1 SJ3, cleaner pre-trends, and a significant India corridor — while J/C/N NLG show the wave is not unique to professional services.
 
 `DATA_INVENTORY.md` lists series that do not exist (M71 AI survey; SJ311/SJ312; bilateral ISCO 2142; UK M71 after 2018).
 
@@ -47,7 +48,9 @@ Novelty relative to generic AI-labour papers and relative to the IJCM draft:
 |---|---|---|
 | Exposure | Eloundou et al., official `occ_level.csv` | `data/eloundou_occ_level.csv` |
 | UK employment | ONS APS SOC 2020, status A | `data/from_study1/aps_employment_2021_2025.csv` (ONS extract only) |
-| Sectoral AI | Eurostat `isoc_eb_ain2` E_AI_TANY, NACE F and M | `data/eurostat_ai_raw.csv` |
+| Sectoral AI (generic) | Eurostat `isoc_eb_ain2` E_AI_TANY, NACE F and M | `data/eurostat_ai_raw.csv` |
+| **GenAI types (preferred)** | E_AI_TNLG / TML / TTM / TIR / TPVSG, NACE F/M | `data/eurostat_ai_genai_types.csv` |
+| Sector placebos | Same indicators, NACE C/J/N (K unpublished) | `data/eurostat_ai_nace_placebos.csv` |
 | Engineering industry | Eurostat `nama_10_a64` / `_e`, NACE M71, F, M | `data/eurostat_nama_*.csv` |
 | Trade | OECD–WTO BaTIS, adjustment B, SJ3/SE/SI/SJ1/SJ2 | `data/batis_*.csv` |
 | Exporter labour | ILOSTAT ISIC F and M | `data/ilo_emp_FM.csv` |
@@ -66,7 +69,7 @@ For EU importers *i*, Mode-1 partners *j* ∈ {IND, PHL, VNM}, *t* = 2018…2024
 \log M^{SJ3}_{ijt}=\alpha_i+\delta_t+\gamma_j+\beta(\mathbf{1}[t\ge 2023]\times \Delta M_i)+\varepsilon_{ijt}.
 \]
 
-\(\Delta M_i\) is Eurostat NACE M AI in 2024 minus 2021. Standard errors clustered by importer (within transformation). EU-16 is the headline sample; EU-8 is a fragility check. Placebos: SI, SJ1, SJ2, SE from China, SJ3 from China, F AI, and log M71 / F GVA.
+The **preferred** \(\Delta M_i\) is Eurostat NACE M **E_AI_TNLG** in 2024 minus 2023 (the ChatGPT diffusion year in the survey). Generic TANY 2024 minus 2021 remains the comparison. Standard errors clustered by importer (within transformation). Portugal has TNLG in 2024 but missing TANY M 2024, so the TNLG panel is 17 importers (*N*=357) and TANY is 16 (*N*=336). Placebos: TML/TTM/TIR; F/C/J/N TNLG; SI; SJ1/SJ2; SE and SJ3 from China; log M71 GVA.
 
 ---
 
@@ -90,9 +93,31 @@ The previous LLM panel is reported in Table 12 only as a robustness column (civi
 
 UK←India SJ3 +128%; UK←China SE +52%; UK←India SI +113%. Germany←Poland SJ3 +54% (nearshore). US←India SJ3 only +8%. Four-year correlation of UK log 2121 with log India SJ3 = −0.89.
 
-### 4.3 European panel (Figures 4, 7, 8; Tables 5, 6, 10)
+### 4.3 European panel, generic TANY (Figures 4, 7, 8; Tables 5, 6, 10)
 
-Headline EU-16 Post × ΔM = 0.000 (0.006). Event-study year × ΔM is already 0.017 (*p*=0.049) in 2018 versus 2022. EU-8 is 0.019***; it does not survive expansion. LOO stays near zero except dropping Sweden (0.010*).
+Headline EU-16 Post × ΔM TANY = 0.000 (0.006). Event-study year × ΔTANY is already 0.017 (*p*=0.049) in 2018 versus 2022. EU-8 is 0.019***; it does not survive expansion. LOO stays near zero except dropping Sweden (0.010*). Generic “any AI” is the wrong shock for a *generative* question.
+
+### 4.3b Preferred shock: generative NLG (Figures 12–16; Tables 13–15)
+
+EU-27 NACE M NLG: 2.60 (2021), 4.55 (2023), **11.51 (2024)**, 17.74 (2025). Construction NLG: 0.99, 0.58, 2.42, 3.25. ICT (J) NLG is higher still (11.14 → 25.83 in 2023–24). 2024 M TNLG leaders: Denmark 34.06, Finland 30.02, Sweden 29.61, Netherlands 22.01; France 3.90; Romania 3.73.
+
+On 17 EU importers × India/Philippines/Viet Nam:
+
+- Post (≥2023) × ΔM TNLG 2023–24: 0.009 (0.005), *p*=0.108, *N*=357.
+- Post = 2024 only × same Δ: 0.007** (0.003).
+- India only: 0.021***. Philippines and Viet Nam are not.
+- Horse race TNLG vs TML: TNLG 0.015***; TML −0.026*.
+- TTM and TIR placebos: 0.004 and −0.010, both null.
+- SI, China SE, China SJ3, SJ1, SJ2: all null.
+- Construction F TNLG: 0.015 (0.020), null.
+- NACE J/C/N TNLG: 0.009**, 0.017**, 0.015**. The Mode-1 association is **not unique to NACE M**.
+- Cross-section Δ log India SJ3 2022–24 on ΔTNLG: 0.017***, *N*=17.
+- EU-8 TNLG: 0.029*** — still sample-dependent if taken alone.
+- log M71 GVA Post × ΔTNLG: −0.007* (GVA only through 2023, so this cannot capture a 2024 output response).
+
+Event study (year × ΔTNLG, omit 2022): 2018 0.007 (0.014); 2019 0.003 (0.012); 2020 0.014 (0.013); 2021 0.009 (0.011); 2023 0.016** (*p*=0.041); 2024 0.015 (*p*=0.072). Pre-trends that failed for TANY are **not** significant for TNLG.
+
+What this does *not* say: UK APS 2121 does not identify Indian GDP. TNLG in M is still a professional-services survey cell, not M71. J/C/N significance means we report a GenAI *country* shock correlated with Mode-1 SJ3, concentrated on India, with construction and computer-services placebos quiet — not a proven M71 outsourcing causal effect.
 
 ### 4.4 M71 industry (Figure 9, Tables 8–9)
 
@@ -116,13 +141,13 @@ Philippines M +39.9% vs F +12.8%; Viet Nam M +28.5% vs F −1.4%; India M +13.0%
 
 ## 6. Limitations
 
-SJ3 is broader than M71. No SJ312. No M71 AI survey. M71 GVA is current prices. Eight clusters in EU-8. Failed pre-trends. APS sampling error. BaTIS ends 2024. No bilateral civil-engineer census.
+SJ3 is broader than M71. No SJ312. No M71 AI survey. M71 GVA is current prices and ends 2023. TNLG in J/C/N also predicts SJ3, so the shock is not civil-unique. Eight clusters in EU-8. TANY failed pre-trends; TNLG pre-trends are quieter but 2023 is already the post window. APS sampling error. BaTIS ends 2024. No bilateral civil-engineer census. OWID ChatGPT, IMF AIPI, and OECD ICT AI series were not retrieveable here.
 
 ---
 
 ## 7. Conclusion
 
-This paper stands on official series assembled for a *cross-border civil* question. It does not recycle IJCM LLM scores. UK CAD and civil-engineer employment fell while technicians and India SJ3 imports rose. A 16-country test of importer professional AI causing Mode-1 imports or M71 GVA is a **null**; an eight-country significant coefficient is not a result to keep.
+This paper stands on official series assembled for a *cross-border civil* question, with the shock measured as **generative NLG**, not generic enterprise AI. It does not recycle IJCM LLM scores. UK CAD and civil-engineer employment fell while technicians and India SJ3 imports rose. Generic TANY is a **null** on Mode-1 SJ3. TNLG is a **borderline-to-positive** association (especially India and 2024-as-post), with insignificant pre-2022 event-study coefficients, silent construction and computer-service placebos, and **no** rise in domestic M71 GVA. ICT and manufacturing NLG move with the same trade outcome, so we do not claim a unique M71 outsourcing causal effect. APS 2121 is not a shock to partner GDP.
 
 ---
 
@@ -151,6 +176,16 @@ Files in `figures/`.
 **Figure 10.** UK APS employment change versus Eloundou β_human and versus Felten AIOE for matched SOC codes (`figure10_instruments_vs_aps.png`).
 
 **Figure 11.** Felten AIIE for US construction NAICS 23 (`figure11_aiie_construction.png`).
+
+**Figure 12.** EU-27 Eurostat AI *types*: NACE M NLG vs machine learning vs text mining vs construction NLG (`figure12_tnlg_vs_tml.png`).
+
+**Figure 13.** 2024 NLG use, NACE M versus F, by country (`figure13_tnlg_2024_MF.png`).
+
+**Figure 14.** Event study, year × importer ΔM TNLG 2023–24, omit 2022 (`figure14_event_study_tnlg.png`).
+
+**Figure 15.** Cross-section: ΔM TNLG 2023–24 vs Δ log India SJ3, 2022–24 (`figure15_cross_section_tnlg.png`).
+
+**Figure 16.** EU-27 NLG by NACE M, J, C, N, F (`figure16_tnlg_by_nace.png`).
 
 ---
 
@@ -360,3 +395,77 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | PRT | — | 2.74 | 10.38 | 1.06 | — | 1.68 | — | Portugal |
 | ROU | 9.06 | 0.18 | 6.68 | 0.05 | 2.38 | 0.13 | 8.88 | Romania |
 | SWE | 53.71 | 13.15 | 16.47 | 2.32 | 37.24 | 10.83 | 40.56 | Sweden |
+
+### Table 13. Generative NLG shock (log SJ3 unless noted)
+
+| Specification | Coefficient (s.e.) | N | Note |
+|---|---|---|---|
+| (N1) Post×ΔM TNLG 2023–24 [preferred GenAI shock] | 0.009 (0.005) | 357 | NLG jump is the ChatGPT window; EU × IND/PHL/VNM |
+| (N2) Post2024×ΔM TNLG 2023–24 | 0.007** (0.003) | 357 | Treat only 2024 as post (BaTIS ends 2024) |
+| (N3) Post×ΔM TNLG 2021–24 | 0.007 (0.005) | 357 | Comparable window to generic TANY ΔM |
+| (N4) Post× TNLG M 2024 level | 0.006 (0.004) | 357 | Level not change |
+| (N5) Placebo Post×ΔF TNLG 2023–24 | 0.015 (0.020) | 357 | Construction enterprises using NLG |
+| (N6) Horse: Post×ΔM TNLG | 0.015*** (0.004) | 357 | Same regression as N7 |
+| (N7) Horse: Post×ΔM TML (ML placebo) | -0.026* (0.014) | 357 | Machine learning, not generative NLG |
+| (N8) Placebo Post×ΔM TTM 2023–24 | 0.004 (0.008) | 357 | Text mining (also jumped; not NLG) |
+| (N9) Placebo Post×ΔM TIR 2023–24 | -0.010 (0.020) | 357 | Image recognition |
+| (N10) Comparison Post×ΔM TANY 2021–24 | 0.000 (0.006) | 336 | Generic any-AI; mixes ML and GenAI |
+| (N11) Placebo SI Post×ΔM TNLG | -0.002 (0.006) | 357 | Computer services from same partners |
+| (N12) Placebo China SE Post×ΔM TNLG | -0.008 (0.009) | 119 | Mode-3 construction from China |
+| (N13) Placebo China SJ3 Post×ΔM TNLG | 0.005 (0.010) | 119 | SJ3 from China |
+| (N14) Placebo Post×ΔJ TNLG 2023–24 | 0.009** (0.004) | 357 | ICT sector NLG (NACE J), not M71-containing M |
+| (N15) Placebo Post×ΔC TNLG 2023–24 | 0.017** (0.008) | 357 | Manufacturing NLG |
+| (N16) Placebo Post×ΔN TNLG 2023–24 | 0.015** (0.007) | 357 | Administrative/support NLG |
+| (NH) India only Post×ΔM TNLG 2023–24 | 0.021*** (0.008) | 119 | Partner = IND |
+| (NH) Philippines only Post×ΔM TNLG 2023–24 | -0.007 (0.015) | 119 | Partner = PHL |
+| (NH) Viet Nam only Post×ΔM TNLG 2023–24 | 0.011 (0.008) | 119 | Partner = VNM |
+| (N17) EU-8 Post×ΔM TNLG 2023–24 | 0.029*** (0.006) | 168 | Same fragile eight-country sample as TANY EU-8 |
+| (N18) Cross-section Δlog IN SJ3 22–24 on ΔTNLG 23–24 | 0.017*** (0.004) | 17 | No FE; one obs per importer |
+| (N19) log M71 GVA Post×ΔM TNLG 2023–24 | -0.007* (0.004) | 96 | Domestic architectural & engineering GVA; GVA only to 2023 |
+| (N20) SJ2 consulting Post×ΔM TNLG | 0.006 (0.011) | 357 | Same importers/partners as SJ3 |
+| (N20) SJ1 R&D Post×ΔM TNLG | 0.007 (0.011) | 357 | Same importers/partners as SJ3 |
+
+### Table 14. Event study: year × ΔM TNLG 2023–24 (omit 2022)
+
+| year | coef | se | p |
+|---|---|---|---|
+| 2018.0 | 0.007 | 0.014 | 0.606 |
+| 2019.0 | 0.003 | 0.012 | 0.779 |
+| 2020.0 | 0.014 | 0.013 | 0.294 |
+| 2021.0 | 0.009 | 0.011 | 0.409 |
+| 2022.0 | 0.0 | 0.0 | 1.0 |
+| 2023.0 | 0.016 | 0.008 | 0.041 |
+| 2024.0 | 0.015 | 0.008 | 0.072 |
+
+### Table 15. EU-27 Eurostat AI types by NACE (% of enterprises, 10+)
+
+| nace | indic | 2021 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|
+| C | E_AI_TANY | 6.93 | 6.79 | 10.57 | 17.27 |
+| C | E_AI_TIR | 2.16 | 2.23 | 2.74 | 3.14 |
+| C | E_AI_TML | 1.67 | 1.73 | 2.73 | 3.66 |
+| C | E_AI_TNLG | 0.85 | 1.19 | 3.53 | 7.09 |
+| C | E_AI_TPVSG | — | — | — | 7.54 |
+| C | E_AI_TTM | 1.62 | 1.82 | 4.58 | 9.42 |
+| F | E_AI_TIR | 1.17 | 0.82 | 1.49 | 2.27 |
+| F | E_AI_TML | 0.68 | 0.43 | 0.83 | 1.62 |
+| F | E_AI_TNLG | 0.99 | 0.58 | 2.42 | 3.25 |
+| F | E_AI_TPVSG | — | — | — | 4.47 |
+| F | E_AI_TTM | 1.43 | 0.98 | 2.81 | 6.09 |
+| J | E_AI_TANY | 25.37 | 29.53 | 48.72 | 62.52 |
+| J | E_AI_TIR | 8.56 | 9.87 | 13.54 | 15.97 |
+| J | E_AI_TML | 15.14 | 16.28 | 25.66 | 28.58 |
+| J | E_AI_TNLG | 6.34 | 11.14 | 25.83 | 42.23 |
+| J | E_AI_TPVSG | — | — | — | 35.53 |
+| J | E_AI_TTM | 11.54 | 14.25 | 30.11 | 42.22 |
+| M | E_AI_TIR | 3.98 | 4.18 | 7.35 | 6.81 |
+| M | E_AI_TML | 6.46 | 6.82 | 11.35 | 12.46 |
+| M | E_AI_TNLG | 2.6 | 4.55 | 11.51 | 17.74 |
+| M | E_AI_TPVSG | — | — | — | 18.72 |
+| M | E_AI_TTM | 6.13 | 6.92 | 15.61 | 25.22 |
+| N | E_AI_TANY | 7.19 | 8.33 | 14.33 | 19.86 |
+| N | E_AI_TIR | 1.88 | 1.9 | 2.96 | 4.01 |
+| N | E_AI_TML | 1.63 | 2.31 | 3.96 | 4.43 |
+| N | E_AI_TNLG | 1.11 | 2.52 | 4.96 | 8.58 |
+| N | E_AI_TPVSG | — | — | — | 9.48 |
+| N | E_AI_TTM | 2.35 | 3.56 | 8.06 | 12.2 |
