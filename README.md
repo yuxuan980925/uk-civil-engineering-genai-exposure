@@ -23,6 +23,8 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
+Study 4 (cross-country AI shock and the civil engineering industry) zip packages are in [`Study4_zip_packages/`](Study4_zip_packages/).
+
 ## Licence
 
 Author-generated data: [CC BY 4.0](LICENSE). Third-party index files remain under their publishers’ terms and must be cited from the manuscript reference list.

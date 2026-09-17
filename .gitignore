@@ -1,6 +1,6 @@
 .DS_Store
 ~$*
 *.zip
-!Study4_Global_AI_Civil_Engineering_Economy/release/*.zip
+!Study4_zip_packages/*.zip
 Study4_Global_AI_Civil_Engineering_Economy/release/Study4_complete_package_*/
 Study4_Global_AI_Civil_Engineering_Economy/data/batis_chunk_*.csv

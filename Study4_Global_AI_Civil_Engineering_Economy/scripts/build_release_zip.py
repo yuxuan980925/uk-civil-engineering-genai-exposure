@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parent
 STAMP = date.today().isoformat()
 REL = ROOT / "release"
+ZIP_OUT = REPO / "Study4_zip_packages"
 PACK_NAME = f"Study4_complete_package_{STAMP}"
 PACK = REL / PACK_NAME
 
@@ -101,7 +102,7 @@ Folder layout
 04_manuscript/   Full English article + Chinese full article + tables
 05_scripts/      Replication scripts
 99_all_zips/     Component zips (data, tables, figures, manuscript, scripts, IJCM)
-                 The same files are also in Study4_.../release/
+                 The same files live in the standalone folder Study4_zip_packages/
 DATA_INVENTORY.md  Have / missing / cannot-exist catalogue
 DATA_SOURCES.md    APIs and retrieval date
 results*.json      Machine-readable estimates (TANY, TNLG, M71 SBS)
@@ -135,11 +136,12 @@ NACE M71 AI survey and BaTIS SJ312 do not exist.
         ("Study4_04_manuscript.zip", PACK / "04_manuscript", "04_manuscript"),
         ("Study4_05_scripts.zip", PACK / "05_scripts", "05_scripts"),
     ]
-    zip_index = ["# All Study 4 zip files (also copied to release/)\n"]
+    zip_index = ["# All Study 4 zip files\n", "Standalone folder: `Study4_zip_packages/`\n"]
+    ZIP_OUT.mkdir(parents=True, exist_ok=True)
     for fname, src, arc in parts:
         if not src.exists():
             continue
-        dest = REL / fname
+        dest = ZIP_OUT / fname
         zip_folder(src, dest, arc)
         shutil.copy2(dest, zips_dir / fname)
         zip_index.append(f"- `{fname}` ({dest.stat().st_size} bytes)")
@@ -161,7 +163,7 @@ NACE M71 AI survey and BaTIS SJ312 do not exist.
         w.writeheader()
         w.writerows(rows)
 
-    zip_path = REL / f"{PACK_NAME}.zip"
+    zip_path = ZIP_OUT / f"{PACK_NAME}.zip"
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
         for p in PACK.rglob("*"):
             if p.is_file():
@@ -171,10 +173,10 @@ NACE M71 AI survey and BaTIS SJ312 do not exist.
     print("dir", PACK)
     zip_index.append(f"- `{PACK_NAME}.zip` ({zip_path.stat().st_size} bytes)  **complete package**")
     index_text = "\n".join(zip_index) + "\n"
-    (REL / "ZIP_INDEX.md").write_text(index_text)
+    (ZIP_OUT / "ZIP_INDEX.md").write_text(index_text)
     (zips_dir / "ZIP_INDEX.md").write_text(index_text)
-    print("release zips:")
-    for p in sorted(REL.glob("*.zip")):
+    print("zip folder", ZIP_OUT)
+    for p in sorted(ZIP_OUT.glob("*.zip")):
         print(" ", p.name, p.stat().st_size)
 
 
