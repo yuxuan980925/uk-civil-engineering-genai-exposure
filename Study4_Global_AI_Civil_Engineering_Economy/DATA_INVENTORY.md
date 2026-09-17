@@ -48,11 +48,14 @@ If a series is missing, the inventory says so. That missingness is part of the c
 | World Bank GDP, services %, industry % | Macro background only | **Have** | `data/wb_*.json` |
 | ILO ISIC F vs M employment | Exporter labour markets | **Have** 17 areas; **China empty** | `data/ilo_emp_FM.csv` |
 | ILO ISCO 2142 by country, bilateral | “Engineers in A → engineers in B” | **Not published** | cannot identify |
-| ONS APS 2121, 3114, 3120, 2453, 2455 | UK task polarisation | **Have** | `Data_IJCM/04_external_indices/aps_employment_2021_2025.csv` |
+| Eurostat NACE **M71 SBS** turnover, emp, wages, VA, GOS | Firm-level industry economy, **includes 2024** | **Have** 2021–24, 17 members | `data/eurostat_sbs_M71_F_M.csv` |
+| Eurostat NACE **M71 D1/P1** | Compensation and output | **Have**; UK D1 only to 2018 | `data/eurostat_nama_D1_P1_M71_F_M.csv` |
+| ILO ISIC **M71** employment | Engineering-industry jobs in IND/CHN | **Not published** (SDMX 404) | `ilo_m71_fetch_log.csv` |
+| BLS NAICS **54133** | US engineering services | Public API returned **NAICS 54 only** | `bls_engineering_ces.csv` |
 
 **M71 2019–2023 GVA (current EUR), selected:** Belgium M71 +40.8% vs F +33.8%; Spain M71 +47.1% vs F +6.8%; Germany M71 +14.7% vs F +30.5%; Italy M71 +55.0% vs F +68.6%. Nominal values include inflation; they are not a GenAI effect.
 
-**Regression (honest):** log M71 GVA, Post×ΔM = −0.006 (0.005), N=90. Construction GVA placebo −0.008** (0.004). Domestic M71 output is **not** rising faster where professional AI jumped.
+**Regression (honest):** log M71 GVA, Post×ΔM = −0.006 (0.005), N=90. SBS log M71 turnover Post-2024×ΔTNLG = −0.007** (0.003), N=68; employment 0.000 (0.002). Construction turnover −0.010***. Domestic M71 is **not** an expansion story where NLG jumped.
 
 ## C. Cross-border civil / engineering-related trade
 
@@ -79,7 +82,7 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 | That fall causes B’s civil-engineer counts to change | **Cannot test.** No bilateral ISCO 2142. |
 | That fall causes B’s GDP to change | **Cannot test** with APS 2121 as a shock (reverse causality / joint trends). |
 | A’s professional AI adoption raises Mode-1 engineering-related imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. SI, China SE/SJ3, SJ1/SJ2, construction TNLG remain null. |
-| A’s professional AI raises A’s own M71 GVA | Testable. TANY −0.006 (0.005); TNLG −0.007* (0.004). Domestic engineering GVA is **not** rising with the NLG jump. |
+| A’s professional AI raises A’s own M71 industry | GVA to 2023: −0.007*. **SBS 2021–24:** turnover −0.007**, wages −0.009***, VA −0.006***, employment null. F turnover also −0.010***. |
 | India Mode 1 vs China Mode 3 | **Have contrast** in levels (+128% vs +52%), not in the DiD. |
 
 ## E. Replication
@@ -88,4 +91,5 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_analysis.py
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_novelty_layer.py
 python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_nlg_shock.py
+python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/run_industry_economy.py
 ```

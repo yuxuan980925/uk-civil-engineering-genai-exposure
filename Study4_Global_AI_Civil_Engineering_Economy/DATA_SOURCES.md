@@ -6,7 +6,8 @@ No interpolated occupation or GDP cells. Construction value added `NV.IND.CONS.Z
 |---|---|---|
 | Enterprise AI by NACE F/M, E_AI_TANY, PC_ENT, GE10 | Eurostat `isoc_eb_ain2` | Statistics API JSON, one geo × nace call |
 | GenAI types TNLG/TML/TTM/TIR/TPVSG, NACE F/M/C/J/N | Eurostat `isoc_eb_ain2` | Same API; TNLG is the preferred shock |
-| Internet users, broadband, R&D / GDP | World Bank WDI | Context only, not the DiD shock |
+| M71 / F / M enterprise turnover, employment, wages | Eurostat SBS `sbs_ovw_act`, `sbs_sc_ovw` | 2021–2024 |
+| Compensation D1 and output P1 | Eurostat `nama_10_a64` | Current EUR |
 | Balanced trade in services SJ3, SE, SI, USD_EXC, adjustment B | OECD–WTO BaTIS | SDMX CSV `OECD.SDD.TPS,DSD_BATIS@DF_BATIS` |
 | Employment by sex and economic activity, ISIC F/M | ILOSTAT `DF_EMP_TEMP_SEX_ECO_NB` | SDMX CSV |
 | GDP, services share, industry share | World Bank WDI | `NY.GDP.MKTP.CD`, `NV.SRV.TOTL.ZS`, `NV.IND.TOTL.ZS` |

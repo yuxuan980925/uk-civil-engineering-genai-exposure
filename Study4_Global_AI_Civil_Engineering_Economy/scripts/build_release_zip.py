@@ -91,6 +91,7 @@ How to replicate
 python3 05_scripts/run_analysis.py
 python3 05_scripts/run_novelty_layer.py
 python3 05_scripts/run_nlg_shock.py
+python3 05_scripts/run_industry_economy.py
 
 Scripts expect this package to sit as Study4_Global_AI_Civil_Engineering_Economy/
 (data/ tables/ figures/ next to scripts/). If you unzip only this package, copy

@@ -275,3 +275,45 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | N | E_AI_TNLG | 1.11 | 2.52 | 4.96 | 8.58 |
 | N | E_AI_TPVSG | — | — | — | 9.48 |
 | N | E_AI_TTM | 2.35 | 3.56 | 8.06 | 12.2 |
+
+### Table 16. M71 industry economy under TNLG (SBS 2021–24 and nama)
+
+| Specification | Coefficient (s.e.) | N | Note |
+|---|---|---|---|
+| (I1) log M71 turnover Post2024×ΔTNLG | -0.007** (0.003) | 68 | SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE |
+| (I2) log M71 employment Post2024×ΔTNLG | -0.000 (0.002) | 68 | SBS sbs_ovw_act M71 EMP_NR; country+year FE |
+| (I3) log M71 wages Post2024×ΔTNLG | -0.009*** (0.003) | 68 | SBS sbs_ovw_act M71 WAGE_MEUR; country+year FE |
+| (I4) log M71 value added Post2024×ΔTNLG | -0.006*** (0.002) | 68 | SBS sbs_ovw_act M71 AV_MEUR; country+year FE |
+| (I5) log M71 GOS Post2024×ΔTNLG | -0.003 (0.005) | 68 | SBS sbs_ovw_act M71 GOS_MEUR; country+year FE |
+| (I6) log F turnover Post2024×ΔTNLG placebo | -0.010*** (0.003) | 68 | SBS sbs_sc_ovw F NETTUR_MEUR; country+year FE |
+| (I7) log F employment Post2024×ΔTNLG placebo | -0.003 (0.002) | 68 | SBS sbs_ovw_act F EMP_NR; country+year FE |
+| (I8) log M turnover Post2024×ΔTNLG placebo | -0.005** (0.002) | 68 | SBS sbs_sc_ovw M NETTUR_MEUR; country+year FE |
+| (I9) log M71 turnover Post2023×ΔTNLG | -0.009** (0.004) | 68 | SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE |
+| (I10) Δlog≈ M71 turnover 2023–24 on ΔTNLG | -0.002 (0.001) | 17 | Cross-section; LHS is percent/100 |
+| (I11) M71 employment % 2023–24 on ΔTNLG | -0.000 (0.001) | 17 | Cross-section; LHS percent/100 |
+| (I12) log M71 compensation Post×ΔTNLG | -0.009** (0.004) | 96 | nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year |
+| (I12) log M71 output Post×ΔTNLG | -0.009*** (0.003) | 96 | nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year |
+| (I12) log F compensation Post×ΔTNLG | -0.011*** (0.004) | 102 | nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year |
+| (I12) log F output Post×ΔTNLG | -0.014*** (0.004) | 102 | nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year |
+
+### Table 17. SBS growth, NACE M71 vs F, 2021–2024
+
+| country | M71 turnover 21–24 % | F turnover 21–24 % | M71 emp 21–24 % | F emp 21–24 % | ΔTNLG M 23–24 |
+|---|---|---|---|---|---|
+| Austria | 21.6 | 14.6 | 3.1 | -0.0 | 8.2 |
+| Belgium | 26.0 | 30.4 | 7.5 | 4.9 | 11.3 |
+| Czechia | 31.6 | 32.1 | 6.8 | 3.4 | 10.3 |
+| Germany | 16.5 | 12.5 | 2.0 | -0.5 | 6.3 |
+| Denmark | 26.2 | 10.9 | 15.7 | 2.7 | 25.7 |
+| Spain | 35.0 | 34.4 | 6.8 | 1.8 | 7.5 |
+| Finland | 17.1 | -5.0 | 2.0 | -5.8 | 18.8 |
+| France | 15.5 | 12.1 | 12.6 | 3.2 | 2.6 |
+| Greece | 74.7 | 98.6 | 13.2 | 25.3 | 5.4 |
+| Hungary | 13.0 | 17.1 | -0.9 | -0.7 | 3.4 |
+| Ireland | 35.9 | 31.2 | 24.3 | 23.0 | 8.6 |
+| Italy | 44.4 | 32.2 | 12.6 | 11.8 | 6.6 |
+| Netherlands | 23.5 | 22.6 | 10.9 | 8.7 | 14.3 |
+| Poland | 41.4 | 35.0 | 1.0 | -1.5 | 3.6 |
+| Portugal | 63.3 | 41.5 | 16.6 | 21.3 | 6.2 |
+| Romania | 78.9 | 64.9 | 11.4 | 0.3 | -1.3 |
+| Sweden | 1.8 | -0.5 | -2.3 | -9.2 | 21.2 |
