@@ -66,9 +66,11 @@ def main():
     (ms / "figures").mkdir(parents=True)
     for name in [
         "Study4_Manuscript.md",
+        "Study4_Concise_Manuscript.md",
         "article_body.md",
         "tables_for_article.md",
         "CN_full_article.md",
+        "CN_Concise_Manuscript.md",
         "CN_novelty_and_claims.md",
     ]:
         src = SRC / "manuscript" / name
@@ -97,16 +99,18 @@ def main():
 
 After `git pull`, open:
 
-1. [`Study4_Manuscript.md`](Study4_Manuscript.md) — English full article
-2. [`CN_full_article.md`](CN_full_article.md) — Chinese
-3. [`FIGURES.md`](FIGURES.md) — figures 1–21
-4. [`tables_for_article.md`](tables_for_article.md) — all tables
+1. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — concise English; focused on UK, India and China
+2. [`CN_Concise_Manuscript.md`](CN_Concise_Manuscript.md) — 中文精简稿
+3. [`Study4_Manuscript.md`](Study4_Manuscript.md) — archived full English article
+4. [`CN_full_article.md`](CN_full_article.md) — archived full Chinese article
+5. [`FIGURES.md`](FIGURES.md) — figures 1–21
+6. [`tables_for_article.md`](tables_for_article.md) — all tables
 
 Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/)
 
 Compiled HTML (browser): [`index.html`](index.html)
 
-Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx) · [`CN_full_article.docx`](CN_full_article.docx) · [`FIGURES.docx`](FIGURES.docx) · [`tables_for_article.docx`](tables_for_article.docx)
+Word (from HTML): [`Study4_Concise_Manuscript.docx`](Study4_Concise_Manuscript.docx) · [`CN_Concise_Manuscript.docx`](CN_Concise_Manuscript.docx)
 
 Do **not** open `Study4.zip` in Cursor. Unzip it in Finder / Explorer; the top of the archive is `Study4_Manuscript.md`.
 """
@@ -119,6 +123,8 @@ Evidence from a Cross-Country Stack — **complete article folder**
 **Open in the editor (not the zip):**
 
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
+- `Study4_Concise_Manuscript.docx` — **concise English submission draft** (UK, India and China)
+- `CN_Concise_Manuscript.docx` — **中文精简稿**
 - `Study4_Manuscript.md` — full English article
 - `CN_full_article.md` — Chinese article
 - `tables_for_article.md` — all article tables
@@ -152,12 +158,15 @@ Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` 
         [
             "zip", "-r", "-X", str(zip_path),
             "README.md", "OPEN_IN_EDITOR.md", "ZIP_PATH.md", "Study4_Manuscript.md",
+            "Study4_Concise_Manuscript.md", "CN_Concise_Manuscript.md",
             "article_body.md", "tables_for_article.md", "CN_full_article.md",
             "CN_novelty_and_claims.md", "FIGURES.md",
             "DATA_INVENTORY.md", "DATA_SOURCES.md",
             "index.html", "Study4_Manuscript.html", "CN_full_article.html",
+            "Study4_Concise_Manuscript.html", "CN_Concise_Manuscript.html",
             "FIGURES.html", "tables_for_article.html",
             "Study4_Manuscript.docx", "CN_full_article.docx",
+            "Study4_Concise_Manuscript.docx", "CN_Concise_Manuscript.docx",
             "FIGURES.docx", "tables_for_article.docx",
             "figures", "tables", "data", "manuscript",
         ],

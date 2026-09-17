@@ -27,10 +27,13 @@ See `Data_IJCM/README.txt` for the file-level inventory.
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack**
 
-Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. **In the editor, open the Markdown files — not the zip.**
+Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. **The concise manuscript focuses on the UK, India and China; the EU-17 is used only as the estimation panel.**
 
-- English: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
-- Chinese: [`Study4_Article_Complete/CN_full_article.md`](Study4_Article_Complete/CN_full_article.md)
+- Concise English Word: [`Study4_Article_Complete/Study4_Concise_Manuscript.docx`](Study4_Article_Complete/Study4_Concise_Manuscript.docx)
+- 中文精简 Word: [`Study4_Article_Complete/CN_Concise_Manuscript.docx`](Study4_Article_Complete/CN_Concise_Manuscript.docx)
+- Concise English Markdown: [`Study4_Article_Complete/Study4_Concise_Manuscript.md`](Study4_Article_Complete/Study4_Concise_Manuscript.md)
+- 中文精简 Markdown: [`Study4_Article_Complete/CN_Concise_Manuscript.md`](Study4_Article_Complete/CN_Concise_Manuscript.md)
+- Archived full English: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
 - Figures 1–21: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
 - Tables: [`Study4_Article_Complete/tables_for_article.md`](Study4_Article_Complete/tables_for_article.md)
 - Folders: [`figures/`](Study4_Article_Complete/figures/) · [`tables/`](Study4_Article_Complete/tables/) · [`data/`](Study4_Article_Complete/data/)

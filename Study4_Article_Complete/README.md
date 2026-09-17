@@ -5,6 +5,8 @@ Evidence from a Cross-Country Stack — **complete article folder**
 **Open in the editor (not the zip):**
 
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
+- `Study4_Concise_Manuscript.docx` — **concise English submission draft** (UK, India and China)
+- `CN_Concise_Manuscript.docx` — **中文精简稿**
 - `Study4_Manuscript.md` — full English article
 - `CN_full_article.md` — Chinese article
 - `tables_for_article.md` — all article tables
