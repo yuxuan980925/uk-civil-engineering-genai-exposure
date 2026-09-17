@@ -23,13 +23,17 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
-## Study 4 (main text, slim)
+## Study 4 article (complete folder)
 
-Open [`Study4_COMPLETE_ENGLISH/Study4_Manuscript.md`](Study4_COMPLETE_ENGLISH/Study4_Manuscript.md) (English) or [`CN_full_article.md`](Study4_COMPLETE_ENGLISH/CN_full_article.md). Figures: [`FIGURES.md`](Study4_COMPLETE_ENGLISH/FIGURES.md).
+**How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack**
 
-Do **not** open the zip in the editor. Download and unzip **`Study4_COMPLETE_ENGLISH/Study4.zip`** in Finder/Explorer if you need a single archive.
+Open [`Study4_Article_Complete/`](Study4_Article_Complete/) — full English article, Chinese article, figures 1–21, all tables, and data.
 
-Full working copy (all experiments): [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
+- English: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
+- Figures: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
+- Zip (unzip in Finder/Explorer, not in the editor): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
+
+Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
 
 ## Licence
 
