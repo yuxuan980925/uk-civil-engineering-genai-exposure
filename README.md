@@ -23,15 +23,15 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
-## Study 4 (article 4, English complete folder)
+## Study 4 (main text, slim)
 
-Open [`Study4_COMPLETE_ENGLISH/`](Study4_COMPLETE_ENGLISH/). That folder holds the **full English article**, figures 1–21, all tables, data, and the complete zip **inside the same folder**:
+Open [`Study4_COMPLETE_ENGLISH/`](Study4_COMPLETE_ENGLISH/). Main-text package: **AI exposure** and the **cross-country civil engineering industry economy** (8 figures, 6 tables). Zip **inside the folder**:
 
-[`Study4_COMPLETE_ENGLISH/Study4_Article4_complete_2026-09-17.zip`](Study4_COMPLETE_ENGLISH/Study4_Article4_complete_2026-09-17.zip)
+[`Study4_COMPLETE_ENGLISH/Study4_Article4_maintext_2026-09-17.zip`](Study4_COMPLETE_ENGLISH/Study4_Article4_maintext_2026-09-17.zip)
 
-English article (open in the editor): [`Study4_COMPLETE_ENGLISH/Study4_Manuscript.md`](Study4_COMPLETE_ENGLISH/Study4_Manuscript.md). Figures: [`Study4_COMPLETE_ENGLISH/FIGURES.md`](Study4_COMPLETE_ENGLISH/FIGURES.md). Tables: [`Study4_COMPLETE_ENGLISH/tables_for_article.md`](Study4_COMPLETE_ENGLISH/tables_for_article.md).
+English: [`Study4_COMPLETE_ENGLISH/Study4_Manuscript.md`](Study4_COMPLETE_ENGLISH/Study4_Manuscript.md). Figures: [`FIGURES.md`](Study4_COMPLETE_ENGLISH/FIGURES.md).
 
-Working copy: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
+Full working copy (all experiments): [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
 
 ## Licence
 
