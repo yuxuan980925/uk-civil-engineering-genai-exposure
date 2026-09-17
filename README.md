@@ -27,11 +27,15 @@ See `Data_IJCM/README.txt` for the file-level inventory.
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack**
 
-Open [`Study4_Article_Complete/`](Study4_Article_Complete/) — full English article, Chinese article, figures 1–21, all tables, and data.
+Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. **In the editor, open the Markdown files — not the zip.**
 
 - English: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
-- Figures: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
-- Zip (unzip in Finder/Explorer, not in the editor): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
+- Chinese: [`Study4_Article_Complete/CN_full_article.md`](Study4_Article_Complete/CN_full_article.md)
+- Figures 1–21: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
+- Tables: [`Study4_Article_Complete/tables_for_article.md`](Study4_Article_Complete/tables_for_article.md)
+- Folders: [`figures/`](Study4_Article_Complete/figures/) · [`tables/`](Study4_Article_Complete/tables/) · [`data/`](Study4_Article_Complete/data/)
+- Compiled HTML: [`Study4_Article_Complete/index.html`](Study4_Article_Complete/index.html)
+- Zip (Finder / Explorer only): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
 
 Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
 

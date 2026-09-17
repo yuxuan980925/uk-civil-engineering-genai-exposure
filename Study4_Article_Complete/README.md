@@ -2,15 +2,17 @@
 
 Evidence from a Cross-Country Stack — **complete article folder**
 
-Open in the editor (not the zip):
+**Open in the editor (not the zip):**
 
-- `Study4_Manuscript.md` — full English article (figures and tables in the file)
+- `OPEN_IN_EDITOR.md` — this folder’s entry list
+- `Study4_Manuscript.md` — full English article
 - `CN_full_article.md` — Chinese article
 - `tables_for_article.md` — all article tables
 - `FIGURES.md` — figures 1–21
 - `figures/` — PNG files
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
+- `index.html` — compiled HTML (figures load from `figures/`)
 
 Zip in this folder: **`Study4.zip`**
 

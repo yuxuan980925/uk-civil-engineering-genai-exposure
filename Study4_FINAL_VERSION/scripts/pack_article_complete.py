@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
@@ -91,20 +92,39 @@ def main():
         if (SRC / name).exists():
             shutil.copy2(SRC / name, OUT / name)
 
+    (OUT / "OPEN_IN_EDITOR.md").write_text(
+        """# Open these files in the editor (not the zip)
+
+After `git pull`, open:
+
+1. [`Study4_Manuscript.md`](Study4_Manuscript.md) — English full article
+2. [`CN_full_article.md`](CN_full_article.md) — Chinese
+3. [`FIGURES.md`](FIGURES.md) — figures 1–21
+4. [`tables_for_article.md`](tables_for_article.md) — all tables
+
+Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/)
+
+Compiled HTML (browser): [`index.html`](index.html)
+
+Do **not** open `Study4.zip` in Cursor. Unzip it in Finder / Explorer; the top of the archive is `Study4_Manuscript.md`.
+"""
+    )
     (OUT / "README.md").write_text(
         """# How Does the Civil Engineering Industry Economy Change under an AI Shock?
 
 Evidence from a Cross-Country Stack — **complete article folder**
 
-Open in the editor (not the zip):
+**Open in the editor (not the zip):**
 
-- `Study4_Manuscript.md` — full English article (figures and tables in the file)
+- `OPEN_IN_EDITOR.md` — this folder’s entry list
+- `Study4_Manuscript.md` — full English article
 - `CN_full_article.md` — Chinese article
 - `tables_for_article.md` — all article tables
 - `FIGURES.md` — figures 1–21
 - `figures/` — PNG files
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
+- `index.html` — compiled HTML (figures load from `figures/`)
 
 Zip in this folder: **`Study4.zip`**
 
@@ -115,16 +135,22 @@ Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` 
         "The complete zip is in this folder:\n\n`Study4_Article_Complete/Study4.zip`\n"
     )
 
+    subprocess.check_call(
+        [sys.executable, str(Path(__file__).resolve().parent / "compile_article.py"), str(OUT)]
+    )
+
     zip_path = OUT / ZIP_NAME
     if zip_path.exists():
         zip_path.unlink()
     subprocess.check_call(
         [
             "zip", "-r", "-X", str(zip_path),
-            "README.md", "ZIP_PATH.md", "Study4_Manuscript.md",
+            "README.md", "OPEN_IN_EDITOR.md", "ZIP_PATH.md", "Study4_Manuscript.md",
             "article_body.md", "tables_for_article.md", "CN_full_article.md",
             "CN_novelty_and_claims.md", "FIGURES.md",
             "DATA_INVENTORY.md", "DATA_SOURCES.md",
+            "index.html", "Study4_Manuscript.html", "CN_full_article.html",
+            "FIGURES.html", "tables_for_article.html",
             "figures", "tables", "data", "manuscript",
         ],
         cwd=OUT,

@@ -33,7 +33,7 @@ Three design choices follow from the literature reviewed in Section 2. First, th
 
 The contribution is empirical stacking, not a new theory of AI. Relative to occupation-exposure maps (Felten et al. 2021; Webb 2020; Eloundou et al. 2024; ILO and NASK 2023) the paper adds *realised* adoption and *industry* accounts. Relative to firm-level generative-AI experiments (Noy and Zhang 2023; Brynjolfsson, Li and Raymond 2025; Dell’Acqua et al. 2023) it adds a 17-country industry and trade panel. Relative to offshoring theory (Blinder 2006; Grossman and Rossi-Hansberg 2008; Baldwin 2016, 2019) it adds a civil-specific mode split and a placebo on computer services.
 
-Replication files are in `Study4_COMPLETE_ENGLISH/` (English article, figures 1–21, tables, data, and the complete zip in the same folder). Missing series are catalogued in `DATA_INVENTORY.md`; their absence is part of the claim boundary.
+Replication files are in `Study4_Article_Complete/` (open `Study4_Manuscript.md`, `CN_full_article.md`, `FIGURES.md`, and `tables_for_article.md` in the editor — not the zip). Figures, tables, and official data are in `figures/`, `tables/`, and `data/` in that folder. Missing series are catalogued in `DATA_INVENTORY.md`; their absence is part of the claim boundary.
 
 ---
 

@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>CN_full_article</title><style>
+body { font-family: Georgia, "Noto Serif CJK SC", serif; max-width: 52rem; margin: 2rem auto; padding: 0 1.2rem; line-height: 1.55; color: #111; }
+img { max-width: 100%; height: auto; display: block; margin: 0.6rem 0 1.4rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 1rem 0 1.6rem; }
+th, td { border: 1px solid #ccc; padding: 0.35rem 0.5rem; text-align: left; }
+th { background: #f4f4f4; }
+code { font-size: 0.92em; }
+h1, h2, h3 { line-height: 1.25; }
+nav a { margin-right: 1rem; }
+</style></head><body><nav>
+<a href="index.html">Index</a>
+<a href="Study4_Manuscript.html">English article</a>
+<a href="CN_full_article.html">Chinese</a>
+<a href="FIGURES.html">Figures 1–21</a>
+<a href="tables_for_article.html">Tables</a>
+</nav><hr>
+<h1>跨国背景下，受 AI 冲击的土木工程行业经济如何变动</h1>
+<p><strong>How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack</strong></p>
+<p>柴宇轩 · 斯特拉斯克莱德大学 · <code>yuxuanchai98@outlook.com</code><br />
+工作论文 · 2026 年 9 月 17 日</p>
+<p>本文只用已检索的官方序列，不插值职业、M71 或 GDP 单元格。不是 IJCM 论文那套大模型职业打分的复用。暴露度来自 Eloundou 等；英国就业来自 ONS APS（状态 A）；冲击为 Eurostat 生成式文本 E_AI_TNLG；行业结果为 NACE M71；贸易为 OECD–WTO BaTIS。</p>
+<p><strong>识别边界。</strong> 英国 SOC 2121 人数下降<strong>不能</strong>识别另一国土木工程师人数或 GDP。ILO 不发布双边 ISCO 2142。</p>
+<hr />
+<h2>摘要</h2>
+<p>生成式 AI 到来后，土木工程<strong>行业经济</strong>如何变动，变动是否留在一国之内？本文用土木专用数据栈回答：（1）土木职业内部的任务暴露；（2）<strong>生成式</strong>采用冲击（E_AI_TNLG），而非笼统的“任何 AI”；（3）NACE <strong>M71</strong> 建筑与工程活动，区别于工地施工（NACE F）；（4）GATS <strong>模式一</strong>与<strong>模式三</strong>贸易。</p>
+<p>Eloundou 人类评分：土木绘图员 0.52，土木技术员 0.477，土木工程师 0.375。英国 APS（2021 年 12 月–2025 年 9 月）：CAD/绘图技术员（3120）−23.9%，土木工程师（2121）−14.3%，建筑土木技术员（3114）+214.5%。这是任务极化，不是单一职业崩塌。</p>
+<p>欧盟 27 国专业服务业 NLG：2023 年 4.55% → 2024 年 11.51% → 2025 年 17.74%；建筑业仅 0.58、2.42、3.25。17 个成员国上，Post-2024×ΔTNLG 对 M71 营业额为 −0.007<strong>、工资 −0.009</strong><em>，就业精确为零。工地营业额同样为负。英国自印度进口 BaTIS SJ3：2019 年 21.9 亿美元 → 2024 年 49.8 亿。欧盟面板上印度走廊 0.021</em>**。笼统 TANY 为 0.000。中国模式三建筑服务并未更多地流向高 NLG 进口国。</p>
+<p>高 NLG 欧洲的土木<strong>咨询业</strong>并未随冲击扩张；同向变动的是印度模式一，不是国内 M71 产出，也不是中国模式三。</p>
+<p><strong>关键词：</strong> 生成式 AI；土木工程；NACE M71；模式一；BaTIS；跨国。</p>
+<hr />
+<h2>1. 引言</h2>
+<p>土木处在 AI–劳动文献的接缝上。图纸、规范、报告像大模型能处理的文本任务（Eloundou 等 2023, 2024；Felten 等 2021）；行业产出却仍是建筑、道路与水系统，Eurostat 企业调查里工地几乎不用 AI。把“建筑业”和“土木工程师”当成一个对象，是把两个市场混在一起。</p>
+<p>研究问题是行业级、跨国的：<strong>当 A 国采用生成式 AI 时，土木工程行业经济如何变动——A 国本国的建筑与工程企业（NACE M71），以及与 B 国的工程相关贸易。</strong> 本文不主张英国 2121 人数导致印度 GDP。</p>
+<p>设计服从第 2 节文献。冲击必须是生成式的（TNLG 2024 减 2023，而不是把 ChatGPT 之前的机器学习混进 TANY）。行业必须是 M71，不是 ISIC F，也不是全部专业服务 M。跨境必须按 GATS 模式（WTO 1994；Francois and Hoekman 2010）：印度、菲律宾、越南作为模式一候选；中国作为模式三建筑服务（BaTIS SE）。</p>
+<p>贡献是经验堆叠，不是新的 AI 理论。相对于职业暴露图（Felten；Webb；Eloundou；ILO–NASK），补上<strong>已实现采用</strong>和<strong>行业账户</strong>。相对于企业实验（Noy and Zhang 2023；Brynjolfsson 等 2025；Dell’Acqua 等 2023），补上 17 国行业与贸易面板。相对于离岸理论（Blinder 2006；Grossman and Rossi-Hansberg 2008；Baldwin 2016, 2019），补上土木的模式切分和计算机服务安慰剂。</p>
+<p>不存在的序列写入 <code>DATA_INVENTORY.md</code>，缺失本身构成主张边界。</p>
+<hr />
+<h2>2. 文献综述</h2>
+<h3>2.1 任务技术变革，而不是职业消失</h3>
+<p>Autor, Levy and Murnane（2003）把问题从“计算机替代哪些职业”改成“替代哪些<strong>任务</strong>”。Autor（2015）强调自动化常提高互补非例行工作的价值。Acemoglu and Restrepo（2018, 2019, 2020）区分替代与新任务重置：行业就业不必随技术下降。这对土木是正确先验：绘图与条款起草更暴露，现场监督与法定签章更不暴露；CAD 技术员下降可以与对接软件的技术员上升并存。</p>
+<p>Acemoglu, Autor, Hazell and Restrepo（2022）发现 ChatGPT 之前美国 AI 相关空缺对就业影响有限。含义是：<strong>职业暴露不是行业发生率</strong>。Felten 产业分（AIIE）对 NAICS 23 多为负，对上 Eurostat：工地企业很少用 AI。不能从建筑机器人论文直接读 M71。</p>
+<h3>2.2 暴露度：AIOE、Webb、Eloundou、ILO–NASK</h3>
+<p>Felten, Raj and Seamans（2018, 2021）把 O<em>NET 能力与 AI 进展重叠（AIOE）并做产业分（AIIE）。Webb（2020）用专利与任务文本重叠。Eloundou 等（2023, 2024）按 GPT 暴露给 O</em>NET 任务打分，本文用官方 <code>occ_level.csv</code>。ILO 与 NASK（2023）把 ISCO 2142 土木工程师列为 <strong>Not Exposed</strong>（均分 0.30）。</p>
+<p>这些工具<strong>排序不一致</strong>。旧 IJCM 外部文件夹里，Felten AIOE（2021）土木工程师 1.283，高于绘图员 0.923。Eloundou、ONS 自动化概率（ONS 2019）和旧 LLM 面板对 CAD 与持证工程师的排序相反。英国 APS 2021–25 跟生成式排序，不跟 2021 AIOE。技术员暴露高却 +214.5%——暴露不是发生（Autor 2015）。</p>
+<p>Goldfarb 等关于 AI 技能需求集中在少数企业与职业，因此不能把全国 Copilot 份额当成土木行业冲击。微软 2025–26 用户份额只作背景，年份与 BaTIS 不对齐。</p>
+<h3>2.3 生成式 AI 作为劳动力市场冲击</h3>
+<p>ChatGPT 给出可定期的冲击。Noy and Zhang（2023）发现专业写作生产率大增。Copilot 研究（Peng 等 2023）显示编码加快。Brynjolfsson, Li and Raymond（2025）发现客服生产率提高集中在经验较少者。Dell’Acqua 等（2023）提出“锯齿前沿”：同一职业内有的任务被帮、有的失败。Hui, Reshef and Zhou（2024）研究自由职业编码市场。</p>
+<p>对土木的两点：规范与 CAD 注释更可能在被帮助一侧；签章、责任与现场在另一侧。企业实验不是行业账户。绘图员画得更快可能减少计费小时（营业额）而不减少人数——这正是 SBS 的形态：NLG 跳升处工资和营业额增长更慢，就业不降。</p>
+<p>Agrawal, Gans and Goldfarb（2018, 2022）把 AI 写成更便宜的预测。Korinek and Stiglitz（2021）强调分配取决于替代还是增强。本文不估计福利，只问哪些可测行业总量动了。</p>
+<h3>2.4 离岸、可贸易任务与 GATS 模式</h3>
+<p>Blinder（2006）提出能沿线传输的就可离岸。Grossman and Rossi-Hansberg（2008）建立任务贸易模型。Baldwin（2016, 2019）强调数字技术把专业服务从办公室拆开。GATS（WTO 1994）分模式一至四。Francois and Hoekman（2010）、Loungani 等（2017）综述为何服务贸易数据落后于货物。</p>
+<p>对土木，模式不是脚注。图纸与计算可作印度模式一；现场承包是模式三。混在“建筑 AI”回归里是设定错误。BaTIS 平衡统计能用的最细工程相邻标题是 <strong>SJ3</strong>。<strong>SJ311/SJ312</strong> 不在 BaTIS。计算机服务 SI 是数字安慰剂：若结果是“任何远程专业工作”，SI 应随 TNLG 动，但没有动。</p>
+<h3>2.5 建筑经济与专业工程</h3>
+<p>建筑经济长期把承包业写成项目型、本地、数字化弱（Gann and Salter 2000；Winch 2010）。BIM（Eastman 等 2011；Sacks 等 2018）数字化的是设计与协调，落在 M71，不必落在 F。Eurostat 证实这一劈裂：专业服务 AI 远高于工地；NLG 更甚。工地是安慰剂行业，不是处理行业。</p>
+<h3>2.6 现有 AI–建筑研究缺什么</h3>
+<p>多数论文或是没有贸易/M71 的职业清单，或是项目级 BIM/ChatGPT 案例。宏观 AI–增长回归不隔离土木。空缺研究看不到模式一 SJ3。缺口是：<strong>可定期的生成式冲击 × M71 行业经济 × 模式切分贸易 × 安慰剂</strong>，并明示统计机构未发布的序列（M71 AI 调查；双边 ISCO 2142；BaTIS SJ312；中国/印度 ILO M71）。</p>
+<hr />
+<h2>3–5. 数据、设计与结果（与英文全文同一套真实数字）</h2>
+<p>冲击：NACE M 的 E_AI_TNLG，2024 减 2023。结果：SBS M71 营业额/就业/工资（2021–2024）；BaTIS SJ3/SE/SI/SJ1/SJ2。</p>
+<p>主要数字（详见英文稿表 1–17、图 1–21）：</p>
+<ul>
+<li>英国 APS：3120 −23.9%，2121 −14.3%，3114 +214.5%。</li>
+<li>英←印 SJ3 +128%；英←中 SE +52%。</li>
+<li>笼统 TANY：0.000（0.006），N=336；事件研究 2018 年已显著，预趋势失败。</li>
+<li>TNLG Post=2024：0.007<strong>；印度 0.021</strong>*；TANY 对照 0.000。SI、中国 SE、SJ1/SJ2 不显著。J/C/N 的 NLG 也显著——全国生成式浪潮，不是仅 M71。</li>
+<li>TNLG 事件研究 2018–21 不显著。</li>
+<li>M71 营业额 Post-2024×ΔTNLG −0.007<strong>，工资 −0.009</strong><em>，就业 0.000；工地营业额 −0.010</em>**。</li>
+<li>中国 SE 2019–24：低 NLG 目的地 +65%，高 NLG +47%，模式三未随 NLG 再配置。</li>
+<li>印度 ISIC M +13.0%、F +33.0%（2019–2024），与“印度工程师替代英国工程师”的简单叙述不符。中国 ILO F/M 为空。</li>
+</ul>
+<hr />
+<h2>6. 讨论与局限</h2>
+<p>任务自动化文献预告职业内部极化（APS 给出）。Globotics 预告模式一（印度 SJ3 给出，菲、越不给出）。建筑经济预告工地不是 AI 市场（Eurostat F、AIIE、SE 安慰剂同意）。相对企业实验，较新的是<strong>行业账户</strong>：高 NLG 欧洲 2024 年 M71 营业额与工资并未繁荣，就业持平。更快的图不等于更大的咨询业名义规模。</p>
+<p>J/C/N 的 TNLG 也预测 SJ3，限制了贸易冲击的土木专一性。SJ3 宽于 M71；无 SJ312；无 M71 AI 调查；现价；17 个聚类；ILO M71 与 BLS 54133 不可用。APS 2121 不是伙伴国 GDP 冲击。</p>
+<hr />
+<h2>7. 结论</h2>
+<p>在<strong>跨国生成式 AI 冲击</strong>下，本文能测到的高 NLG 欧盟成员国土木工程<strong>行业经济</strong>没有扩张：SBS 显示营业额与工资相对更慢、就业持平，工地类似。动起来的是<strong>印度模式一</strong>（BaTIS SJ3），不是中国模式三，也不是笼统“任何 AI”。英国土木职业按 Eloundou 排序极化，而不是整块崩塌。</p>
+<p>题目的答案是分裂的：<strong>国内 M71 无繁荣；印度模式一有关联，但不是 2121 的因果。</strong> 在 SJ312、M71 AI 调查和双边 ISCO 2142 出现之前，不应把施工、土木工程师与工程服务贸易当成可互换对象。</p>
+<p>文献目录与英文全文 <em>References</em> 相同（Autor 等；Acemoglu and Restrepo；Eloundou 等；Felten 等；Baldwin；Grossman and Rossi-Hansberg；Noy and Zhang；Brynjolfsson 等；Eurostat；OECD–WTO BaTIS；ILO WP 140；GATS 等）。</p>
+<hr />
+<h2>图 1–21（由 <code>data/</code> 官方序列脚本生成）</h2>
+<p><strong>图 1.</strong> Eurostat enterprise AI use, EU-27, NACE M vs NACE F, 2021–2025.</p>
+<p><img alt="图 1" src="figures/figure1_eurostat_M_vs_F.png" /></p>
+<p><strong>图 2.</strong> UK APS employment change, 16 civil-adjacent SOC 2020 unit groups, Dec 2021–Sep 2025.</p>
+<p><img alt="图 2" src="figures/figure2_uk_aps_bundle.png" /></p>
+<p><strong>图 3.</strong> UK BaTIS balanced imports: India SJ3, China SE, India SI.</p>
+<p><img alt="图 3" src="figures/figure3_uk_trade.png" /></p>
+<p><strong>图 4.</strong> Event study, year × importer ΔM TANY, omit 2022.</p>
+<p><img alt="图 4" src="figures/figure4_event_study.png" /></p>
+<p><strong>图 5.</strong> ILO ISIC M vs F employment growth, 2019–2024.</p>
+<p><img alt="图 5" src="figures/figure5_ilo_M_vs_F.png" /></p>
+<p><strong>图 6.</strong> EU-importer sums: Mode-1 SJ3 vs China SE.</p>
+<p><img alt="图 6" src="figures/figure6_eu_mode1_vs_china.png" /></p>
+<p><strong>图 7.</strong> Cross-section: ΔM TANY vs Δ log India SJ3, 2022–24.</p>
+<p><img alt="图 7" src="figures/figure7_cross_section.png" /></p>
+<p><strong>图 8.</strong> Leave-one-importer-out, TANY.</p>
+<p><img alt="图 8" src="figures/figure8_loo.png" /></p>
+<p><strong>图 9.</strong> NACE M71 vs F GVA, 2019–2023, current EUR.</p>
+<p><img alt="图 9" src="figures/figure9_m71_vs_F_gva.png" /></p>
+<p><strong>图 10.</strong> UK APS change versus Eloundou β_human and versus Felten AIOE.</p>
+<p><img alt="图 10" src="figures/figure10_instruments_vs_aps.png" /></p>
+<p><strong>图 11.</strong> Felten AIIE, US construction NAICS 23.</p>
+<p><img alt="图 11" src="figures/figure11_aiie_construction.png" /></p>
+<p><strong>图 12.</strong> EU-27 AI types: M NLG vs ML vs text mining vs construction NLG.</p>
+<p><img alt="图 12" src="figures/figure12_tnlg_vs_tml.png" /></p>
+<p><strong>图 13.</strong> 2024 NLG use, NACE M versus F, by country.</p>
+<p><img alt="图 13" src="figures/figure13_tnlg_2024_MF.png" /></p>
+<p><strong>图 14.</strong> Event study, year × ΔM TNLG 2023–24, omit 2022.</p>
+<p><img alt="图 14" src="figures/figure14_event_study_tnlg.png" /></p>
+<p><strong>图 15.</strong> ΔM TNLG 2023–24 vs Δ log India SJ3, 2022–24.</p>
+<p><img alt="图 15" src="figures/figure15_cross_section_tnlg.png" /></p>
+<p><strong>图 16.</strong> EU-27 NLG by NACE M, J, C, N, F.</p>
+<p><img alt="图 16" src="figures/figure16_tnlg_by_nace.png" /></p>
+<p><strong>图 17.</strong> SBS net turnover growth 2021–24, M71 vs F.</p>
+<p><img alt="图 17" src="figures/figure17_sbs_turnover_m71_vs_F.png" /></p>
+<p><strong>图 18.</strong> SBS employment growth 2021–24, M71 vs F.</p>
+<p><img alt="图 18" src="figures/figure18_sbs_emp_m71_vs_F.png" /></p>
+<p><strong>图 19.</strong> ΔTNLG 2023–24 vs M71 turnover change 2023–24.</p>
+<p><img alt="图 19" src="figures/figure19_tnlg_vs_m71_turnover.png" /></p>
+<p><strong>图 20.</strong> M71 net turnover levels, selected members.</p>
+<p><img alt="图 20" src="figures/figure20_m71_turnover_levels.png" /></p>
+<p><strong>图 21.</strong> US CES NAICS 54 only (not engineering 54133).</p>
+<p><img alt="图 21" src="figures/figure21_bls_naics54.png" /></p></body></html>

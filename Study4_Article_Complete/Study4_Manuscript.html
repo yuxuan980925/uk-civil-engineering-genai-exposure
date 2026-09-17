@@ -1,0 +1,2199 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>Study4_Manuscript</title><style>
+body { font-family: Georgia, "Noto Serif CJK SC", serif; max-width: 52rem; margin: 2rem auto; padding: 0 1.2rem; line-height: 1.55; color: #111; }
+img { max-width: 100%; height: auto; display: block; margin: 0.6rem 0 1.4rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 1rem 0 1.6rem; }
+th, td { border: 1px solid #ccc; padding: 0.35rem 0.5rem; text-align: left; }
+th { background: #f4f4f4; }
+code { font-size: 0.92em; }
+h1, h2, h3 { line-height: 1.25; }
+nav a { margin-right: 1rem; }
+</style></head><body><nav>
+<a href="index.html">Index</a>
+<a href="Study4_Manuscript.html">English article</a>
+<a href="CN_full_article.html">Chinese</a>
+<a href="FIGURES.html">Figures 1–21</a>
+<a href="tables_for_article.html">Tables</a>
+</nav><hr>
+<h1>How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack</h1>
+<p>Yuxuan Chai · University of Strathclyde · <code>yuxuanchai98@outlook.com</code><br />
+Working paper · 17 September 2026</p>
+<p>This article uses <strong>only retrieved official series</strong>. No occupation, M71, or GDP cell is interpolated. It is <strong>not</strong> a reuse of the IJCM large-language-model occupation panel. Exposure is Eloundou et al.; UK employment is ONS APS (status A); the preferred shock is Eurostat <code>E_AI_TNLG</code>; industry outcomes are Eurostat NACE M71; trade is OECD–WTO BaTIS.</p>
+<p><strong>Claim boundary.</strong> A decline in UK SOC 2121 does <strong>not</strong> identify another country’s civil-engineer counts or GDP. ILO does not publish bilateral ISCO 2142.</p>
+<hr />
+<h2>Abstract</h2>
+<p>How does the <em>civil engineering industry economy</em> move when generative AI arrives, and does the movement stay inside one country? This paper answers with a civil-specific stack that other AI-labour papers do not combine: (i) task exposure <em>inside</em> civil occupations; (ii) a <strong>generative</strong> adoption shock (Eurostat natural-language generation, E_AI_TNLG), not generic “any AI”; (iii) NACE <strong>M71</strong> architectural and engineering activities as the industry, distinct from on-site construction (NACE F); and (iv) GATS <strong>Mode 1</strong> versus <strong>Mode 3</strong> trade.</p>
+<p>Occupation data already disagree with a single “civil engineers collapse” story. Eloundou et al.’s human GPT-exposure score is 0.52 for architectural and civil drafters, 0.477 for civil engineering technologists, and 0.375 for civil engineers. In the UK Annual Population Survey, December 2021–September 2025, CAD/drawing technicians (SOC 3120) fell 23.9%, civil engineers (2121) fell 14.3%, and building and civil technicians (3114) rose 214.5%.</p>
+<p>Industry and trade data disagree with a domestic boom. EU-27 professional NLG use jumped from 4.55% of enterprises in 2023 to 11.51% in 2024 and 17.74% in 2025; construction NLG stayed at 0.58, 2.42 and 3.25. On 17 EU members, post-2024 × ΔTNLG (2023–24) is <strong>−0.007</strong> (s.e. 0.003) on log M71 net turnover and <strong>−0.009</strong> on log wages; M71 employment is a precise null. Construction turnover is also negative. By contrast, UK imports of BaTIS SJ3 (technical, trade-related and other business services) from India rose from USD 2.19 billion (2019) to 4.98 billion (2024). In the EU panel, post-2024 × ΔTNLG on log Mode-1 SJ3 is 0.007<strong>; the India corridor is 0.021</strong>*. Generic any-AI (E_AI_TANY) is 0.000 (0.006). Chinese Mode-3 construction services did not reallocate toward high-NLG importers.</p>
+<p>The civil engineering <em>industry</em> in high-NLG Europe did not expand with the shock. The corridor that moved is Mode-1 engineering-adjacent services from India, not domestic M71 output and not China Mode 3.</p>
+<p><strong>Keywords:</strong> generative AI; civil engineering; NACE M71; Mode 1; BaTIS; Eurostat; cross-country.</p>
+<hr />
+<h2>1. Introduction</h2>
+<p>Civil engineering sits at an awkward joint in the AI-labour literature. On the occupation side, drawings, specifications and reports look like the text-and-code tasks that large language models handle (Eloundou, Manning, Mishkin and Rock 2023, 2024; Felten, Raj and Seamans 2021). On the industry side, most of the sector’s <em>output</em> is still delivered as buildings, roads and water systems—activities whose establishments barely use AI in the Eurostat enterprise survey. Treating “construction” and “civil engineers” as one object therefore mixes two markets.</p>
+<p>The research question is industry-level and cross-country: <strong>when generative AI is adopted in country A, how does the civil engineering industry economy change—in A’s own architectural and engineering firms (NACE M71), and in engineering-related trade with country B?</strong> The paper does not claim that UK headcount in SOC 2121 causes Indian GDP.</p>
+<p>Three design choices follow from the literature reviewed in Section 2. First, the shock must be <em>generative</em>. Eurostat’s catch-all indicator E_AI_TANY mixes machine learning that existed before ChatGPT with language generation that did not. The preferred intensity is E_AI_TNLG in NACE M, 2024 minus 2023. Second, the industry must be <em>M71</em>, not ISIC F construction and not all of professional services (NACE M). Third, cross-border delivery must respect GATS modes (WTO 1994; Francois and Hoekman 2010): India, the Philippines and Viet Nam as Mode-1 candidates for drawings and calculations; China as Mode-3 construction services (BaTIS SE).</p>
+<p>The contribution is empirical stacking, not a new theory of AI. Relative to occupation-exposure maps (Felten et al. 2021; Webb 2020; Eloundou et al. 2024; ILO and NASK 2023) the paper adds <em>realised</em> adoption and <em>industry</em> accounts. Relative to firm-level generative-AI experiments (Noy and Zhang 2023; Brynjolfsson, Li and Raymond 2025; Dell’Acqua et al. 2023) it adds a 17-country industry and trade panel. Relative to offshoring theory (Blinder 2006; Grossman and Rossi-Hansberg 2008; Baldwin 2016, 2019) it adds a civil-specific mode split and a placebo on computer services.</p>
+<p>Replication files are in <code>Study4_Article_Complete/</code> (open <code>Study4_Manuscript.md</code>, <code>CN_full_article.md</code>, <code>FIGURES.md</code>, and <code>tables_for_article.md</code> in the editor — not the zip). Figures, tables, and official data are in <code>figures/</code>, <code>tables/</code>, and <code>data/</code> in that folder. Missing series are catalogued in <code>DATA_INVENTORY.md</code>; their absence is part of the claim boundary.</p>
+<hr />
+<h2>2. Literature review</h2>
+<h3>2.1 Task-based technical change, not occupation disappearance</h3>
+<p>Autor, Levy and Murnane (2003) shifted empirical work from “which occupations computers replace” to “which <em>tasks</em> are routine.” Autor (2015) emphasised that automation often raises the value of complementary non-routine work. Acemoglu and Restrepo (2018, 2019, 2020) distinguish displacement from reinstatement: new tasks can offset lost ones, so industry employment need not fall when a technology arrives. That is the right prior for civil engineering. Draughting and clause-drafting are more exposed than site supervision and statutory sign-off; a fall in CAD technicians can coexist with stable or rising technician grades that interface with software (Section 4.1).</p>
+<p>Acemoglu, Autor, Hazell and Restrepo (2022) find, for the United States before ChatGPT, limited employment effects of AI-related vacancies outside a few exposed occupations. The implication for this paper is that <strong>occupation exposure is not industry incidence</strong>. Felten industry scores (AIIE) for NAICS 23 construction are mostly negative (Table 12c, Figure 11), matching Eurostat: construction enterprises rarely use AI. The professional M71 story cannot be read off construction-robot papers.</p>
+<h3>2.2 Measuring AI exposure: AIOE, Webb, Eloundou, ILO–NASK</h3>
+<p>Felten, Raj and Seamans (2018, 2021) overlap O<em>NET abilities with AI progress (AIOE) and build industry scores (AIIE). Webb (2020) overlaps patents with occupation task text. Eloundou et al. (2023, 2024) score O</em>NET tasks for GPT exposure with humans and with models; the occupation-level <code>occ_level.csv</code> is the exposure file used here. ILO and NASK (2023) apply a similar logic to ISCO-08: civil engineers (2142) are classified <strong>Not Exposed</strong>, with a mean score of 0.30 in their published summary—licensed judgement and site coordination dominate.</p>
+<p>These instruments <strong>do not rank civil occupations the same way</strong>. In the files already in <code>Data_IJCM/04_external_indices/</code>, Felten AIOE (2021, pre-ChatGPT applications) scores civil engineers at 1.283, above drafters (0.923) and civil engineering technicians (0.932). Eloundou β_human, ONS automation probabilities (ONS 2019) and an earlier LLM panel reverse that ranking for CAD versus licensed engineers (Table 12). UK APS 2021–25 follows the <em>generative</em> ranking for CAD versus 2121, not 2021 AIOE. Technicians are high on Eloundou and ONS automation but <em>rose</em> 214.5%—exposure is not incidence (Autor 2015).</p>
+<p>Goldfarb, Taska and Teodoridis (2023) and related vacancy studies show that AI skill demand is concentrated in a few firms and occupations. That cautions against using a national Copilot share as a civil-industry shock. Microsoft’s 2025–26 AI user-share snapshot is therefore kept as context, not as the 2015–24 DiD intensity (years do not overlap BaTIS).</p>
+<h3>2.3 Generative AI as a labour-market shock</h3>
+<p>The 2022–23 arrival of ChatGPT created a dated shock that earlier AI indices lack. Noy and Zhang (2023) find large productivity gains in professional writing. Peng, Kalliamvakou, Cihon and Demirer (2023) and related software studies find faster coding with Copilot. Brynjolfsson, Li and Raymond (2025) document customer-support productivity gains concentrated among less experienced workers. Dell’Acqua et al. (2023) describe a “jagged frontier”: AI helps some knowledge tasks and fails on others inside the same job. Hui, Reshef and Zhou (2024) study freelance coding after Copilot.</p>
+<p>Two lessons matter for civil engineering. First, <strong>text and drawing tasks</strong> (specifications, CAD annotation, quantity take-off assistance) sit on the helped side of the jagged frontier; <strong>stamp, liability and site</strong> sit on the other. Second, <strong>firm experiments are not industry accounts</strong>. A draughtsman who finishes a drawing faster may reduce billed hours (turnover) without reducing headcount, which is exactly the SBS pattern in Section 4.4: wages and turnover grow more slowly where NLG jumped; employment does not.</p>
+<p>Agrawal, Gans and Goldfarb (2018, 2022) frame AI as cheaper prediction. Korinek and Stiglitz (2021) and Acemoglu (2025, policy writing on complementary AI) warn that the distribution of gains depends on whether AI automates or augments. This paper does not estimate welfare. It asks which <em>measured</em> industry aggregates moved.</p>
+<h3>2.4 Offshoring, tradable tasks, and GATS modes</h3>
+<p>Blinder (2006) argued that whatever can be delivered down a wire is potentially offshorable. Grossman and Rossi-Hansberg (2008) model trade in <em>tasks</em>. Baldwin (2016, 2019) emphasises globotics: digital technology unbundles the professional service from the office. GATS (WTO 1994) still classifies supply as Mode 1 (cross-border), Mode 2 (consumption abroad), Mode 3 (commercial presence) and Mode 4 (presence of natural persons). Francois and Hoekman (2010) and Loungani, Mishra, Papageorgiou and Wang (2017) review why services trade data lag goods data.</p>
+<p>For civil engineering the mode split is not a footnote. <strong>Drawings and calculations</strong> can move as Mode 1 from India. <strong>Contracting on a site</strong> is Mode 3 (or goods-plus-construction). Mixing them in “construction AI” regressions is a specification error. OECD–WTO BaTIS balanced statistics (Fortanier, Liberatore, Maurer and Pilgrim 2017; OECD–WTO documentation) provide bilateral EBOPS headings. The finest published heading that still covers engineering-adjacent professional work in this pull is <strong>SJ3</strong> (technical, trade-related and other business services). <strong>SJ311/SJ312</strong> (architectural and engineering services) are not in BaTIS (HTTP 404). SJ3 is therefore a ceiling, not a civil invoice.</p>
+<p>Computer services (SI) are the natural digital placebo: if the result is “any remote professional work,” SI should move with TNLG; it does not (Table 13). Consulting (SJ2) and R&amp;D (SJ1) are neighbouring professional placebos.</p>
+<h3>2.5 Construction economics versus professional engineering</h3>
+<p>Construction economics has long treated the contractor industry as project-based, local and weakly digitised (Gann and Salter 2000; Winch 2010). Building information modelling (Eastman, Teicholz, Sacks and Liston 2011; Sacks, Eastman, Lee and Teicholz 2018) digitises <em>design and coordination</em>, which live in NACE M71 and related consultancies, not necessarily in NACE F. Whyte and colleagues on digital delivery similarly locate the information model in professional organisations.</p>
+<p>Eurostat confirms the split. In 2024, EU-27 E_AI_TANY was 42-ish percent in high-M countries’ professional services versus single digits on construction sites (Table 3). NLG is even more skewed (Table 15, Figures 12–13, 16). Felten AIIE for highway and heavy-civil contractors is negative. <strong>On-site construction is the placebo industry, not the treatment industry.</strong></p>
+<h3>2.6 What is missing in existing AI–construction papers</h3>
+<p>Most AI-and-construction papers are either (a) occupation checklists without trade or M71 accounts, or (b) case studies of BIM/ChatGPT on a project. Macro AI-and-growth papers (e.g. cross-country regressions of GDP on AI patents or internet use) do not isolate civil engineering. Vacancy studies do not observe Mode-1 SJ3. This paper’s gap is therefore: <strong>a dated generative shock × M71 industry economy × mode-split trade × placebos</strong>, with an explicit list of series that statistical agencies do not publish (M71 AI survey; bilateral ISCO 2142; BaTIS SJ312; ILO M71 for China/India).</p>
+<hr />
+<h2>3. Data</h2>
+<p>All files are in <code>data/</code> of the replication package. Retrieval dates are in <code>DATA_SOURCES.md</code>. Table A in the inventory file records failed pulls (OWID ChatGPT CSVs, IMF AIPI empty JSON, OECD ICT_BUS 404, ILO M71 404). Failed pulls are not filled.</p>
+<h3>3.1 Occupation exposure and UK employment</h3>
+<p>Eloundou occupation scores: <code>eloundou_occ_level.csv</code>. Matches used: SOC 2121 → O*NET 17-2051; 3114 → 17-3022; 3120 → 17-3011 (Table 1). Other APS civil-adjacent unit groups are reported unmatched (Table 2).</p>
+<p>ONS APS SOC 2020 employment, status A only, December 2021–September 2025, from the extract already in <code>Data_IJCM/04_external_indices/</code>. Felten AIOE/AIIE workbooks and ONS automation probabilities are copied to <code>data/from_legacy_study4/</code> and used as <strong>additional instruments</strong> (Table 12, Figures 10–11), not as the DiD shock.</p>
+<h3>3.2 AI shock</h3>
+<p>Eurostat <code>isoc_eb_ain2</code>, enterprises with 10+ persons, percent using AI:</p>
+<ul>
+<li>E_AI_TANY, NACE F and M: generic comparison (<code>eurostat_ai_raw.csv</code>).</li>
+<li>E_AI_TNLG, TML, TTM, TIR, TPVSG, NACE F and M: generative and technology placebos (<code>eurostat_ai_genai_types.csv</code>). TPVSG (pictures/video/sound) exists for <strong>2025 only</strong>.</li>
+<li>Same indicators, NACE C, J, N: sector placebos (<code>eurostat_ai_nace_placebos.csv</code>). NACE K (finance) is empty. <strong>NACE M71 is not in the survey</strong> (HTTP 400). NACE M is the finest cell that contains M71 firms.</li>
+</ul>
+<p><strong>Preferred shock:</strong> ΔTNLG in NACE M, 2024 minus 2023. EU-27 M: 2.60 (2021), 4.55 (2023), 11.51 (2024), 17.74 (2025). Construction: 0.99, 0.58, 2.42, 3.25.</p>
+<h3>3.3 Civil industry economy</h3>
+<ul>
+<li>National accounts <code>nama_10_a64</code> / <code>_e</code>: GVA, employment, compensation (D1), output (P1) for M71, F, M. UK M71 GVA/D1 stop in <strong>2018</strong>.</li>
+<li>Structural business statistics <code>sbs_ovw_act</code> and <code>sbs_sc_ovw</code>: M71 vs F vs M, 2021–<strong>2024</strong>, net turnover, persons employed, wages, value added, GOS. This is the industry-economy file that overlaps the 2024 NLG year.</li>
+<li>ILOSTAT employment ISIC F vs M (<code>ilo_emp_FM.csv</code>). China is empty. ISIC M71 is not published (404).</li>
+<li>BLS CES: public API returned NAICS <strong>54</strong> (all professional and technical), not 54133. Figure 21 is labelled as too broad.</li>
+</ul>
+<p>Values are <strong>current prices</strong> where applicable. Nominal growth is not a GenAI effect; the DiD asks whether high-NLG countries grew <em>faster</em>.</p>
+<h3>3.4 Trade</h3>
+<p>OECD–WTO BaTIS, adjustment B, USD million, 2015–2024: SJ3, SE, SI in <code>batis_civil_related.csv</code>; SJ1 and SJ2 in <code>batis_SJ1_SJ2.csv</code>. Partners: IND, PHL, VNM (Mode 1); CHN (Mode 3 SE).</p>
+<p>World Bank GDP and sector shares are background only (<code>wb_*.json</code>). Construction value-added indicator <code>NV.IND.CONS.ZS</code> is invalid (API 120) and is not invented.</p>
+<hr />
+<h2>4. Empirical design</h2>
+<h3>4.1 Trade equation</h3>
+<p>For EU importers (i), Mode-1 partners (j \in {\text{IND}, \text{PHL}, \text{VNM}}), (t = 2018,\ldots,2024):</p>
+<p>[<br />
+\log M^{SJ3}<em>{ijt}=\alpha_i+\delta_t+\gamma_j+\beta\bigl(\mathbf{1}[t\ge t_0]\times \Delta TNLG_i\bigr)+\varepsilon</em>{ijt}.<br />
+]</p>
+<p>Standard errors are clustered by importer after an iterative within transformation (importer, year, partner). (t_0=2023) is reported; (t_0=2024) matches the year BaTIS still covers after the NLG jump. Portugal has TNLG in 2024 but missing TANY M 2024, so TNLG panels have 17 importers ((N=357)) and TANY panels 16 ((N=336)).</p>
+<p>Placebos replace SJ3 with SI, SJ1, SJ2, SE from China, SJ3 from China; or replace ΔTNLG-M with ΔTNLG-F, ΔTML, ΔTTM, ΔTIR, ΔTNLG in J/C/N. Generic TANY is the horse-race comparison, not the preferred shock. Event studies interact year dummies with ΔTNLG (or ΔTANY), omitting 2022.</p>
+<h3>4.2 Industry-economy equation</h3>
+<p>[<br />
+\log Y^{M71}<em>{it}=\alpha_i+\delta_t+\beta\bigl(\mathbf{1}[t\ge 2024]\times \Delta TNLG_i\bigr)+u</em>{it},<br />
+]</p>
+<p>(Y \in {\text{net turnover, employment, wages, value added, GOS}}), SBS 2021–2024, 17 countries ((N=68)). Construction F and all-professional M are placebos. National-accounts GVA/D1/P1 use post-2023 because those series largely end in 2023.</p>
+<h3>4.3 What is not identified</h3>
+<p>UK APS 2121 is an <em>outcome</em> in one labour market, not an instrument for Indian GDP. Reverse causality and common trends would invalidate that regression even if ILO published bilateral engineer counts—which it does not.</p>
+<hr />
+<h2>5. Results</h2>
+<h3>5.1 Polarisation inside civil occupations (Figure 2, Tables 1–2, 12)</h3>
+<p>Among 16 APS civil-adjacent unit groups, the largest declines are quality-control and planning engineers (−25.3%), CAD/drawing technicians (−23.9%), chartered surveyors (−21.7%) and civil engineers (−14.3%). The largest increase is building and civil engineering technicians (+214.5%). CAD is the high-Eloundou match (0.52) and contracted more than civil engineers (0.375). That pattern matches task-based technical change (Autor et al. 2003; Eloundou et al. 2024) and the jagged-frontier view (Dell’Acqua et al. 2023), not a uniform occupation collapse.</p>
+<p>Felten AIOE ranks the other way for engineers versus drafters (Table 12, Figure 10). The 2021 ability-based index is a poor description of 2022–25 generative-text disruption inside civil offices.</p>
+<h3>5.2 Trade corridors (Figure 3, Table 4)</h3>
+<p>UK←India SJ3 +128%; UK←China SE +52%; UK←India SI +113%. Germany←Poland SJ3 +54% (nearshore). US←India SJ3 only +8%. Four overlapping years of UK log 2121 and log India SJ3 correlate at −0.89 ((n=4)). The correlation is <strong>descriptive</strong>. It does not identify 2121 as the cause of Indian exports.</p>
+<h3>5.3 Generic any-AI is the wrong shock (Figures 4, 7, 8; Tables 5, 6, 10)</h3>
+<p>EU-16 post × ΔM TANY 2021–24 on log SJ3 is <strong>0.000 (0.006)</strong>, (N=336). An eight-country subsample is 0.019**<em> and does not survive expansion (Table 5, rows 17–18). Event-study year × ΔTANY is already 0.017 ((p=0.049)) in 2018 versus 2022 (Table 6)—a failed pre-trend. Leave-one-out stays near zero except dropping Sweden (0.010</em>). Mixing pre-ChatGPT machine learning into the intensity hides the generative episode.</p>
+<h3>5.4 Preferred shock: generative NLG and Mode-1 SJ3 (Figures 12–16; Tables 13–15)</h3>
+<p>EU-27 professional NLG is the dated shock (Figure 12). 2024 M TNLG leaders: Denmark 34.06, Finland 30.02, Sweden 29.61, Netherlands 22.01; France 3.90; Romania 3.73 (Figure 13). ICT (J) is higher still (Figure 16).</p>
+<p>On 17 importers × India/Philippines/Viet Nam (Table 13):</p>
+<ul>
+<li>Post ≥ 2023 × ΔM TNLG 2023–24: 0.009 (0.005), (p=0.108), (N=357).</li>
+<li>Post = 2024 only: 0.007** (0.003).</li>
+<li>India only: 0.021***. Philippines and Viet Nam are not.</li>
+<li>Horse race versus machine learning: TNLG 0.015**<em>; TML −0.026</em>.</li>
+<li>Text mining and image recognition: 0.004 and −0.010, both null.</li>
+<li>SI, China SE, China SJ3, SJ1, SJ2: all null.</li>
+<li>Construction-enterprise NLG: 0.015 (0.020), null.</li>
+<li>NACE J/C/N TNLG: 0.009<strong>, 0.017</strong>, 0.015<strong>. The trade association is a </strong>national GenAI wave**, not an M71-only shock.</li>
+<li>Cross-section Δ log India SJ3 2022–24 on ΔTNLG: 0.017***, (N=17).</li>
+<li>Event study (Table 14): 2018–21 insignificant (unlike TANY); 2023 0.016 ((p=0.041)); 2024 0.015 ((p=0.072)).</li>
+</ul>
+<p>This is consistent with Baldwin’s globotics and Grossman–Rossi-Hansberg task trade <strong>for India Mode 1</strong>, not for every partner and not for construction services.</p>
+<h3>5.5 Domestic M71 industry economy (Figures 9, 17–20; Tables 8–9, 16–17)</h3>
+<p>Nominal M71 turnover rose in almost every member from 2021 to 2024 (Romania +78.9%, Greece +74.7%, Germany +16.5%, Sweden +1.8%; Table 17, Figure 17). That recovery-plus-inflation path is not GenAI.</p>
+<p>The DiD (Table 16) asks whether it rose <em>faster</em> where NLG jumped:</p>
+<ul>
+<li>log M71 turnover, post-2024 × ΔTNLG: −0.007** (0.003), (N=68)</li>
+<li>log wages: −0.009***</li>
+<li>log value added: −0.006***</li>
+<li>log employment: −0.000 (0.002)</li>
+<li>log F construction turnover: −0.010***</li>
+<li>log all-professional M turnover: −0.005**</li>
+<li>nama compensation and output through 2023: about −0.009**, with construction more negative</li>
+</ul>
+<p>Jobs in M71 did not fall with the NLG jump. Turnover and wage bills grew more slowly—the pattern a task-automation model allows when hours per drawing fall (Acemoglu and Restrepo 2019; Noy and Zhang 2023). Because construction looks similar, the domestic result is <strong>not</strong> a unique civil-consultancy tax; it is slower nominal growth in several high-NLG (often Nordic) economies, including on site.</p>
+<p>China Mode-3 SE, 2019–24 sums: low-TNLG EU destinations USD 572 → 946 million (+65%); high-TNLG destinations 680 → 1,003 (+47%). Mode 3 did not follow the NLG map.</p>
+<h3>5.6 Exporter labour markets (Figure 5, Table 7)</h3>
+<p>Philippines ISIC M +39.9% vs F +12.8%; Viet Nam M +28.5% vs F −1.4%; India M +13.0% vs F +33.0% (2019–2024). India expanded construction employment faster than professional services—the opposite of a simple “India engineers replace UK engineers” account. China is missing from the ILO F/M pull. ISIC M71 is unpublished.</p>
+<h3>5.7 Case notes</h3>
+<p><strong>United Kingdom–India.</strong> No post-Brexit Eurostat M AI. UK facts are APS polarisation plus BaTIS SJ3. They are not Indian GDP on 2121.</p>
+<p><strong>China.</strong> Mode 3, not Mode 1. Microsoft Copilot shares undercount domestic models; they are not used as the shock.</p>
+<p><strong>Germany–Poland.</strong> Nearshore SJ3 can rise when consumer Copilot shares look similar; Eurostat M and TNLG still differ.</p>
+<hr />
+<h2>6. Discussion</h2>
+<p>Three literatures predicted pieces of this pattern; none predicted the stack.</p>
+<p>Task-based automation (Autor et al. 2003; Eloundou et al. 2024) predicted polarisation <em>inside</em> civil occupations. UK APS delivers that.</p>
+<p>Globotics and task trade (Baldwin 2019; Grossman and Rossi-Hansberg 2008) predicted Mode-1 professional flows where the wire is cheap. India SJ3 delivers a positive association with TNLG; the Philippines and Viet Nam do not, so the prediction is corridor-specific, not “South-East Asia.”</p>
+<p>Construction economics (Gann and Salter 2000; Eastman et al. 2011) predicted that the <em>site</em> would not be the AI market. Eurostat F versus M, Felten AIIE, and the SE placebo all agree.</p>
+<p>The result that is newest relative to firm experiments is the <strong>industry account</strong>: M71 turnover and wages do not boom in high-NLG Europe in 2024; employment is flat. Faster drawings need not mean a larger consultancy industry in current euros. If anything, high-NLG countries show slower nominal growth—shared with construction—so one should not market the coefficient as “AI destroyed civil consultancies.” It is a relative slowdown in a short panel, current prices, 17 clusters.</p>
+<p>J/C/N TNLG also predicting SJ3 is a limitation for civil-specificity of the <em>trade</em> shock: the paper reports a national generative wave correlated with India Mode 1, with construction and computer-service placebos quiet, <strong>not</strong> a proven M71 outsourcing LATE.</p>
+<hr />
+<h2>7. Limitations</h2>
+<p>SJ3 is broader than M71 invoices. SJ312 does not exist in BaTIS. M71 is not in the AI survey. SBS and nama are current prices. Seventeen importer clusters. TNLG in J/C/N also predicts SJ3. Construction SBS turnover is also negative. GVA ends in 2023; SBS 2024 is short. ILO M71 and BLS 54133 are unpublished or not returned. APS has sampling error. BaTIS ends 2024. No bilateral civil-engineer census. OWID, IMF AIPI and OECD ICT AI series were not retrieveable here.</p>
+<hr />
+<h2>8. Conclusion</h2>
+<p>Under a <strong>cross-country generative-AI shock</strong>, the civil engineering <em>industry economy</em> did not expand in the high-NLG EU members that this paper can measure. Eurostat SBS 2021–24 shows slower M71 turnover and wages where professional NLG jumped, flat employment, and a similar pattern on construction sites. What did move is <strong>Mode-1 engineering-adjacent trade from India</strong> (BaTIS SJ3), not China Mode-3 construction services, and not generic “any AI.” Inside the United Kingdom, civil occupations polarised along Eloundou’s ranking rather than collapsing as one block.</p>
+<p>The title question—how the civil engineering industry economy changes under AI in a transnational setting—therefore has a split answer: <strong>domestic M71, no boom; India Mode 1, yes, as association not as APS-2121 causality.</strong> Future work needs SJ312, an M71 AI survey, and bilateral ISCO 2142. Until those exist, papers should not treat construction, civil engineers, and engineering services trade as interchangeable.</p>
+<hr />
+<h2>References</h2>
+<p>Acemoglu, D., &amp; Restrepo, P. (2018). The race between man and machine: Implications of technology for growth, factor shares, and employment. <em>American Economic Review</em>, 108(6), 1488–1542.</p>
+<p>Acemoglu, D., &amp; Restrepo, P. (2019). Automation and new tasks: How technology displaces and reinstates labor. <em>Journal of Economic Perspectives</em>, 33(2), 3–30.</p>
+<p>Acemoglu, D., &amp; Restrepo, P. (2020). Robots and jobs: Evidence from US labor markets. <em>Journal of Political Economy</em>, 128(6), 2188–2244.</p>
+<p>Acemoglu, D., Autor, D., Hazell, J., &amp; Restrepo, P. (2022). Artificial intelligence and jobs: Evidence from online vacancies. <em>Journal of Labor Economics</em>, 40(S1), S293–S340.</p>
+<p>Agrawal, A., Gans, J., &amp; Goldfarb, A. (2018). <em>Prediction machines: The simple economics of artificial intelligence</em>. Harvard Business Review Press.</p>
+<p>Agrawal, A., Gans, J., &amp; Goldfarb, A. (2022). <em>Power and prediction: The disruptive economics of artificial intelligence</em>. Harvard Business Review Press.</p>
+<p>Autor, D. H. (2015). Why are there still so many jobs? The history and future of workplace automation. <em>Journal of Economic Perspectives</em>, 29(3), 3–30.</p>
+<p>Autor, D. H., Levy, F., &amp; Murnane, R. J. (2003). The skill content of recent technological change: An empirical exploration. <em>Quarterly Journal of Economics</em>, 118(4), 1279–1333.</p>
+<p>Autor, D., Mindell, D., &amp; Reynolds, E. (2022). <em>The work of the future: Building better jobs in an age of intelligent machines</em>. MIT Press.</p>
+<p>Baldwin, R. (2016). <em>The great convergence: Information technology and the new globalization</em>. Harvard University Press.</p>
+<p>Baldwin, R. (2019). <em>The globotics upheaval: Globalization, robotics, and the future of work</em>. Oxford University Press.</p>
+<p>Blinder, A. S. (2006). Offshoring: The next industrial revolution? <em>Foreign Affairs</em>, 85(2), 113–128.</p>
+<p>Brynjolfsson, E., Li, D., &amp; Raymond, L. (2025). Generative AI at work. <em>Quarterly Journal of Economics</em>, 140(2), 889–942.</p>
+<p>Dell’Acqua, F., McFowland, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K., Rajendran, S., Krayer, L., Candelon, F., &amp; Lakhani, K. R. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. Harvard Business School Working Paper 24-013.</p>
+<p>Eastman, C., Teicholz, P., Sacks, R., &amp; Liston, K. (2011). <em>BIM handbook: A guide to building information modeling</em> (2nd ed.). Wiley.</p>
+<p>Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2023). GPTs are GPTs: An early look at the labor market impact potential of large language models. arXiv:2303.10130.</p>
+<p>Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of LLMs. <em>Science</em>, 384(6702), 1306–1308.</p>
+<p>Eurostat. (2024–2026). ICT usage in enterprises: Artificial intelligence (<code>isoc_eb_ain2</code>); national accounts (<code>nama_10_a64</code>); structural business statistics (<code>sbs_ovw_act</code>, <code>sbs_sc_ovw</code>). Luxembourg: European Commission.</p>
+<p>Felten, E., Raj, M., &amp; Seamans, R. (2018). A method to link advances in artificial intelligence to occupational abilities. <em>AEA Papers and Proceedings</em>, 108, 54–57.</p>
+<p>Felten, E., Raj, M., &amp; Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. <em>Strategic Management Journal</em>, 42(12), 2195–2217.</p>
+<p>Fortanier, F., Liberatore, A., Maurer, A., &amp; Pilgrim, G. (2017). The OECD–WTO Balanced Trade in Services database. OECD/WTO.</p>
+<p>Francois, J., &amp; Hoekman, B. (2010). Services trade and policy. <em>Journal of Economic Literature</em>, 48(3), 642–692.</p>
+<p>Gann, D. M., &amp; Salter, A. J. (2000). Innovation in project-based, service-enhanced firms: The construction of complex products and systems. <em>Research Policy</em>, 29(7–8), 955–972.</p>
+<p>Goldfarb, A., Taska, B., &amp; Teodoridis, F. (2023). Could machine learning be a general purpose technology? A comparison of emerging methods and technology categories. <em>Research Policy</em> (related vacancy/AI-skill work).</p>
+<p>Grossman, G. M., &amp; Rossi-Hansberg, E. (2008). Trading tasks: A simple theory of offshoring. <em>American Economic Review</em>, 98(5), 1978–1997.</p>
+<p>Hui, X., Reshef, O., &amp; Zhou, L. (2024). The short-term effects of generative artificial intelligence on employment: Evidence from an online labor market. <em>Organization Science</em>.</p>
+<p>ILO &amp; NASK. (2023). <em>Generative AI and jobs: A global analysis of potential effects on job quantity and quality</em> (ILO Working Paper 140). Geneva: International Labour Organization.</p>
+<p>Korinek, A., &amp; Stiglitz, J. E. (2021). Artificial intelligence, globalization, and strategies for economic development. NBER Working Paper 28453.</p>
+<p>Loungani, P., Mishra, S., Papageorgiou, C., &amp; Wang, K. (2017). World trade in services: Evidence from a new dataset. IMF Working Paper 17/77.</p>
+<p>Microsoft. (2026). <em>AI Diffusion Report</em>, Q1 2026 update (user-share snapshot; not used as 2015–24 shock).</p>
+<p>Noy, S., &amp; Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. <em>Science</em>, 381(6654), 187–192.</p>
+<p>OECD &amp; WTO. BaTIS: Balanced Trade in Services dataset, BPM6, adjustment B.</p>
+<p>Office for National Statistics. (2019). Which occupations are at highest risk of being automated? (Table 9, SOC 2010). APS SOC 2020 employment extracts as used in this repository.</p>
+<p>Peng, S., Kalliamvakou, E., Cihon, P., &amp; Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590.</p>
+<p>Sacks, R., Eastman, C., Lee, G., &amp; Teicholz, P. (2018). <em>BIM handbook</em> (3rd ed.). Wiley.</p>
+<p>Webb, M. (2020). The impact of artificial intelligence on the labor market. Stanford mimeo.</p>
+<p>Winch, G. M. (2010). <em>Managing construction projects</em> (2nd ed.). Wiley-Blackwell.</p>
+<p>WTO. (1994). <em>General Agreement on Trade in Services</em>. Geneva: World Trade Organization.</p>
+<hr />
+<h2>Figure captions</h2>
+<p>PNG files live in <code>figures/</code> and are generated from <code>../data/</code>.</p>
+<p><strong>Figure 1.</strong> Eurostat enterprise AI use, EU-27, NACE M vs NACE F, 2021–2025.</p>
+<p><img alt="Figure 1" src="figures/figure1_eurostat_M_vs_F.png" /></p>
+<p><strong>Figure 2.</strong> UK APS employment change, 16 civil-adjacent SOC 2020 unit groups, Dec 2021–Sep 2025.</p>
+<p><img alt="Figure 2" src="figures/figure2_uk_aps_bundle.png" /></p>
+<p><strong>Figure 3.</strong> UK BaTIS balanced imports: India SJ3, China SE, India SI.</p>
+<p><img alt="Figure 3" src="figures/figure3_uk_trade.png" /></p>
+<p><strong>Figure 4.</strong> Event study, year × importer ΔM TANY, omit 2022.</p>
+<p><img alt="Figure 4" src="figures/figure4_event_study.png" /></p>
+<p><strong>Figure 5.</strong> ILO ISIC M vs F employment growth, 2019–2024.</p>
+<p><img alt="Figure 5" src="figures/figure5_ilo_M_vs_F.png" /></p>
+<p><strong>Figure 6.</strong> EU-importer sums: Mode-1 SJ3 vs China SE.</p>
+<p><img alt="Figure 6" src="figures/figure6_eu_mode1_vs_china.png" /></p>
+<p><strong>Figure 7.</strong> Cross-section: ΔM TANY vs Δ log India SJ3, 2022–24.</p>
+<p><img alt="Figure 7" src="figures/figure7_cross_section.png" /></p>
+<p><strong>Figure 8.</strong> Leave-one-importer-out, TANY.</p>
+<p><img alt="Figure 8" src="figures/figure8_loo.png" /></p>
+<p><strong>Figure 9.</strong> NACE M71 vs F GVA, 2019–2023, current EUR.</p>
+<p><img alt="Figure 9" src="figures/figure9_m71_vs_F_gva.png" /></p>
+<p><strong>Figure 10.</strong> UK APS change versus Eloundou β_human and versus Felten AIOE.</p>
+<p><img alt="Figure 10" src="figures/figure10_instruments_vs_aps.png" /></p>
+<p><strong>Figure 11.</strong> Felten AIIE, US construction NAICS 23.</p>
+<p><img alt="Figure 11" src="figures/figure11_aiie_construction.png" /></p>
+<p><strong>Figure 12.</strong> EU-27 AI types: M NLG vs ML vs text mining vs construction NLG.</p>
+<p><img alt="Figure 12" src="figures/figure12_tnlg_vs_tml.png" /></p>
+<p><strong>Figure 13.</strong> 2024 NLG use, NACE M versus F, by country.</p>
+<p><img alt="Figure 13" src="figures/figure13_tnlg_2024_MF.png" /></p>
+<p><strong>Figure 14.</strong> Event study, year × ΔM TNLG 2023–24, omit 2022.</p>
+<p><img alt="Figure 14" src="figures/figure14_event_study_tnlg.png" /></p>
+<p><strong>Figure 15.</strong> ΔM TNLG 2023–24 vs Δ log India SJ3, 2022–24.</p>
+<p><img alt="Figure 15" src="figures/figure15_cross_section_tnlg.png" /></p>
+<p><strong>Figure 16.</strong> EU-27 NLG by NACE M, J, C, N, F.</p>
+<p><img alt="Figure 16" src="figures/figure16_tnlg_by_nace.png" /></p>
+<p><strong>Figure 17.</strong> SBS net turnover growth 2021–24, M71 vs F.</p>
+<p><img alt="Figure 17" src="figures/figure17_sbs_turnover_m71_vs_F.png" /></p>
+<p><strong>Figure 18.</strong> SBS employment growth 2021–24, M71 vs F.</p>
+<p><img alt="Figure 18" src="figures/figure18_sbs_emp_m71_vs_F.png" /></p>
+<p><strong>Figure 19.</strong> ΔTNLG 2023–24 vs M71 turnover change 2023–24.</p>
+<p><img alt="Figure 19" src="figures/figure19_tnlg_vs_m71_turnover.png" /></p>
+<p><strong>Figure 20.</strong> M71 net turnover levels, selected members.</p>
+<p><img alt="Figure 20" src="figures/figure20_m71_turnover_levels.png" /></p>
+<p><strong>Figure 21.</strong> US CES NAICS 54 only (not engineering 54133).</p>
+<p><img alt="Figure 21" src="figures/figure21_bls_naics54.png" /></p>
+<hr />
+<h2>Article tables (generated from official series)</h2>
+<p>LLM occupation scores from the IJCM paper are <strong>not</strong> used. Exposure is Eloundou et al. matched to SOC 2020; employment is ONS APS.</p>
+<h3>Table 1. Civil occupation exposure (Eloundou occ_level.csv)</h3>
+<table>
+<thead>
+<tr>
+<th>SOC2020</th>
+<th>UK occupation</th>
+<th>O*NET</th>
+<th>O*NET title</th>
+<th>Eloundou β_human</th>
+<th>Eloundou β_model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2121</td>
+<td>Civil engineers</td>
+<td>17-2051.00</td>
+<td>Civil Engineers</td>
+<td>0.375</td>
+<td>0.446</td>
+</tr>
+<tr>
+<td>3114</td>
+<td>Building and civil engineering technicians</td>
+<td>17-3022.00</td>
+<td>Civil Engineering Technologists and Technicians</td>
+<td>0.477</td>
+<td>0.591</td>
+</tr>
+<tr>
+<td>3120</td>
+<td>CAD, drawing and architectural technicians</td>
+<td>17-3011.00</td>
+<td>Architectural and Civil Drafters</td>
+<td>0.520</td>
+<td>0.540</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 2. UK APS employment, civil-adjacent SOC 2020 (Dec 2021–Sep 2025)</h3>
+<table>
+<thead>
+<tr>
+<th>SOC2020</th>
+<th>occupation</th>
+<th>emp_2021_12</th>
+<th>emp_2025_09</th>
+<th>change_pct</th>
+<th>Eloundou β_human</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2481</td>
+<td>Quality control and planning engineers</td>
+<td>47,000</td>
+<td>35,100</td>
+<td>-25.3</td>
+<td></td>
+</tr>
+<tr>
+<td>3120</td>
+<td>CAD, drawing and architectural technicians</td>
+<td>72,900</td>
+<td>55,500</td>
+<td>-23.9</td>
+<td>0.520</td>
+</tr>
+<tr>
+<td>2454</td>
+<td>Chartered surveyors</td>
+<td>76,500</td>
+<td>59,900</td>
+<td>-21.7</td>
+<td></td>
+</tr>
+<tr>
+<td>2121</td>
+<td>Civil engineers</td>
+<td>115,800</td>
+<td>99,200</td>
+<td>-14.3</td>
+<td>0.375</td>
+</tr>
+<tr>
+<td>2453</td>
+<td>Quantity surveyors</td>
+<td>63,000</td>
+<td>54,200</td>
+<td>-14.0</td>
+<td></td>
+</tr>
+<tr>
+<td>3581</td>
+<td>Inspectors of standards and regulations</td>
+<td>48,000</td>
+<td>46,700</td>
+<td>-2.7</td>
+<td></td>
+</tr>
+<tr>
+<td>2455</td>
+<td>Construction project managers and related professionals</td>
+<td>107,500</td>
+<td>112,300</td>
+<td>4.5</td>
+<td></td>
+</tr>
+<tr>
+<td>2452</td>
+<td>Chartered architectural technologists, planning officers and consultants</td>
+<td>52,000</td>
+<td>57,100</td>
+<td>9.8</td>
+<td></td>
+</tr>
+<tr>
+<td>3541</td>
+<td>Estimators, valuers and assessors</td>
+<td>55,400</td>
+<td>61,300</td>
+<td>10.6</td>
+<td></td>
+</tr>
+<tr>
+<td>3582</td>
+<td>Health and safety managers and officers</td>
+<td>75,400</td>
+<td>89,300</td>
+<td>18.4</td>
+<td></td>
+</tr>
+<tr>
+<td>2127</td>
+<td>Engineering project managers and project engineers</td>
+<td>62,100</td>
+<td>78,600</td>
+<td>26.6</td>
+<td></td>
+</tr>
+<tr>
+<td>2483</td>
+<td>Environmental health professionals</td>
+<td>9,000</td>
+<td>11,400</td>
+<td>26.7</td>
+<td></td>
+</tr>
+<tr>
+<td>2114</td>
+<td>Physical scientists</td>
+<td>26,200</td>
+<td>34,900</td>
+<td>33.2</td>
+<td></td>
+</tr>
+<tr>
+<td>2129</td>
+<td>Engineering professionals n.e.c.</td>
+<td>70,500</td>
+<td>110,700</td>
+<td>57.0</td>
+<td></td>
+</tr>
+<tr>
+<td>2152</td>
+<td>Environment professionals</td>
+<td>45,300</td>
+<td>80,700</td>
+<td>78.1</td>
+<td></td>
+</tr>
+<tr>
+<td>3114</td>
+<td>Building and civil engineering technicians</td>
+<td>5,500</td>
+<td>17,300</td>
+<td>214.5</td>
+<td>0.477</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 3. Eurostat enterprise AI use, NACE M vs F (%)</h3>
+<table>
+<thead>
+<tr>
+<th>country</th>
+<th>iso3</th>
+<th>ai_F_2021</th>
+<th>ai_F_2023</th>
+<th>ai_F_2024</th>
+<th>ai_F_2025</th>
+<th>ai_M_2021</th>
+<th>ai_M_2023</th>
+<th>ai_M_2024</th>
+<th>ai_M_2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Austria</td>
+<td>AUT</td>
+<td>3.12</td>
+<td>4.28</td>
+<td>7.35</td>
+<td>14.89</td>
+<td>20.93</td>
+<td>25.82</td>
+<td>39.59</td>
+<td>52.8</td>
+</tr>
+<tr>
+<td>Belgium</td>
+<td>BEL</td>
+<td>8.3</td>
+<td>5.17</td>
+<td>11.08</td>
+<td>20.25</td>
+<td>20.24</td>
+<td>28.28</td>
+<td>42.92</td>
+<td>57.11</td>
+</tr>
+<tr>
+<td>Czechia</td>
+<td>CZE</td>
+<td>0.35</td>
+<td>1.34</td>
+<td>2.35</td>
+<td>7.84</td>
+<td>9.28</td>
+<td>9.42</td>
+<td>22.09</td>
+<td>33.31</td>
+</tr>
+<tr>
+<td>Denmark</td>
+<td>DNK</td>
+<td>8.87</td>
+<td>3.23</td>
+<td>11.7</td>
+<td>23.93</td>
+<td>39.22</td>
+<td>23.58</td>
+<td>44.9</td>
+<td>63.71</td>
+</tr>
+<tr>
+<td>Finland</td>
+<td>FIN</td>
+<td>9.39</td>
+<td>5.18</td>
+<td>11.26</td>
+<td>24.01</td>
+<td>29.63</td>
+<td>31.54</td>
+<td>48.46</td>
+<td>74.75</td>
+</tr>
+<tr>
+<td>France</td>
+<td>FRA</td>
+<td>4.09</td>
+<td>2.09</td>
+<td>3.14</td>
+<td>9.52</td>
+<td>15.23</td>
+<td>13.75</td>
+<td>17.47</td>
+<td>32.5</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>DEU</td>
+<td>8.29</td>
+<td>4.48</td>
+<td>10.01</td>
+<td>14.28</td>
+<td>25.54</td>
+<td>26.34</td>
+<td>42.29</td>
+<td>48.3</td>
+</tr>
+<tr>
+<td>Greece</td>
+<td>GRC</td>
+<td>2.82</td>
+<td>3.4</td>
+<td>5.17</td>
+<td>6.96</td>
+<td>9.2</td>
+<td>8.67</td>
+<td>21.02</td>
+<td>30.81</td>
+</tr>
+<tr>
+<td>Hungary</td>
+<td>HUN</td>
+<td>0.55</td>
+<td>1.8</td>
+<td>4.27</td>
+<td>4.53</td>
+<td>3.71</td>
+<td>5.24</td>
+<td>17.3</td>
+<td>22.86</td>
+</tr>
+<tr>
+<td>Ireland</td>
+<td>IRL</td>
+<td>0.27</td>
+<td>5.92</td>
+<td>6.24</td>
+<td>9.2</td>
+<td>13.59</td>
+<td>15.77</td>
+<td>27.25</td>
+<td>31.76</td>
+</tr>
+<tr>
+<td>Italy</td>
+<td>ITA</td>
+<td>5.24</td>
+<td>2.62</td>
+<td>5.24</td>
+<td>10.39</td>
+<td>8.68</td>
+<td>9.23</td>
+<td>19.56</td>
+<td>35.72</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td>NLD</td>
+<td>7.39</td>
+<td>4.72</td>
+<td>8.88</td>
+<td>21.29</td>
+<td>20.05</td>
+<td>24.8</td>
+<td>39.78</td>
+<td>54.98</td>
+</tr>
+<tr>
+<td>Poland</td>
+<td>POL</td>
+<td>0.35</td>
+<td>1.23</td>
+<td>2.01</td>
+<td>2.35</td>
+<td>6.48</td>
+<td>9.05</td>
+<td>14.45</td>
+<td>22.16</td>
+</tr>
+<tr>
+<td>Portugal</td>
+<td>PRT</td>
+<td>1.06</td>
+<td>2.92</td>
+<td>2.74</td>
+<td>4.74</td>
+<td>10.38</td>
+<td>10.68</td>
+<td>—</td>
+<td>25.68</td>
+</tr>
+<tr>
+<td>Romania</td>
+<td>ROU</td>
+<td>0.05</td>
+<td>0.13</td>
+<td>0.18</td>
+<td>2.65</td>
+<td>6.68</td>
+<td>7.21</td>
+<td>9.06</td>
+<td>15.6</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td>ESP</td>
+<td>3.77</td>
+<td>4.63</td>
+<td>4.43</td>
+<td>11.26</td>
+<td>13.72</td>
+<td>16.14</td>
+<td>26.07</td>
+<td>38.35</td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td>SWE</td>
+<td>2.32</td>
+<td>2.78</td>
+<td>13.15</td>
+<td>14.9</td>
+<td>16.47</td>
+<td>20.69</td>
+<td>53.71</td>
+<td>64.88</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 4. BaTIS balanced corridors (USD million)</h3>
+<table>
+<thead>
+<tr>
+<th>series</th>
+<th>usd_mn_2019</th>
+<th>usd_mn_2024</th>
+<th>pct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UK ← India SJ3 (Mode 1)</td>
+<td>2186.6</td>
+<td>4979.3</td>
+<td>127.7</td>
+</tr>
+<tr>
+<td>UK ← China SE (Mode 3)</td>
+<td>118.5</td>
+<td>179.8</td>
+<td>51.7</td>
+</tr>
+<tr>
+<td>UK ← India SI (computer)</td>
+<td>2215.3</td>
+<td>4723.0</td>
+<td>113.2</td>
+</tr>
+<tr>
+<td>US ← India SJ3</td>
+<td>2398.0</td>
+<td>2584.5</td>
+<td>7.8</td>
+</tr>
+<tr>
+<td>Germany ← India SJ3</td>
+<td>659.6</td>
+<td>925.9</td>
+<td>40.4</td>
+</tr>
+<tr>
+<td>Germany ← Poland SJ3 (nearshore)</td>
+<td>1516.0</td>
+<td>2327.7</td>
+<td>53.5</td>
+</tr>
+<tr>
+<td>Australia ← India SJ3</td>
+<td>167.3</td>
+<td>250.4</td>
+<td>49.6</td>
+</tr>
+<tr>
+<td>Netherlands ← India SJ3</td>
+<td>830.9</td>
+<td>967.2</td>
+<td>16.4</td>
+</tr>
+<tr>
+<td>France ← India SJ3</td>
+<td>524.0</td>
+<td>830.1</td>
+<td>58.4</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 5. Identification (log SJ3 unless noted)</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Coefficient (s.e.)</th>
+<th>N</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1) Post × M-AI 2024</td>
+<td>0.002 (0.003)</td>
+<td>336</td>
+<td>EU importers × IND/PHL/VNM; TWFE</td>
+</tr>
+<tr>
+<td>(2) Post × ΔM 2021–24 [headline]</td>
+<td>0.000 (0.006)</td>
+<td>336</td>
+<td>Preferred: GenAI window is the 2023–24 jump</td>
+</tr>
+<tr>
+<td>(3) Horse race: Post × ΔM</td>
+<td>0.001 (0.008)</td>
+<td>336</td>
+<td>Same regression as (4)</td>
+</tr>
+<tr>
+<td>(4) Horse race: Post × ΔF</td>
+<td>-0.004 (0.029)</td>
+<td>336</td>
+<td>Construction AI change, controlling for M</td>
+</tr>
+<tr>
+<td>(5) Placebo SI Mode-1</td>
+<td>-0.002 (0.007)</td>
+<td>336</td>
+<td>Computer services from same partners</td>
+</tr>
+<tr>
+<td>(6) Placebo SE from China</td>
+<td>-0.002 (0.007)</td>
+<td>112</td>
+<td>Mode-3 construction services</td>
+</tr>
+<tr>
+<td>(7) Placebo SJ3 from China</td>
+<td>0.009 (0.010)</td>
+<td>112</td>
+<td>SJ3 from China</td>
+</tr>
+<tr>
+<td>(8) Placebo SE from Mode-1</td>
+<td>-0.009 (0.014)</td>
+<td>336</td>
+<td>Construction services from IND/PHL/VNM</td>
+</tr>
+<tr>
+<td>(9) Post × (M−F) 2024 gap</td>
+<td>0.003 (0.004)</td>
+<td>336</td>
+<td>Professional minus construction AI</td>
+</tr>
+<tr>
+<td>(10) Time-varying M-AI 2021/23/24</td>
+<td>0.003 (0.003)</td>
+<td>150</td>
+<td>Eurostat years overlapping BaTIS</td>
+</tr>
+<tr>
+<td>(11) Placebo time-varying F-AI</td>
+<td>-0.010 (0.010)</td>
+<td>153</td>
+<td>Construction AI</td>
+</tr>
+<tr>
+<td>(12) Drop 2020–21</td>
+<td>0.002 (0.004)</td>
+<td>240</td>
+<td>Omit COVID years</td>
+</tr>
+<tr>
+<td>(13) Fake post=2020 × ΔM, sample 2018–21</td>
+<td>-0.000 (0.005)</td>
+<td>192</td>
+<td>Pre-trend placebo</td>
+</tr>
+<tr>
+<td>(14) IHS(value), Post × ΔM</td>
+<td>0.001 (0.006)</td>
+<td>336</td>
+<td>arcsinh instead of log</td>
+</tr>
+<tr>
+<td>(15) WLS by 2019 SJ3 value</td>
+<td>-0.007 (0.009)</td>
+<td>336</td>
+<td>Larger corridors weighted more</td>
+</tr>
+<tr>
+<td>(H) India only, Post × ΔM</td>
+<td>0.005 (0.005)</td>
+<td>112</td>
+<td>Partner = IND</td>
+</tr>
+<tr>
+<td>(H) Philippines only, Post × ΔM</td>
+<td>-0.014 (0.014)</td>
+<td>112</td>
+<td>Partner = PHL</td>
+</tr>
+<tr>
+<td>(H) Viet Nam only, Post × ΔM</td>
+<td>0.010 (0.006)</td>
+<td>112</td>
+<td>Partner = VNM</td>
+</tr>
+<tr>
+<td>(16) Cross-section Δlog IN SJ3 22–24 on ΔM</td>
+<td>0.007 (0.004)</td>
+<td>16</td>
+<td>No FE; one obs per importer</td>
+</tr>
+<tr>
+<td>(17) EU-8 only: Post × ΔM 2021–24</td>
+<td>0.019*** (0.006)</td>
+<td>168</td>
+<td>DEU FRA NLD POL ITA ESP IRL ROU; fragility check</td>
+</tr>
+<tr>
+<td>(18) EU-8 only: time-varying M-AI</td>
+<td>0.023** (0.010)</td>
+<td>72</td>
+<td>Same 8 importers, 2021/23/24</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 6. Event study: year × ΔM (omit 2022)</h3>
+<table>
+<thead>
+<tr>
+<th>year</th>
+<th>coef</th>
+<th>se</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018.0</td>
+<td>0.017</td>
+<td>0.009</td>
+<td>0.049</td>
+</tr>
+<tr>
+<td>2019.0</td>
+<td>0.011</td>
+<td>0.01</td>
+<td>0.275</td>
+</tr>
+<tr>
+<td>2020.0</td>
+<td>0.017</td>
+<td>0.011</td>
+<td>0.106</td>
+</tr>
+<tr>
+<td>2021.0</td>
+<td>0.011</td>
+<td>0.012</td>
+<td>0.333</td>
+</tr>
+<tr>
+<td>2022.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>2023.0</td>
+<td>0.011</td>
+<td>0.004</td>
+<td>0.005</td>
+</tr>
+<tr>
+<td>2024.0</td>
+<td>0.013</td>
+<td>0.005</td>
+<td>0.016</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 7. ILO ISIC M vs F employment, 2019–2024 (%)</h3>
+<table>
+<thead>
+<tr>
+<th>country</th>
+<th>pct_M</th>
+<th>pct_F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>United Arab Emirates</td>
+<td>17.0</td>
+<td>53.3</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>9.2</td>
+<td>13.6</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>-4.1</td>
+<td>-5.5</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td>28.4</td>
+<td>10.6</td>
+</tr>
+<tr>
+<td>France</td>
+<td>22.6</td>
+<td>5.7</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>21.8</td>
+<td>-7.6</td>
+</tr>
+<tr>
+<td>India</td>
+<td>13.0</td>
+<td>33.0</td>
+</tr>
+<tr>
+<td>Ireland</td>
+<td>51.5</td>
+<td>17.1</td>
+</tr>
+<tr>
+<td>Italy</td>
+<td>5.5</td>
+<td>21.5</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td>37.8</td>
+<td>16.8</td>
+</tr>
+<tr>
+<td>Philippines</td>
+<td>39.9</td>
+<td>12.8</td>
+</tr>
+<tr>
+<td>Poland</td>
+<td>30.4</td>
+<td>0.3</td>
+</tr>
+<tr>
+<td>Romania</td>
+<td>13.0</td>
+<td>17.6</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>8.6</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>United States</td>
+<td>7.1</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Viet Nam</td>
+<td>28.5</td>
+<td>-1.4</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 8. NACE M71 vs F GVA, 2019–2023 current EUR (%)</h3>
+<table>
+<thead>
+<tr>
+<th>country</th>
+<th>iso3</th>
+<th>F</th>
+<th>M</th>
+<th>M71</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Austria</td>
+<td>AUT</td>
+<td>23.7</td>
+<td>21.5</td>
+<td>16.1</td>
+</tr>
+<tr>
+<td>Belgium</td>
+<td>BEL</td>
+<td>33.8</td>
+<td>32.0</td>
+<td>40.8</td>
+</tr>
+<tr>
+<td>Czechia</td>
+<td>CZE</td>
+<td>45.5</td>
+<td>41.0</td>
+<td>47.1</td>
+</tr>
+<tr>
+<td>Denmark</td>
+<td>DNK</td>
+<td>15.6</td>
+<td>21.7</td>
+<td>34.2</td>
+</tr>
+<tr>
+<td>Finland</td>
+<td>FIN</td>
+<td>-0.3</td>
+<td>16.7</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>France</td>
+<td>FRA</td>
+<td>15.9</td>
+<td>13.5</td>
+<td>14.0</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>DEU</td>
+<td>30.5</td>
+<td>26.1</td>
+<td>14.7</td>
+</tr>
+<tr>
+<td>Greece</td>
+<td>GRC</td>
+<td>80.6</td>
+<td>41.4</td>
+<td>39.3</td>
+</tr>
+<tr>
+<td>Hungary</td>
+<td>HUN</td>
+<td>45.2</td>
+<td>35.7</td>
+<td>38.5</td>
+</tr>
+<tr>
+<td>Ireland</td>
+<td>IRL</td>
+<td>43.4</td>
+<td>74.8</td>
+<td>70.0</td>
+</tr>
+<tr>
+<td>Italy</td>
+<td>ITA</td>
+<td>68.6</td>
+<td>33.9</td>
+<td>55.0</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td>NLD</td>
+<td>33.8</td>
+<td>33.7</td>
+<td>29.2</td>
+</tr>
+<tr>
+<td>Poland</td>
+<td>POL</td>
+<td>18.4</td>
+<td>41.6</td>
+<td>28.9</td>
+</tr>
+<tr>
+<td>Portugal</td>
+<td>PRT</td>
+<td>41.7</td>
+<td>51.4</td>
+<td>63.1</td>
+</tr>
+<tr>
+<td>Romania</td>
+<td>ROU</td>
+<td>82.7</td>
+<td>50.6</td>
+<td>63.5</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td>ESP</td>
+<td>6.8</td>
+<td>28.5</td>
+<td>47.1</td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td>SWE</td>
+<td>12.2</td>
+<td>18.9</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 9. M71 GVA and SJ1/SJ2 placebos</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Coefficient (s.e.)</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(M71) log GVA Post × ΔM</td>
+<td>-0.006 (0.005)</td>
+<td>90</td>
+</tr>
+<tr>
+<td>(F) log GVA Post × ΔM placebo</td>
+<td>-0.008** (0.004)</td>
+<td>96</td>
+</tr>
+<tr>
+<td>(M71) time-varying M-AI 2021/23</td>
+<td>0.000 (0.004)</td>
+<td>32</td>
+</tr>
+<tr>
+<td>(trade) SJ2 consulting placebo Post × ΔM</td>
+<td>0.007 (0.007)</td>
+<td>336</td>
+</tr>
+<tr>
+<td>(trade) SJ1 R&amp;D placebo Post × ΔM</td>
+<td>0.003 (0.009)</td>
+<td>336</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 10. Leave-one-importer-out, Post × ΔM</h3>
+<table>
+<thead>
+<tr>
+<th>dropped</th>
+<th>country</th>
+<th>display</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUT</td>
+<td>Austria</td>
+<td>0.001 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>BEL</td>
+<td>Belgium</td>
+<td>0.000 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>CZE</td>
+<td>Czechia</td>
+<td>0.001 (0.005)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>DEU</td>
+<td>Germany</td>
+<td>0.001 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>DNK</td>
+<td>Denmark</td>
+<td>0.002 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>ESP</td>
+<td>Spain</td>
+<td>0.001 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>FIN</td>
+<td>Finland</td>
+<td>-0.000 (0.005)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>FRA</td>
+<td>France</td>
+<td>-0.002 (0.005)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>GRC</td>
+<td>Greece</td>
+<td>0.001 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>HUN</td>
+<td>Hungary</td>
+<td>0.000 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>IRL</td>
+<td>Ireland</td>
+<td>0.001 (0.005)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>ITA</td>
+<td>Italy</td>
+<td>0.000 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>NLD</td>
+<td>Netherlands</td>
+<td>-0.001 (0.005)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>POL</td>
+<td>Poland</td>
+<td>0.001 (0.006)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>PRT</td>
+<td>Portugal</td>
+<td>0.000 (0.006)</td>
+<td>336</td>
+</tr>
+<tr>
+<td>ROU</td>
+<td>Romania</td>
+<td>-0.002 (0.005)</td>
+<td>315</td>
+</tr>
+<tr>
+<td>SWE</td>
+<td>Sweden</td>
+<td>0.010* (0.006)</td>
+<td>315</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 11. Importer AI intensity (Eurostat pp)</h3>
+<table>
+<thead>
+<tr>
+<th>iso3</th>
+<th>ai_M_2024</th>
+<th>ai_F_2024</th>
+<th>ai_M_2021</th>
+<th>ai_F_2021</th>
+<th>dM</th>
+<th>dF</th>
+<th>gap24</th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUT</td>
+<td>39.59</td>
+<td>7.35</td>
+<td>20.93</td>
+<td>3.12</td>
+<td>18.66</td>
+<td>4.23</td>
+<td>32.24</td>
+<td>Austria</td>
+</tr>
+<tr>
+<td>BEL</td>
+<td>42.92</td>
+<td>11.08</td>
+<td>20.24</td>
+<td>8.3</td>
+<td>22.68</td>
+<td>2.78</td>
+<td>31.84</td>
+<td>Belgium</td>
+</tr>
+<tr>
+<td>CZE</td>
+<td>22.09</td>
+<td>2.35</td>
+<td>9.28</td>
+<td>0.35</td>
+<td>12.81</td>
+<td>2.0</td>
+<td>19.74</td>
+<td>Czechia</td>
+</tr>
+<tr>
+<td>DEU</td>
+<td>42.29</td>
+<td>10.01</td>
+<td>25.54</td>
+<td>8.29</td>
+<td>16.75</td>
+<td>1.72</td>
+<td>32.28</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>DNK</td>
+<td>44.9</td>
+<td>11.7</td>
+<td>39.22</td>
+<td>8.87</td>
+<td>5.68</td>
+<td>2.83</td>
+<td>33.2</td>
+<td>Denmark</td>
+</tr>
+<tr>
+<td>ESP</td>
+<td>26.07</td>
+<td>4.43</td>
+<td>13.72</td>
+<td>3.77</td>
+<td>12.35</td>
+<td>0.66</td>
+<td>21.64</td>
+<td>Spain</td>
+</tr>
+<tr>
+<td>FIN</td>
+<td>48.46</td>
+<td>11.26</td>
+<td>29.63</td>
+<td>9.39</td>
+<td>18.83</td>
+<td>1.87</td>
+<td>37.2</td>
+<td>Finland</td>
+</tr>
+<tr>
+<td>FRA</td>
+<td>17.47</td>
+<td>3.14</td>
+<td>15.23</td>
+<td>4.09</td>
+<td>2.24</td>
+<td>-0.95</td>
+<td>14.33</td>
+<td>France</td>
+</tr>
+<tr>
+<td>GRC</td>
+<td>21.02</td>
+<td>5.17</td>
+<td>9.2</td>
+<td>2.82</td>
+<td>11.82</td>
+<td>2.35</td>
+<td>15.85</td>
+<td>Greece</td>
+</tr>
+<tr>
+<td>HUN</td>
+<td>17.3</td>
+<td>4.27</td>
+<td>3.71</td>
+<td>0.55</td>
+<td>13.59</td>
+<td>3.72</td>
+<td>13.03</td>
+<td>Hungary</td>
+</tr>
+<tr>
+<td>IRL</td>
+<td>27.25</td>
+<td>6.24</td>
+<td>13.59</td>
+<td>0.27</td>
+<td>13.66</td>
+<td>5.97</td>
+<td>21.01</td>
+<td>Ireland</td>
+</tr>
+<tr>
+<td>ITA</td>
+<td>19.56</td>
+<td>5.24</td>
+<td>8.68</td>
+<td>5.24</td>
+<td>10.88</td>
+<td>0.0</td>
+<td>14.32</td>
+<td>Italy</td>
+</tr>
+<tr>
+<td>NLD</td>
+<td>39.78</td>
+<td>8.88</td>
+<td>20.05</td>
+<td>7.39</td>
+<td>19.73</td>
+<td>1.49</td>
+<td>30.9</td>
+<td>Netherlands</td>
+</tr>
+<tr>
+<td>POL</td>
+<td>14.45</td>
+<td>2.01</td>
+<td>6.48</td>
+<td>0.35</td>
+<td>7.97</td>
+<td>1.66</td>
+<td>12.44</td>
+<td>Poland</td>
+</tr>
+<tr>
+<td>PRT</td>
+<td>—</td>
+<td>2.74</td>
+<td>10.38</td>
+<td>1.06</td>
+<td>—</td>
+<td>1.68</td>
+<td>—</td>
+<td>Portugal</td>
+</tr>
+<tr>
+<td>ROU</td>
+<td>9.06</td>
+<td>0.18</td>
+<td>6.68</td>
+<td>0.05</td>
+<td>2.38</td>
+<td>0.13</td>
+<td>8.88</td>
+<td>Romania</td>
+</tr>
+<tr>
+<td>SWE</td>
+<td>53.71</td>
+<td>13.15</td>
+<td>16.47</td>
+<td>2.32</td>
+<td>37.24</td>
+<td>10.83</td>
+<td>40.56</td>
+<td>Sweden</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 13. Generative NLG shock (log SJ3 unless noted)</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Coefficient (s.e.)</th>
+<th>N</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(N1) Post×ΔM TNLG 2023–24 [preferred GenAI shock]</td>
+<td>0.009 (0.005)</td>
+<td>357</td>
+<td>NLG jump is the ChatGPT window; EU × IND/PHL/VNM</td>
+</tr>
+<tr>
+<td>(N2) Post2024×ΔM TNLG 2023–24</td>
+<td>0.007** (0.003)</td>
+<td>357</td>
+<td>Treat only 2024 as post (BaTIS ends 2024)</td>
+</tr>
+<tr>
+<td>(N3) Post×ΔM TNLG 2021–24</td>
+<td>0.007 (0.005)</td>
+<td>357</td>
+<td>Comparable window to generic TANY ΔM</td>
+</tr>
+<tr>
+<td>(N4) Post× TNLG M 2024 level</td>
+<td>0.006 (0.004)</td>
+<td>357</td>
+<td>Level not change</td>
+</tr>
+<tr>
+<td>(N5) Placebo Post×ΔF TNLG 2023–24</td>
+<td>0.015 (0.020)</td>
+<td>357</td>
+<td>Construction enterprises using NLG</td>
+</tr>
+<tr>
+<td>(N6) Horse: Post×ΔM TNLG</td>
+<td>0.015*** (0.004)</td>
+<td>357</td>
+<td>Same regression as N7</td>
+</tr>
+<tr>
+<td>(N7) Horse: Post×ΔM TML (ML placebo)</td>
+<td>-0.026* (0.014)</td>
+<td>357</td>
+<td>Machine learning, not generative NLG</td>
+</tr>
+<tr>
+<td>(N8) Placebo Post×ΔM TTM 2023–24</td>
+<td>0.004 (0.008)</td>
+<td>357</td>
+<td>Text mining (also jumped; not NLG)</td>
+</tr>
+<tr>
+<td>(N9) Placebo Post×ΔM TIR 2023–24</td>
+<td>-0.010 (0.020)</td>
+<td>357</td>
+<td>Image recognition</td>
+</tr>
+<tr>
+<td>(N10) Comparison Post×ΔM TANY 2021–24</td>
+<td>0.000 (0.006)</td>
+<td>336</td>
+<td>Generic any-AI; mixes ML and GenAI</td>
+</tr>
+<tr>
+<td>(N11) Placebo SI Post×ΔM TNLG</td>
+<td>-0.002 (0.006)</td>
+<td>357</td>
+<td>Computer services from same partners</td>
+</tr>
+<tr>
+<td>(N12) Placebo China SE Post×ΔM TNLG</td>
+<td>-0.008 (0.009)</td>
+<td>119</td>
+<td>Mode-3 construction from China</td>
+</tr>
+<tr>
+<td>(N13) Placebo China SJ3 Post×ΔM TNLG</td>
+<td>0.005 (0.010)</td>
+<td>119</td>
+<td>SJ3 from China</td>
+</tr>
+<tr>
+<td>(N14) Placebo Post×ΔJ TNLG 2023–24</td>
+<td>0.009** (0.004)</td>
+<td>357</td>
+<td>ICT sector NLG (NACE J), not M71-containing M</td>
+</tr>
+<tr>
+<td>(N15) Placebo Post×ΔC TNLG 2023–24</td>
+<td>0.017** (0.008)</td>
+<td>357</td>
+<td>Manufacturing NLG</td>
+</tr>
+<tr>
+<td>(N16) Placebo Post×ΔN TNLG 2023–24</td>
+<td>0.015** (0.007)</td>
+<td>357</td>
+<td>Administrative/support NLG</td>
+</tr>
+<tr>
+<td>(NH) India only Post×ΔM TNLG 2023–24</td>
+<td>0.021*** (0.008)</td>
+<td>119</td>
+<td>Partner = IND</td>
+</tr>
+<tr>
+<td>(NH) Philippines only Post×ΔM TNLG 2023–24</td>
+<td>-0.007 (0.015)</td>
+<td>119</td>
+<td>Partner = PHL</td>
+</tr>
+<tr>
+<td>(NH) Viet Nam only Post×ΔM TNLG 2023–24</td>
+<td>0.011 (0.008)</td>
+<td>119</td>
+<td>Partner = VNM</td>
+</tr>
+<tr>
+<td>(N17) EU-8 Post×ΔM TNLG 2023–24</td>
+<td>0.029*** (0.006)</td>
+<td>168</td>
+<td>Same fragile eight-country sample as TANY EU-8</td>
+</tr>
+<tr>
+<td>(N18) Cross-section Δlog IN SJ3 22–24 on ΔTNLG 23–24</td>
+<td>0.017*** (0.004)</td>
+<td>17</td>
+<td>No FE; one obs per importer</td>
+</tr>
+<tr>
+<td>(N19) log M71 GVA Post×ΔM TNLG 2023–24</td>
+<td>-0.007* (0.004)</td>
+<td>96</td>
+<td>Domestic architectural &amp; engineering GVA; GVA only to 2023</td>
+</tr>
+<tr>
+<td>(N20) SJ2 consulting Post×ΔM TNLG</td>
+<td>0.006 (0.011)</td>
+<td>357</td>
+<td>Same importers/partners as SJ3</td>
+</tr>
+<tr>
+<td>(N20) SJ1 R&amp;D Post×ΔM TNLG</td>
+<td>0.007 (0.011)</td>
+<td>357</td>
+<td>Same importers/partners as SJ3</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 14. Event study: year × ΔM TNLG 2023–24 (omit 2022)</h3>
+<table>
+<thead>
+<tr>
+<th>year</th>
+<th>coef</th>
+<th>se</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018.0</td>
+<td>0.007</td>
+<td>0.014</td>
+<td>0.606</td>
+</tr>
+<tr>
+<td>2019.0</td>
+<td>0.003</td>
+<td>0.012</td>
+<td>0.779</td>
+</tr>
+<tr>
+<td>2020.0</td>
+<td>0.014</td>
+<td>0.013</td>
+<td>0.294</td>
+</tr>
+<tr>
+<td>2021.0</td>
+<td>0.009</td>
+<td>0.011</td>
+<td>0.409</td>
+</tr>
+<tr>
+<td>2022.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>2023.0</td>
+<td>0.016</td>
+<td>0.008</td>
+<td>0.041</td>
+</tr>
+<tr>
+<td>2024.0</td>
+<td>0.015</td>
+<td>0.008</td>
+<td>0.072</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 15. EU-27 Eurostat AI types by NACE (% of enterprises, 10+)</h3>
+<table>
+<thead>
+<tr>
+<th>nace</th>
+<th>indic</th>
+<th>2021</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>E_AI_TANY</td>
+<td>6.93</td>
+<td>6.79</td>
+<td>10.57</td>
+<td>17.27</td>
+</tr>
+<tr>
+<td>C</td>
+<td>E_AI_TIR</td>
+<td>2.16</td>
+<td>2.23</td>
+<td>2.74</td>
+<td>3.14</td>
+</tr>
+<tr>
+<td>C</td>
+<td>E_AI_TML</td>
+<td>1.67</td>
+<td>1.73</td>
+<td>2.73</td>
+<td>3.66</td>
+</tr>
+<tr>
+<td>C</td>
+<td>E_AI_TNLG</td>
+<td>0.85</td>
+<td>1.19</td>
+<td>3.53</td>
+<td>7.09</td>
+</tr>
+<tr>
+<td>C</td>
+<td>E_AI_TPVSG</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7.54</td>
+</tr>
+<tr>
+<td>C</td>
+<td>E_AI_TTM</td>
+<td>1.62</td>
+<td>1.82</td>
+<td>4.58</td>
+<td>9.42</td>
+</tr>
+<tr>
+<td>F</td>
+<td>E_AI_TIR</td>
+<td>1.17</td>
+<td>0.82</td>
+<td>1.49</td>
+<td>2.27</td>
+</tr>
+<tr>
+<td>F</td>
+<td>E_AI_TML</td>
+<td>0.68</td>
+<td>0.43</td>
+<td>0.83</td>
+<td>1.62</td>
+</tr>
+<tr>
+<td>F</td>
+<td>E_AI_TNLG</td>
+<td>0.99</td>
+<td>0.58</td>
+<td>2.42</td>
+<td>3.25</td>
+</tr>
+<tr>
+<td>F</td>
+<td>E_AI_TPVSG</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>4.47</td>
+</tr>
+<tr>
+<td>F</td>
+<td>E_AI_TTM</td>
+<td>1.43</td>
+<td>0.98</td>
+<td>2.81</td>
+<td>6.09</td>
+</tr>
+<tr>
+<td>J</td>
+<td>E_AI_TANY</td>
+<td>25.37</td>
+<td>29.53</td>
+<td>48.72</td>
+<td>62.52</td>
+</tr>
+<tr>
+<td>J</td>
+<td>E_AI_TIR</td>
+<td>8.56</td>
+<td>9.87</td>
+<td>13.54</td>
+<td>15.97</td>
+</tr>
+<tr>
+<td>J</td>
+<td>E_AI_TML</td>
+<td>15.14</td>
+<td>16.28</td>
+<td>25.66</td>
+<td>28.58</td>
+</tr>
+<tr>
+<td>J</td>
+<td>E_AI_TNLG</td>
+<td>6.34</td>
+<td>11.14</td>
+<td>25.83</td>
+<td>42.23</td>
+</tr>
+<tr>
+<td>J</td>
+<td>E_AI_TPVSG</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>35.53</td>
+</tr>
+<tr>
+<td>J</td>
+<td>E_AI_TTM</td>
+<td>11.54</td>
+<td>14.25</td>
+<td>30.11</td>
+<td>42.22</td>
+</tr>
+<tr>
+<td>M</td>
+<td>E_AI_TIR</td>
+<td>3.98</td>
+<td>4.18</td>
+<td>7.35</td>
+<td>6.81</td>
+</tr>
+<tr>
+<td>M</td>
+<td>E_AI_TML</td>
+<td>6.46</td>
+<td>6.82</td>
+<td>11.35</td>
+<td>12.46</td>
+</tr>
+<tr>
+<td>M</td>
+<td>E_AI_TNLG</td>
+<td>2.6</td>
+<td>4.55</td>
+<td>11.51</td>
+<td>17.74</td>
+</tr>
+<tr>
+<td>M</td>
+<td>E_AI_TPVSG</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>18.72</td>
+</tr>
+<tr>
+<td>M</td>
+<td>E_AI_TTM</td>
+<td>6.13</td>
+<td>6.92</td>
+<td>15.61</td>
+<td>25.22</td>
+</tr>
+<tr>
+<td>N</td>
+<td>E_AI_TANY</td>
+<td>7.19</td>
+<td>8.33</td>
+<td>14.33</td>
+<td>19.86</td>
+</tr>
+<tr>
+<td>N</td>
+<td>E_AI_TIR</td>
+<td>1.88</td>
+<td>1.9</td>
+<td>2.96</td>
+<td>4.01</td>
+</tr>
+<tr>
+<td>N</td>
+<td>E_AI_TML</td>
+<td>1.63</td>
+<td>2.31</td>
+<td>3.96</td>
+<td>4.43</td>
+</tr>
+<tr>
+<td>N</td>
+<td>E_AI_TNLG</td>
+<td>1.11</td>
+<td>2.52</td>
+<td>4.96</td>
+<td>8.58</td>
+</tr>
+<tr>
+<td>N</td>
+<td>E_AI_TPVSG</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9.48</td>
+</tr>
+<tr>
+<td>N</td>
+<td>E_AI_TTM</td>
+<td>2.35</td>
+<td>3.56</td>
+<td>8.06</td>
+<td>12.2</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 16. M71 industry economy under TNLG (SBS 2021–24 and nama)</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Coefficient (s.e.)</th>
+<th>N</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(I1) log M71 turnover Post2024×ΔTNLG</td>
+<td>-0.007** (0.003)</td>
+<td>68</td>
+<td>SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I2) log M71 employment Post2024×ΔTNLG</td>
+<td>-0.000 (0.002)</td>
+<td>68</td>
+<td>SBS sbs_ovw_act M71 EMP_NR; country+year FE</td>
+</tr>
+<tr>
+<td>(I3) log M71 wages Post2024×ΔTNLG</td>
+<td>-0.009*** (0.003)</td>
+<td>68</td>
+<td>SBS sbs_ovw_act M71 WAGE_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I4) log M71 value added Post2024×ΔTNLG</td>
+<td>-0.006*** (0.002)</td>
+<td>68</td>
+<td>SBS sbs_ovw_act M71 AV_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I5) log M71 GOS Post2024×ΔTNLG</td>
+<td>-0.003 (0.005)</td>
+<td>68</td>
+<td>SBS sbs_ovw_act M71 GOS_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I6) log F turnover Post2024×ΔTNLG placebo</td>
+<td>-0.010*** (0.003)</td>
+<td>68</td>
+<td>SBS sbs_sc_ovw F NETTUR_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I7) log F employment Post2024×ΔTNLG placebo</td>
+<td>-0.003 (0.002)</td>
+<td>68</td>
+<td>SBS sbs_ovw_act F EMP_NR; country+year FE</td>
+</tr>
+<tr>
+<td>(I8) log M turnover Post2024×ΔTNLG placebo</td>
+<td>-0.005** (0.002)</td>
+<td>68</td>
+<td>SBS sbs_sc_ovw M NETTUR_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I9) log M71 turnover Post2023×ΔTNLG</td>
+<td>-0.009** (0.004)</td>
+<td>68</td>
+<td>SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE</td>
+</tr>
+<tr>
+<td>(I10) Δlog≈ M71 turnover 2023–24 on ΔTNLG</td>
+<td>-0.002 (0.001)</td>
+<td>17</td>
+<td>Cross-section; LHS is percent/100</td>
+</tr>
+<tr>
+<td>(I11) M71 employment % 2023–24 on ΔTNLG</td>
+<td>-0.000 (0.001)</td>
+<td>17</td>
+<td>Cross-section; LHS percent/100</td>
+</tr>
+<tr>
+<td>(I12) log M71 compensation Post×ΔTNLG</td>
+<td>-0.009** (0.004)</td>
+<td>96</td>
+<td>nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year</td>
+</tr>
+<tr>
+<td>(I12) log M71 output Post×ΔTNLG</td>
+<td>-0.009*** (0.003)</td>
+<td>96</td>
+<td>nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year</td>
+</tr>
+<tr>
+<td>(I12) log F compensation Post×ΔTNLG</td>
+<td>-0.011*** (0.004)</td>
+<td>102</td>
+<td>nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year</td>
+</tr>
+<tr>
+<td>(I12) log F output Post×ΔTNLG</td>
+<td>-0.014*** (0.004)</td>
+<td>102</td>
+<td>nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year</td>
+</tr>
+</tbody>
+</table>
+<h3>Table 17. SBS growth, NACE M71 vs F, 2021–2024</h3>
+<table>
+<thead>
+<tr>
+<th>country</th>
+<th>M71 turnover 21–24 %</th>
+<th>F turnover 21–24 %</th>
+<th>M71 emp 21–24 %</th>
+<th>F emp 21–24 %</th>
+<th>ΔTNLG M 23–24</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Austria</td>
+<td>21.6</td>
+<td>14.6</td>
+<td>3.1</td>
+<td>-0.0</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td>Belgium</td>
+<td>26.0</td>
+<td>30.4</td>
+<td>7.5</td>
+<td>4.9</td>
+<td>11.3</td>
+</tr>
+<tr>
+<td>Czechia</td>
+<td>31.6</td>
+<td>32.1</td>
+<td>6.8</td>
+<td>3.4</td>
+<td>10.3</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>16.5</td>
+<td>12.5</td>
+<td>2.0</td>
+<td>-0.5</td>
+<td>6.3</td>
+</tr>
+<tr>
+<td>Denmark</td>
+<td>26.2</td>
+<td>10.9</td>
+<td>15.7</td>
+<td>2.7</td>
+<td>25.7</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td>35.0</td>
+<td>34.4</td>
+<td>6.8</td>
+<td>1.8</td>
+<td>7.5</td>
+</tr>
+<tr>
+<td>Finland</td>
+<td>17.1</td>
+<td>-5.0</td>
+<td>2.0</td>
+<td>-5.8</td>
+<td>18.8</td>
+</tr>
+<tr>
+<td>France</td>
+<td>15.5</td>
+<td>12.1</td>
+<td>12.6</td>
+<td>3.2</td>
+<td>2.6</td>
+</tr>
+<tr>
+<td>Greece</td>
+<td>74.7</td>
+<td>98.6</td>
+<td>13.2</td>
+<td>25.3</td>
+<td>5.4</td>
+</tr>
+<tr>
+<td>Hungary</td>
+<td>13.0</td>
+<td>17.1</td>
+<td>-0.9</td>
+<td>-0.7</td>
+<td>3.4</td>
+</tr>
+<tr>
+<td>Ireland</td>
+<td>35.9</td>
+<td>31.2</td>
+<td>24.3</td>
+<td>23.0</td>
+<td>8.6</td>
+</tr>
+<tr>
+<td>Italy</td>
+<td>44.4</td>
+<td>32.2</td>
+<td>12.6</td>
+<td>11.8</td>
+<td>6.6</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td>23.5</td>
+<td>22.6</td>
+<td>10.9</td>
+<td>8.7</td>
+<td>14.3</td>
+</tr>
+<tr>
+<td>Poland</td>
+<td>41.4</td>
+<td>35.0</td>
+<td>1.0</td>
+<td>-1.5</td>
+<td>3.6</td>
+</tr>
+<tr>
+<td>Portugal</td>
+<td>63.3</td>
+<td>41.5</td>
+<td>16.6</td>
+<td>21.3</td>
+<td>6.2</td>
+</tr>
+<tr>
+<td>Romania</td>
+<td>78.9</td>
+<td>64.9</td>
+<td>11.4</td>
+<td>0.3</td>
+<td>-1.3</td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td>1.8</td>
+<td>-0.5</td>
+<td>-2.3</td>
+<td>-9.2</td>
+<td>21.2</td>
+</tr>
+</tbody>
+</table></body></html>
