@@ -41,9 +41,21 @@ def copy_tree(src: Path, dst: Path, skip_substrings=()):
         shutil.copy2(p, q)
 
 
+def zip_folder(src: Path, zip_path: Path, arc_root: str):
+    zip_path.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
+        for p in src.rglob("*"):
+            if not p.is_file():
+                continue
+            if p.suffix.lower() == ".zip":
+                continue
+            z.write(p, arcname=str(Path(arc_root) / p.relative_to(src)))
+
+
 def main():
-    if REL.exists():
-        shutil.rmtree(REL)
+    REL.mkdir(parents=True, exist_ok=True)
+    if PACK.exists():
+        shutil.rmtree(PACK)
     PACK.mkdir(parents=True)
 
     copy_tree(ROOT / "data", PACK / "01_data", skip_substrings=("batis_chunk",))
@@ -88,6 +100,8 @@ Folder layout
 03_figures/      All figures 1-21 (PNG)
 04_manuscript/   Full English article + Chinese full article + tables
 05_scripts/      Replication scripts
+99_all_zips/     Component zips (data, tables, figures, manuscript, scripts, IJCM)
+                 The same files are also in Study4_.../release/
 DATA_INVENTORY.md  Have / missing / cannot-exist catalogue
 DATA_SOURCES.md    APIs and retrieval date
 results*.json      Machine-readable estimates (TANY, TNLG, M71 SBS)
@@ -110,6 +124,26 @@ EU-16 Post x Delta M on Mode-1 SJ3 is a null; EU-8 is sample-dependent.
 NACE M71 AI survey and BaTIS SJ312 do not exist.
 """
     (PACK / "README_PACKAGE.txt").write_text(readme)
+
+    zips_dir = PACK / "99_all_zips"
+    zips_dir.mkdir(parents=True, exist_ok=True)
+    parts = [
+        ("Study4_00_previous_ijcm_data.zip", PACK / "00_previous_ijcm_data", "00_previous_ijcm_data"),
+        ("Study4_01_data.zip", PACK / "01_data", "01_data"),
+        ("Study4_02_tables.zip", PACK / "02_tables", "02_tables"),
+        ("Study4_03_figures.zip", PACK / "03_figures", "03_figures"),
+        ("Study4_04_manuscript.zip", PACK / "04_manuscript", "04_manuscript"),
+        ("Study4_05_scripts.zip", PACK / "05_scripts", "05_scripts"),
+    ]
+    zip_index = ["# All Study 4 zip files (also copied to release/)\n"]
+    for fname, src, arc in parts:
+        if not src.exists():
+            continue
+        dest = REL / fname
+        zip_folder(src, dest, arc)
+        shutil.copy2(dest, zips_dir / fname)
+        zip_index.append(f"- `{fname}` ({dest.stat().st_size} bytes)")
+        print("part zip", dest, dest.stat().st_size)
 
     rows = []
     for p in sorted(PACK.rglob("*")):
@@ -135,6 +169,13 @@ NACE M71 AI survey and BaTIS SJ312 do not exist.
     print("files", len(rows))
     print("zip", zip_path, zip_path.stat().st_size)
     print("dir", PACK)
+    zip_index.append(f"- `{PACK_NAME}.zip` ({zip_path.stat().st_size} bytes)  **complete package**")
+    index_text = "\n".join(zip_index) + "\n"
+    (REL / "ZIP_INDEX.md").write_text(index_text)
+    (zips_dir / "ZIP_INDEX.md").write_text(index_text)
+    print("release zips:")
+    for p in sorted(REL.glob("*.zip")):
+        print(" ", p.name, p.stat().st_size)
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 # Study 4: GenAI and the cross-border civil engineering economy
 
-Complete zip (data, tables, figures, manuscript, scripts):
+Complete zip and **all component zips** are in:
 
-`release/Study4_complete_package_2026-09-17.zip`
+`Study4_Global_AI_Civil_Engineering_Economy/release/`
 
 Rebuild:
 
