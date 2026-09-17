@@ -197,8 +197,7 @@ NACE M71 AI survey and BaTIS SJ312 do not exist.
 This folder is the **final version** of Study 4:
 跨国背景下，受 AI 冲击的土木工程行业经济如何变动。
 
-The copy you should open is at the **repository root**: `Study4_FINAL_VERSION/`.
-This nested copy is a duplicate under `Study4_Global_AI_Civil_Engineering_Economy/`.
+It sits under `Study4_Global_AI_Civil_Engineering_Economy/`.
 All zip archives are in `zips/`. Unpacked data, tables, figures 1–21, and manuscripts are in the numbered folders.
 
 Do not treat APS SOC 2121 as causing partner-country GDP.
@@ -217,30 +216,11 @@ Do not treat APS SOC 2121 as causing partner-country GDP.
         """# Study4_FINAL_VERSION — 最终版本
 
 Final-version zip copies, stored under `Study4_zip_packages/Study4_FINAL_VERSION/`.
-The unpacked final tree you should open is at the **repository root**: `Study4_FINAL_VERSION/`.
+The unpacked final tree is `Study4_Global_AI_Civil_Engineering_Economy/Study4_FINAL_VERSION/`.
 """
     )
     print("final dir", final)
     print("final zips dir", zip_final)
-
-    # Also place the same final folder at the repository root (visible in the clone root).
-    root_final = REPO / "Study4_FINAL_VERSION"
-    if root_final.exists():
-        shutil.rmtree(root_final)
-    shutil.copytree(final, root_final)
-    (root_final / "00_THIS_IS_THE_FINAL_VERSION.md").write_text(
-        """# Study4_FINAL_VERSION — 最终版本
-
-This folder is at the **repository root** so it is visible when you open the project.
-
-跨国背景下，受 AI 冲击的土木工程行业经济如何变动。
-
-Contents: unpacked data, tables, figures 1–21, English + Chinese articles, scripts, and `zips/`.
-
-Do not treat APS SOC 2121 as causing partner-country GDP.
-"""
-    )
-    print("repo-root final dir", root_final)
 
 
 if __name__ == "__main__":

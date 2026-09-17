@@ -23,7 +23,9 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
-Study 4 (cross-country AI shock and the civil engineering industry) zip packages are in [`Study4_zip_packages/`](Study4_zip_packages/).
+Study 4 **final version** (open this folder): [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
+
+Zip copies: [`Study4_zip_packages/`](Study4_zip_packages/). Working files: [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/).
 
 ## Licence
 

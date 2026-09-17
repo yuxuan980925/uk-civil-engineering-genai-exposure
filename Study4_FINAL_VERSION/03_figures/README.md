@@ -1,0 +1,23 @@
+# Figures
+
+- `figure10_instruments_vs_aps.png`
+- `figure11_aiie_construction.png`
+- `figure12_tnlg_vs_tml.png`
+- `figure13_tnlg_2024_MF.png`
+- `figure14_event_study_tnlg.png`
+- `figure15_cross_section_tnlg.png`
+- `figure16_tnlg_by_nace.png`
+- `figure17_sbs_turnover_m71_vs_F.png`
+- `figure18_sbs_emp_m71_vs_F.png`
+- `figure19_tnlg_vs_m71_turnover.png`
+- `figure1_eurostat_M_vs_F.png`
+- `figure20_m71_turnover_levels.png`
+- `figure21_bls_naics54.png`
+- `figure2_uk_aps_bundle.png`
+- `figure3_uk_trade.png`
+- `figure4_event_study.png`
+- `figure5_ilo_M_vs_F.png`
+- `figure6_eu_mode1_vs_china.png`
+- `figure7_cross_section.png`
+- `figure8_loo.png`
+- `figure9_m71_vs_F_gva.png`

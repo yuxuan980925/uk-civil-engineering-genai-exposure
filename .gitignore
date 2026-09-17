@@ -4,5 +4,6 @@
 !Study4_zip_packages/*.zip
 !Study4_zip_packages/Study4_FINAL_VERSION/*.zip
 !Study4_Global_AI_Civil_Engineering_Economy/Study4_FINAL_VERSION/zips/*.zip
+!Study4_FINAL_VERSION/zips/*.zip
 Study4_Global_AI_Civil_Engineering_Economy/release/Study4_complete_package_*/
 Study4_Global_AI_Civil_Engineering_Economy/data/batis_chunk_*.csv
