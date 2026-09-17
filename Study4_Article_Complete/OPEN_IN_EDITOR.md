@@ -11,4 +11,6 @@ Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/)
 
 Compiled HTML (browser): [`index.html`](index.html)
 
+Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx) · [`CN_full_article.docx`](CN_full_article.docx) · [`FIGURES.docx`](FIGURES.docx) · [`tables_for_article.docx`](tables_for_article.docx)
+
 Do **not** open `Study4.zip` in Cursor. Unzip it in Finder / Explorer; the top of the archive is `Study4_Manuscript.md`.

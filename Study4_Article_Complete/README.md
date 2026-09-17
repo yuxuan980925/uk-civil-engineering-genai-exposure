@@ -13,6 +13,10 @@ Evidence from a Cross-Country Stack — **complete article folder**
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
 - `index.html` — compiled HTML (figures load from `figures/`)
+- `Study4_Manuscript.docx` — Word, English article (from HTML, figures embedded)
+- `CN_full_article.docx` — Word, Chinese
+- `FIGURES.docx` — Word, figures 1–21
+- `tables_for_article.docx` — Word, all tables
 
 Zip in this folder: **`Study4.zip`**
 

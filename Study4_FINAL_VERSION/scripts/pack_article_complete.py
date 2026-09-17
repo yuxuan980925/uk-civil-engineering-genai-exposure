@@ -106,6 +106,8 @@ Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/)
 
 Compiled HTML (browser): [`index.html`](index.html)
 
+Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx) · [`CN_full_article.docx`](CN_full_article.docx) · [`FIGURES.docx`](FIGURES.docx) · [`tables_for_article.docx`](tables_for_article.docx)
+
 Do **not** open `Study4.zip` in Cursor. Unzip it in Finder / Explorer; the top of the archive is `Study4_Manuscript.md`.
 """
     )
@@ -125,6 +127,10 @@ Evidence from a Cross-Country Stack — **complete article folder**
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
 - `index.html` — compiled HTML (figures load from `figures/`)
+- `Study4_Manuscript.docx` — Word, English article (from HTML, figures embedded)
+- `CN_full_article.docx` — Word, Chinese
+- `FIGURES.docx` — Word, figures 1–21
+- `tables_for_article.docx` — Word, all tables
 
 Zip in this folder: **`Study4.zip`**
 
@@ -151,6 +157,8 @@ Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` 
             "DATA_INVENTORY.md", "DATA_SOURCES.md",
             "index.html", "Study4_Manuscript.html", "CN_full_article.html",
             "FIGURES.html", "tables_for_article.html",
+            "Study4_Manuscript.docx", "CN_full_article.docx",
+            "FIGURES.docx", "tables_for_article.docx",
             "figures", "tables", "data", "manuscript",
         ],
         cwd=OUT,

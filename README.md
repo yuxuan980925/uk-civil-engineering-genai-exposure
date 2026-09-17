@@ -35,6 +35,7 @@ Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. **
 - Tables: [`Study4_Article_Complete/tables_for_article.md`](Study4_Article_Complete/tables_for_article.md)
 - Folders: [`figures/`](Study4_Article_Complete/figures/) · [`tables/`](Study4_Article_Complete/tables/) · [`data/`](Study4_Article_Complete/data/)
 - Compiled HTML: [`Study4_Article_Complete/index.html`](Study4_Article_Complete/index.html)
+- Word (from HTML): [`Study4_Article_Complete/Study4_Manuscript.docx`](Study4_Article_Complete/Study4_Manuscript.docx) · [`CN_full_article.docx`](Study4_Article_Complete/CN_full_article.docx)
 - Zip (Finder / Explorer only): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
 
 Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
