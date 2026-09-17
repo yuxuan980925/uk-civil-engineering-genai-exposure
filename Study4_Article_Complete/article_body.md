@@ -11,13 +11,13 @@ This article uses **only retrieved official series**. No occupation, M71, or GDP
 
 ## Abstract
 
-How does the *civil engineering industry economy* move when generative AI arrives, and does the movement stay inside one country? This paper answers with a civil-specific stack that other AI-labour papers do not combine: (i) task exposure *inside* civil occupations; (ii) a **generative** adoption shock (Eurostat natural-language generation, E_AI_TNLG), not generic “any AI”; (iii) NACE **M71** architectural and engineering activities as the industry, distinct from on-site construction (NACE F); and (iv) GATS **Mode 1** versus **Mode 3** trade.
+This paper examines whether the adoption of generative AI is associated with changes in civil-engineering work, engineering consultancies and cross-border technical services. The narrative is organised around the United Kingdom and India. The UK provides occupation-level evidence and a clearly observed trade corridor; India is the principal supplier-side case for remotely delivered services. China is retained only as a comparison for construction services that depend more heavily on physical projects and commercial presence. A panel of 17 EU members supplies the variation used to estimate industry and trade relationships, but those members are not presented as 17 separate country studies.
 
 Occupation data already disagree with a single “civil engineers collapse” story. Eloundou et al.’s human GPT-exposure score is 0.52 for architectural and civil drafters, 0.477 for civil engineering technologists, and 0.375 for civil engineers. In the UK Annual Population Survey, December 2021–September 2025, CAD/drawing technicians (SOC 3120) fell 23.9%, civil engineers (2121) fell 14.3%, and building and civil technicians (3114) rose 214.5%.
 
 Industry and trade data disagree with a domestic boom. EU-27 professional NLG use jumped from 4.55% of enterprises in 2023 to 11.51% in 2024 and 17.74% in 2025; construction NLG stayed at 0.58, 2.42 and 3.25. On 17 EU members, post-2024 × ΔTNLG (2023–24) is **−0.007** (s.e. 0.003) on log M71 net turnover and **−0.009** on log wages; M71 employment is a precise null. Construction turnover is also negative. By contrast, UK imports of BaTIS SJ3 (technical, trade-related and other business services) from India rose from USD 2.19 billion (2019) to 4.98 billion (2024). In the EU panel, post-2024 × ΔTNLG on log Mode-1 SJ3 is 0.007**; the India corridor is 0.021***. Generic any-AI (E_AI_TANY) is 0.000 (0.006). Chinese Mode-3 construction services did not reallocate toward high-NLG importers.
 
-The civil engineering *industry* in high-NLG Europe did not expand with the shock. The corridor that moved is Mode-1 engineering-adjacent services from India, not domestic M71 output and not China Mode 3.
+Taken together, the estimates do not show a domestic engineering-consultancy boom in economies where NLG adoption rose most quickly. The clearest cross-border relationship appears instead in technical and other business services imported from India. That finding is narrower than an outsourcing claim: the trade category is broader than civil engineering, and the available data cannot connect changes in UK civil-engineer employment to employment or output in India.
 
 **Keywords:** generative AI; civil engineering; NACE M71; Mode 1; BaTIS; Eurostat; cross-country.
 
@@ -25,13 +25,13 @@ The civil engineering *industry* in high-NLG Europe did not expand with the shoc
 
 ## 1. Introduction
 
-Civil engineering sits at an awkward joint in the AI-labour literature. On the occupation side, drawings, specifications and reports look like the text-and-code tasks that large language models handle (Eloundou, Manning, Mishkin and Rock 2023, 2024; Felten, Raj and Seamans 2021). On the industry side, most of the sector’s *output* is still delivered as buildings, roads and water systems—activities whose establishments barely use AI in the Eurostat enterprise survey. Treating “construction” and “civil engineers” as one object therefore mixes two markets.
+Civil engineering combines office work that can be digitised with delivery that remains tied to a place. Drawings, specifications, calculations and reports resemble tasks on which language models can assist (Eloundou, Manning, Mishkin and Rock 2023, 2024; Felten, Raj and Seamans 2021). Site inspection, statutory responsibility and physical construction do not travel as easily. This distinction matters empirically. An occupation called “civil engineer,” an engineering consultancy classified in NACE M71 and a construction contractor classified in NACE F refer to related but different economic units.
 
-The research question is industry-level and cross-country: **when generative AI is adopted in country A, how does the civil engineering industry economy change—in A’s own architectural and engineering firms (NACE M71), and in engineering-related trade with country B?** The paper does not claim that UK headcount in SOC 2121 causes Indian GDP.
+The research question is therefore specific: when firms adopt natural-language-generation tools, what happens to architectural and engineering businesses at home, and what happens to technical services purchased across borders? The UK is used to describe adjustment within civil occupations. India is the main cross-border case because it is an established supplier of remotely delivered professional services and because the UK–India corridor changes markedly over the sample. China serves a more limited purpose: its construction-services exports offer a useful comparison with project delivery that is less readily supplied through Mode 1.
 
-Three design choices follow from the literature reviewed in Section 2. First, the shock must be *generative*. Eurostat’s catch-all indicator E_AI_TANY mixes machine learning that existed before ChatGPT with language generation that did not. The preferred intensity is E_AI_TNLG in NACE M, 2024 minus 2023. Second, the industry must be *M71*, not ISIC F construction and not all of professional services (NACE M). Third, cross-border delivery must respect GATS modes (WTO 1994; Francois and Hoekman 2010): India, the Philippines and Viet Nam as Mode-1 candidates for drawings and calculations; China as Mode-3 construction services (BaTIS SE).
+The empirical choices follow from this framing. The preferred shock is the change from 2023 to 2024 in Eurostat’s measure of enterprise use of AI for natural-language generation, E_AI_TNLG. The catch-all “any AI” measure is retained as a comparison because it also captures older machine-learning and image technologies. Domestic outcomes are measured for NACE M71 rather than for construction as a whole. Cross-border delivery is separated by GATS mode (WTO 1994; Francois and Hoekman 2010): Indian SJ3 imports approximate a broad Mode-1 technical-services margin, while Chinese construction services provide the contrasting project-delivery margin. The other exporters in the pooled estimation increase statistical coverage but are not independent case studies.
 
-The contribution is empirical stacking, not a new theory of AI. Relative to occupation-exposure maps (Felten et al. 2021; Webb 2020; Eloundou et al. 2024; ILO and NASK 2023) the paper adds *realised* adoption and *industry* accounts. Relative to firm-level generative-AI experiments (Noy and Zhang 2023; Brynjolfsson, Li and Raymond 2025; Dell’Acqua et al. 2023) it adds a 17-country industry and trade panel. Relative to offshoring theory (Blinder 2006; Grossman and Rossi-Hansberg 2008; Baldwin 2016, 2019) it adds a civil-specific mode split and a placebo on computer services.
+The contribution lies in joining evidence that is usually studied separately. Occupation-exposure maps describe which tasks might change, but not whether engineering businesses expand or contract. Firm experiments identify productivity effects on selected tasks, but not changes in industry accounts. The present data connect those literatures to realised adoption, M71 turnover and employment, and bilateral services trade. The approach is deliberately modest: it uses the EU panel for estimation while keeping the substantive interpretation centred on the UK–India relationship and the China comparison.
 
 Replication files are in `Study4_Article_Complete/` (open `Study4_Manuscript.md`, `CN_full_article.md`, `FIGURES.md`, and `tables_for_article.md` in the editor — not the zip). Figures, tables, and official data are in `figures/`, `tables/`, and `data/` in that folder. Missing series are catalogued in `DATA_INVENTORY.md`; their absence is part of the claim boundary.
 
@@ -154,92 +154,73 @@ Among 16 APS civil-adjacent unit groups, the largest declines are quality-contro
 
 Felten AIOE ranks the other way for engineers versus drafters (Table 12, Figure 10). The 2021 ability-based index is a poor description of 2022–25 generative-text disruption inside civil offices.
 
-### 5.2 Trade corridors (Figure 3, Table 4)
+### 5.2 The UK–India corridor (Figure 3, Table 4)
 
-UK←India SJ3 +128%; UK←China SE +52%; UK←India SI +113%. Germany←Poland SJ3 +54% (nearshore). US←India SJ3 only +8%. Four overlapping years of UK log 2121 and log India SJ3 correlate at −0.89 (\(n=4\)). The correlation is **descriptive**. It does not identify 2121 as the cause of Indian exports.
+UK imports of Indian SJ3 services increased from USD 2.19 billion in 2019 to USD 4.98 billion in 2024, a rise of 128%. This is the most transparent corridor in the data and motivates the panel analysis below. It should not be read as a direct measure of imported civil-engineering work: SJ3 includes technical, trade-related and other business services, and bilateral architectural and engineering services are not separately available. Nor can the increase be paired mechanically with the decline in UK civil-engineer employment. The overlap between the occupation and trade series is only four years, and the resulting correlation is descriptive rather than causal.
+
+Two comparisons help to locate the margin. UK imports of Indian computer services also increased over the period, but computer services do not respond to the NLG shock in the panel estimates. UK imports of Chinese construction services increased by 52%, yet the destination pattern of those exports is not related to importer NLG adoption. The issue is therefore not simply that all digitally intensive trade or all construction-related trade expanded after 2019.
 
 ### 5.3 Generic any-AI is the wrong shock (Figures 4, 7, 8; Tables 5, 6, 10)
 
-EU-16 post × ΔM TANY 2021–24 on log SJ3 is **0.000 (0.006)**, \(N=336\). An eight-country subsample is 0.019*** and does not survive expansion (Table 5, rows 17–18). Event-study year × ΔTANY is already 0.017 (\(p=0.049\)) in 2018 versus 2022 (Table 6)—a failed pre-trend. Leave-one-out stays near zero except dropping Sweden (0.010*). Mixing pre-ChatGPT machine learning into the intensity hides the generative episode.
+The generic any-AI measure produces little evidence of a trade relationship. In the 16-member sample, the post-shock interaction between the change in NACE M “any AI” use and log SJ3 imports is 0.000 with a standard error of 0.006 (\(N=336\)). A positive estimate in a smaller eight-member sample disappears when coverage is expanded. The event study also shows a pre-existing difference in 2018 relative to 2022, which weakens any causal interpretation. These results explain why the analysis does not use a broad digital-maturity index as its principal shock. Natural-language generation has a clearer date and a closer connection to the written technical work at issue.
 
 ### 5.4 Preferred shock: generative NLG and Mode-1 SJ3 (Figures 12–16; Tables 13–15)
 
-EU-27 professional NLG is the dated shock (Figure 12). 2024 M TNLG leaders: Denmark 34.06, Finland 30.02, Sweden 29.61, Netherlands 22.01; France 3.90; Romania 3.73 (Figure 13). ICT (J) is higher still (Figure 16).
+NLG use in professional services rose sharply between 2023 and 2024, although the size of the change differed substantially across EU members (Figures 12–13). This cross-sectional variation identifies the preferred specification. In the pooled Mode-1 panel, the interaction for 2024 is 0.007 with a standard error of 0.003. When the sample is restricted to India, the estimate rises to 0.021 (0.008). The cross-sectional regression for the 2022–24 change in Indian SJ3 imports gives a similar positive relationship. Estimates for the earlier pre-period years are not statistically distinguishable from zero, although the very short post-period still calls for restraint.
 
-On 17 importers × India/Philippines/Viet Nam (Table 13):
+The comparison specifications make the interpretation more precise. The association is not reproduced for the other exporters in the pooled sample. It is also absent for computer services, Chinese SJ3, Chinese construction services, R&D and consulting. In a direct comparison with enterprise use of machine learning, the NLG interaction remains positive while the machine-learning interaction is negative. Measures for text mining and image recognition are not significant.
 
-- Post ≥ 2023 × ΔM TNLG 2023–24: 0.009 (0.005), \(p=0.108\), \(N=357\).
-- Post = 2024 only: 0.007** (0.003).
-- India only: 0.021***. Philippines and Viet Nam are not.
-- Horse race versus machine learning: TNLG 0.015***; TML −0.026*.
-- Text mining and image recognition: 0.004 and −0.010, both null.
-- SI, China SE, China SJ3, SJ1, SJ2: all null.
-- Construction-enterprise NLG: 0.015 (0.020), null.
-- NACE J/C/N TNLG: 0.009**, 0.017**, 0.015**. The trade association is a **national GenAI wave**, not an M71-only shock.
-- Cross-section Δ log India SJ3 2022–24 on ΔTNLG: 0.017***, \(N=17\).
-- Event study (Table 14): 2018–21 insignificant (unlike TANY); 2023 0.016 (\(p=0.041\)); 2024 0.015 (\(p=0.072\)).
-
-This is consistent with Baldwin’s globotics and Grossman–Rossi-Hansberg task trade **for India Mode 1**, not for every partner and not for construction services.
+Sector-level adoption measures are less discriminating. NLG changes in ICT, manufacturing and administrative services also predict SJ3 imports, while NLG use within construction does not. Thus the treatment should be understood as a national generative-AI wave observed through professional-service adoption, not as an M71-specific intervention. Within that wave, India is the corridor that carries the positive Mode-1 relationship. This is consistent with the trade-in-tasks mechanism described by Grossman and Rossi-Hansberg (2008) and Baldwin (2019), but it does not establish that every remotely supplied service or every exporting economy responded in the same way.
 
 ### 5.5 Domestic M71 industry economy (Figures 9, 17–20; Tables 8–9, 16–17)
 
-Nominal M71 turnover rose in almost every member from 2021 to 2024 (Romania +78.9%, Greece +74.7%, Germany +16.5%, Sweden +1.8%; Table 17, Figure 17). That recovery-plus-inflation path is not GenAI.
+Nominal M71 turnover increased in nearly every member between 2021 and 2024 (Table 17, Figure 17). That common recovery, which also includes inflation, should not be attributed to generative AI. The fixed-effects model asks the narrower question of whether turnover grew differently in countries where NLG adoption rose more.
 
-The DiD (Table 16) asks whether it rose *faster* where NLG jumped:
+The estimate for log M71 turnover is −0.007 with a standard error of 0.003 (\(N=68\)). The corresponding estimates are −0.009 for wages, −0.006 for value added and effectively zero for employment. The combination matters more than any single coefficient. Firms in higher-adoption economies did not shed more workers, but their billed output and labour costs grew more slowly in the first observed post-shock year. One possible explanation is that assistance with drawings and documents reduced billable hours without immediately changing staffing. Price changes, demand composition and broader macroeconomic conditions are equally possible, and the present data cannot distinguish among them.
 
-- log M71 turnover, post-2024 × ΔTNLG: −0.007** (0.003), \(N=68\)
-- log wages: −0.009***
-- log value added: −0.006***
-- log employment: −0.000 (0.002)
-- log F construction turnover: −0.010***
-- log all-professional M turnover: −0.005**
-- nama compensation and output through 2023: about −0.009**, with construction more negative
-
-Jobs in M71 did not fall with the NLG jump. Turnover and wage bills grew more slowly—the pattern a task-automation model allows when hours per drawing fall (Acemoglu and Restrepo 2019; Noy and Zhang 2023). Because construction looks similar, the domestic result is **not** a unique civil-consultancy tax; it is slower nominal growth in several high-NLG (often Nordic) economies, including on site.
+The construction comparison cautions against treating the result as unique to engineering consultancies. Construction turnover has an estimate of −0.010, while turnover across all professional services has an estimate of −0.005. National-accounts compensation and output, which mostly end in 2023, show a similar direction. The domestic evidence is therefore best described as a relative slowdown in nominal activity among higher-NLG economies, not as proof that AI damaged M71 firms.
 
 China Mode-3 SE, 2019–24 sums: low-TNLG EU destinations USD 572 → 946 million (+65%); high-TNLG destinations 680 → 1,003 (+47%). Mode 3 did not follow the NLG map.
 
-### 5.6 Exporter labour markets (Figure 5, Table 7)
+### 5.6 Exporter-side evidence
 
-Philippines ISIC M +39.9% vs F +12.8%; Viet Nam M +28.5% vs F −1.4%; India M +13.0% vs F +33.0% (2019–2024). India expanded construction employment faster than professional services—the opposite of a simple “India engineers replace UK engineers” account. China is missing from the ILO F/M pull. ISIC M71 is unpublished.
+Indian employment provides a useful check on the simplest substitution story. Between 2019 and 2024, employment in the broad professional-services sector increased by 13.0%, whereas construction employment increased by 33.0%. These aggregates do not resemble a clean transfer from UK civil-engineering jobs into Indian professional employment. They are also too broad to test such a claim: ILOSTAT does not supply bilateral civil-engineer employment, and M71 is not consistently published for the countries and years needed here.
 
-### 5.7 Case notes
-
-**United Kingdom–India.** No post-Brexit Eurostat M AI. UK facts are APS polarisation plus BaTIS SJ3. They are not Indian GDP on 2121.
-
-**China.** Mode 3, not Mode 1. Microsoft Copilot shares undercount domestic models; they are not used as the shock.
-
-**Germany–Poland.** Nearshore SJ3 can rise when consumer Copilot shares look similar; Eurostat M and TNLG still differ.
+China remains a comparison rather than a second treatment case. Its construction-services exports to lower-NLG EU destinations rose from USD 572 million to USD 946 million between 2019 and 2024; exports to higher-NLG destinations rose from USD 680 million to USD 1.00 billion. The latter increase is smaller in percentage terms, so Chinese project delivery did not reorient toward the economies with the largest NLG shock. Consumer Copilot shares are not used in this analysis because they omit important domestic models and do not align with the BaTIS period.
 
 ---
 
 ## 6. Discussion
 
-Three literatures predicted pieces of this pattern; none predicted the stack.
+The evidence fits a task-based account better than an occupation-replacement account. UK employment changed in different directions across adjacent civil occupations. CAD and drawing technicians contracted more than civil engineers, but building and civil-engineering technicians expanded despite having relatively high measured exposure. This is what one would expect if generative AI altered the mix of drafting, checking, coordination and responsibility within jobs rather than removing an occupation in one step. It also explains why occupation exposure cannot stand in for an industry outcome.
 
-Task-based automation (Autor et al. 2003; Eloundou et al. 2024) predicted polarisation *inside* civil occupations. UK APS delivers that.
+The M71 estimates add an industry perspective that is missing from most task experiments. Faster preparation of a drawing or specification does not necessarily increase a consultancy’s nominal turnover. It may lower the hours billed for a fixed deliverable, change prices, release capacity for other projects or alter the division of work between grades. Stable employment alongside weaker turnover and wage growth is compatible with several of these channels. Because the data contain only one complete post-shock year, however, the estimates cannot determine which channel dominates or whether the pattern will persist.
 
-Globotics and task trade (Baldwin 2019; Grossman and Rossi-Hansberg 2008) predicted Mode-1 professional flows where the wire is cheap. India SJ3 delivers a positive association with TNLG; the Philippines and Viet Nam do not, so the prediction is corridor-specific, not “South-East Asia.”
+The trade result is similarly bounded. India’s positive coefficient is consistent with the idea that digital tools lower the cost of coordinating technical work across borders. It could reflect complementary trade, in which AI makes it easier for UK clients and Indian suppliers to work together, rather than direct replacement of UK labour. It could also reflect demand or sourcing changes correlated with adoption. The absence of an effect for computer services and Chinese construction services helps to rule out a wholly generic trade expansion, but it does not isolate civil-engineering invoices within SJ3.
 
-Construction economics (Gann and Salter 2000; Eastman et al. 2011) predicted that the *site* would not be the AI market. Eurostat F versus M, Felten AIIE, and the SE placebo all agree.
+Keeping the country narrative narrow makes these distinctions clearer. The UK evidence concerns occupations and one import corridor. India represents the remotely supplied services margin. China is useful because construction-services delivery depends more heavily on projects and commercial presence. The EU members provide variation in adoption and industry outcomes; listing each of them as a separate case would imply a level of country-specific identification that the design does not offer.
 
-The result that is newest relative to firm experiments is the **industry account**: M71 turnover and wages do not boom in high-NLG Europe in 2024; employment is flat. Faster drawings need not mean a larger consultancy industry in current euros. If anything, high-NLG countries show slower nominal growth—shared with construction—so one should not market the coefficient as “AI destroyed civil consultancies.” It is a relative slowdown in a short panel, current prices, 17 clusters.
-
-J/C/N TNLG also predicting SJ3 is a limitation for civil-specificity of the *trade* shock: the paper reports a national generative wave correlated with India Mode 1, with construction and computer-service placebos quiet, **not** a proven M71 outsourcing LATE.
+The results therefore support a restrained interpretation. Generative-AI adoption coincided with reorganisation inside UK civil occupations, slower nominal growth in M71 activity among higher-adoption EU economies, and increased technical-services imports from India. They do not demonstrate that AI destroyed engineering consultancies, that UK job losses moved to India, or that national GDP changed because of civil-engineering exposure.
 
 ---
 
 ## 7. Limitations
 
-SJ3 is broader than M71 invoices. SJ312 does not exist in BaTIS. M71 is not in the AI survey. SBS and nama are current prices. Seventeen importer clusters. TNLG in J/C/N also predicts SJ3. Construction SBS turnover is also negative. GVA ends in 2023; SBS 2024 is short. ILO M71 and BLS 54133 are unpublished or not returned. APS has sampling error. BaTIS ends 2024. No bilateral civil-engineer census. OWID, IMF AIPI and OECD ICT AI series were not retrieveable here.
+Several data constraints set the boundary of the study. Eurostat does not publish NLG adoption for M71 itself, so adoption in the broader NACE M sector is used as a proxy. Changes in NLG adoption in other sectors also predict SJ3 imports, which means the trade treatment captures a national generative-AI wave rather than an intervention confined to engineering consultancies.
+
+The trade category is also broad. BaTIS SJ3 includes technical, trade-related and other business services, while bilateral SJ312 architectural and engineering services are unavailable in this extraction. The positive India estimate may therefore contain non-engineering activity. No bilateral series records employment in ISCO 2142, so the analysis cannot trace jobs between the UK and India.
+
+The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions. APS estimates are subject to sampling variation and are used descriptively.
+
+These limitations are not repaired by filling missing observations. No country, occupation, industry or GDP cell is interpolated. Unsuccessful retrievals, including M71-specific AI adoption and more detailed engineering trade and employment series, remain documented in the data inventory. Additional post-shock years and more precise service classifications are needed before the associations reported here can support stronger causal claims.
 
 ---
 
 ## 8. Conclusion
 
-Under a **cross-country generative-AI shock**, the civil engineering *industry economy* did not expand in the high-NLG EU members that this paper can measure. Eurostat SBS 2021–24 shows slower M71 turnover and wages where professional NLG jumped, flat employment, and a similar pattern on construction sites. What did move is **Mode-1 engineering-adjacent trade from India** (BaTIS SJ3), not China Mode-3 construction services, and not generic “any AI.” Inside the United Kingdom, civil occupations polarised along Eloundou’s ranking rather than collapsing as one block.
+The available evidence does not show a domestic civil-engineering consultancy boom following the generative-AI shock. In the EU panel, M71 turnover, wages and value added grew more slowly where professional-service NLG adoption rose more, while employment was unchanged. Within the UK, civil occupations moved in different directions rather than contracting as a single group.
 
-The title question—how the civil engineering industry economy changes under AI in a transnational setting—therefore has a split answer: **domestic M71, no boom; India Mode 1, yes, as association not as APS-2121 causality.** Future work needs SJ312, an M71 AI survey, and bilateral ISCO 2142. Until those exist, papers should not treat construction, civil engineers, and engineering services trade as interchangeable.
+The clearest cross-border relationship is with Indian Mode-1 technical services. It is not present for generic any-AI adoption or for Chinese construction services. The appropriate conclusion is therefore limited but informative: generative AI is associated with task reorganisation and a changing India-linked services margin, not with a simple transfer of civil-engineering jobs or a measurable effect on partner-country GDP. More detailed bilateral engineering trade, M71-specific adoption and additional post-shock years are required to establish the mechanism.
 
 ---
 
@@ -448,25 +429,7 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 
 ### Table 3. Eurostat enterprise AI use, NACE M vs F (%)
 
-| country | iso3 | ai_F_2021 | ai_F_2023 | ai_F_2024 | ai_F_2025 | ai_M_2021 | ai_M_2023 | ai_M_2024 | ai_M_2025 |
-|---|---|---|---|---|---|---|---|---|---|
-| Austria | AUT | 3.12 | 4.28 | 7.35 | 14.89 | 20.93 | 25.82 | 39.59 | 52.8 |
-| Belgium | BEL | 8.3 | 5.17 | 11.08 | 20.25 | 20.24 | 28.28 | 42.92 | 57.11 |
-| Czechia | CZE | 0.35 | 1.34 | 2.35 | 7.84 | 9.28 | 9.42 | 22.09 | 33.31 |
-| Denmark | DNK | 8.87 | 3.23 | 11.7 | 23.93 | 39.22 | 23.58 | 44.9 | 63.71 |
-| Finland | FIN | 9.39 | 5.18 | 11.26 | 24.01 | 29.63 | 31.54 | 48.46 | 74.75 |
-| France | FRA | 4.09 | 2.09 | 3.14 | 9.52 | 15.23 | 13.75 | 17.47 | 32.5 |
-| Germany | DEU | 8.29 | 4.48 | 10.01 | 14.28 | 25.54 | 26.34 | 42.29 | 48.3 |
-| Greece | GRC | 2.82 | 3.4 | 5.17 | 6.96 | 9.2 | 8.67 | 21.02 | 30.81 |
-| Hungary | HUN | 0.55 | 1.8 | 4.27 | 4.53 | 3.71 | 5.24 | 17.3 | 22.86 |
-| Ireland | IRL | 0.27 | 5.92 | 6.24 | 9.2 | 13.59 | 15.77 | 27.25 | 31.76 |
-| Italy | ITA | 5.24 | 2.62 | 5.24 | 10.39 | 8.68 | 9.23 | 19.56 | 35.72 |
-| Netherlands | NLD | 7.39 | 4.72 | 8.88 | 21.29 | 20.05 | 24.8 | 39.78 | 54.98 |
-| Poland | POL | 0.35 | 1.23 | 2.01 | 2.35 | 6.48 | 9.05 | 14.45 | 22.16 |
-| Portugal | PRT | 1.06 | 2.92 | 2.74 | 4.74 | 10.38 | 10.68 | — | 25.68 |
-| Romania | ROU | 0.05 | 0.13 | 0.18 | 2.65 | 6.68 | 7.21 | 9.06 | 15.6 |
-| Spain | ESP | 3.77 | 4.63 | 4.43 | 11.26 | 13.72 | 16.14 | 26.07 | 38.35 |
-| Sweden | SWE | 2.32 | 2.78 | 13.15 | 14.9 | 16.47 | 20.69 | 53.71 | 64.88 |
+The country-by-country adoption table is retained in `tables_for_article.md` and `tables/table_eurostat_M_F.csv`. The main text reports the EU aggregate and uses member observations for estimation rather than treating each member as a separate case.
 
 ### Table 4. BaTIS balanced corridors (USD million)
 
@@ -597,25 +560,7 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 
 ### Table 11. Importer AI intensity (Eurostat pp)
 
-| iso3 | ai_M_2024 | ai_F_2024 | ai_M_2021 | ai_F_2021 | dM | dF | gap24 | country |
-|---|---|---|---|---|---|---|---|---|
-| AUT | 39.59 | 7.35 | 20.93 | 3.12 | 18.66 | 4.23 | 32.24 | Austria |
-| BEL | 42.92 | 11.08 | 20.24 | 8.3 | 22.68 | 2.78 | 31.84 | Belgium |
-| CZE | 22.09 | 2.35 | 9.28 | 0.35 | 12.81 | 2.0 | 19.74 | Czechia |
-| DEU | 42.29 | 10.01 | 25.54 | 8.29 | 16.75 | 1.72 | 32.28 | Germany |
-| DNK | 44.9 | 11.7 | 39.22 | 8.87 | 5.68 | 2.83 | 33.2 | Denmark |
-| ESP | 26.07 | 4.43 | 13.72 | 3.77 | 12.35 | 0.66 | 21.64 | Spain |
-| FIN | 48.46 | 11.26 | 29.63 | 9.39 | 18.83 | 1.87 | 37.2 | Finland |
-| FRA | 17.47 | 3.14 | 15.23 | 4.09 | 2.24 | -0.95 | 14.33 | France |
-| GRC | 21.02 | 5.17 | 9.2 | 2.82 | 11.82 | 2.35 | 15.85 | Greece |
-| HUN | 17.3 | 4.27 | 3.71 | 0.55 | 13.59 | 3.72 | 13.03 | Hungary |
-| IRL | 27.25 | 6.24 | 13.59 | 0.27 | 13.66 | 5.97 | 21.01 | Ireland |
-| ITA | 19.56 | 5.24 | 8.68 | 5.24 | 10.88 | 0.0 | 14.32 | Italy |
-| NLD | 39.78 | 8.88 | 20.05 | 7.39 | 19.73 | 1.49 | 30.9 | Netherlands |
-| POL | 14.45 | 2.01 | 6.48 | 0.35 | 7.97 | 1.66 | 12.44 | Poland |
-| PRT | — | 2.74 | 10.38 | 1.06 | — | 1.68 | — | Portugal |
-| ROU | 9.06 | 0.18 | 6.68 | 0.05 | 2.38 | 0.13 | 8.88 | Romania |
-| SWE | 53.71 | 13.15 | 16.47 | 2.32 | 37.24 | 10.83 | 40.56 | Sweden |
+Member-level treatment values are retained in `tables/table_ai_intensity.csv`. The estimation uses all available members, but the article does not interpret them as separate national cases.
 
 ### Table 13. Generative NLG shock (log SJ3 unless noted)
 
