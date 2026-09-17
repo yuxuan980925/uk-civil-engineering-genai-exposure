@@ -51,11 +51,16 @@ def main():
     copy_tree(ROOT / "figures", PACK / "03_figures")
     copy_tree(ROOT / "manuscript", PACK / "04_manuscript")
     copy_tree(ROOT / "scripts", PACK / "05_scripts")
+    ijcm = REPO / "Data_IJCM"
+    if ijcm.exists():
+        copy_tree(ijcm, PACK / "00_previous_ijcm_data")
     for name in [
         "DATA_INVENTORY.md",
         "DATA_SOURCES.md",
         "README.md",
         "results.json",
+        "results_nlg.json",
+        "results_industry.json",
     ]:
         src = ROOT / name
         if src.exists():
@@ -77,14 +82,15 @@ Built: {STAMP}
 
 Folder layout
 -------------
-01_data/         Official downloads + analysis panel (no fabricated cells)
+00_previous_ijcm_data/  Old occupation-paper files (Felten, ONS, APS, LLM panel). LLM scores are NOT the shock.
+01_data/         Official Study 4 downloads + analysis panels (no fabricated cells)
 02_tables/       All regression and descriptive tables (CSV)
-03_figures/      All figures (PNG)
-04_manuscript/   English paper + Chinese claim boundary
-05_scripts/      Replication: run_analysis.py then run_novelty_layer.py
+03_figures/      All figures 1-21 (PNG)
+04_manuscript/   Full English article + Chinese full article + tables
+05_scripts/      Replication scripts
 DATA_INVENTORY.md  Have / missing / cannot-exist catalogue
 DATA_SOURCES.md    APIs and retrieval date
-results.json       Machine-readable headline estimates
+results*.json      Machine-readable estimates (TANY, TNLG, M71 SBS)
 
 How to replicate
 ----------------

@@ -22,6 +22,6 @@ Requires pandas, numpy, statsmodels, matplotlib.
 
 Catalogue of have / missing series: `DATA_INVENTORY.md`.
 
-This article does **not** use IJCM LLM occupation scores. Exposure is Eloundou; employment is ONS APS. Full paper: `manuscript/Study4_Manuscript.md`.
+Full article (title: how the civil engineering industry economy changes under an AI shock, cross-country): `manuscript/Study4_Manuscript.md`. Chinese full text: `manuscript/CN_full_article.md`. This article does **not** use IJCM LLM scores as the shock.
 
 **Preferred shock is Eurostat E_AI_TNLG.** Trade: Post×ΔTNLG 0.009 (0.005); India 0.021***. **Industry:** SBS log M71 turnover Post-2024×ΔTNLG −0.007**; employment 0.000. Do not claim A-country 2121 causes B-country GDP.
