@@ -43,40 +43,38 @@ def copy_tree(src: Path, dst: Path) -> int:
     return n
 
 
-README = """# uk-civil-engineering-genai-exposure
+README = """# Open these files in the editor
 
-Standalone **English-only** folder. There is no Chinese manuscript in this directory.
+Cursor cannot preview Word, zip or Excel (`binary file is not supported`). Open **Markdown / HTML / CSV** only.
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China**
 
+English-only folder. There is no Chinese manuscript here.
+
 Corresponding author: Yuxuan Chai (`yuxuanchai98@outlook.com`), University of Strathclyde.
 
-## Word (open these)
+## Open in the editor
 
-| File | Contents |
-|---|---|
-| [Word/01_Manuscript.docx](Word/01_Manuscript.docx) | English article with five in-text figures |
-| [Word/02_All_Figures.docx](Word/02_All_Figures.docx) | All 23 figures |
-| [Word/03_All_Tables.docx](Word/03_All_Tables.docx) | All experiment tables |
-| [Word/04_Experimental_Results.docx](Word/04_Experimental_Results.docx) | TANY / TNLG / SBS estimates |
-| [Word/06_IJCM_Blinded_Manuscript.docx](Word/06_IJCM_Blinded_Manuscript.docx) | Blinded IJCM manuscript |
-| [Word/08_IJCM_Tables.docx](Word/08_IJCM_Tables.docx) | Article Tables 1–6 |
+1. [Study4_Manuscript.md](Study4_Manuscript.md) — English article (figures load from `figures/`)
+2. [Study4_Manuscript.html](Study4_Manuscript.html) — same article as HTML
+3. [FIGURES.md](FIGURES.md) — all 23 figures
+4. [tables_for_article.md](tables_for_article.md) — tables
+5. [IJCM_Submission/02_Blinded_Manuscript_for_Review.md](IJCM_Submission/02_Blinded_Manuscript_for_Review.md) — blinded manuscript
+6. [EXPERIMENTS_RUN.md](EXPERIMENTS_RUN.md) — experiment log
+7. [results/results_nlg.json](results/results_nlg.json) — NLG estimates
 
-Also: [Study4_Manuscript.docx](Study4_Manuscript.docx) · [Study4_Manuscript.md](Study4_Manuscript.md) · [index.html](index.html)
-
-## Data and results (same folder)
+## Data (CSV / JSON — editor can open these)
 
 | Path | Contents |
 |---|---|
 | `data/` | Retrieved Eurostat / BaTIS / SBS series |
-| `Data_Study4_IJCM/` | Numbered Study 4 replication data (01–08) |
-| `Data_IJCM/` | Study 1 occupation-exposure replication data (01–08) |
 | `tables/` | Complete CSV tables |
-| `figures/` | PNG originals |
+| `figures/` | PNG figures (also preview in FIGURES.md) |
 | `results/` | `results.json`, `results_nlg.json`, `results_industry.json` |
-| `IJCM_Submission/` | Title page, blinded manuscript, cover letter, Figure1–5 |
+| `Data_Study4_IJCM/` | Numbered Study 4 replication data |
+| `Data_IJCM/` | Study 1 occupation-exposure data |
 
-Do not open zip files in the editor.
+Word `.docx` files in `Word/` are for Microsoft Word on your computer, not for Cursor.
 """
 
 INDEX = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
@@ -90,23 +88,22 @@ h1, h2, h3 { line-height: 1.25; }
 nav a { margin-right: 1rem; }
 </style></head><body>
 <h1>How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China</h1>
-<p>English-only folder. Open the <strong>Word</strong> files. There is no Chinese article here.</p>
+<p>English-only folder. In the editor, open <strong>.md / .html / .csv</strong>. Do not open <code>.docx</code> or <code>.zip</code> (Cursor shows <em>binary file is not supported</em>).</p>
 <nav>
-<a href="Word/01_Manuscript.docx">English Word</a>
 <a href="Study4_Manuscript.md">English Markdown</a>
 <a href="Study4_Manuscript.html">English HTML</a>
 <a href="FIGURES.md">Figures</a>
 <a href="tables_for_article.md">Tables</a>
-<a href="Word/06_IJCM_Blinded_Manuscript.docx">IJCM blinded</a>
+<a href="IJCM_Submission/02_Blinded_Manuscript_for_Review.md">IJCM blinded</a>
 </nav><hr>
 <ul>
-<li><a href="Word/01_Manuscript.docx"><strong>English manuscript (Word)</strong></a></li>
-<li><a href="Word/02_All_Figures.docx">All 23 figures (Word)</a></li>
-<li><a href="Word/03_All_Tables.docx">All tables (Word)</a></li>
-<li><a href="Word/04_Experimental_Results.docx">Experimental results (Word)</a></li>
-<li><a href="Study4_Manuscript.md">English Markdown</a></li>
-<li><a href="IJCM_Submission/01_Title_Page_Not_for_Review.docx">Title page</a></li>
-<li><a href="IJCM_Submission/02_Blinded_Manuscript_for_Review.docx">Blinded manuscript</a></li>
+<li><a href="Study4_Manuscript.md"><strong>English manuscript (Markdown)</strong></a></li>
+<li><a href="Study4_Manuscript.html">English compiled HTML</a></li>
+<li><a href="FIGURES.md">All 23 figures</a></li>
+<li><a href="tables_for_article.md">Tables</a></li>
+<li><a href="EXPERIMENTS_RUN.md">Experimental results log</a></li>
+<li><a href="IJCM_Submission/02_Blinded_Manuscript_for_Review.md">Blinded manuscript (Markdown)</a></li>
+<li><a href="IJCM_Submission/02_Blinded_Manuscript_for_Review.html">Blinded manuscript (HTML)</a></li>
 </ul>
 <p>Data: <code>data/</code> · <code>Data_Study4_IJCM/</code> · <code>Data_IJCM/</code> · PNG: <code>figures/</code> · results: <code>results/</code></p>
 </body></html>
@@ -186,10 +183,21 @@ def main():
     (word / "README.md").write_text(README, encoding="utf-8")
     (OUT / "index.html").write_text(INDEX, encoding="utf-8")
     (OUT / "ZIP_PATH.md").write_text(
-        "This folder is the complete English package. Open Word/01_Manuscript.docx.\n"
-        "There is no Chinese manuscript in this directory.\n",
+        "Do not open zip or Word files in Cursor (binary file is not supported).\n\n"
+        "Open Study4_Manuscript.md, FIGURES.md and tables_for_article.md.\n",
         encoding="utf-8",
     )
+    open_me = """# Open me (not Word, not zip)
+
+Cursor cannot preview `.docx` / `.zip` / `.xlsx`.
+
+1. [Study4_Manuscript.md](Study4_Manuscript.md)
+2. [FIGURES.md](FIGURES.md)
+3. [tables_for_article.md](tables_for_article.md)
+4. [EXPERIMENTS_RUN.md](EXPERIMENTS_RUN.md)
+5. [IJCM_Submission/02_Blinded_Manuscript_for_Review.md](IJCM_Submission/02_Blinded_Manuscript_for_Review.md)
+"""
+    (OUT / "00_OPEN_ME.md").write_text(open_me, encoding="utf-8")
 
     chinese = [p.as_posix() for p in OUT.rglob("*") if p.is_file() and is_chinese(p.relative_to(OUT).as_posix())]
     if chinese:

@@ -1,2 +1,3 @@
-This folder is the complete English package. Open Word/01_Manuscript.docx.
-There is no Chinese manuscript in this directory.
+Do not open zip or Word files in Cursor (binary file is not supported).
+
+Open Study4_Manuscript.md, FIGURES.md and tables_for_article.md.

@@ -1,34 +1,32 @@
-# uk-civil-engineering-genai-exposure
+# Open these files in the editor
 
-Standalone **English-only** folder. There is no Chinese manuscript in this directory.
+Cursor cannot preview Word, zip or Excel (`binary file is not supported`). Open **Markdown / HTML / CSV** only.
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China**
 
+English-only folder. There is no Chinese manuscript here.
+
 Corresponding author: Yuxuan Chai (`yuxuanchai98@outlook.com`), University of Strathclyde.
 
-## Word (open these)
+## Open in the editor
 
-| File | Contents |
-|---|---|
-| [Word/01_Manuscript.docx](Word/01_Manuscript.docx) | English article with five in-text figures |
-| [Word/02_All_Figures.docx](Word/02_All_Figures.docx) | All 23 figures |
-| [Word/03_All_Tables.docx](Word/03_All_Tables.docx) | All experiment tables |
-| [Word/04_Experimental_Results.docx](Word/04_Experimental_Results.docx) | TANY / TNLG / SBS estimates |
-| [Word/06_IJCM_Blinded_Manuscript.docx](Word/06_IJCM_Blinded_Manuscript.docx) | Blinded IJCM manuscript |
-| [Word/08_IJCM_Tables.docx](Word/08_IJCM_Tables.docx) | Article Tables 1–6 |
+1. [Study4_Manuscript.md](Study4_Manuscript.md) — English article (figures load from `figures/`)
+2. [Study4_Manuscript.html](Study4_Manuscript.html) — same article as HTML
+3. [FIGURES.md](FIGURES.md) — all 23 figures
+4. [tables_for_article.md](tables_for_article.md) — tables
+5. [IJCM_Submission/02_Blinded_Manuscript_for_Review.md](IJCM_Submission/02_Blinded_Manuscript_for_Review.md) — blinded manuscript
+6. [EXPERIMENTS_RUN.md](EXPERIMENTS_RUN.md) — experiment log
+7. [results/results_nlg.json](results/results_nlg.json) — NLG estimates
 
-Also: [Study4_Manuscript.docx](Study4_Manuscript.docx) · [Study4_Manuscript.md](Study4_Manuscript.md) · [index.html](index.html)
-
-## Data and results (same folder)
+## Data (CSV / JSON — editor can open these)
 
 | Path | Contents |
 |---|---|
 | `data/` | Retrieved Eurostat / BaTIS / SBS series |
-| `Data_Study4_IJCM/` | Numbered Study 4 replication data (01–08) |
-| `Data_IJCM/` | Study 1 occupation-exposure replication data (01–08) |
 | `tables/` | Complete CSV tables |
-| `figures/` | PNG originals |
+| `figures/` | PNG figures (also preview in FIGURES.md) |
 | `results/` | `results.json`, `results_nlg.json`, `results_industry.json` |
-| `IJCM_Submission/` | Title page, blinded manuscript, cover letter, Figure1–5 |
+| `Data_Study4_IJCM/` | Numbered Study 4 replication data |
+| `Data_IJCM/` | Study 1 occupation-exposure data |
 
-Do not open zip files in the editor.
+Word `.docx` files in `Word/` are for Microsoft Word on your computer, not for Cursor.
