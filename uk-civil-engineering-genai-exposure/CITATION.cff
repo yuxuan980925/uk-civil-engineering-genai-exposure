@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Who drafts and who still signs? Replication data for a multi-instrument map of generative AI exposure across 50 UK civil and environmental occupations"
+message: If you use this dataset, please cite the accompanying journal article once it is published, and this repository.
+type: dataset
+authors:
+  - family-names: Chai
+    given-names: Yuxuan
+    email: yuxuanchai98@outlook.com
+    affiliation: University of Strathclyde
+license: CC-BY-4.0

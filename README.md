@@ -23,22 +23,19 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
-## Study 4 article (complete folder)
+## Study 4 (complete folder)
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China**
 
-Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. The primary manuscript is UK-centred: UK–India and UK–China, with 5 main figures and 6 main tables. The EU-17 supplies the harmonised NLG estimation panel.
+Open the standalone English folder [`uk-civil-engineering-genai-exposure/`](uk-civil-engineering-genai-exposure/). In Cursor, open Markdown — not Word or zip (`binary file is not supported`).
 
-- Primary English Word: [`Study4_Article_Complete/Study4_Manuscript.docx`](Study4_Article_Complete/Study4_Manuscript.docx)
-- Primary English Markdown: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
-- Chinese Word: [`Study4_Article_Complete/CN_full_article.docx`](Study4_Article_Complete/CN_full_article.docx)
-- Supplementary figures: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
-- Tables: [`Study4_Article_Complete/tables_for_article.md`](Study4_Article_Complete/tables_for_article.md)
-- Folders: [`figures/`](Study4_Article_Complete/figures/) · [`tables/`](Study4_Article_Complete/tables/) · [`data/`](Study4_Article_Complete/data/) · [`scripts/`](Study4_Article_Complete/scripts/)
-- Compiled HTML: [`Study4_Article_Complete/index.html`](Study4_Article_Complete/index.html)
-- Complete zip with all results (Finder / Explorer only): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
+- English article: [`uk-civil-engineering-genai-exposure/Study4_Manuscript.md`](uk-civil-engineering-genai-exposure/Study4_Manuscript.md)
+- Figures: [`uk-civil-engineering-genai-exposure/FIGURES.md`](uk-civil-engineering-genai-exposure/FIGURES.md)
+- Tables: [`uk-civil-engineering-genai-exposure/tables_for_article.md`](uk-civil-engineering-genai-exposure/tables_for_article.md)
+- Start here: [`uk-civil-engineering-genai-exposure/00_OPEN_ME.md`](uk-civil-engineering-genai-exposure/00_OPEN_ME.md)
+- Numbered Study 4 data: [`uk-civil-engineering-genai-exposure/Data_Study4_IJCM/`](uk-civil-engineering-genai-exposure/Data_Study4_IJCM/)
 
-Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
+The same openable files are also in [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/). Working copy: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). An optional zip is [`Study4_zip_packages/Study4.zip`](Study4_zip_packages/Study4.zip) (unzip locally; do not open it in the editor).
 
 ## Licence
 

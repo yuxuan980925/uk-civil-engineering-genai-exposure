@@ -1,0 +1,51 @@
+occupation,ChatGPT,DeepSeek,Gemini3Pro,pooled_mean
+Architectural technician,4.0,3.0,4.0,3.6666666666666665
+BIM technician,5.0,4.0,4.0,4.333333333333333
+Building and building services engineer,4.0,3.0,3.0,3.3333333333333335
+Building control officer,3.0,2.0,2.0,2.3333333333333335
+Building control surveyor,3.0,2.0,2.0,2.3333333333333335
+Building technician,2.0,3.0,2.0,2.3333333333333335
+CAD technician,5.0,4.0,4.0,4.333333333333333
+Cartographer,5.0,4.0,4.0,4.333333333333333
+Chartered architectural technologist,4.0,3.0,4.0,3.6666666666666665
+Civil engineer,3.0,3.0,3.0,3.0
+Civil engineering technician,3.0,3.0,2.0,2.6666666666666665
+Construction contract manager,4.0,2.0,4.0,3.3333333333333335
+Construction project manager,4.0,2.0,2.0,2.6666666666666665
+Energy adviser and assessor,5.0,4.0,4.0,4.333333333333333
+Energy engineer,4.0,3.0,4.0,3.6666666666666665
+Energy manager,4.0,3.0,4.0,3.6666666666666665
+Engineering project manager,4.0,2.0,3.0,3.0
+Environmental consultant,4.0,3.0,4.0,3.6666666666666665
+Environmental health professional,4.0,3.0,2.0,3.0
+Environmental scientist,4.0,3.0,3.0,3.3333333333333335
+Environmental/geo-environmental engineer,3.0,2.0,3.0,2.6666666666666665
+Estimator,5.0,4.0,4.0,4.333333333333333
+Fire safety officer,3.0,3.0,3.0,3.0
+Gas engineer (professional),2.0,2.0,2.0,2.0
+Geotechnical engineer,3.0,2.0,2.0,2.3333333333333335
+Health and safety inspector,2.0,2.0,2.0,2.0
+Heating and ventilating engineer (professional),3.0,3.0,3.0,3.0
+Housing and planning inspector,2.0,2.0,2.0,2.0
+Hydrogeologist,3.0,2.0,3.0,2.6666666666666665
+Hydrographic surveyor,2.0,2.0,2.0,2.0
+Hydrologist,3.0,3.0,4.0,3.3333333333333335
+Land surveyor,3.0,2.0,2.0,2.3333333333333335
+Occupational health and safety officer,3.0,2.0,3.0,2.6666666666666665
+Occupational hygienist,3.0,3.0,2.0,2.6666666666666665
+Planning engineer,4.0,3.0,4.0,3.6666666666666665
+Project engineer,4.0,3.0,3.0,3.3333333333333335
+Quality control engineer,3.0,3.0,3.0,3.0
+Quantity surveyor,5.0,3.0,4.0,4.0
+Road traffic and transport safety officer,3.0,2.0,3.0,2.6666666666666665
+Structural engineer,3.0,3.0,3.0,3.0
+Surveying technician,2.0,3.0,2.0,2.3333333333333335
+Sustainability officer,5.0,3.0,4.0,4.0
+Town planning officer,5.0,3.0,4.0,4.0
+Traffic and vehicle examiner/inspector,2.0,3.0,1.0,2.0
+Traffic engineer,4.0,3.0,3.0,3.3333333333333335
+Transport planner,5.0,3.0,4.0,4.0
+Transportation engineer,4.0,3.0,3.0,3.3333333333333335
+Urban designer,4.0,2.0,3.0,3.0
+Valuer,4.0,2.0,3.0,3.0
+Water engineer (professional),3.0,3.0,3.0,3.0

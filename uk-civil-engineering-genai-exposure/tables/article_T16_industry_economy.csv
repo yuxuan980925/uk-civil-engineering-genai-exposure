@@ -1,0 +1,16 @@
+Specification,Coefficient (s.e.),N,Note
+(I1) log M71 turnover Post2024×ΔTNLG,-0.007** (0.003),68,SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE
+(I2) log M71 employment Post2024×ΔTNLG,-0.000 (0.002),68,SBS sbs_ovw_act M71 EMP_NR; country+year FE
+(I3) log M71 wages Post2024×ΔTNLG,-0.009*** (0.003),68,SBS sbs_ovw_act M71 WAGE_MEUR; country+year FE
+(I4) log M71 value added Post2024×ΔTNLG,-0.006*** (0.002),68,SBS sbs_ovw_act M71 AV_MEUR; country+year FE
+(I5) log M71 GOS Post2024×ΔTNLG,-0.003 (0.005),68,SBS sbs_ovw_act M71 GOS_MEUR; country+year FE
+(I6) log F turnover Post2024×ΔTNLG placebo,-0.010*** (0.003),68,SBS sbs_sc_ovw F NETTUR_MEUR; country+year FE
+(I7) log F employment Post2024×ΔTNLG placebo,-0.003 (0.002),68,SBS sbs_ovw_act F EMP_NR; country+year FE
+(I8) log M turnover Post2024×ΔTNLG placebo,-0.005** (0.002),68,SBS sbs_sc_ovw M NETTUR_MEUR; country+year FE
+(I9) log M71 turnover Post2023×ΔTNLG,-0.009** (0.004),68,SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE
+(I10) Δlog≈ M71 turnover 2023–24 on ΔTNLG,-0.002 (0.001),17,Cross-section; LHS is percent/100
+(I11) M71 employment % 2023–24 on ΔTNLG,-0.000 (0.001),17,Cross-section; LHS percent/100
+(I12) log M71 compensation Post×ΔTNLG,-0.009** (0.004),96,nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year
+(I12) log M71 output Post×ΔTNLG,-0.009*** (0.003),96,nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year
+(I12) log F compensation Post×ΔTNLG,-0.011*** (0.004),102,nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year
+(I12) log F output Post×ΔTNLG,-0.014*** (0.004),102,nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year
