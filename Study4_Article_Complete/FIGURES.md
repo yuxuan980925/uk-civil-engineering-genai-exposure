@@ -1,6 +1,6 @@
-# Figures 1–21
+# Supplementary figures 1–23
 
-From: *How Does the Civil Engineering Industry Economy Change under an AI Shock?*
+From: *How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China*
 
 ## Figure 1
 
@@ -127,3 +127,15 @@ M71 turnover levels.
 US CES NAICS 54 (too broad).
 
 ![Figure 21](figures/figure21_bls_naics54.png)
+
+## Figure 22
+
+UK–India and UK–China SJ3 corridors, 2019 = 100.
+
+![Figure 22](figures/figure22_uk_india_china_sj3.png)
+
+## Figure 23
+
+UK–India and UK–China service growth by category.
+
+![Figure 23](figures/figure23_uk_india_china_service_growth.png)

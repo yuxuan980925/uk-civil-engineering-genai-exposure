@@ -25,21 +25,18 @@ See `Data_IJCM/README.txt` for the file-level inventory.
 
 ## Study 4 article (complete folder)
 
-**How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack**
+**How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China**
 
-Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. **The concise manuscript focuses on the UK, India and China; the EU-17 is used only as the estimation panel.**
+Open [`Study4_Article_Complete/`](Study4_Article_Complete/) after `git pull`. The primary manuscript is UK-centred: UK–India and UK–China, with 5 main figures and 6 main tables. The EU-17 supplies the harmonised NLG estimation panel.
 
-- Concise English Word: [`Study4_Article_Complete/Study4_Concise_Manuscript.docx`](Study4_Article_Complete/Study4_Concise_Manuscript.docx)
-- 中文精简 Word: [`Study4_Article_Complete/CN_Concise_Manuscript.docx`](Study4_Article_Complete/CN_Concise_Manuscript.docx)
-- Concise English Markdown: [`Study4_Article_Complete/Study4_Concise_Manuscript.md`](Study4_Article_Complete/Study4_Concise_Manuscript.md)
-- 中文精简 Markdown: [`Study4_Article_Complete/CN_Concise_Manuscript.md`](Study4_Article_Complete/CN_Concise_Manuscript.md)
-- Archived full English: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
-- Figures 1–21: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
+- Primary English Word: [`Study4_Article_Complete/Study4_Manuscript.docx`](Study4_Article_Complete/Study4_Manuscript.docx)
+- Primary English Markdown: [`Study4_Article_Complete/Study4_Manuscript.md`](Study4_Article_Complete/Study4_Manuscript.md)
+- Chinese Word: [`Study4_Article_Complete/CN_full_article.docx`](Study4_Article_Complete/CN_full_article.docx)
+- Supplementary figures: [`Study4_Article_Complete/FIGURES.md`](Study4_Article_Complete/FIGURES.md)
 - Tables: [`Study4_Article_Complete/tables_for_article.md`](Study4_Article_Complete/tables_for_article.md)
-- Folders: [`figures/`](Study4_Article_Complete/figures/) · [`tables/`](Study4_Article_Complete/tables/) · [`data/`](Study4_Article_Complete/data/)
+- Folders: [`figures/`](Study4_Article_Complete/figures/) · [`tables/`](Study4_Article_Complete/tables/) · [`data/`](Study4_Article_Complete/data/) · [`scripts/`](Study4_Article_Complete/scripts/)
 - Compiled HTML: [`Study4_Article_Complete/index.html`](Study4_Article_Complete/index.html)
-- Word (from HTML): [`Study4_Article_Complete/Study4_Manuscript.docx`](Study4_Article_Complete/Study4_Manuscript.docx) · [`CN_full_article.docx`](Study4_Article_Complete/CN_full_article.docx)
-- Zip (Finder / Explorer only): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
+- Complete zip with all results (Finder / Explorer only): [`Study4_Article_Complete/Study4.zip`](Study4_Article_Complete/Study4.zip)
 
 Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/).
 

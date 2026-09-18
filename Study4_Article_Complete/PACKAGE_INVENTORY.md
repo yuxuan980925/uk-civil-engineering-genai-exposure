@@ -2,11 +2,12 @@
 
 Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `Study4_Manuscript.html`.
 
-- Figures: 21 PNG
-- Tables: 33 CSV
-- Data files: 39
-- Manuscript-support files: 28
-- Files in package before zip: 149
+- Figures: 23 PNG
+- Tables: 34 CSV
+- Data files: 40
+- Manuscript-support files: 30
+- Reproduction scripts: 15
+- Files in package before zip: 175
 
 ## Included files
 
@@ -19,9 +20,11 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `CN_novelty_and_claims.md`
 - `DATA_INVENTORY.md`
 - `DATA_SOURCES.md`
+- `EXPERIMENTS_RUN.md`
 - `FIGURES.docx`
 - `FIGURES.html`
 - `FIGURES.md`
+- `MANIFEST.csv`
 - `OPEN_IN_EDITOR.md`
 - `README.md`
 - `Study4_Concise_Manuscript.docx`
@@ -34,6 +37,7 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `article_body.md`
 - `data/batis_SJ1_SJ2.csv`
 - `data/batis_civil_related.csv`
+- `data/batis_uk_india_china.csv`
 - `data/bls_54133_fetch_log.csv`
 - `data/bls_54133_raw.json`
 - `data/bls_engineering_ces.csv`
@@ -84,6 +88,8 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `figures/figure1_eurostat_M_vs_F.png`
 - `figures/figure20_m71_turnover_levels.png`
 - `figures/figure21_bls_naics54.png`
+- `figures/figure22_uk_india_china_sj3.png`
+- `figures/figure23_uk_india_china_service_growth.png`
 - `figures/figure2_uk_aps_bundle.png`
 - `figures/figure3_uk_trade.png`
 - `figures/figure4_event_study.png`
@@ -112,6 +118,8 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `manuscript/figures/figure1_eurostat_M_vs_F.png`
 - `manuscript/figures/figure20_m71_turnover_levels.png`
 - `manuscript/figures/figure21_bls_naics54.png`
+- `manuscript/figures/figure22_uk_india_china_sj3.png`
+- `manuscript/figures/figure23_uk_india_china_service_growth.png`
 - `manuscript/figures/figure2_uk_aps_bundle.png`
 - `manuscript/figures/figure3_uk_trade.png`
 - `manuscript/figures/figure4_event_study.png`
@@ -121,6 +129,24 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `manuscript/figures/figure8_loo.png`
 - `manuscript/figures/figure9_m71_vs_F_gva.png`
 - `manuscript/tables_for_article.md`
+- `results.json`
+- `results_industry.json`
+- `results_nlg.json`
+- `scripts/build_article_assets.py`
+- `scripts/build_focused_main_text.py`
+- `scripts/build_release_zip.py`
+- `scripts/compile_article.py`
+- `scripts/download_ai_shocks.py`
+- `scripts/download_m71_economy.py`
+- `scripts/inherit_legacy_instruments.py`
+- `scripts/pack_article_complete.py`
+- `scripts/pack_english_complete.py`
+- `scripts/run_all_experiments.py`
+- `scripts/run_analysis.py`
+- `scripts/run_focused_corridors.py`
+- `scripts/run_industry_economy.py`
+- `scripts/run_nlg_shock.py`
+- `scripts/run_novelty_layer.py`
 - `tables/article_T12_multi_instrument.csv`
 - `tables/article_T12b_aiie_construction.csv`
 - `tables/article_T12c_aiie_naics23.csv`
@@ -153,6 +179,7 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `tables/table_uk_aps_change.csv`
 - `tables/table_uk_aps_civil_bundle.csv`
 - `tables/table_uk_aps_vs_india_sj3.csv`
+- `tables/table_uk_india_china_corridors.csv`
 - `tables/table_world_bank.csv`
 - `tables_for_article.docx`
 - `tables_for_article.html`

@@ -6,10 +6,10 @@ After `git pull`, open:
 2. [`CN_full_article.md`](CN_full_article.md) — complete Chinese article
 3. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — optional short English version
 4. [`CN_Concise_Manuscript.md`](CN_Concise_Manuscript.md) — 可选中文精简稿
-5. [`FIGURES.md`](FIGURES.md) — figures 1–21
+5. [`FIGURES.md`](FIGURES.md) — supplementary figures 1–23 (the article embeds 5)
 6. [`tables_for_article.md`](tables_for_article.md) — all tables
 
-Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/)
+Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/) · [`scripts/`](scripts/)
 
 Compiled HTML (browser): [`index.html`](index.html)
 

@@ -1,23 +1,26 @@
 # How Does the Civil Engineering Industry Economy Change under an AI Shock?
 
-Evidence from a Cross-Country Stack — **complete article folder**
+The United Kingdom’s Service Links with India and China — **complete article folder**
 
 **Open in the editor (not the zip):**
 
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
-- `Study4_Manuscript.docx` — **primary English submission draft**, about 8,000 words, with embedded figures
+- `Study4_Manuscript.docx` — **primary English submission draft**, about 7,200 words, with 5 embedded figures
 - `Study4_Manuscript.md` — editor-readable primary English article
 - `CN_full_article.md` — Chinese article
 - `CN_full_article.docx` — Word, Chinese
 - `Study4_Concise_Manuscript.docx` — optional short English version
 - `CN_Concise_Manuscript.docx` — 可选中文精简稿
 - `tables_for_article.md` — all article tables
-- `FIGURES.md` — figures 1–21
+- `FIGURES.md` — supplementary figures 1–23; only 5 are embedded in the main article
 - `figures/` — PNG files
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
+- `scripts/` — all download, analysis, compilation and packaging scripts
+- `results.json`, `results_nlg.json`, `results_industry.json` — machine-readable experiment results
+- `EXPERIMENTS_RUN.md` — experiment record
 - `index.html` — compiled HTML (figures load from `figures/`)
-- `FIGURES.docx` — Word, figures 1–21
+- `FIGURES.docx` — Word, supplementary figures 1–23
 - `tables_for_article.docx` — Word, all tables
 - `PACKAGE_INVENTORY.md` — package contents and file counts
 - `SHA256SUMS.txt` — checksums for every packaged file except the zip itself
