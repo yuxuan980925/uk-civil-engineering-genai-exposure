@@ -234,7 +234,7 @@ The panel result adds a different piece of evidence. India’s positive coeffici
 
 Keeping the UK at the centre of both country comparisons makes these distinctions clearer. The Indian relationship shows the strongest expansion in SJ3 and computer services, while the Chinese relationship grows from a smaller base and contains a larger construction-services flow. The EU members provide variation in adoption and industry outcomes; they are an estimation sample rather than additional country stories.
 
-The distinction also changes how the trade numbers should be read. UK imports from India rose by almost USD 2.8 billion in SJ3 between 2019 and 2024, whereas the increase in Chinese imports from India was about USD 140 million. A similar percentage coefficient in a panel regression would therefore imply very different changes in value. Conversely, rapid percentage growth in a small construction flow need not represent a large reallocation of engineering activity. The article reports both levels and rates to prevent a visually striking percentage from obscuring economic scale.
+The distinction also changes how the trade numbers should be read. UK imports from India rose by almost USD 2.8 billion in SJ3 between 2019 and 2024, whereas the increase in UK imports from China was about USD 771 million. A similar percentage coefficient in a panel regression would therefore imply very different changes in value. Conversely, rapid percentage growth in a small construction flow need not represent a large reallocation of engineering activity. The article reports both levels and rates to prevent a visually striking percentage from obscuring economic scale.
 
 For engineering businesses, the findings point to coordination rather than a simple location choice. Generative tools can lower the cost of preparing and checking documents, but they can also lower the cost of communicating requirements across organisational boundaries. The India coefficient may therefore reflect complementarity: importers that adopted NLG more rapidly may have become better able to specify, review or integrate work supplied from India. The available data cannot separate this channel from substitution, but stable M71 employment makes a complete displacement account less persuasive.
 
@@ -334,7 +334,7 @@ Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects o
 
 OECD & WTO. BaTIS: Balanced Trade in Services dataset, BPM6, adjustment B.
 
-Office for National Statistics. (2019). Which occupations are at highest risk of being automated? (Table 9, SOC 2010). APS SOC 2020 employment extracts as used in this repository.
+Office for National Statistics. (2019). Which occupations are at highest risk of being automated? (Table 9, SOC 2010). APS SOC 2020 employment extracts used in the supplementary materials.
 
 Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590.
 
