@@ -2,8 +2,9 @@
 
 Study 4 can be opened in either of these folders:
 
-1. **[`../Study4_Global_AI_Civil_Engineering_Economy/`](../Study4_Global_AI_Civil_Engineering_Economy/)** — restored openable copy (article, figures, Word, IJCM files). Start with [`../Study4_Global_AI_Civil_Engineering_Economy/README.md`](../Study4_Global_AI_Civil_Engineering_Economy/README.md).
-2. **This folder** (`Study4_FINAL_VERSION/`) — working copy (code, extra experiments, data).
+1. **[`../Study4/`](../Study4/)** — complete package (article, figures, Word, IJCM files, numbered data). Start with [`../Study4/README.md`](../Study4/README.md).
+2. **[`../Study4_Global_AI_Civil_Engineering_Economy/`](../Study4_Global_AI_Civil_Engineering_Economy/)** — same openable copy under the original folder name.
+3. **This folder** (`Study4_FINAL_VERSION/`) — working copy (code, extra experiments, data).
 
 Cursor cannot preview zip files (*binary file is not supported*). Open [`00_OPEN_IN_EDITOR.md`](00_OPEN_IN_EDITOR.md) and [`FIGURES.md`](FIGURES.md).
 

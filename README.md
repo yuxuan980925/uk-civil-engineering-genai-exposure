@@ -23,19 +23,19 @@ The files that support the findings are in [`Data_IJCM/`](Data_IJCM/). The panel
 
 See `Data_IJCM/README.txt` for the file-level inventory.
 
-## Study 4 article (complete folder)
+## Study 4 (complete folder)
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China**
 
-After `git pull`, open [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/). That directory is the restored openable copy (markdown, HTML, figures, Word). It is no longer a pointer README.
+Open [`Study4/`](Study4/). That folder is the complete package: article, figures, tables, data, IJCM Word files, and numbered replication data. No unzip step.
 
-- English Markdown: [`Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md`](Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md)
-- Chinese Markdown: [`Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md`](Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md)
-- Folder index: [`Study4_Global_AI_Civil_Engineering_Economy/index.html`](Study4_Global_AI_Civil_Engineering_Economy/index.html)
-- IJCM Word set: [`Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/`](Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/)
-- Complete zip (unzip locally, not in the editor): [`Study4_zip_packages/Study4.zip`](Study4_zip_packages/Study4.zip)
+- English: [`Study4/Study4_Manuscript.md`](Study4/Study4_Manuscript.md)
+- Chinese: [`Study4/CN_full_article.md`](Study4/CN_full_article.md)
+- Index: [`Study4/index.html`](Study4/index.html)
+- IJCM Word: [`Study4/IJCM_Submission/`](Study4/IJCM_Submission/)
+- Numbered data: [`Study4/Data_Study4_IJCM/`](Study4/Data_Study4_IJCM/)
 
-A second compiled copy remains in [`Study4_Article_Complete/`](Study4_Article_Complete/). Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). Do not open zip files in the editor.
+The same openable files are also in [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/). Working copy: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). An optional zip is [`Study4_zip_packages/Study4.zip`](Study4_zip_packages/Study4.zip) (unzip locally; do not open it in the editor).
 
 ## Licence
 

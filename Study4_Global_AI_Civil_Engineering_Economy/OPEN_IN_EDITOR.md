@@ -30,9 +30,8 @@ This folder is the **openable copy** of Study 4 (generative-AI shock, UK–India
 | `figures/` | PNG figures used by the markdown/HTML articles |
 | `tables/` | CSV tables |
 | `data/` | Retrieved Eurostat / BaTIS / SBS series |
+| `Data_Study4_IJCM/` | Numbered replication data (01–08) |
 | `IJCM_Submission/` | Title page, blinded manuscript, cover letter, 300 dpi Figure1–5 |
 | `scripts/` | Replication scripts |
 
-Download-only zip (unzip in Finder / Explorer, not in the editor): [Study4.zip](Study4.zip)
-
-The same files also exist at repository root as `Study4_IJCM_Submission/` and `Study4_Article_Complete/`.
+The complete package is also in [`../Study4/`](../Study4/). Do not open zip files in the editor.
