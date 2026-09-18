@@ -1,0 +1,6 @@
+specification,coef (se),n,note
+"Model 1: DiD, log UK employment, core×post (SOC 2121+3120)",-0.339*** (0.114),256,APS 16 occ × 16 quarters; cluster by SOC
+"  pre-trend placebo (core×fake-post, pre-period)",0.002 (0.050),80,should be ~0
+"Model 2: ITS, log UK←India SJ3, post-2022 shift",-0.093 (0.069),10,BaTIS 2015–2024; HC1
+"  pre-trend placebo (fake shock 2019, pre-sample)",0.005 (0.093),8,should be ~0
+"Model 3: cross-occupation slope, Δlog emp on exposure β",1.660 (10.434),3,civil occupations with Eloundou scores
