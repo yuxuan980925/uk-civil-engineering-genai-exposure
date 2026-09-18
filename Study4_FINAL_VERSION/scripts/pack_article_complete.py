@@ -138,9 +138,9 @@ The United Kingdom’s Service Links with India and China — **complete article
 **Open in the editor (not the zip):**
 
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
-- `Study4_Manuscript.docx` — **primary English submission draft**, about 7,200 words, with 5 embedded figures
-- `Study4_Manuscript.md` — editor-readable primary English article
-- `CN_full_article.md` — Chinese article
+- `Study4_Manuscript.docx` — English working copy used to compile this folder; the **journal submission files** are in [`../Study4_IJCM_Submission/`](../Study4_IJCM_Submission/)
+- `Study4_Manuscript.md` — editor-readable English article in IJCM layout (abstract, keywords, numbered sections, disclosure, data availability, tables, figures)
+- `CN_full_article.md` — Chinese companion article (not the IJCM file)
 - `CN_full_article.docx` — Word, Chinese
 - `Study4_Concise_Manuscript.docx` — optional short English version
 - `CN_Concise_Manuscript.docx` — 可选中文精简稿

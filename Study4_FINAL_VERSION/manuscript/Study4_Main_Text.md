@@ -1,4 +1,9 @@
-# How Does the Civil Engineering Industry Economy Change under an AI Shock? Evidence from a Cross-Country Stack
+# Superseded working note
+
+The IJCM submission is `Study4_Manuscript.md`. This short note is not the article. Occupation APS figures here are supplementary context only and do not identify partner GDP.
+
+# How Does the Civil Engineering Industry Economy Change under an AI Shock?
+ Evidence from a Cross-Country Stack
 
 Yuxuan Chai · University of Strathclyde · `yuxuanchai98@outlook.com`  
 Working paper · 17 September 2026

@@ -1,8 +1,8 @@
 # Study 4: GenAI and the cross-country civil engineering industry economy
 
-The **complete article folder** is [`../Study4_Article_Complete/`](../Study4_Article_Complete/). After `git pull`, open the `.md` files in the editor — not the zip.
+The **openable article folder** is [`../Study4_Global_AI_Civil_Engineering_Economy/`](../Study4_Global_AI_Civil_Engineering_Economy/). After `git pull`, open the `.md` files in that directory — not a zip.
 
-This folder is the working copy (code and extra experiments). Do not open `.zip` in the editor.
+This folder is the working copy (code and extra experiments). A second compiled copy is [`../Study4_Article_Complete/`](../Study4_Article_Complete/). Do not open `.zip` in the editor.
 
 Start here: [`00_OPEN_IN_EDITOR.md`](00_OPEN_IN_EDITOR.md)
 
