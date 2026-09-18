@@ -11,9 +11,11 @@ This folder is the complete journal package for Study 4, in the same role as
 4. `04_Tables.docx` — editable copies of Tables 1–6.
 5. `05_Figure_Captions.docx` — captions for Figures 1–5.
 6. `Figures/Figure1.png` … `Figure5.png` — separate 300 dpi files.
-7. `Data_Study4_IJCM/` — numbered replication package (Study 1 layout).
+7. `06_Supplementary_Figures.docx` and `07_Supplementary_Tables.docx` — supplementary material.
 
-An identified author copy is `00_Manuscript_as_Submitted.docx`.
+An identified author copy is `Study4_Complete_Manuscript.docx`.
+
+The archive `Study4_COMPLETE_SUBMISSION.zip` contains only the journal submission set above (not replication scripts or raw data).
 
 ## Journal format applied
 

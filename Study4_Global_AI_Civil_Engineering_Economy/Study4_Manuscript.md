@@ -26,7 +26,7 @@ Three measurement choices follow. First, the shock must capture generative use r
 
 This design connects three bodies of evidence that are usually separate. Task studies show that language models can reduce the time required for writing, coding and analysis. Industry accounts reveal whether those task-level gains translate into turnover, employment or wages. Trade data show whether digitally deliverable services respond differently from project-based construction services. The contribution is not a new exposure index or a claim about aggregate GDP. It is a service-heading-specific comparison of domestic M71 outcomes and cross-border adjustment during the first observable generative-AI adoption wave.
 
-A complete replication package accompanies this submission. All empirical specifications were rerun from the released data. The six main-text tables and five main-text figures report the results needed for the article; the accompanying supplementary-results set preserves all 34 generated tables, all 23 generated figures and the machine-readable coefficient files. Missing series are catalogued there; their absence is part of the claim boundary.
+A complete replication package is available separately from the corresponding author. The six main-text tables and five main-text figures report the results needed for the article; supplementary tables and figures document the full estimation output. Missing series are catalogued in that package; their absence is part of the claim boundary.
 
 ---
 
@@ -219,13 +219,9 @@ The M71 estimates add an industry perspective that is missing from most task exp
 
 The panel result adds a different piece of evidence. India’s positive coefficient is consistent with digital tools lowering the cost of coordinating technical work across borders. It could reflect complementary trade, in which AI makes collaboration with Indian suppliers easier, rather than replacement of domestic labour. It could also reflect demand or sourcing changes correlated with adoption. The absence of an effect for computer services and Chinese construction services narrows the result, but it does not isolate civil-engineering invoices within SJ3.
 
-Keeping the UK at the centre of both country comparisons makes these distinctions clearer. The Indian relationship shows the strongest expansion in SJ3 and computer services, while the Chinese relationship grows from a smaller base and contains a larger construction-services flow. The EU members provide variation in adoption and industry outcomes; they are an estimation sample rather than additional country stories.
+The UK-centred comparison clarifies scale as well as direction. UK imports from India rose by almost USD 2.8 billion in SJ3 between 2019 and 2024, compared with about USD 771 million from China; percentage changes in small construction flows should not be read as large reallocations of engineering activity. For firms, the pattern is consistent with lower coordination costs for digitally deliverable work—especially with Indian suppliers—rather than a simple domestic-versus-offshore location choice. Stable M71 employment makes a complete displacement account less persuasive, although the data cannot yet separate complementarity from substitution.
 
-The distinction also changes how the trade numbers should be read. UK imports from India rose by almost USD 2.8 billion in SJ3 between 2019 and 2024, whereas the increase in UK imports from China was about USD 771 million. A similar percentage coefficient in a panel regression would therefore imply very different changes in value. Conversely, rapid percentage growth in a small construction flow need not represent a large reallocation of engineering activity. The article reports both levels and rates to prevent a visually striking percentage from obscuring economic scale.
-
-For engineering businesses, the findings point to coordination rather than a simple location choice. Generative tools can lower the cost of preparing and checking documents, but they can also lower the cost of communicating requirements across organisational boundaries. The India coefficient may therefore reflect complementarity: importers that adopted NLG more rapidly may have become better able to specify, review or integrate work supplied from India. The available data cannot separate this channel from substitution, but stable M71 employment makes a complete displacement account less persuasive.
-
-China’s role is different in each empirical layer. In the bilateral section, China is one of the UK’s two partners and both directions are measured for all three service headings. In the EU panel, China supplies comparison outcomes: SJ3 and construction services. Keeping those roles separate avoids the mistaken inference that the null Chinese construction coefficient explains all UK–China trade. It only shows that EU importers with larger NLG shocks did not disproportionately increase the Chinese construction flow.
+China plays different roles in the two empirical layers: as a bilateral partner in the descriptive section and as a supplier of comparison outcomes in the EU panel. The null Chinese construction coefficient therefore does not explain all UK–China trade; it shows only that EU importers with larger NLG shocks did not disproportionately increase that flow.
 
 The results have practical implications for measurement. Researchers and policy analysts should not use construction-services trade as a proxy for remote engineering design, nor should they use a broad technical-services category as if every dollar were a civil-engineering invoice. Statistical agencies could materially improve analysis by publishing bilateral architectural and engineering services, enterprise AI use for M71, and consistent price indices for professional services. Until then, mode, service heading and direction of trade need to remain explicit.
 
@@ -273,7 +269,7 @@ No potential conflict of interest was reported by the author.
 
 ## Data availability statement
 
-The data that support the findings of this study are included in the accompanying replication package (`Data_Study4_IJCM/`). Eurostat, OECD–WTO BaTIS and ILOSTAT series remain subject to their publishers’ terms and should be cited as in the reference list. Author-generated files are released under CC BY 4.0.
+The findings draw on Eurostat, OECD–WTO BaTIS and ILOSTAT series, which remain subject to their publishers’ terms and should be cited as in the reference list. Supplementary tables and figures reproduce the derived estimates; the full replication package is available from the corresponding author on request. Author-generated files are released under CC BY 4.0.
 
 ## References
 

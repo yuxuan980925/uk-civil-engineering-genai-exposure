@@ -189,12 +189,8 @@ def validate_delivery() -> int:
         "05_Figure_Captions.docx",
         "06_Supplementary_Figures.docx",
         "07_Supplementary_Tables.docx",
-        "Supplementary_Results/FIGURES.md",
-        "Supplementary_Results/tables_for_article.md",
-        "Supplementary_Results/results.json",
-        "Supplementary_Results/results_nlg.json",
-        "Supplementary_Results/results_industry.json",
-        "Data_Study4_IJCM/README.txt",
+        "README_SUBMISSION.md",
+        "FORMAT_CHECK.txt",
         "ZIP_CONTENTS.md",
         "Study4_COMPLETE_SUBMISSION.zip",
     ]
@@ -228,17 +224,16 @@ def validate_delivery() -> int:
 
     figures = sorted((DELIVERY / "Figures").glob("Figure*.png"))
     require(len(figures) == 5, f"delivery folder has {len(figures)} figures, expected 5")
-    supplementary_figures = sorted((DELIVERY / "Supplementary_Results" / "figures").glob("*.png"))
-    supplementary_tables = sorted((DELIVERY / "Supplementary_Results" / "tables").glob("*.csv"))
-    require(len(supplementary_figures) == 23,
-            f"supplement has {len(supplementary_figures)} figures, expected 23")
-    require(len(supplementary_tables) == 34,
-            f"supplement has {len(supplementary_tables)} tables, expected 34")
+    require(not (DELIVERY / "Data_Study4_IJCM").exists(),
+            "replication package should not be in the journal delivery folder")
+    require(not (DELIVERY / "Supplementary_Results").exists(),
+            "raw supplementary folder should not be in the journal delivery folder")
 
     package = DELIVERY / "Study4_COMPLETE_SUBMISSION.zip"
     with zipfile.ZipFile(package) as archive:
         require(archive.testzip() is None, "complete delivery zip contains a corrupt member")
         names = set(archive.namelist())
+        require(len(names) == 17, f"delivery zip has {len(names)} files, expected 17")
         for member in [
             "Study4_Complete_Manuscript.docx",
             "01_Title_Page_Not_for_Review.docx",
@@ -250,12 +245,17 @@ def validate_delivery() -> int:
             "07_Supplementary_Tables.docx",
             "Figures/Figure1.png",
             "Figures/Figure5.png",
-            "Supplementary_Results/figures/figure23_uk_india_china_service_growth.png",
-            "Supplementary_Results/tables/table_nlg_identification.csv",
-            "Data_Study4_IJCM/README.txt",
+            "README_SUBMISSION.md",
+            "00_OPEN_ME.md",
+            "FORMAT_CHECK.txt",
             "ZIP_CONTENTS.md",
         ]:
             require(member in names, f"delivery zip missing {member}")
+        for excluded in (
+            "Data_Study4_IJCM/README.txt",
+            "Supplementary_Results/results.json",
+        ):
+            require(excluded not in names, f"delivery zip should not contain {excluded}")
     return len(required) + len(required_content) + 6 + 14
 
 

@@ -1,8 +1,0 @@
-Outcome,Post-2024 × ΔTNLG (s.e.),N
-Log M71 turnover,−0.007** (0.003),68
-Log M71 employment,−0.000 (0.002),68
-Log M71 wages,−0.009*** (0.003),68
-Log M71 value added,−0.006*** (0.002),68
-Log construction turnover (comparison),−0.010*** (0.003),68
-
-Note,"Country and year fixed effects; standard errors clustered by country. *p < 0.10, **p < 0.05, ***p < 0.01."

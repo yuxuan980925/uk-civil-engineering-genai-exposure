@@ -1,4 +1,4 @@
-# Study 4 complete submission
+# Study 4 journal submission
 
 Target journal: *International Journal of Construction Management*
 
@@ -6,7 +6,10 @@ Open `Study4_Complete_Manuscript.docx` for the complete identified Word article.
 It contains the title, abstract, keywords, numbered body, full results, six
 tables, five figures, discussion, conclusion, declarations and references.
 
-Submission files in this folder:
+Main-text word count (Introduction through Conclusion, excluding title page,
+abstract, references, and figure/table captions): 5218.
+
+Files for ScholarOne upload:
 
 - `Study4_Complete_Manuscript.docx` — complete identified manuscript
 - `02_Blinded_Manuscript_for_Review.docx` — anonymous review manuscript
@@ -15,11 +18,9 @@ Submission files in this folder:
 - `04_Tables.docx` — editable Tables 1–6
 - `05_Figure_Captions.docx` — Figure 1–5 captions
 - `Figures/` — five separate 300 dpi figures
-- `06_Supplementary_Figures.docx` — all 23 generated figures
-- `07_Supplementary_Tables.docx` — all 34 generated tables
-- `Supplementary_Results/` — all figure/table files and machine-readable estimates
-- `Data_Study4_IJCM/` — complete numbered replication package
-- `ZIP_CONTENTS.md` — complete file list for the archive
-- `Study4_COMPLETE_SUBMISSION.zip` — all of the above in one archive
+- `06_Supplementary_Figures.docx` — supplementary figures
+- `07_Supplementary_Tables.docx` — supplementary tables
+- `Study4_COMPLETE_SUBMISSION.zip` — the journal submission set in one archive
 
-Markdown and HTML copies are included for editor/browser preview.
+Markdown and HTML copies of the identified manuscript are included for preview.
+Replication scripts and raw data are not part of this zip.

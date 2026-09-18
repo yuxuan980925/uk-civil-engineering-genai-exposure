@@ -7,6 +7,7 @@ import hashlib
 import re
 import shutil
 import subprocess
+import zipfile
 from pathlib import Path
 
 from docx import Document
@@ -126,6 +127,26 @@ TABLES = [
         ],
         "note": "The table restates the claim boundary; it is not an additional statistical test.",
     },
+]
+
+JOURNAL_ZIP_MEMBERS = [
+    "Study4_Complete_Manuscript.docx",
+    "01_Title_Page_Not_for_Review.docx",
+    "02_Blinded_Manuscript_for_Review.docx",
+    "03_Cover_Letter.docx",
+    "04_Tables.docx",
+    "05_Figure_Captions.docx",
+    "06_Supplementary_Figures.docx",
+    "07_Supplementary_Tables.docx",
+    "Figures/Figure1.png",
+    "Figures/Figure2.png",
+    "Figures/Figure3.png",
+    "Figures/Figure4.png",
+    "Figures/Figure5.png",
+    "README_SUBMISSION.md",
+    "00_OPEN_ME.md",
+    "FORMAT_CHECK.txt",
+    "ZIP_CONTENTS.md",
 ]
 
 REFERENCES = """
@@ -454,10 +475,10 @@ def format_source_manuscript() -> str:
         "## Disclosure statement\n\n"
         "No potential conflict of interest was reported by the author.\n\n"
         "## Data availability statement\n\n"
-        "The data that support the findings of this study are included in the "
-        "accompanying replication package (`Data_Study4_IJCM/`). Eurostat, "
-        "OECD–WTO BaTIS and ILOSTAT series remain subject to their "
-        "publishers’ terms and should be cited as in the reference list. "
+        "The findings draw on Eurostat, OECD–WTO BaTIS and ILOSTAT series, which remain "
+        "subject to their publishers’ terms and should be cited as in the reference list. "
+        "Supplementary tables and figures reproduce the derived estimates; the full "
+        "replication package is available from the corresponding author on request. "
         "Author-generated files are released under CC BY 4.0.\n\n"
         "## References\n\n"
         f"{REFERENCES}\n\n"
@@ -498,7 +519,7 @@ def add_styled_paragraph(document: Document, text: str, *, bold=False, italic=Fa
     return p
 
 
-def write_title_page(path: Path, word_count: int) -> None:
+def write_title_page(path: Path, total_words: int, main_body_words: int) -> None:
     document = Document()
     style_document(document, double=True)
     add_page_number(document.sections[0])
@@ -520,10 +541,11 @@ def write_title_page(path: Path, word_count: int) -> None:
     add_styled_paragraph(document, "Manuscript details", bold=True, size=12)
     details = [
         f"Running head: {RUNNING_HEAD}",
-        f"Word count (including abstract, tables, captions and references): {word_count}",
+        f"Main-text word count (Introduction through Conclusion, excluding title page, abstract, references, and figure/table captions): {main_body_words}",
+        f"Full manuscript word count (including abstract, tables, captions and references): {total_words}",
         "Tables: 6",
         "Figures: 5 (separate 300 dpi PNG files)",
-        "Supplementary material: numbered replication package Data_Study4_IJCM",
+        "Supplementary material: 06_Supplementary_Figures.docx and 07_Supplementary_Tables.docx",
     ]
     for line in details:
         add_styled_paragraph(document, line, size=12)
@@ -557,9 +579,9 @@ def write_title_page(path: Path, word_count: int) -> None:
     )
     add_styled_paragraph(
         document,
-        "Data availability: The replication files that support the findings are in "
-        "Data_Study4_IJCM. Third-party Eurostat, OECD–WTO BaTIS, ILOSTAT and World Bank "
-        "material remains subject to the publishers’ terms.",
+        "Data availability: Official Eurostat, OECD–WTO BaTIS, ILOSTAT and World Bank "
+        "material remains subject to the publishers’ terms. Supplementary tables and "
+        "figures are included; the full replication package is available on request.",
         size=12,
         indent=True,
     )
@@ -607,7 +629,8 @@ def write_cover_letter(path: Path) -> None:
         "I confirm that the work is original, has not been published, and is not under "
         "consideration elsewhere. I am the sole author and approve this submission. There "
         "are no competing interests. The research received no specific grant from any "
-        "funding agency. A complete replication package is supplied as supplementary material.",
+        "funding agency. Supplementary tables and figures are included; the full "
+        "replication package is available on request.",
         size=12,
         indent=True,
     )
@@ -849,9 +872,11 @@ This folder is the complete journal package for Study 4, in the same role as
 4. `04_Tables.docx` — editable copies of Tables 1–6.
 5. `05_Figure_Captions.docx` — captions for Figures 1–5.
 6. `Figures/Figure1.png` … `Figure5.png` — separate 300 dpi files.
-7. `Data_Study4_IJCM/` — numbered replication package (Study 1 layout).
+7. `06_Supplementary_Figures.docx` and `07_Supplementary_Tables.docx` — supplementary material.
 
-An identified author copy is `00_Manuscript_as_Submitted.docx`.
+An identified author copy is `Study4_Complete_Manuscript.docx`.
+
+The archive `Study4_COMPLETE_SUBMISSION.zip` contains only the journal submission set above (not replication scripts or raw data).
 
 ## Journal format applied
 
@@ -905,8 +930,8 @@ def write_inventory(folder: Path) -> None:
     )
 
 
-def build_delivery_folder() -> Path:
-    """Create the single-folder, single-zip handoff requested by the author."""
+def build_delivery_folder(main_body_words: int, total_words: int) -> Path:
+    """Create the journal handoff folder and a slim submission zip."""
     if DELIVERY.exists():
         shutil.rmtree(DELIVERY)
     shutil.copytree(OUT, DELIVERY, ignore=shutil.ignore_patterns("*.zip"))
@@ -926,20 +951,28 @@ def build_delivery_folder() -> Path:
     article = ROOT / "Study4_Article_Complete"
     shutil.copy2(article / "FIGURES.docx", DELIVERY / "06_Supplementary_Figures.docx")
     shutil.copy2(article / "tables_for_article.docx", DELIVERY / "07_Supplementary_Tables.docx")
-    supplement = DELIVERY / "Supplementary_Results"
-    shutil.copytree(article / "figures", supplement / "figures")
-    shutil.copytree(article / "tables", supplement / "tables")
-    for name in [
-        "FIGURES.md",
-        "tables_for_article.md",
-        "results.json",
-        "results_nlg.json",
-        "results_industry.json",
-        "EXPERIMENTS_RUN.md",
-    ]:
-        shutil.copy2(article / name, supplement / name)
+
+    for bulky in ("Data_Study4_IJCM", "Supplementary_Results"):
+        target = DELIVERY / bulky
+        if target.exists():
+            shutil.rmtree(target)
+
+    for redundant in (
+        "00_Manuscript_as_Submitted.docx",
+        "00_Manuscript_as_Submitted.md",
+        "00_Manuscript_as_Submitted.html",
+        "02_Blinded_Manuscript_for_Review.md",
+        "02_Blinded_Manuscript_for_Review.html",
+        "PACKAGE_INVENTORY.md",
+        "SHA256SUMS.txt",
+        "Study4_IJCM_Submission.zip",
+    ):
+        path = DELIVERY / redundant
+        if path.exists():
+            path.unlink()
+
     (DELIVERY / "00_OPEN_ME.md").write_text(
-        f"""# Study 4 complete submission
+        f"""# Study 4 journal submission
 
 Target journal: *{JOURNAL}*
 
@@ -947,7 +980,10 @@ Open `Study4_Complete_Manuscript.docx` for the complete identified Word article.
 It contains the title, abstract, keywords, numbered body, full results, six
 tables, five figures, discussion, conclusion, declarations and references.
 
-Submission files in this folder:
+Main-text word count (Introduction through Conclusion, excluding title page,
+abstract, references, and figure/table captions): {main_body_words}.
+
+Files for ScholarOne upload:
 
 - `Study4_Complete_Manuscript.docx` — complete identified manuscript
 - `02_Blinded_Manuscript_for_Review.docx` — anonymous review manuscript
@@ -956,27 +992,35 @@ Submission files in this folder:
 - `04_Tables.docx` — editable Tables 1–6
 - `05_Figure_Captions.docx` — Figure 1–5 captions
 - `Figures/` — five separate 300 dpi figures
-- `06_Supplementary_Figures.docx` — all 23 generated figures
-- `07_Supplementary_Tables.docx` — all 34 generated tables
-- `Supplementary_Results/` — all figure/table files and machine-readable estimates
-- `Data_Study4_IJCM/` — complete numbered replication package
-- `ZIP_CONTENTS.md` — complete file list for the archive
-- `Study4_COMPLETE_SUBMISSION.zip` — all of the above in one archive
+- `06_Supplementary_Figures.docx` — supplementary figures
+- `07_Supplementary_Tables.docx` — supplementary tables
+- `Study4_COMPLETE_SUBMISSION.zip` — the journal submission set in one archive
 
-Markdown and HTML copies are included for editor/browser preview.
+Markdown and HTML copies of the identified manuscript are included for preview.
+Replication scripts and raw data are not part of this zip.
 """,
         encoding="utf-8",
     )
-    contents = sorted(
-        path.relative_to(DELIVERY).as_posix()
-        for path in DELIVERY.rglob("*")
-        if path.is_file() and path.suffix != ".zip"
+    (DELIVERY / "FORMAT_CHECK.txt").write_text(
+        "\n".join(
+            [
+                f"Journal: {JOURNAL}",
+                f"Title: {TITLE}",
+                f"Main-text words (Introduction–Conclusion): {main_body_words}",
+                f"Full manuscript words (incl. abstract, tables, captions, references): {total_words}",
+                f"Keywords: {KEYWORDS}",
+                "Tables: 6",
+                "Figures: 5 at 300 dpi",
+                "Blinded identity check: passed",
+                "Spacing: double; font: 12-pt Times New Roman; margins: 2.54 cm",
+                "",
+            ]
+        ),
+        encoding="utf-8",
     )
-    contents.append("ZIP_CONTENTS.md")
-    contents.sort()
     (DELIVERY / "ZIP_CONTENTS.md").write_text(
         "# Study 4 complete submission zip contents\n\n"
-        + "\n".join(f"- `{relative}`" for relative in contents)
+        + "\n".join(f"- `{relative}`" for relative in JOURNAL_ZIP_MEMBERS)
         + "\n",
         encoding="utf-8",
     )
@@ -986,11 +1030,12 @@ Markdown and HTML copies are included for editor/browser preview.
     for path in (zip_tmp, zip_inside):
         if path.exists():
             path.unlink()
-    subprocess.check_call(
-        ["zip", "-r", "-X", str(zip_tmp), ".", "-x", "*.zip"],
-        cwd=DELIVERY,
-        stdout=subprocess.DEVNULL,
-    )
+    with zipfile.ZipFile(zip_tmp, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for relative in JOURNAL_ZIP_MEMBERS:
+            path = DELIVERY / relative
+            if not path.is_file():
+                raise FileNotFoundError(f"missing journal zip member: {relative}")
+            archive.write(path, arcname=relative)
     shutil.move(zip_tmp, zip_inside)
     subprocess.check_call(["unzip", "-t", str(zip_inside)], stdout=subprocess.DEVNULL)
     return zip_inside
@@ -1029,9 +1074,16 @@ def word_count(text: str) -> int:
     return len(re.findall(r"[A-Za-z0-9Δ×β−-]+", text))
 
 
+def main_body_word_count(identified: str) -> int:
+    start = identified.index("## 1. Introduction")
+    end = identified.index("## Author contribution", start)
+    return word_count(identified[start:end])
+
+
 def main() -> None:
     identified = format_source_manuscript()
     wc = word_count(identified)
+    body_wc = main_body_word_count(identified)
     abstract_words = word_count(ABSTRACT)
 
     if OUT.exists():
@@ -1065,7 +1117,7 @@ def main() -> None:
         header=RUNNING_HEAD,
     )
 
-    write_title_page(OUT / "01_Title_Page_Not_for_Review.docx", wc)
+    write_title_page(OUT / "01_Title_Page_Not_for_Review.docx", wc, body_wc)
     write_cover_letter(OUT / "03_Cover_Letter.docx")
     write_tables_docx(OUT / "04_Tables.docx")
     write_figure_captions_docx(OUT / "05_Figure_Captions.docx")
@@ -1080,6 +1132,7 @@ def main() -> None:
                 f"Journal: {JOURNAL}",
                 f"Title: {TITLE}",
                 f"Abstract words: {abstract_words}",
+                f"Main-text words (Introduction–Conclusion): {body_wc}",
                 f"Manuscript words: {wc}",
                 f"Keywords: {KEYWORDS}",
                 "Tables: 6",
@@ -1105,9 +1158,10 @@ def main() -> None:
     )
     shutil.copy2(zip_root, zip_inside)
     subprocess.check_call(["unzip", "-t", str(zip_inside)], stdout=subprocess.DEVNULL)
-    delivery_zip = build_delivery_folder()
+    delivery_zip = build_delivery_folder(body_wc, wc)
     print(OUT)
     print("abstract_words", abstract_words)
+    print("main_body_words", body_wc)
     print("word_count", wc)
     print(zip_inside)
     print(delivery_zip)
