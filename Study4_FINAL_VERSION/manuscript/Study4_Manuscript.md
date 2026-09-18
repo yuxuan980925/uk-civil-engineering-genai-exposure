@@ -1,29 +1,18 @@
 # How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China
 
-Yuxuan Chai · University of Strathclyde · `yuxuanchai98@outlook.com`  
-Working paper · 17 September 2026
+Yuxuan Chai
 
-This article uses retrieved official series without interpolating country, industry or trade cells. The preferred shock is Eurostat enterprise use of AI for natural-language generation (`E_AI_TNLG`); industry outcomes are Eurostat NACE M71; trade is OECD–WTO BaTIS.
+University of Strathclyde, Glasgow, United Kingdom
 
-**Claim boundary.** UK–India and UK–China trade trends are descriptive because the United Kingdom is outside the harmonised Eurostat NLG panel. The EU-importer panel identifies conditional associations with Indian and Chinese service flows; it does not identify bilateral civil-engineer employment or GDP effects.
+Correspondence: Yuxuan Chai, University of Strathclyde, Glasgow, United Kingdom. Email: yuxuanchai98@outlook.com
 
----
+Manuscript submitted to the *International Journal of Construction Management*.
 
 ## Abstract
 
-This paper studies the civil-engineering economy under a generative-AI shock through two relationships centred on the United Kingdom: UK–India and UK–China. The bilateral evidence covers technical and other business services (SJ3), construction services (SE), and computer and information services (SI). A panel of 17 EU importers provides harmonised variation in enterprise use of natural-language-generation AI. The UK trends are interpreted descriptively, while the panel tests whether importer adoption is associated with Indian Mode-1 services or Chinese project-based construction services.
+This paper studies the civil-engineering economy under a generative-AI shock through two United Kingdom-centred relationships: UK–India and UK–China. Bilateral evidence covers technical and other business services (SJ3), construction services (SE), and computer and information services (SI). A panel of 17 EU importers supplies harmonised variation in enterprise use of natural-language-generation (NLG) AI. UK trends are descriptive; the panel tests whether importer adoption is associated with Indian Mode-1 services or Chinese project-based construction services. The shock is the 2023–24 change in Eurostat NLG use among professional-service enterprises. Domestic outcomes are turnover, employment, wages and value added in NACE M71 architectural and engineering activities; trade outcomes come from OECD–WTO BaTIS. Between 2019 and 2024, UK imports of Indian SJ3 rose 127.7% and UK imports of Chinese SJ3 rose 99.3%. In the importer panel, the India-only SJ3 coefficient is 0.021 (s.e. 0.008), whereas Chinese construction services are unrelated to importer NLG adoption (−0.008, s.e. 0.009). Domestic M71 turnover and wages grew more slowly in higher-adoption economies, while employment was unchanged. The evidence is consistent with generative tools changing the coordination of digitally deliverable services, especially between the UK and India. It does not show that AI caused the bilateral changes or that civil-engineering jobs or GDP relocated.
 
-The shock is the 2023–24 change in Eurostat natural-language-generation use among professional-service enterprises. Domestic outcomes are turnover, employment, wages and value added in NACE M71 architectural and engineering activities. Cross-border outcomes come from OECD–WTO BaTIS. SJ3 technical and other business services imported from India approximate the digitally deliverable margin, while SE construction services from China capture project-based delivery.
-
-Between 2019 and 2024, UK imports of Indian SJ3 rose 127.7% and Indian imports from the UK rose 97.3%. UK imports of Chinese SJ3 rose 99.3%, while Chinese imports from the UK rose 29.2%. The UK purchased substantially more Indian than Chinese SJ3 in 2024 (USD 4.98 billion versus USD 1.55 billion). Computer services grew strongly in the UK–India relationship, while Chinese construction services remained much smaller than the technical and computer flows.
-
-Professional-service NLG use in the EU-27 rose from 4.55% in 2023 to 11.51% in 2024. In the importer panel, the India-only coefficient for SJ3 is 0.021 (s.e. 0.008), whereas Chinese construction services are unrelated to importer NLG adoption (−0.008, 0.009). Domestic M71 turnover and wages grew more slowly in higher-adoption economies, while employment was unchanged.
-
-The evidence is consistent with generative tools changing the coordination of digitally deliverable services, especially between the UK and India. It does not show that AI caused the bilateral changes: SJ3 is broader than engineering, computer services also expanded, and UK enterprise adoption is not measured on the same basis as the EU treatment. The contribution is therefore a bounded comparison of observed UK trade and panel associations, not an estimate of outsourcing or national output.
-
-**Keywords:** generative AI; civil engineering; India; China; Mode 1; Mode 3; NACE M71; services trade.
-
----
+**Keywords:** generative AI; civil engineering; construction management; services trade; NACE M71; Mode 1
 
 ## 1. Introduction
 
@@ -37,7 +26,7 @@ Three measurement choices follow. First, the shock must capture generative use r
 
 This design connects three bodies of evidence that are usually separate. Task studies show that language models can reduce the time required for writing, coding and analysis. Industry accounts reveal whether those task-level gains translate into turnover, employment or wages. Trade data show whether digitally deliverable services respond differently from project-based construction services. The contribution is not a new exposure index or a claim about aggregate GDP. It is a mode-specific comparison of domestic M71 outcomes and cross-border adjustment during the first observable generative-AI adoption wave.
 
-Replication files are in `Study4_Article_Complete/` (open `Study4_Manuscript.md`, `CN_full_article.md`, `FIGURES.md`, and `tables_for_article.md` in the editor — not the zip). Figures, tables, and official data are in `figures/`, `tables/`, and `data/` in that folder. Missing series are catalogued in `DATA_INVENTORY.md`; their absence is part of the claim boundary.
+A complete replication package accompanies this submission. Missing series are catalogued there; their absence is part of the claim boundary.
 
 ---
 
@@ -61,7 +50,7 @@ The 2022–23 arrival of ChatGPT created a dated shock that earlier AI indices l
 
 Two lessons matter for civil engineering. First, text and drawing tasks (specifications, CAD annotation, quantity take-off assistance) sit on the helped side of the jagged frontier; stamp, liability and site work sit on the other. Second, firm experiments are not industry accounts. A draughtsperson who finishes a drawing faster may reduce billed hours without reducing headcount, which is consistent with the SBS pattern in Section 5.5: wages and turnover grow more slowly where NLG jumped while employment does not.
 
-Agrawal, Gans and Goldfarb (2018, 2022) frame AI as cheaper prediction. Korinek and Stiglitz (2021) and Acemoglu (2025, policy writing on complementary AI) warn that the distribution of gains depends on whether AI automates or augments. This paper does not estimate welfare. It asks which *measured* industry aggregates moved.
+Agrawal, Gans and Goldfarb (2018, 2022) frame AI as cheaper prediction. Korinek and Stiglitz (2021) warn that the distribution of gains depends on whether AI automates or augments. This paper does not estimate welfare. It asks which *measured* industry aggregates moved.
 
 ### 2.4 Tradable tasks and the UK’s partner relationships
 
@@ -73,7 +62,7 @@ Computer services (SI) are the natural digital comparison: if the panel result m
 
 ### 2.5 Construction economics versus professional engineering
 
-Construction economics has long treated the contractor industry as project-based, local and weakly digitised (Gann and Salter 2000; Winch 2010). Building information modelling (Eastman, Teicholz, Sacks and Liston 2011; Sacks, Eastman, Lee and Teicholz 2018) digitises *design and coordination*, which live in NACE M71 and related consultancies, not necessarily in NACE F. Whyte and colleagues on digital delivery similarly locate the information model in professional organisations.
+Construction economics has long treated the contractor industry as project-based, local and weakly digitised (Gann and Salter 2000; Winch 2010). Building information modelling (Eastman, Teicholz, Sacks and Liston 2011; Sacks, Eastman, Lee and Teicholz 2018) digitises *design and coordination*, which live in NACE M71 and related consultancies, not necessarily in NACE F. Whyte (2019) similarly locates digital delivery in professional organisations rather than only on the construction site.
 
 Eurostat confirms the split. Professional-service enterprises adopted natural-language-generation tools much more rapidly than construction enterprises (Table 2, Figure 3). Felten’s industry exposure scores for highway and heavy-civil contractors are also low. On-site construction is therefore a comparison industry rather than the treated professional industry.
 
@@ -95,7 +84,7 @@ This division between description and estimation is central to the paper. Bilate
 
 ## 3. Data
 
-All files are in `data/` of the replication package. Retrieval dates are in `DATA_SOURCES.md`. Table A in the inventory file records failed pulls (OWID ChatGPT CSVs, IMF AIPI empty JSON, OECD ICT_BUS 404, ILO M71 404). Failed pulls are not filled.
+The analysis uses retrieved official series only. No country, industry or trade cell is interpolated. Retrieval dates and unsuccessful pulls (including OWID ChatGPT files, an empty IMF AI Preparedness response, OECD ICT_BUS, and ILO M71) are documented in the supplementary replication package and are not filled.
 
 ### 3.1 Country-pair design
 
@@ -268,126 +257,100 @@ The conclusion remains conditional. The bilateral comparisons do not have a UK N
 
 ---
 
+## Disclosure statement
+
+No potential conflict of interest was reported by the author.
+
+## Data availability statement
+
+The data that support the findings of this study are included in the accompanying replication package (`Data_Study4_IJCM/`). Eurostat, OECD–WTO BaTIS, ILOSTAT and World Bank series remain subject to their publishers’ terms and should be cited as in the reference list. Author-generated files are released under CC BY 4.0.
+
+## Disclosure statement
+
+No potential conflict of interest was reported by the author.
+
+## Data availability statement
+
+The data that support the findings of this study are included in the accompanying replication package (`Data_Study4_IJCM/`). Eurostat, OECD–WTO BaTIS, ILOSTAT and World Bank series remain subject to their publishers’ terms and should be cited as in the reference list. Author-generated files are released under CC BY 4.0.
+
 ## References
 
-Acemoglu, D., & Restrepo, P. (2018). The race between man and machine: Implications of technology for growth, factor shares, and employment. *American Economic Review*, 108(6), 1488–1542.
+Acemoglu, D., & Restrepo, P. (2018). The race between man and machine: Implications of technology for growth, factor shares, and employment. *American Economic Review, 108*(6), 1488–1542.
 
-Acemoglu, D., & Restrepo, P. (2019). Automation and new tasks: How technology displaces and reinstates labor. *Journal of Economic Perspectives*, 33(2), 3–30.
+Acemoglu, D., & Restrepo, P. (2019). Automation and new tasks: How technology displaces and reinstates labor. *Journal of Economic Perspectives, 33*(2), 3–30.
 
-Acemoglu, D., & Restrepo, P. (2020). Robots and jobs: Evidence from US labor markets. *Journal of Political Economy*, 128(6), 2188–2244.
-
-Acemoglu, D., Autor, D., Hazell, J., & Restrepo, P. (2022). Artificial intelligence and jobs: Evidence from online vacancies. *Journal of Labor Economics*, 40(S1), S293–S340.
+Acemoglu, D., & Restrepo, P. (2020). Robots and jobs: Evidence from US labor markets. *Journal of Political Economy, 128*(6), 2188–2244.
 
 Agrawal, A., Gans, J., & Goldfarb, A. (2018). *Prediction machines: The simple economics of artificial intelligence*. Harvard Business Review Press.
 
 Agrawal, A., Gans, J., & Goldfarb, A. (2022). *Power and prediction: The disruptive economics of artificial intelligence*. Harvard Business Review Press.
 
-Autor, D. H. (2015). Why are there still so many jobs? The history and future of workplace automation. *Journal of Economic Perspectives*, 29(3), 3–30.
+Autor, D. H. (2015). Why are there still so many jobs? The history and future of workplace automation. *Journal of Economic Perspectives, 29*(3), 3–30.
 
-Autor, D. H., Levy, F., & Murnane, R. J. (2003). The skill content of recent technological change: An empirical exploration. *Quarterly Journal of Economics*, 118(4), 1279–1333.
-
-Autor, D., Mindell, D., & Reynolds, E. (2022). *The work of the future: Building better jobs in an age of intelligent machines*. MIT Press.
+Autor, D. H., Levy, F., & Murnane, R. J. (2003). The skill content of recent technological change: An empirical exploration. *Quarterly Journal of Economics, 118*(4), 1279–1333.
 
 Baldwin, R. (2016). *The great convergence: Information technology and the new globalization*. Harvard University Press.
 
 Baldwin, R. (2019). *The globotics upheaval: Globalization, robotics, and the future of work*. Oxford University Press.
 
-Blinder, A. S. (2006). Offshoring: The next industrial revolution? *Foreign Affairs*, 85(2), 113–128.
+Blinder, A. S. (2006). Offshoring: The next industrial revolution? *Foreign Affairs, 85*(2), 113–128.
 
-Brynjolfsson, E., Li, D., & Raymond, L. (2025). Generative AI at work. *Quarterly Journal of Economics*, 140(2), 889–942.
+Brynjolfsson, E., Li, D., & Raymond, L. (2025). Generative AI at work. *Quarterly Journal of Economics, 140*(2), 889–942.
 
-Dell’Acqua, F., McFowland, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K., Rajendran, S., Krayer, L., Candelon, F., & Lakhani, K. R. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. Harvard Business School Working Paper 24-013.
+Dell’Acqua, F., McFowland, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K. C., Rajendran, S., Krayer, L., Candelon, F., & Lakhani, K. R. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality (Harvard Business School Working Paper 24-013).
 
 Eastman, C., Teicholz, P., Sacks, R., & Liston, K. (2011). *BIM handbook: A guide to building information modeling* (2nd ed.). Wiley.
 
 Eloundou, T., Manning, S., Mishkin, P., & Rock, D. (2023). GPTs are GPTs: An early look at the labor market impact potential of large language models. arXiv:2303.10130.
 
-Eloundou, T., Manning, S., Mishkin, P., & Rock, D. (2024). GPTs are GPTs: Labor market impact potential of LLMs. *Science*, 384(6702), 1306–1308.
+Eloundou, T., Manning, S., Mishkin, P., & Rock, D. (2024). GPTs are GPTs: Labor market impact potential of LLMs. *Science, 384*(6702), 1306–1308.
 
-Eurostat. (2024–2026). ICT usage in enterprises: Artificial intelligence (`isoc_eb_ain2`); national accounts (`nama_10_a64`); structural business statistics (`sbs_ovw_act`, `sbs_sc_ovw`). Luxembourg: European Commission.
+Eurostat. (2024). *ICT usage in enterprises: Artificial intelligence (isoc_eb_ain2); national accounts (nama_10_a64); structural business statistics (sbs_ovw_act, sbs_sc_ovw)*. European Commission.
 
-Felten, E., Raj, M., & Seamans, R. (2018). A method to link advances in artificial intelligence to occupational abilities. *AEA Papers and Proceedings*, 108, 54–57.
+Felten, E., Raj, M., & Seamans, R. (2018). A method to link advances in artificial intelligence to occupational abilities. *AEA Papers and Proceedings, 108*, 54–57.
 
-Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. *Strategic Management Journal*, 42(12), 2195–2217.
+Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. *Strategic Management Journal, 42*(12), 2195–2217.
 
-Fortanier, F., Liberatore, A., Maurer, A., & Pilgrim, G. (2017). The OECD–WTO Balanced Trade in Services database. OECD/WTO.
+Fortanier, F., Liberatore, A., Maurer, A., & Pilgrim, G. (2017). *The OECD–WTO Balanced Trade in Services database*. OECD/WTO.
 
-Francois, J., & Hoekman, B. (2010). Services trade and policy. *Journal of Economic Literature*, 48(3), 642–692.
+Francois, J., & Hoekman, B. (2010). Services trade and policy. *Journal of Economic Literature, 48*(3), 642–692.
 
-Gann, D. M., & Salter, A. J. (2000). Innovation in project-based, service-enhanced firms: The construction of complex products and systems. *Research Policy*, 29(7–8), 955–972.
+Gann, D. M., & Salter, A. J. (2000). Innovation in project-based, service-enhanced firms: The construction of complex products and systems. *Research Policy, 29*(7–8), 955–972.
 
-Goldfarb, A., Taska, B., & Teodoridis, F. (2023). Could machine learning be a general purpose technology? A comparison of emerging methods and technology categories. *Research Policy* (related vacancy/AI-skill work).
-
-Grossman, G. M., & Rossi-Hansberg, E. (2008). Trading tasks: A simple theory of offshoring. *American Economic Review*, 98(5), 1978–1997.
+Grossman, G. M., & Rossi-Hansberg, E. (2008). Trading tasks: A simple theory of offshoring. *American Economic Review, 98*(5), 1978–1997.
 
 Hui, X., Reshef, O., & Zhou, L. (2024). The short-term effects of generative artificial intelligence on employment: Evidence from an online labor market. *Organization Science*.
 
-ILO & NASK. (2023). *Generative AI and jobs: A global analysis of potential effects on job quantity and quality* (ILO Working Paper 140). Geneva: International Labour Organization.
+ILO. (n.d.). *ILOSTAT: Employment by sex and economic activity*. International Labour Organization.
 
-Korinek, A., & Stiglitz, J. E. (2021). Artificial intelligence, globalization, and strategies for economic development. NBER Working Paper 28453.
+Korinek, A., & Stiglitz, J. E. (2021). Artificial intelligence, globalization, and strategies for economic development (NBER Working Paper 28453).
 
-Loungani, P., Mishra, S., Papageorgiou, C., & Wang, K. (2017). World trade in services: Evidence from a new dataset. IMF Working Paper 17/77.
+Loungani, P., Mishra, S., Papageorgiou, C., & Wang, K. (2017). World trade in services: Evidence from a new dataset (IMF Working Paper 17/77).
 
-Microsoft. (2026). *AI Diffusion Report*, Q1 2026 update (user-share snapshot; not used as 2015–24 shock).
+Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. *Science, 381*(6654), 187–192.
 
-Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. *Science*, 381(6654), 187–192.
+OECD & WTO. (n.d.). *BaTIS: Balanced Trade in Services dataset* (BPM6, adjustment B).
 
-OECD & WTO. BaTIS: Balanced Trade in Services dataset, BPM6, adjustment B.
-
-Office for National Statistics. (2019). Which occupations are at highest risk of being automated? (Table 9, SOC 2010). APS SOC 2020 employment extracts used in the supplementary materials.
+Office for National Statistics. (2019). *Which occupations are at highest risk of being automated?* (Table 9, SOC 2010).
 
 Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590.
 
-Sacks, R., Eastman, C., Lee, G., & Teicholz, P. (2018). *BIM handbook* (3rd ed.). Wiley.
+Sacks, R., Eastman, C., Lee, G., & Teicholz, P. (2018). *BIM handbook: A guide to building information modeling for owners, designers, engineers, contractors, and facility managers* (3rd ed.). Wiley.
 
-Webb, M. (2020). The impact of artificial intelligence on the labor market. Stanford mimeo.
+Webb, M. (2020). *The impact of artificial intelligence on the labor market*. Stanford University.
+
+Whyte, J. (2019). How digital information transforms project delivery models. *Project Management Journal, 50*(2), 177–194.
 
 Winch, G. M. (2010). *Managing construction projects* (2nd ed.). Wiley-Blackwell.
 
-WTO. (1994). *General Agreement on Trade in Services*. Geneva: World Trade Organization.
+WTO. (1994). *General Agreement on Trade in Services*. World Trade Organization.
 
----
+## Tables
 
----
-
----
-
----
-
-## Main-text figures
-
-Only five figures are retained in the article. The remaining replication graphics stay in `figures/` but are not embedded in the manuscript.
-
-**Figure 1. The United Kingdom’s SJ3 service corridors with India and China, 2015–2024 (2019 = 100).**
-
-![Figure 1](figures/figure22_uk_india_china_sj3.png)
-
-**Figure 2. Growth in UK–India and UK–China services trade by category, 2019–2024.**
-
-![Figure 2](figures/figure23_uk_india_china_service_growth.png)
-
-**Figure 3. EU-27 professional-service NLG adoption and technology comparisons.**
-
-![Figure 3](figures/figure12_tnlg_vs_tml.png)
-
-**Figure 4. Importer ΔTNLG and the change in Indian SJ3 imports.**
-
-![Figure 4](figures/figure15_cross_section_tnlg.png)
-
-**Figure 5. M71 and construction turnover growth, 2021–2024.**
-
-![Figure 5](figures/figure17_sbs_turnover_m71_vs_F.png)
-
----
-
-## Main-text tables
-
-Detailed country and robustness tables remain in `tables_for_article.md` and `tables/`.
-
-### Table 1. UK–India and UK–China service corridors
+**Table 1.** UK–India and UK–China service corridors
 
 | Import flow | Service | 2019 (USD m) | 2024 (USD m) | Change |
-|---|---|---:|---:|---:|
+|---|---|---|---|---|
 | UK imports from India | SJ3 technical and other business services | 2,186.6 | 4,979.3 | 127.7% |
 | India imports from UK | SJ3 technical and other business services | 787.6 | 1,554.2 | 97.3% |
 | UK imports from China | SJ3 technical and other business services | 775.5 | 1,546.0 | 99.3% |
@@ -401,21 +364,21 @@ Detailed country and robustness tables remain in `tables_for_article.md` and `ta
 | UK imports from China | SI computer and information services | 724.7 | 1,054.5 | 45.5% |
 | China imports from UK | SI computer and information services | 1,639.3 | 2,404.1 | 46.7% |
 
-Source: OECD–WTO BaTIS, adjustment B. Values are balanced imports in current USD million.
+*Note.* Source: OECD–WTO BaTIS, adjustment B. Values are balanced imports in current USD million.
 
-### Table 2. EU-27 enterprise use of natural-language-generation AI
+**Table 2.** EU-27 enterprise use of natural-language-generation AI
 
 | Industry | 2023 | 2024 | 2025 |
-|---|---:|---:|---:|
+|---|---|---|---|
 | NACE M professional services | 4.55% | 11.51% | 17.74% |
 | NACE F construction | 0.58% | 2.42% | 3.25% |
 
-Source: Eurostat `isoc_eb_ain2`, enterprises with at least ten persons.
+*Note.* Source: Eurostat isoc_eb_ain2, enterprises with at least ten persons.
 
-### Table 3. Selected trade estimates under the NLG shock
+**Table 3.** Selected trade estimates under the NLG shock
 
 | Outcome/specification | Coefficient (s.e.) | N |
-|---|---:|---:|
+|---|---|---|
 | Indian SJ3, Post × ΔM TNLG | 0.021*** (0.008) | 119 |
 | Pooled Mode-1 SJ3, Post-2024 × ΔM TNLG | 0.007** (0.003) | 357 |
 | Chinese construction services (SE) | −0.008 (0.009) | 119 |
@@ -423,28 +386,30 @@ Source: Eurostat `isoc_eb_ain2`, enterprises with at least ten persons.
 | Indian computer services comparison | −0.002 (0.006) | 357 |
 | Generic any-AI comparison | 0.000 (0.006) | 336 |
 
-Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects.
+*Note.* Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects. *p < 0.10, **p < 0.05, ***p < 0.01.
 
-### Table 4. M71 industry outcomes under the NLG shock
+**Table 4.** M71 industry outcomes under the NLG shock
 
 | Outcome | Post-2024 × ΔTNLG (s.e.) | N |
-|---|---:|---:|
+|---|---|---|
 | Log M71 turnover | −0.007** (0.003) | 68 |
 | Log M71 employment | −0.000 (0.002) | 68 |
 | Log M71 wages | −0.009*** (0.003) | 68 |
 | Log M71 value added | −0.006*** (0.002) | 68 |
 | Log construction turnover (comparison) | −0.010*** (0.003) | 68 |
 
-### Table 5. Chinese construction services by importer NLG group
+*Note.* Country and year fixed effects; standard errors clustered by country. *p < 0.10, **p < 0.05, ***p < 0.01.
+
+**Table 5.** Chinese construction services by importer NLG group
 
 | EU destination group | 2019 (USD m) | 2024 (USD m) | Change |
-|---|---:|---:|---:|
+|---|---|---|---|
 | Lower ΔTNLG | 571.9 | 946.2 | 65.4% |
 | Higher ΔTNLG | 679.9 | 1,002.6 | 47.5% |
 
-Source: OECD–WTO BaTIS SE. Groups split at the importer median change in NACE M TNLG.
+*Note.* Source: OECD–WTO BaTIS SE. Groups split at the importer median change in NACE M TNLG.
 
-### Table 6. Interpretation boundary
+**Table 6.** Interpretation boundary
 
 | Supported by the data | Not identified |
 |---|---|
@@ -452,3 +417,41 @@ Source: OECD–WTO BaTIS SE. Groups split at the importer median change in NACE 
 | EU importer NLG associated with Indian SJ3 | Civil-specific SJ312 invoices |
 | Null Chinese construction-service comparison | India replacing Chinese or UK civil engineers |
 | M71 outcomes associated with importer NLG | Bilateral employment or GDP effects |
+
+*Note.* The table restates the claim boundary; it is not an additional statistical test.
+
+## Figure captions
+
+**Figure 1.** The United Kingdom’s SJ3 service corridors with India and China, 2015–2024 (2019 = 100).
+
+**Figure 2.** Growth in UK–India and UK–China services trade by category, 2019–2024.
+
+**Figure 3.** EU-27 professional-service NLG adoption and technology comparisons.
+
+**Figure 4.** Importer ΔTNLG and the change in Indian SJ3 imports.
+
+**Figure 5.** M71 and construction turnover growth, 2021–2024.
+
+## Figures
+
+Figures are supplied as separate 300 dpi PNG files (`Figure1.png`–`Figure5.png`) and are repeated below for the convenience of reviewers.
+
+**Figure 1.** The United Kingdom’s SJ3 service corridors with India and China, 2015–2024 (2019 = 100).
+
+![Figure 1](figures/figure22_uk_india_china_sj3.png)
+
+**Figure 2.** Growth in UK–India and UK–China services trade by category, 2019–2024.
+
+![Figure 2](figures/figure23_uk_india_china_service_growth.png)
+
+**Figure 3.** EU-27 professional-service NLG adoption and technology comparisons.
+
+![Figure 3](figures/figure12_tnlg_vs_tml.png)
+
+**Figure 4.** Importer ΔTNLG and the change in Indian SJ3 imports.
+
+![Figure 4](figures/figure15_cross_section_tnlg.png)
+
+**Figure 5.** M71 and construction turnover growth, 2021–2024.
+
+![Figure 5](figures/figure17_sbs_turnover_m71_vs_F.png)

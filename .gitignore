@@ -8,5 +8,7 @@
 !Study4_COMPLETE_ENGLISH/*.zip
 !Study4_Article_Complete/*.zip
 !Study4_IJCM_Submission.zip
+!Study4_IJCM_Submission/*.zip
+!Data_Study4_IJCM/**/*.png
 Study4_FINAL_VERSION/data/batis_chunk_*.csv
 Study4_FINAL_VERSION/release/
