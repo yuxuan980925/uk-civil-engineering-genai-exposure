@@ -31,7 +31,9 @@ Manuscript submitted to *International Journal of Construction Management*:
 
 Corresponding author: Yuxuan Chai (`yuxuanchai98@outlook.com`), University of Strathclyde.
 
-Open [`Study4_IJCM_Submission/`](Study4_IJCM_Submission/) after `git pull`. This is the complete journal set, in the same role as Study 1: a formatted manuscript plus a numbered replication package.
+After `git pull`, open the restored folder [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/) (markdown, HTML, figures, and Word). That directory is no longer a pointer; the article files sit inside it.
+
+The journal upload set is [`Study4_IJCM_Submission/`](Study4_IJCM_Submission/), in the same role as Study 1: a formatted manuscript plus a numbered replication package.
 
 | File / folder | Role |
 |---|---|
@@ -45,6 +47,13 @@ Open [`Study4_IJCM_Submission/`](Study4_IJCM_Submission/) after `git pull`. This
 | `00_Manuscript_as_Submitted.docx` | Identified author copy |
 
 The same numbered data package is also at [`Data_Study4_IJCM/`](Data_Study4_IJCM/). See `Data_Study4_IJCM/README.txt` for the file-level inventory.
+
+| Open in editor | Path |
+|---|---|
+| English article | [`Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md`](Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md) |
+| Chinese article | [`Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md`](Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md) |
+| Folder index | [`Study4_Global_AI_Civil_Engineering_Economy/index.html`](Study4_Global_AI_Civil_Engineering_Economy/index.html) |
+| Blinded Word | [`Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/02_Blinded_Manuscript_for_Review.docx`](Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/02_Blinded_Manuscript_for_Review.docx) |
 
 Working copies and extra experiments remain in [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/) and [`Study4_Article_Complete/`](Study4_Article_Complete/).
 
