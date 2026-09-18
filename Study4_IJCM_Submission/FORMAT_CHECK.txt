@@ -1,7 +1,7 @@
 Journal: International Journal of Construction Management
 Title: How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China
 Abstract words: 216
-Manuscript words: 7238
+Manuscript words: 7162
 Keywords: generative AI; civil engineering; construction management; services trade; NACE M71; Mode 1
 Tables: 6
 Figures: 5 at 300 dpi

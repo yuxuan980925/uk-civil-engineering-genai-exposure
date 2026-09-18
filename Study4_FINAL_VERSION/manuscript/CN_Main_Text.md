@@ -1,4 +1,9 @@
+# 已由送审稿取代的工作笔记
+
+IJCM 送审稿为 `Study4_Manuscript.md` 与 `CN_full_article.md`。本短稿不是投递文本。此处 APS 数字仅为补充背景，不能识别伙伴国 GDP。
+
 # 跨国背景下，受 AI 冲击的土木工程行业经济如何变动
+
 
 柴宇轩 · 斯特拉斯克莱德大学 · `yuxuanchai98@outlook.com`  
 工作论文 · 2026 年 9 月 17 日

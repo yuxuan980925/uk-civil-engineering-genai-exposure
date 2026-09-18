@@ -64,7 +64,7 @@ Computer services (SI) are the natural digital comparison: if the panel result m
 
 Construction economics has long treated the contractor industry as project-based, local and weakly digitised (Gann and Salter 2000; Winch 2010). Building information modelling (Eastman, Teicholz, Sacks and Liston 2011; Sacks, Eastman, Lee and Teicholz 2018) digitises *design and coordination*, which live in NACE M71 and related consultancies, not necessarily in NACE F. Whyte (2019) similarly locates digital delivery in professional organisations rather than only on the construction site.
 
-Eurostat confirms the split. Professional-service enterprises adopted natural-language-generation tools much more rapidly than construction enterprises (Table 2, Figure 3). Felten’s industry exposure scores for highway and heavy-civil contractors are also low. On-site construction is therefore a comparison industry rather than the treated professional industry.
+Eurostat (2024) confirms the split. Professional-service enterprises adopted natural-language-generation tools much more rapidly than construction enterprises (Table 2, Figure 3). Felten et al. (2021) also report low industry AI-exposure scores for highway and heavy-civil contractors. On-site construction is therefore a comparison industry rather than the treated professional industry.
 
 ### 2.6 The empirical gap
 
@@ -84,7 +84,7 @@ This division between description and estimation is central to the paper. Bilate
 
 ## 3. Data
 
-The analysis uses retrieved official series only. No country, industry or trade cell is interpolated. Retrieval dates and unsuccessful pulls (including OWID ChatGPT files, an empty IMF AI Preparedness response, OECD ICT_BUS, and ILO M71) are documented in the supplementary replication package and are not filled.
+The analysis uses retrieved official series only (Eurostat 2024; OECD & WTO n.d.; ILO n.d.). No country, industry or trade cell is interpolated. Retrieval dates and unsuccessful pulls (including OWID ChatGPT files, an empty IMF AI Preparedness response, OECD ICT_BUS, and ILO M71) are documented in the supplementary replication package and are not filled.
 
 ### 3.1 Country-pair design
 
@@ -94,7 +94,7 @@ The pair analysis does not assign an AI treatment to the UK, India or China. The
 
 ### 3.2 AI shock
 
-Eurostat `isoc_eb_ain2`, enterprises with 10+ persons, percent using AI:
+Eurostat `isoc_eb_ain2`, enterprises with 10+ persons, percent using AI (Eurostat 2024):
 
 - E_AI_TANY, NACE F and M: generic comparison (`eurostat_ai_raw.csv`).
 - E_AI_TNLG, TML, TTM, TIR, TPVSG, NACE F and M: generative and technology placebos (`eurostat_ai_genai_types.csv`). TPVSG (pictures/video/sound) exists for **2025 only**.
@@ -106,18 +106,16 @@ Eurostat `isoc_eb_ain2`, enterprises with 10+ persons, percent using AI:
 
 - National accounts `nama_10_a64` / `_e`: GVA, employment, compensation (D1), output (P1) for M71, F, M. UK M71 GVA/D1 stop in **2018**.
 - Structural business statistics `sbs_ovw_act` and `sbs_sc_ovw`: M71 vs F vs M, 2021–**2024**, net turnover, persons employed, wages, value added, GOS. This is the industry-economy file that overlaps the 2024 NLG year.
-- ILOSTAT employment ISIC F vs M (`ilo_emp_FM.csv`). China is empty. ISIC M71 is not published (404).
+- ILOSTAT employment by sex and economic activity for ISIC F versus M (ILO n.d.). China is empty in this pull. ISIC M71 is not published (404).
 - The US BLS series returned NAICS 54 rather than engineering-specific 54133 and is retained only in the supplementary data.
 
 Values are **current prices** where applicable. Nominal growth is not a GenAI effect; the DiD asks whether high-NLG countries grew *faster*.
 
 ### 3.4 UK–India and UK–China trade outcomes
 
-OECD–WTO BaTIS, adjustment B, supplies annual bilateral values in USD million from 2015 to 2024. `batis_uk_india_china.csv` contains 120 observations: four directed import flows, three service headings and ten years. The four flows are UK imports from India, India imports from the UK, UK imports from China and China imports from the UK. SJ3 is the closest available engineering-adjacent category, SE records construction services and SI provides a digital-services comparison.
+OECD & WTO (n.d.) BaTIS, adjustment B, supplies annual bilateral values in USD million from 2015 to 2024 (Fortanier et al. 2017). The corridor extract contains 120 observations: four directed import flows, three service headings and ten years. The four flows are UK imports from India, India imports from the UK, UK imports from China and China imports from the UK. SJ3 is the closest available engineering-adjacent category, SE records construction services and SI provides a digital-services comparison.
 
 For the panel analysis, the headline outcome remains SJ3 imported from India. Chinese SE construction services are the project-delivery comparison. A pooled Mode-1 sample containing two additional exporters is retained as a robustness exercise but is not part of the bilateral narrative.
-
-World Bank GDP and sector shares are background only (`wb_*.json`). Construction value-added indicator `NV.IND.CONS.ZS` is invalid (API 120) and is not invented.
 
 ### 3.5 Comparability and data quality
 
@@ -155,7 +153,7 @@ The UK–India and UK–China bilateral section does not use this equation. It r
 
 ### 4.3 What is not identified
 
-The bilateral comparisons do not identify an AI effect on UK–India or UK–China trade. They show how service composition changed over the period covered by the NLG shock. The panel estimates are stronger because treatment is measured consistently, but they remain short-window associations. Neither design identifies bilateral civil-engineer employment, firm-level subcontracting or GDP effects.
+The bilateral comparisons do not identify an AI effect on UK–India or UK–China trade. They show how service composition changed over the period covered by the NLG shock. The panel estimates are stronger because treatment is measured consistently, but they remain short-window associations. Neither design identifies bilateral civil-engineer employment, firm-level subcontracting or GDP effects. Table 6 records this claim boundary in compact form.
 
 ### 4.4 Interpreting the two empirical layers
 
@@ -185,9 +183,9 @@ Computer services followed a similar path: UK imports from India rose 113.2%, an
 
 The UK–India findings establish a strong descriptive change, not its cause. Brexit, post-pandemic demand, exchange rates, service-sector growth and sourcing decisions may all contribute. The UK is outside the Eurostat enterprise-adoption panel, so the bilateral series cannot be assigned the same NLG treatment used in the regressions.
 
-### 5.3 Generic any-AI is the wrong shock (Table 2)
+### 5.3 Generic any-AI is the wrong shock (Table 3)
 
-The generic any-AI measure produces little evidence of a trade relationship. In the 16-member sample, the post-shock interaction between the change in NACE M “any AI” use and log SJ3 imports is 0.000 with a standard error of 0.006 (\(N=336\)). A positive estimate in a smaller eight-member sample disappears when coverage is expanded. The event study also shows a pre-existing difference in 2018 relative to 2022, which weakens any causal interpretation. These results explain why the analysis does not use a broad digital-maturity index as its principal shock. Natural-language generation has a clearer date and a closer connection to the written technical work at issue.
+The generic any-AI measure produces little evidence of a trade relationship (Table 3). In the 16-member sample, the post-shock interaction between the change in NACE M “any AI” use and log SJ3 imports is 0.000 with a standard error of 0.006 (\(N=336\)). A positive estimate in a smaller eight-member sample disappears when coverage is expanded. The event study also shows a pre-existing difference in 2018 relative to 2022, which weakens any causal interpretation. These results explain why the analysis does not use a broad digital-maturity index as its principal shock. Natural-language generation has a clearer date and a closer connection to the written technical work at issue.
 
 ### 5.4 Preferred shock and Indian SJ3 (Figures 3–4, Tables 2–3)
 
@@ -205,9 +203,9 @@ The estimate for log M71 turnover is −0.007 with a standard error of 0.003 (\(
 
 The construction comparison cautions against treating the result as unique to engineering consultancies. Construction turnover has an estimate of −0.010, while turnover across all professional services has an estimate of −0.005. National-accounts compensation and output, which mostly end in 2023, show a similar direction. The domestic evidence is therefore best described as a relative slowdown in nominal activity among higher-NLG economies, not as proof that AI damaged M71 firms.
 
-### 5.6 India and China in the importer panel (Tables 2–3)
+### 5.6 India and China in the importer panel (Tables 3 and 5)
 
-The panel comparison helps distinguish the bilateral trends from the NLG association. Indian SJ3 has a positive post-shock coefficient of 0.021 (0.008), while Chinese construction services have a coefficient of −0.008 (0.009). Chinese SJ3 is also null. When Chinese construction exports are divided by destination adoption, exports to lower-TNLG destinations increased by 65% between 2019 and 2024, compared with 47% for higher-TNLG destinations. Project-based Chinese services did not reorient toward the importers with the largest NLG increase.
+The panel comparison helps distinguish the bilateral trends from the NLG association (Table 3). Indian SJ3 has a positive post-shock coefficient of 0.021 (0.008), while Chinese construction services have a coefficient of −0.008 (0.009). Chinese SJ3 is also null. When Chinese construction exports are divided by destination adoption, exports to lower-TNLG destinations increased by 65.4% between 2019 and 2024, compared with 47.5% for higher-TNLG destinations (Table 5). Project-based Chinese services did not reorient toward the importers with the largest NLG increase.
 
 This does not mean that UK–India or UK–China bilateral growth was caused by AI. The bilateral section compares two-way observed flows; the panel section estimates how EU importer adoption covaries with imports from each supplier. The positive coefficient belongs to Indian SJ3 in the EU market and cannot be transferred mechanically to the UK.
 
@@ -231,7 +229,7 @@ China’s role is different in each empirical layer. In the bilateral section, C
 
 The results have practical implications for measurement. Researchers and policy analysts should not use construction-services trade as a proxy for remote engineering design, nor should they use a broad technical-services category as if every dollar were a civil-engineering invoice. Statistical agencies could materially improve analysis by publishing bilateral architectural and engineering services, enterprise AI use for M71, and consistent price indices for professional services. Until then, mode, service heading and direction of trade need to remain explicit.
 
-The results therefore support a restrained interpretation. Generative-AI adoption is associated with slower nominal growth in M71 activity among higher-adoption EU economies and increased technical-services imports from India. The UK–India and UK–China comparisons show where Britain’s bilateral service trade expanded, but they do not demonstrate that AI caused those changes, shifted civil-engineering jobs between the countries or changed national GDP.
+The results therefore support a restrained interpretation (Table 6). Generative-AI adoption is associated with slower nominal growth in M71 activity among higher-adoption EU economies and increased technical-services imports from India. The UK–India and UK–China comparisons show where Britain’s bilateral service trade expanded, but they do not demonstrate that AI caused those changes, shifted civil-engineering jobs between the countries or changed national GDP.
 
 ---
 
@@ -241,7 +239,7 @@ Several data constraints set the boundary of the study. Eurostat does not publis
 
 The trade category is also broad. BaTIS SJ3 includes technical, trade-related and other business services, while bilateral SJ312 architectural and engineering services are unavailable. The positive India estimate may therefore contain non-engineering activity. No bilateral series records employment in ISCO 2142, so the analysis cannot trace civil-engineering jobs between India, China and the UK.
 
-The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions. APS estimates are subject to sampling variation and are used descriptively.
+The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions.
 
 These limitations are not repaired by filling missing observations. No country, occupation, industry or GDP cell is interpolated. Unsuccessful retrievals, including M71-specific AI adoption and more detailed engineering trade and employment series, remain documented in the data inventory. Additional post-shock years and more precise service classifications are needed before the associations reported here can support stronger causal claims.
 
@@ -253,7 +251,7 @@ The UK’s service relationships with both India and China expanded between 2019
 
 The harmonised EU panel links higher importer NLG adoption to Indian SJ3 but not to Chinese construction services. Domestic M71 turnover and wages also grew more slowly in higher-adoption economies, while employment was unchanged. These findings are consistent with a changing digitally deliverable services margin, not with a general construction-trade effect.
 
-The conclusion remains conditional. The bilateral comparisons do not have a UK NLG treatment, SJ3 is broader than engineering, and the industry panel has only one complete post-shock year. The paper therefore documents UK–India and UK–China service changes and places them beside the NLG panel evidence; it does not claim that AI caused bilateral civil-engineering relocation.
+The conclusion remains conditional. The bilateral comparisons do not have a UK NLG treatment, SJ3 is broader than engineering, and the industry panel has only one complete post-shock year. The paper therefore documents UK–India and UK–China service changes and places them beside the NLG panel evidence; it does not claim that AI caused bilateral civil-engineering relocation (Table 6).
 
 ---
 
@@ -263,15 +261,7 @@ No potential conflict of interest was reported by the author.
 
 ## Data availability statement
 
-The data that support the findings of this study are included in the accompanying replication package (`Data_Study4_IJCM/`). Eurostat, OECD–WTO BaTIS, ILOSTAT and World Bank series remain subject to their publishers’ terms and should be cited as in the reference list. Author-generated files are released under CC BY 4.0.
-
-## Disclosure statement
-
-No potential conflict of interest was reported by the author.
-
-## Data availability statement
-
-The data that support the findings of this study are included in the accompanying replication package (`Data_Study4_IJCM/`). Eurostat, OECD–WTO BaTIS, ILOSTAT and World Bank series remain subject to their publishers’ terms and should be cited as in the reference list. Author-generated files are released under CC BY 4.0.
+The data that support the findings of this study are included in the accompanying replication package (`Data_Study4_IJCM/`). Eurostat, OECD–WTO BaTIS and ILOSTAT series remain subject to their publishers’ terms and should be cited as in the reference list. Author-generated files are released under CC BY 4.0.
 
 ## References
 
@@ -330,8 +320,6 @@ Loungani, P., Mishra, S., Papageorgiou, C., & Wang, K. (2017). World trade in se
 Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. *Science, 381*(6654), 187–192.
 
 OECD & WTO. (n.d.). *BaTIS: Balanced Trade in Services dataset* (BPM6, adjustment B).
-
-Office for National Statistics. (2019). *Which occupations are at highest risk of being automated?* (Table 9, SOC 2010).
 
 Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590.
 

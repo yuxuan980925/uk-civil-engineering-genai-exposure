@@ -184,8 +184,6 @@ Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects o
 
 OECD & WTO. (n.d.). *BaTIS: Balanced Trade in Services dataset* (BPM6, adjustment B).
 
-Office for National Statistics. (2019). *Which occupations are at highest risk of being automated?* (Table 9, SOC 2010).
-
 Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590.
 
 Sacks, R., Eastman, C., Lee, G., & Teicholz, P. (2018). *BIM handbook: A guide to building information modeling for owners, designers, engineers, contractors, and facility managers* (3rd ed.). Wiley.
@@ -400,7 +398,8 @@ def markdown_tables_and_figures() -> str:
 def format_source_manuscript() -> str:
     text = SOURCE.read_text(encoding="utf-8")
     start = text.index("## 1. Introduction")
-    end = text.index("## References")
+    end_markers = ["## Disclosure statement", "## Data availability statement", "## References"]
+    end = min(text.index(m, start) for m in end_markers if m in text[start:])
     body = text[start:end].rstrip()
     body = body.replace(
         "Replication files are in `Study4_Article_Complete/` "
@@ -440,7 +439,7 @@ def format_source_manuscript() -> str:
         "## Data availability statement\n\n"
         "The data that support the findings of this study are included in the "
         "accompanying replication package (`Data_Study4_IJCM/`). Eurostat, "
-        "OECD–WTO BaTIS, ILOSTAT and World Bank series remain subject to their "
+        "OECD–WTO BaTIS and ILOSTAT series remain subject to their "
         "publishers’ terms and should be cited as in the reference list. "
         "Author-generated files are released under CC BY 4.0.\n\n"
         "## References\n\n"
