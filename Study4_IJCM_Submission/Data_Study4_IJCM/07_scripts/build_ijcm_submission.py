@@ -876,7 +876,7 @@ This folder is the complete journal package for Study 4, in the same role as
 
 An identified author copy is `Study4_Complete_Manuscript.docx`.
 
-The archive `Study4_COMPLETE_SUBMISSION.zip` contains only the journal submission set above (not replication scripts or raw data).
+The archive `Study4_COMPLETE_SUBMISSION.zip` contains only the journal submission set above (not replication scripts or raw data). Full replication data is in [`replication/`](../uk-civil-engineering-genai-exposure/replication/) on GitHub (and duplicated at repo root [`Data_Study4_IJCM/`](../Data_Study4_IJCM/)).
 
 ## Journal format applied
 
@@ -930,6 +930,61 @@ def write_inventory(folder: Path) -> None:
     )
 
 
+def populate_replication_folder(delivery: Path) -> None:
+    """Keep full replication data in GitHub beside the lean journal zip."""
+    repl = delivery / "replication"
+    repl.mkdir()
+    shutil.copytree(DATA_ROOT, repl / "Data_Study4_IJCM")
+    article = ROOT / "Study4_Article_Complete"
+    supplement = repl / "Supplementary_Results"
+    supplement.mkdir()
+    shutil.copytree(article / "figures", supplement / "figures")
+    shutil.copytree(article / "tables", supplement / "tables")
+    for name in [
+        "FIGURES.md",
+        "tables_for_article.md",
+        "results.json",
+        "results_nlg.json",
+        "results_industry.json",
+        "EXPERIMENTS_RUN.md",
+    ]:
+        shutil.copy2(article / name, supplement / name)
+    (repl / "README.txt").write_text(
+        f"""Study 4 full replication data (GitHub only — not in Study4_COMPLETE_SUBMISSION.zip)
+==================================================================================
+
+Target journal: {JOURNAL}
+
+This folder holds the complete raw/processed data, replication scripts, and
+supplementary estimation output for Study 4. Upload the lean zip to ScholarOne;
+use this folder (or the duplicate at repo root) to reproduce or audit the paper.
+
+Contents
+--------
+Data_Study4_IJCM/
+  Numbered replication package (01_ai_shock through 08_figures), matching the
+  Study 1 Data_IJCM layout. Includes retrieval scripts, derived tables, and
+  machine-readable results*.json files.
+
+Supplementary_Results/
+  All 23 generated supplementary figures, 34 supplementary tables, coefficient
+  JSON files, and documentation (FIGURES.md, tables_for_article.md,
+  EXPERIMENTS_RUN.md).
+
+Duplicate
+---------
+The same numbered data tree is also published at the repository root:
+  Data_Study4_IJCM/
+
+Licence
+-------
+Author-generated files: CC BY 4.0. Third-party statistics remain under their
+publishers’ terms.
+""",
+        encoding="utf-8",
+    )
+
+
 def build_delivery_folder(main_body_words: int, total_words: int) -> Path:
     """Create the journal handoff folder and a slim submission zip."""
     if DELIVERY.exists():
@@ -952,10 +1007,12 @@ def build_delivery_folder(main_body_words: int, total_words: int) -> Path:
     shutil.copy2(article / "FIGURES.docx", DELIVERY / "06_Supplementary_Figures.docx")
     shutil.copy2(article / "tables_for_article.docx", DELIVERY / "07_Supplementary_Tables.docx")
 
-    for bulky in ("Data_Study4_IJCM", "Supplementary_Results"):
+    for bulky in ("Data_Study4_IJCM", "Supplementary_Results", "replication"):
         target = DELIVERY / bulky
         if target.exists():
             shutil.rmtree(target)
+
+    populate_replication_folder(DELIVERY)
 
     for redundant in (
         "00_Manuscript_as_Submitted.docx",
@@ -996,8 +1053,11 @@ Files for ScholarOne upload:
 - `07_Supplementary_Tables.docx` — supplementary tables
 - `Study4_COMPLETE_SUBMISSION.zip` — the journal submission set in one archive
 
+Full replication data (raw/processed series, scripts, supplementary figures and
+tables) lives in [`replication/`](replication/) on GitHub only — not in the zip.
+The same numbered data tree is also at repo root [`Data_Study4_IJCM/`](../Data_Study4_IJCM/).
+
 Markdown and HTML copies of the identified manuscript are included for preview.
-Replication scripts and raw data are not part of this zip.
 """,
         encoding="utf-8",
     )

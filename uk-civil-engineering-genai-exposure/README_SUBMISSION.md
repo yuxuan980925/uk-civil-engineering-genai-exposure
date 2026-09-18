@@ -15,7 +15,7 @@ This folder is the complete journal package for Study 4, in the same role as
 
 An identified author copy is `Study4_Complete_Manuscript.docx`.
 
-The archive `Study4_COMPLETE_SUBMISSION.zip` contains only the journal submission set above (not replication scripts or raw data).
+The archive `Study4_COMPLETE_SUBMISSION.zip` contains only the journal submission set above (not replication scripts or raw data). Full replication data is in [`replication/`](../uk-civil-engineering-genai-exposure/replication/) on GitHub (and duplicated at repo root [`Data_Study4_IJCM/`](../Data_Study4_IJCM/)).
 
 ## Journal format applied
 

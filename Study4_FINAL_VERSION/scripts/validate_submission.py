@@ -225,9 +225,21 @@ def validate_delivery() -> int:
     figures = sorted((DELIVERY / "Figures").glob("Figure*.png"))
     require(len(figures) == 5, f"delivery folder has {len(figures)} figures, expected 5")
     require(not (DELIVERY / "Data_Study4_IJCM").exists(),
-            "replication package should not be in the journal delivery folder")
+            "replication package should not sit at delivery root")
     require(not (DELIVERY / "Supplementary_Results").exists(),
-            "raw supplementary folder should not be in the journal delivery folder")
+            "raw supplementary folder should not sit at delivery root")
+    repl = DELIVERY / "replication"
+    require(repl.is_dir(), "replication folder missing from delivery folder")
+    require((repl / "Data_Study4_IJCM" / "README.txt").is_file(),
+            "replication/Data_Study4_IJCM missing")
+    require((repl / "Supplementary_Results" / "results.json").is_file(),
+            "replication/Supplementary_Results missing")
+    supplementary_figures = sorted((repl / "Supplementary_Results" / "figures").glob("*.png"))
+    supplementary_tables = sorted((repl / "Supplementary_Results" / "tables").glob("*.csv"))
+    require(len(supplementary_figures) == 23,
+            f"replication supplement has {len(supplementary_figures)} figures, expected 23")
+    require(len(supplementary_tables) == 34,
+            f"replication supplement has {len(supplementary_tables)} tables, expected 34")
 
     package = DELIVERY / "Study4_COMPLETE_SUBMISSION.zip"
     with zipfile.ZipFile(package) as archive:
@@ -254,6 +266,7 @@ def validate_delivery() -> int:
         for excluded in (
             "Data_Study4_IJCM/README.txt",
             "Supplementary_Results/results.json",
+            "replication/README.txt",
         ):
             require(excluded not in names, f"delivery zip should not contain {excluded}")
     return len(required) + len(required_content) + 6 + 14

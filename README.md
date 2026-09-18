@@ -34,7 +34,12 @@ Corresponding author: Yuxuan Chai (`yuxuanchai98@outlook.com`), University of St
 The single-folder submission handoff is
 [`uk-civil-engineering-genai-exposure/`](uk-civil-engineering-genai-exposure/).
 Open `Study4_Complete_Manuscript.docx`; the complete archive is
-`uk-civil-engineering-genai-exposure/Study4_COMPLETE_SUBMISSION.zip`.
+`uk-civil-engineering-genai-exposure/Study4_COMPLETE_SUBMISSION.zip` (17 journal files).
+
+Full replication data (raw/processed series, scripts, supplementary figures/tables)
+is on GitHub at
+[`uk-civil-engineering-genai-exposure/replication/`](uk-civil-engineering-genai-exposure/replication/)
+and duplicated at repo root [`Data_Study4_IJCM/`](Data_Study4_IJCM/).
 
 After `git pull`, open the restored folder [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/) (markdown, HTML, figures, and Word). That directory is no longer a pointer; the article files sit inside it.
 

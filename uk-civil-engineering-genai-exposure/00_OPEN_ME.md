@@ -22,5 +22,8 @@ Files for ScholarOne upload:
 - `07_Supplementary_Tables.docx` — supplementary tables
 - `Study4_COMPLETE_SUBMISSION.zip` — the journal submission set in one archive
 
+Full replication data (raw/processed series, scripts, supplementary figures and
+tables) lives in [`replication/`](replication/) on GitHub only — not in the zip.
+The same numbered data tree is also at repo root [`Data_Study4_IJCM/`](../Data_Study4_IJCM/).
+
 Markdown and HTML copies of the identified manuscript are included for preview.
-Replication scripts and raw data are not part of this zip.
