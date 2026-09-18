@@ -27,12 +27,13 @@ See `Data_IJCM/README.txt` for the file-level inventory.
 
 **How Does the Civil Engineering Industry Economy Change under an AI Shock? The United Kingdom’s Service Links with India and China**
 
-Open [`Study4/`](Study4/). That folder is the complete package: article, figures, tables, data, IJCM Word files, and numbered replication data. No unzip step.
+Open [`Study4/`](Study4/). Word files are in [`Study4/Word/`](Study4/Word/): English and Chinese manuscripts, all 23 figures, all tables, experimental results, and the IJCM set. Data and experiment JSON files are in the same folder (`data/`, `tables/`, `results/`, `Data_Study4_IJCM/`).
 
-- English: [`Study4/Study4_Manuscript.md`](Study4/Study4_Manuscript.md)
-- Chinese: [`Study4/CN_full_article.md`](Study4/CN_full_article.md)
-- Index: [`Study4/index.html`](Study4/index.html)
-- IJCM Word: [`Study4/IJCM_Submission/`](Study4/IJCM_Submission/)
+- English Word: [`Study4/Word/01_English_Manuscript.docx`](Study4/Word/01_English_Manuscript.docx)
+- Chinese Word: [`Study4/Word/02_Chinese_Manuscript.docx`](Study4/Word/02_Chinese_Manuscript.docx)
+- All figures Word: [`Study4/Word/03_All_Figures.docx`](Study4/Word/03_All_Figures.docx)
+- All tables Word: [`Study4/Word/04_All_Tables.docx`](Study4/Word/04_All_Tables.docx)
+- Results Word: [`Study4/Word/05_Experimental_Results.docx`](Study4/Word/05_Experimental_Results.docx)
 - Numbered data: [`Study4/Data_Study4_IJCM/`](Study4/Data_Study4_IJCM/)
 
 The same openable files are also in [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/). Working copy: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). An optional zip is [`Study4_zip_packages/Study4.zip`](Study4_zip_packages/Study4.zip) (unzip locally; do not open it in the editor).

@@ -1,37 +1,31 @@
-# Study 4 — open this folder
+# Study 4 完整文件夹（Word）
 
-This folder is the **openable copy** of Study 4 (generative-AI shock, UK–India and UK–China, IJCM format). Files live **in this directory**. Do not open zip files in the editor.
+打开本文件夹中的 **Word/**。正文、图、表都是 .docx。不要打开 zip。
 
-## Open these (markdown / HTML)
+## Word 文件
 
-1. [Study4_Manuscript.md](Study4_Manuscript.md) — English article
-2. [Study4_Manuscript.html](Study4_Manuscript.html) — English, compiled (figures load from `figures/`)
-3. [CN_full_article.md](CN_full_article.md) — Chinese article
-4. [CN_full_article.html](CN_full_article.html) — Chinese, compiled
-5. [index.html](index.html) — folder index
-6. [FIGURES.md](FIGURES.md) — supplementary figures 1–23
-7. [tables_for_article.md](tables_for_article.md) — supplementary tables
-
-## Word (IJCM upload set)
-
-- [IJCM_Submission/01_Title_Page_Not_for_Review.docx](IJCM_Submission/01_Title_Page_Not_for_Review.docx)
-- [IJCM_Submission/02_Blinded_Manuscript_for_Review.docx](IJCM_Submission/02_Blinded_Manuscript_for_Review.docx)
-- [IJCM_Submission/02_Blinded_Manuscript_for_Review.html](IJCM_Submission/02_Blinded_Manuscript_for_Review.html)
-- [IJCM_Submission/03_Cover_Letter.docx](IJCM_Submission/03_Cover_Letter.docx)
-- [IJCM_Submission/04_Tables.docx](IJCM_Submission/04_Tables.docx)
-- [IJCM_Submission/05_Figure_Captions.docx](IJCM_Submission/05_Figure_Captions.docx)
-- [Study4_Manuscript.docx](Study4_Manuscript.docx)
-- [CN_full_article.docx](CN_full_article.docx)
-
-## Folders in this directory
-
-| Path | Contents |
+| 文件 | 内容 |
 |---|---|
-| `figures/` | PNG figures used by the markdown/HTML articles |
-| `tables/` | CSV tables |
-| `data/` | Retrieved Eurostat / BaTIS / SBS series |
-| `Data_Study4_IJCM/` | Numbered replication data (01–08) |
-| `IJCM_Submission/` | Title page, blinded manuscript, cover letter, 300 dpi Figure1–5 |
-| `scripts/` | Replication scripts |
+| [Word/01_English_Manuscript.docx](Word/01_English_Manuscript.docx) | 英文正文（含文中 5 张图） |
+| [Word/02_Chinese_Manuscript.docx](Word/02_Chinese_Manuscript.docx) | 中文正文（含文中 5 张图） |
+| [Word/03_All_Figures.docx](Word/03_All_Figures.docx) | 全部 23 张图 |
+| [Word/04_All_Tables.docx](Word/04_All_Tables.docx) | 全部实验 CSV 表（Word） |
+| [Word/05_Experimental_Results.docx](Word/05_Experimental_Results.docx) | 实验结果（TANY / TNLG / SBS） |
+| [Word/07_IJCM_Blinded_Manuscript.docx](Word/07_IJCM_Blinded_Manuscript.docx) | IJCM 匿名审稿稿 |
+| [Word/09_IJCM_Tables.docx](Word/09_IJCM_Tables.docx) | IJCM 文中 Table 1–6 |
+| [Word/06_IJCM_Title_Page.docx](Word/06_IJCM_Title_Page.docx) | 标题页 |
+| [Word/08_IJCM_Cover_Letter.docx](Word/08_IJCM_Cover_Letter.docx) | Cover letter |
+| [Word/12_Supplementary_Tables.docx](Word/12_Supplementary_Tables.docx) | 补充表格 Word |
 
-The complete package is also in [`../Study4/`](../Study4/). Do not open zip files in the editor.
+## 数据与实验结果（同一文件夹）
+
+| 路径 | 内容 |
+|---|---|
+| `data/` | Eurostat / BaTIS / SBS 等原始检索文件 |
+| `Data_Study4_IJCM/` | 编号复制数据 01–08 |
+| `tables/` | 全部实验 CSV（完整、未截断） |
+| `figures/` | 全部 PNG 原图 |
+| `results/` | `results.json`、`results_nlg.json`、`results_industry.json` |
+| `IJCM_Submission/` | 投稿 Word + Figure1–5（300 dpi） |
+
+Corresponding author: Yuxuan Chai (`yuxuanchai98@outlook.com`), University of Strathclyde.
