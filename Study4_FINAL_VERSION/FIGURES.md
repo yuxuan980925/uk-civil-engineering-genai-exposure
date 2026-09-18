@@ -34,7 +34,7 @@ ILO ISIC M vs F employment growth, 2019–2024.
 
 ## Figure 6
 
-EU-importer sums: Mode-1 SJ3 vs China SE.
+EU-importer sums: digitally deliverable SJ3 proxy versus Chinese construction services. BaTIS does not directly identify GATS modes of supply.
 
 ![Figure 6](figures/figure6_eu_mode1_vs_china.png)
 

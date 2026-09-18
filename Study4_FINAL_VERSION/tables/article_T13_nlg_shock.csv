@@ -10,7 +10,7 @@ Specification,Coefficient (s.e.),N,Note
 (N9) Placebo Post×ΔM TIR 2023–24,-0.010 (0.020),357,Image recognition
 (N10) Comparison Post×ΔM TANY 2021–24,0.000 (0.006),336,Generic any-AI; mixes ML and GenAI
 (N11) Placebo SI Post×ΔM TNLG,-0.002 (0.006),357,Computer services from same partners
-(N12) Placebo China SE Post×ΔM TNLG,-0.008 (0.009),119,Mode-3 construction from China
+(N12) Placebo China SE Post×ΔM TNLG,-0.008 (0.009),119,Project-based construction services from China; BaTIS does not identify mode
 (N13) Placebo China SJ3 Post×ΔM TNLG,0.005 (0.010),119,SJ3 from China
 (N14) Placebo Post×ΔJ TNLG 2023–24,0.009** (0.004),357,"ICT sector NLG (NACE J), not M71-containing M"
 (N15) Placebo Post×ΔC TNLG 2023–24,0.017** (0.008),357,Manufacturing NLG

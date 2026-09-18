@@ -72,7 +72,7 @@ Source: Eurostat `isoc_eb_ain2`, enterprises with at least ten persons.
 | Outcome/specification | Coefficient (s.e.) | N |
 |---|---:|---:|
 | Indian SJ3, Post × ΔM TNLG | 0.021*** (0.008) | 119 |
-| Pooled Mode-1 SJ3, Post-2024 × ΔM TNLG | 0.007** (0.003) | 357 |
+| Pooled SJ3, Post-2024 × ΔM TNLG | 0.007** (0.003) | 357 |
 | Chinese construction services (SE) | −0.008 (0.009) | 119 |
 | Chinese SJ3 | 0.005 (0.010) | 119 |
 | Indian computer services comparison | −0.002 (0.006) | 357 |
@@ -112,7 +112,11 @@ Source: OECD–WTO BaTIS SE. Groups split at the importer median change in NACE 
 
 def main() -> None:
     text = MANUSCRIPT.read_text(encoding="utf-8")
-    markers = ["\n## Figure captions", "\n## Main-text figures"]
+    if "## Disclosure statement" in text and "## Data availability statement" in text:
+        ARTICLE_BODY.write_text(text, encoding="utf-8")
+        print("IJCM end matter already present; left manuscript unchanged")
+        return
+    markers = ["\n## Figure captions", "\n## Main-text figures", "\n## Tables"]
     marker = next((candidate for candidate in markers if candidate in text), None)
     if marker is None:
         raise SystemExit("Figure appendix marker not found")
