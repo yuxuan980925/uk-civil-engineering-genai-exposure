@@ -1,0 +1,6 @@
+url,status
+https://ourworldindata.org/grapher/number-of-chatgpt-users.csv?v=1,fail
+https://ourworldindata.org/grapher/chatgpt-monthly-users.csv?v=1,fail
+https://catalog.ourworldindata.org/garden/artificial-intelligence/latest/ai_adoption/ai_adoption.csv,fail
+https://catalog.ourworldindata.org/garden/technology/latest/artificial_intelligence/artificial_intelligence.csv,fail
+https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Artificial%20intelligence%20-%20AI%20Index%20Report/Artificial%20intelligence%20-%20AI%20Index%20Report.csv,fail
