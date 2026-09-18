@@ -1,0 +1,9 @@
+# Python dependencies for the Study 4 analysis pipeline
+# (Study4_FINAL_VERSION/scripts/run_all_experiments.py and related scripts).
+# Pinned to versions verified to reproduce the figures, tables and release zips.
+numpy==2.4.4
+pandas==3.0.5
+matplotlib==3.11.2
+statsmodels==0.15.0
+scipy==1.18.1
+openpyxl==3.1.5

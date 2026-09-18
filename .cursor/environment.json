@@ -1,0 +1,4 @@
+{
+  "name": "Study 4 GenAI civil-engineering analysis",
+  "install": "pip3 install --user --no-input -r requirements.txt"
+}
