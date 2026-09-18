@@ -5,6 +5,7 @@ from __future__ import annotations
 import shutil
 import subprocess
 import sys
+import hashlib
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
@@ -99,10 +100,10 @@ def main():
 
 After `git pull`, open:
 
-1. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — concise English; focused on UK, India and China
-2. [`CN_Concise_Manuscript.md`](CN_Concise_Manuscript.md) — 中文精简稿
-3. [`Study4_Manuscript.md`](Study4_Manuscript.md) — archived full English article
-4. [`CN_full_article.md`](CN_full_article.md) — archived full Chinese article
+1. [`Study4_Manuscript.md`](Study4_Manuscript.md) — primary English article, about 8,000 words
+2. [`CN_full_article.md`](CN_full_article.md) — complete Chinese article
+3. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — optional short English version
+4. [`CN_Concise_Manuscript.md`](CN_Concise_Manuscript.md) — 可选中文精简稿
 5. [`FIGURES.md`](FIGURES.md) — figures 1–21
 6. [`tables_for_article.md`](tables_for_article.md) — all tables
 
@@ -110,7 +111,9 @@ Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/)
 
 Compiled HTML (browser): [`index.html`](index.html)
 
-Word (from HTML): [`Study4_Concise_Manuscript.docx`](Study4_Concise_Manuscript.docx) · [`CN_Concise_Manuscript.docx`](CN_Concise_Manuscript.docx)
+Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx) · [`CN_full_article.docx`](CN_full_article.docx)
+
+Package inventory: [`PACKAGE_INVENTORY.md`](PACKAGE_INVENTORY.md) · checksums: [`SHA256SUMS.txt`](SHA256SUMS.txt)
 
 Do **not** open `Study4.zip` in Cursor. Unzip it in Finder / Explorer; the top of the archive is `Study4_Manuscript.md`.
 """
@@ -123,20 +126,22 @@ Evidence from a Cross-Country Stack — **complete article folder**
 **Open in the editor (not the zip):**
 
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
-- `Study4_Concise_Manuscript.docx` — **concise English submission draft** (UK, India and China)
-- `CN_Concise_Manuscript.docx` — **中文精简稿**
-- `Study4_Manuscript.md` — full English article
+- `Study4_Manuscript.docx` — **primary English submission draft**, about 8,000 words, with embedded figures
+- `Study4_Manuscript.md` — editor-readable primary English article
 - `CN_full_article.md` — Chinese article
+- `CN_full_article.docx` — Word, Chinese
+- `Study4_Concise_Manuscript.docx` — optional short English version
+- `CN_Concise_Manuscript.docx` — 可选中文精简稿
 - `tables_for_article.md` — all article tables
 - `FIGURES.md` — figures 1–21
 - `figures/` — PNG files
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
 - `index.html` — compiled HTML (figures load from `figures/`)
-- `Study4_Manuscript.docx` — Word, English article (from HTML, figures embedded)
-- `CN_full_article.docx` — Word, Chinese
 - `FIGURES.docx` — Word, figures 1–21
 - `tables_for_article.docx` — Word, all tables
+- `PACKAGE_INVENTORY.md` — package contents and file counts
+- `SHA256SUMS.txt` — checksums for every packaged file except the zip itself
 
 Zip in this folder: **`Study4.zip`**
 
@@ -151,13 +156,45 @@ Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` 
         [sys.executable, str(Path(__file__).resolve().parent / "compile_article.py"), str(OUT)]
     )
 
+    package_files = sorted(
+        p for p in OUT.rglob("*")
+        if p.is_file() and p.name not in {ZIP_NAME, "PACKAGE_INVENTORY.md", "SHA256SUMS.txt"}
+    )
+    inventory = [
+        "# Complete package inventory",
+        "",
+        "Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `Study4_Manuscript.html`.",
+        "",
+        f"- Figures: {len(list((OUT / 'figures').glob('*.png')))} PNG",
+        f"- Tables: {len(list((OUT / 'tables').glob('*.csv')))} CSV",
+        f"- Data files: {len([p for p in (OUT / 'data').rglob('*') if p.is_file()])}",
+        f"- Manuscript-support files: {len([p for p in (OUT / 'manuscript').rglob('*') if p.is_file()])}",
+        f"- Files in package before zip: {len(package_files) + 2}",
+        "",
+        "## Included files",
+        "",
+    ]
+    inventory.extend(f"- `{p.relative_to(OUT).as_posix()}`" for p in package_files)
+    (OUT / "PACKAGE_INVENTORY.md").write_text("\n".join(inventory) + "\n", encoding="utf-8")
+
+    checksum_files = sorted(
+        p for p in OUT.rglob("*")
+        if p.is_file() and p.name not in {ZIP_NAME, "SHA256SUMS.txt"}
+    )
+    checksums = []
+    for p in checksum_files:
+        digest = hashlib.sha256(p.read_bytes()).hexdigest()
+        checksums.append(f"{digest}  {p.relative_to(OUT).as_posix()}")
+    (OUT / "SHA256SUMS.txt").write_text("\n".join(checksums) + "\n", encoding="utf-8")
+
     zip_path = OUT / ZIP_NAME
     if zip_path.exists():
         zip_path.unlink()
     subprocess.check_call(
         [
             "zip", "-r", "-X", str(zip_path),
-            "README.md", "OPEN_IN_EDITOR.md", "ZIP_PATH.md", "Study4_Manuscript.md",
+            "README.md", "OPEN_IN_EDITOR.md", "ZIP_PATH.md",
+            "PACKAGE_INVENTORY.md", "SHA256SUMS.txt", "Study4_Manuscript.md",
             "Study4_Concise_Manuscript.md", "CN_Concise_Manuscript.md",
             "article_body.md", "tables_for_article.md", "CN_full_article.md",
             "CN_novelty_and_claims.md", "FIGURES.md",

@@ -5,20 +5,22 @@ Evidence from a Cross-Country Stack — **complete article folder**
 **Open in the editor (not the zip):**
 
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
-- `Study4_Concise_Manuscript.docx` — **concise English submission draft** (UK, India and China)
-- `CN_Concise_Manuscript.docx` — **中文精简稿**
-- `Study4_Manuscript.md` — full English article
+- `Study4_Manuscript.docx` — **primary English submission draft**, about 8,000 words, with embedded figures
+- `Study4_Manuscript.md` — editor-readable primary English article
 - `CN_full_article.md` — Chinese article
+- `CN_full_article.docx` — Word, Chinese
+- `Study4_Concise_Manuscript.docx` — optional short English version
+- `CN_Concise_Manuscript.docx` — 可选中文精简稿
 - `tables_for_article.md` — all article tables
 - `FIGURES.md` — figures 1–21
 - `figures/` — PNG files
 - `tables/` — CSV tables
 - `data/` — official series used in the paper
 - `index.html` — compiled HTML (figures load from `figures/`)
-- `Study4_Manuscript.docx` — Word, English article (from HTML, figures embedded)
-- `CN_full_article.docx` — Word, Chinese
 - `FIGURES.docx` — Word, figures 1–21
 - `tables_for_article.docx` — Word, all tables
+- `PACKAGE_INVENTORY.md` — package contents and file counts
+- `SHA256SUMS.txt` — checksums for every packaged file except the zip itself
 
 Zip in this folder: **`Study4.zip`**
 
