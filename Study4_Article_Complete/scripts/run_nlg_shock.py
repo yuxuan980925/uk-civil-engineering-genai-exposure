@@ -308,7 +308,7 @@ def main():
     run_spec(
         results, "(N12) Placebo China SE Post×ΔM TNLG",
         panel_se, "post_x_d_tnlg_M_2324", ["post_x_d_tnlg_M_2324"],
-        "Mode-3 construction from China",
+        "Project-based construction services from China; BaTIS does not identify mode",
     )
     run_spec(
         results, "(N13) Placebo China SJ3 Post×ΔM TNLG",
@@ -465,7 +465,7 @@ def main():
         ax.errorbar(es_df.year, es_df.coef, yerr=1.96 * es_df.se.replace({0: np.nan}), fmt="o-", capsize=3)
         ax.set_xlabel("Year (2022 = reference)")
         ax.set_ylabel("Year × importer ΔM TNLG 2023–24")
-        ax.set_title("Event study with generative-NLG shock, Mode-1 SJ3")
+        ax.set_title("Event study with generative-NLG shock, SJ3 imports")
         ax.legend(frameon=False)
         fig.tight_layout()
         fig.savefig(FIG / "figure14_event_study_tnlg.png")
@@ -477,7 +477,7 @@ def main():
         ax.annotate(r.importer, (r.d_tnlg_M_2324, r.dlog), textcoords="offset points", xytext=(4, 4), fontsize=8)
     ax.set_xlabel("NACE M NLG, 2024 minus 2023 (pp)")
     ax.set_ylabel("Δ log SJ3 imports from India, 2022–24")
-    ax.set_title("GenAI NLG acceleration and India Mode-1 SJ3 growth")
+    ax.set_title("GenAI NLG acceleration and Indian SJ3 import growth")
     fig.tight_layout()
     fig.savefig(FIG / "figure15_cross_section_tnlg.png")
     plt.close()

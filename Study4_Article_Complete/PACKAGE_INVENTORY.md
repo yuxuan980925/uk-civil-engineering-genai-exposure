@@ -6,8 +6,8 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - Tables: 34 CSV
 - Data files: 40
 - Manuscript-support files: 30
-- Reproduction scripts: 16
-- Files in package before zip: 176
+- Reproduction scripts: 17
+- Files in package before zip: 177
 
 ## Included files
 
@@ -148,6 +148,7 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `scripts/run_industry_economy.py`
 - `scripts/run_nlg_shock.py`
 - `scripts/run_novelty_layer.py`
+- `scripts/validate_submission.py`
 - `tables/article_T12_multi_instrument.csv`
 - `tables/article_T12b_aiie_construction.csv`
 - `tables/article_T12c_aiie_naics23.csv`

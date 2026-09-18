@@ -106,7 +106,7 @@
       "display": "-0.004 (0.029)"
     },
     {
-      "spec": "(5) Placebo SI Mode-1",
+      "spec": "(5) Placebo SI digital services",
       "coef": -0.001976928151195671,
       "se": 0.007119463676298514,
       "p": 0.7812585023996218,
@@ -124,7 +124,7 @@
       "n": 112,
       "r2": 0.9206424458520835,
       "clusters": 16,
-      "note": "Mode-3 construction services",
+      "note": "Project-based construction services; BaTIS does not identify mode",
       "display": "-0.002 (0.007)"
     },
     {
@@ -139,7 +139,7 @@
       "display": "0.009 (0.010)"
     },
     {
-      "spec": "(8) Placebo SE from Mode-1",
+      "spec": "(8) Placebo SE from SJ3 exporters",
       "coef": -0.008840157483280259,
       "se": 0.013547831559405352,
       "p": 0.5140692768530238,
@@ -294,5 +294,5 @@
     }
   ],
   "cannot_identify": "A-country civil-engineer headcount causing B-country GDP or engineer counts",
-  "identified_object": "Importer NACE M AI change \u00d7 post-2023 associated with Mode-1 SJ3 imports; F/SE/SI/China placebos"
+  "identified_object": "Importer NACE M AI change \u00d7 post-2023 associated with SJ3 imports; F/SE/SI/China comparisons"
 }

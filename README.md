@@ -31,6 +31,11 @@ Manuscript submitted to *International Journal of Construction Management*:
 
 Corresponding author: Yuxuan Chai (`yuxuanchai98@outlook.com`), University of Strathclyde.
 
+The single-folder submission handoff is
+[`uk-civil-engineering-genai-exposure/`](uk-civil-engineering-genai-exposure/).
+Open `Study4_Complete_Manuscript.docx`; the complete archive is
+`uk-civil-engineering-genai-exposure/Study4_COMPLETE_SUBMISSION.zip`.
+
 After `git pull`, open the restored folder [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Global_AI_Civil_Engineering_Economy/) (markdown, HTML, figures, and Word). That directory is no longer a pointer; the article files sit inside it.
 
 The journal upload set is [`Study4_IJCM_Submission/`](Study4_IJCM_Submission/), in the same role as Study 1: a formatted manuscript plus a numbered replication package.

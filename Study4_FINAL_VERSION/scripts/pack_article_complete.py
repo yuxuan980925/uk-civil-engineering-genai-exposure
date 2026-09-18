@@ -11,6 +11,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 SRC = Path(__file__).resolve().parents[1]
 OUT = REPO / "Study4_Article_Complete"
+OPENABLE = REPO / "Study4_Global_AI_Civil_Engineering_Economy"
 ZIP_NAME = "Study4.zip"
 
 CAPTIONS = [
@@ -229,7 +230,15 @@ Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` 
     )
     subprocess.check_call(["unzip", "-t", str(zip_path)], stdout=subprocess.DEVNULL)
 
+    if OPENABLE.exists():
+        shutil.rmtree(OPENABLE)
+    copy_tree(OUT, OPENABLE)
+    copy_tree(REPO / "Study4_IJCM_Submission", OPENABLE / "IJCM_Submission")
+    copy_tree(REPO / "Data_Study4_IJCM", OPENABLE / "Data_Study4_IJCM")
+    shutil.copy2(zip_path, OPENABLE / ZIP_NAME)
+
     print("folder", OUT)
+    print("openable", OPENABLE)
     print("zip", zip_path, zip_path.stat().st_size)
     print("figures", len(list((OUT / "figures").glob("*.png"))))
     print("tables", len(list((OUT / "tables").glob("*.csv"))))

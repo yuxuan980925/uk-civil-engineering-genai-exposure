@@ -34,7 +34,7 @@ ILO ISIC M vs F employment growth.
 
 ## Figure 6
 
-EU Mode-1 SJ3 vs China SE.
+EU SJ3 imports vs Chinese construction services.
 
 ![Figure 6](figures/figure6_eu_mode1_vs_china.png)
 

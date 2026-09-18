@@ -3,7 +3,7 @@
 Date: 2026-09-17
 
 Scripts (in order):
-1. `scripts/run_analysis.py` — TANY Mode-1 SJ3 panel, APS, BaTIS corridors, event study, ILO
+1. `scripts/run_analysis.py` — TANY SJ3 importer panel, APS, BaTIS corridors, event study, ILO
 2. `scripts/run_novelty_layer.py` — M71 GVA, SJ1/SJ2 placebos, Eloundou
 3. `scripts/inherit_legacy_instruments.py` — Felten AIOE/AIIE vs APS (instruments only)
 4. `scripts/run_nlg_shock.py` — preferred E_AI_TNLG

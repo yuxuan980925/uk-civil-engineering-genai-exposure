@@ -1,36 +1,20 @@
-# Study 4 — open this folder
+# Open these files in the editor (not the zip)
 
-This folder is the **openable copy** of Study 4 (generative-AI shock, UK–India and UK–China, IJCM format). Files live **in this directory**. Do not open zip files in the editor.
+After `git pull`, open:
 
-## Open these (markdown / HTML)
+1. [`Study4_Manuscript.md`](Study4_Manuscript.md) — primary English article, about 8,000 words
+2. [`CN_full_article.md`](CN_full_article.md) — complete Chinese article
+3. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — optional short English version
+4. [`CN_Concise_Manuscript.md`](CN_Concise_Manuscript.md) — 可选中文精简稿
+5. [`FIGURES.md`](FIGURES.md) — supplementary figures 1–23 (the article embeds 5)
+6. [`tables_for_article.md`](tables_for_article.md) — all tables
 
-1. [Study4_Manuscript.md](Study4_Manuscript.md) — English article
-2. [Study4_Manuscript.html](Study4_Manuscript.html) — English, compiled (figures load from `figures/`)
-3. [CN_full_article.md](CN_full_article.md) — Chinese article
-4. [CN_full_article.html](CN_full_article.html) — Chinese, compiled
-5. [index.html](index.html) — folder index
-6. [FIGURES.md](FIGURES.md) — supplementary figures 1–23
-7. [tables_for_article.md](tables_for_article.md) — supplementary tables
+Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/) · [`scripts/`](scripts/)
 
-## Word (IJCM upload set)
+Compiled HTML (browser): [`index.html`](index.html)
 
-- [IJCM_Submission/01_Title_Page_Not_for_Review.docx](IJCM_Submission/01_Title_Page_Not_for_Review.docx)
-- [IJCM_Submission/02_Blinded_Manuscript_for_Review.docx](IJCM_Submission/02_Blinded_Manuscript_for_Review.docx)
-- [IJCM_Submission/02_Blinded_Manuscript_for_Review.html](IJCM_Submission/02_Blinded_Manuscript_for_Review.html)
-- [IJCM_Submission/03_Cover_Letter.docx](IJCM_Submission/03_Cover_Letter.docx)
-- [IJCM_Submission/04_Tables.docx](IJCM_Submission/04_Tables.docx)
-- [IJCM_Submission/05_Figure_Captions.docx](IJCM_Submission/05_Figure_Captions.docx)
-- [Study4_Manuscript.docx](Study4_Manuscript.docx)
-- [CN_full_article.docx](CN_full_article.docx)
+Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx) · [`CN_full_article.docx`](CN_full_article.docx)
 
-## Folders in this directory
+Package inventory: [`PACKAGE_INVENTORY.md`](PACKAGE_INVENTORY.md) · checksums: [`SHA256SUMS.txt`](SHA256SUMS.txt)
 
-| Path | Contents |
-|---|---|
-| `figures/` | PNG figures used by the markdown/HTML articles |
-| `tables/` | CSV tables |
-| `data/` | Retrieved Eurostat / BaTIS / SBS series |
-| `IJCM_Submission/` | Title page, blinded manuscript, cover letter, 300 dpi Figure1–5 |
-| `scripts/` | Replication scripts |
-
-The same files also exist at repository root as `Study4_IJCM_Submission/` and `Study4_Article_Complete/`.
+Do **not** open `Study4.zip` in Cursor. Unzip it in Finder / Explorer; the top of the archive is `Study4_Manuscript.md`.

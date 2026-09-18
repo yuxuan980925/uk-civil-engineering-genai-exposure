@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Study 4: GenAI, Mode-1 engineering services, and cross-border civil-industry adjustment.
+"""Study 4: GenAI, engineering-adjacent services, and cross-border civil-industry adjustment.
 
-Identified object: importer NACE M AI adoption associated with Mode-1 SJ3 imports.
+Identified object: importer NACE M AI adoption associated with SJ3 imports.
 Not identified: APS 2121 in country A causing employment or GDP in country B.
 """
 from __future__ import annotations
@@ -275,10 +275,10 @@ def main():
     run_spec(results, "(2) Post × ΔM 2021–24 [headline]", panel, "post_x_dM", ["post_x_dM"], "Preferred: GenAI window is the 2023–24 jump")
     run_spec(results, "(3) Horse race: Post × ΔM", panel, "post_x_dM", ["post_x_dM", "post_x_dF"], "Same regression as (4)")
     run_spec(results, "(4) Horse race: Post × ΔF", panel, "post_x_dF", ["post_x_dM", "post_x_dF"], "Construction AI change, controlling for M")
-    run_spec(results, "(5) Placebo SI Mode-1", panel_si, "post_x_dM", ["post_x_dM"], "Computer services from same partners")
-    run_spec(results, "(6) Placebo SE from China", panel_se_chn, "post_x_dM", ["post_x_dM"], "Mode-3 construction services")
+    run_spec(results, "(5) Placebo SI digital services", panel_si, "post_x_dM", ["post_x_dM"], "Computer services from same partners")
+    run_spec(results, "(6) Placebo SE from China", panel_se_chn, "post_x_dM", ["post_x_dM"], "Project-based construction services; BaTIS does not identify mode")
     run_spec(results, "(7) Placebo SJ3 from China", panel_sj3_chn, "post_x_dM", ["post_x_dM"], "SJ3 from China")
-    run_spec(results, "(8) Placebo SE from Mode-1", panel_se_m1, "post_x_dM", ["post_x_dM"], "Construction services from IND/PHL/VNM")
+    run_spec(results, "(8) Placebo SE from SJ3 exporters", panel_se_m1, "post_x_dM", ["post_x_dM"], "Construction services from IND/PHL/VNM")
     run_spec(results, "(9) Post × (M−F) 2024 gap", panel, "post_x_gap", ["post_x_gap"], "Professional minus construction AI")
 
     tvp = panel[panel.year.isin([2021, 2023, 2024])].copy()
@@ -393,8 +393,8 @@ def main():
 
     desc = []
     for imp, part, svc, lab in [
-        ("GBR", "IND", "SJ3", "UK ← India SJ3 (Mode 1)"),
-        ("GBR", "CHN", "SE", "UK ← China SE (Mode 3)"),
+        ("GBR", "IND", "SJ3", "UK ← India SJ3 (digitally deliverable proxy)"),
+        ("GBR", "CHN", "SE", "UK ← China SE (project-based comparison)"),
         ("GBR", "IND", "SI", "UK ← India SI (computer)"),
         ("USA", "IND", "SJ3", "US ← India SJ3"),
         ("DEU", "IND", "SJ3", "Germany ← India SJ3"),
@@ -574,7 +574,7 @@ def main():
         ax.plot(s.year, s.value, marker="o", label=lab)
     ax.set_ylabel("USD million (BaTIS balanced)")
     ax.set_xlabel("Year")
-    ax.set_title("UK imports: Mode-1 SJ3 vs Mode-3 SE vs computer SI")
+    ax.set_title("UK imports: SJ3 vs construction SE vs computer SI")
     ax.legend(frameon=False)
     fig.tight_layout()
     fig.savefig(FIG / "figure3_uk_trade.png")
@@ -625,7 +625,7 @@ def main():
         ax.plot(gsum.year, gsum.value, marker="o", label=lab)
     ax.set_ylabel("USD million (sum of balanced imports)")
     ax.set_xlabel("Year")
-    ax.set_title("EU-importer engineering-related imports: Mode-1 SJ3 vs China SE")
+    ax.set_title("EU-importer engineering-related imports: SJ3 vs China SE")
     ax.legend(frameon=False)
     fig.tight_layout()
     fig.savefig(FIG / "figure6_eu_mode1_vs_china.png")
@@ -664,7 +664,7 @@ def main():
         "aps_change": t_aps.to_dict(orient="records"),
         "identification": results,
         "cannot_identify": "A-country civil-engineer headcount causing B-country GDP or engineer counts",
-        "identified_object": "Importer NACE M AI change × post-2023 associated with Mode-1 SJ3 imports; F/SE/SI/China placebos",
+        "identified_object": "Importer NACE M AI change × post-2023 associated with SJ3 imports; F/SE/SI/China comparisons",
     }
     (ROOT / "results.json").write_text(json.dumps(headline, indent=2, default=str))
     print("importers", len(importers), importers)

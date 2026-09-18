@@ -26,7 +26,7 @@ Three measurement choices follow. First, the shock must capture generative use r
 
 This design connects three bodies of evidence that are usually separate. Task studies show that language models can reduce the time required for writing, coding and analysis. Industry accounts reveal whether those task-level gains translate into turnover, employment or wages. Trade data show whether digitally deliverable services respond differently from project-based construction services. The contribution is not a new exposure index or a claim about aggregate GDP. It is a service-heading-specific comparison of domestic M71 outcomes and cross-border adjustment during the first observable generative-AI adoption wave.
 
-A complete replication package accompanies this submission. Missing series are catalogued there; their absence is part of the claim boundary.
+A complete replication package accompanies this submission. All empirical specifications were rerun from the released data. The six main-text tables and five main-text figures report the results needed for the article; the accompanying supplementary-results set preserves all 34 generated tables, all 23 generated figures and the machine-readable coefficient files. Missing series are catalogued there; their absence is part of the claim boundary.
 
 ---
 

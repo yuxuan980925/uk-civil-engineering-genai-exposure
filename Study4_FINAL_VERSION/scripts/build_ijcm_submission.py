@@ -21,6 +21,7 @@ STUDY = ROOT / "Study4_FINAL_VERSION"
 SOURCE = STUDY / "manuscript" / "Study4_Manuscript.md"
 OUT = ROOT / "Study4_IJCM_Submission"
 DATA_ROOT = ROOT / "Data_Study4_IJCM"
+DELIVERY = ROOT / "uk-civil-engineering-genai-exposure"
 TITLE = (
     "How Does the Civil Engineering Industry Economy Change under an AI Shock? "
     "The United Kingdom’s Service Links with India and China"
@@ -670,7 +671,7 @@ def write_table_csvs(folder: Path) -> None:
     for i, table in enumerate(TABLES, 1):
         path = folder / f"Table{i}.csv"
         with path.open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.writer(handle)
+            writer = csv.writer(handle, lineterminator="\n")
             writer.writerow(table["headers"])
             writer.writerows(table["rows"])
             writer.writerow([])
@@ -904,6 +905,97 @@ def write_inventory(folder: Path) -> None:
     )
 
 
+def build_delivery_folder() -> Path:
+    """Create the single-folder, single-zip handoff requested by the author."""
+    if DELIVERY.exists():
+        shutil.rmtree(DELIVERY)
+    shutil.copytree(OUT, DELIVERY, ignore=shutil.ignore_patterns("*.zip"))
+
+    shutil.copy2(
+        OUT / "00_Manuscript_as_Submitted.docx",
+        DELIVERY / "Study4_Complete_Manuscript.docx",
+    )
+    shutil.copy2(
+        OUT / "00_Manuscript_as_Submitted.md",
+        DELIVERY / "Study4_Complete_Manuscript.md",
+    )
+    shutil.copy2(
+        OUT / "00_Manuscript_as_Submitted.html",
+        DELIVERY / "Study4_Complete_Manuscript.html",
+    )
+    article = ROOT / "Study4_Article_Complete"
+    shutil.copy2(article / "FIGURES.docx", DELIVERY / "06_Supplementary_Figures.docx")
+    shutil.copy2(article / "tables_for_article.docx", DELIVERY / "07_Supplementary_Tables.docx")
+    supplement = DELIVERY / "Supplementary_Results"
+    shutil.copytree(article / "figures", supplement / "figures")
+    shutil.copytree(article / "tables", supplement / "tables")
+    for name in [
+        "FIGURES.md",
+        "tables_for_article.md",
+        "results.json",
+        "results_nlg.json",
+        "results_industry.json",
+        "EXPERIMENTS_RUN.md",
+    ]:
+        shutil.copy2(article / name, supplement / name)
+    (DELIVERY / "00_OPEN_ME.md").write_text(
+        f"""# Study 4 complete submission
+
+Target journal: *{JOURNAL}*
+
+Open `Study4_Complete_Manuscript.docx` for the complete identified Word article.
+It contains the title, abstract, keywords, numbered body, full results, six
+tables, five figures, discussion, conclusion, declarations and references.
+
+Submission files in this folder:
+
+- `Study4_Complete_Manuscript.docx` — complete identified manuscript
+- `02_Blinded_Manuscript_for_Review.docx` — anonymous review manuscript
+- `01_Title_Page_Not_for_Review.docx` — author details and declarations
+- `03_Cover_Letter.docx` — cover letter
+- `04_Tables.docx` — editable Tables 1–6
+- `05_Figure_Captions.docx` — Figure 1–5 captions
+- `Figures/` — five separate 300 dpi figures
+- `06_Supplementary_Figures.docx` — all 23 generated figures
+- `07_Supplementary_Tables.docx` — all 34 generated tables
+- `Supplementary_Results/` — all figure/table files and machine-readable estimates
+- `Data_Study4_IJCM/` — complete numbered replication package
+- `ZIP_CONTENTS.md` — complete file list for the archive
+- `Study4_COMPLETE_SUBMISSION.zip` — all of the above in one archive
+
+Markdown and HTML copies are included for editor/browser preview.
+""",
+        encoding="utf-8",
+    )
+    contents = sorted(
+        path.relative_to(DELIVERY).as_posix()
+        for path in DELIVERY.rglob("*")
+        if path.is_file() and path.suffix != ".zip"
+    )
+    contents.append("ZIP_CONTENTS.md")
+    contents.sort()
+    (DELIVERY / "ZIP_CONTENTS.md").write_text(
+        "# Study 4 complete submission zip contents\n\n"
+        + "\n".join(f"- `{relative}`" for relative in contents)
+        + "\n",
+        encoding="utf-8",
+    )
+
+    zip_tmp = ROOT / "Study4_COMPLETE_SUBMISSION.zip"
+    zip_inside = DELIVERY / zip_tmp.name
+    for path in (zip_tmp, zip_inside):
+        if path.exists():
+            path.unlink()
+    subprocess.check_call(
+        ["zip", "-r", "-X", str(zip_tmp), ".", "-x", "*.zip"],
+        cwd=DELIVERY,
+        stdout=subprocess.DEVNULL,
+    )
+    shutil.move(zip_tmp, zip_inside)
+    subprocess.check_call(["unzip", "-t", str(zip_inside)], stdout=subprocess.DEVNULL)
+    return zip_inside
+
+
 def compile_html(md_path: Path, dest: Path) -> None:
     try:
         import markdown
@@ -1013,10 +1105,12 @@ def main() -> None:
     )
     shutil.copy2(zip_root, zip_inside)
     subprocess.check_call(["unzip", "-t", str(zip_inside)], stdout=subprocess.DEVNULL)
+    delivery_zip = build_delivery_folder()
     print(OUT)
     print("abstract_words", abstract_words)
     print("word_count", wc)
     print(zip_inside)
+    print(delivery_zip)
 
 
 if __name__ == "__main__":

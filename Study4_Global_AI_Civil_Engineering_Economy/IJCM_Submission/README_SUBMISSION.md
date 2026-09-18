@@ -11,7 +11,7 @@ This folder is the complete journal package for Study 4, in the same role as
 4. `04_Tables.docx` — editable copies of Tables 1–6.
 5. `05_Figure_Captions.docx` — captions for Figures 1–5.
 6. `Figures/Figure1.png` … `Figure5.png` — separate 300 dpi files.
-7. Numbered replication package (Study 1 layout): `../../Data_Study4_IJCM/` at the repository root (also nested under `Study4_IJCM_Submission/Data_Study4_IJCM/`).
+7. `Data_Study4_IJCM/` — numbered replication package (Study 1 layout).
 
 An identified author copy is `00_Manuscript_as_Submitted.docx`.
 
@@ -20,7 +20,7 @@ An identified author copy is `00_Manuscript_as_Submitted.docx`.
 - Research article for the *International Journal of Construction Management* (Taylor & Francis, ISSN 1562-3599 / 2331-2327).
 - Unstructured abstract (about 230 words) and six keywords.
 - Numbered sections: Introduction; Literature review; Data; Empirical design; Results; Discussion; Limitations; Conclusion.
-- End matter required by recent IJCM papers: Disclosure statement; Data availability statement; References.
+- End matter: Author contribution; Funding; Ethics statement; Disclosure statement; Data availability statement; References.
 - In-text citations and reference list in APA 7th author–date form (accepted by Taylor & Francis format-free / Your Paper Your Way; production will apply the journal template after acceptance).
 - Tables numbered Table 1–Table 6 with titles above and notes below.
 - Figures numbered Figure 1–Figure 5, 300 dpi, captions listed separately.
@@ -29,6 +29,13 @@ An identified author copy is `00_Manuscript_as_Submitted.docx`.
 ## Required human check
 
 Confirm funding, competing-interest and originality statements in ScholarOne if any detail has changed.
+
+## Validate the package
+
+After rebuilding, run
+`python3 Study4_FINAL_VERSION/scripts/validate_submission.py` from the repository
+root checkout. The validator checks the article sections, figure links and
+resolution, anonymisation, data tables, checksums and zip integrity.
 
 ## Licence
 

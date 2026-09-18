@@ -3,10 +3,10 @@ Specification,Coefficient (s.e.),N,Note
 (2) Post × ΔM 2021–24 [headline],0.000 (0.006),336,Preferred: GenAI window is the 2023–24 jump
 (3) Horse race: Post × ΔM,0.001 (0.008),336,Same regression as (4)
 (4) Horse race: Post × ΔF,-0.004 (0.029),336,"Construction AI change, controlling for M"
-(5) Placebo SI Mode-1,-0.002 (0.007),336,Computer services from same partners
-(6) Placebo SE from China,-0.002 (0.007),112,Mode-3 construction services
+(5) Placebo SI digital services,-0.002 (0.007),336,Computer services from same partners
+(6) Placebo SE from China,-0.002 (0.007),112,Project-based construction services; BaTIS does not identify mode
 (7) Placebo SJ3 from China,0.009 (0.010),112,SJ3 from China
-(8) Placebo SE from Mode-1,-0.009 (0.014),336,Construction services from IND/PHL/VNM
+(8) Placebo SE from SJ3 exporters,-0.009 (0.014),336,Construction services from IND/PHL/VNM
 (9) Post × (M−F) 2024 gap,0.003 (0.004),336,Professional minus construction AI
 (10) Time-varying M-AI 2021/23/24,0.003 (0.003),150,Eurostat years overlapping BaTIS
 (11) Placebo time-varying F-AI,-0.010 (0.010),153,Construction AI

@@ -1,36 +1,30 @@
-# Study 4 — open this folder
+# How Does the Civil Engineering Industry Economy Change under an AI Shock?
 
-This folder is the **openable copy** of Study 4 (generative-AI shock, UK–India and UK–China, IJCM format). Files live **in this directory**. Do not open zip files in the editor.
+The United Kingdom’s Service Links with India and China — **complete article folder**
 
-## Open these (markdown / HTML)
+**Open in the editor (not the zip):**
 
-1. [Study4_Manuscript.md](Study4_Manuscript.md) — English article
-2. [Study4_Manuscript.html](Study4_Manuscript.html) — English, compiled (figures load from `figures/`)
-3. [CN_full_article.md](CN_full_article.md) — Chinese article
-4. [CN_full_article.html](CN_full_article.html) — Chinese, compiled
-5. [index.html](index.html) — folder index
-6. [FIGURES.md](FIGURES.md) — supplementary figures 1–23
-7. [tables_for_article.md](tables_for_article.md) — supplementary tables
+- `OPEN_IN_EDITOR.md` — this folder’s entry list
+- `Study4_Manuscript.docx` — English working copy used to compile this folder; the **journal submission files** are in [`../Study4_IJCM_Submission/`](../Study4_IJCM_Submission/)
+- `Study4_Manuscript.md` — editor-readable English article in IJCM layout (abstract, keywords, numbered sections, disclosure, data availability, tables, figures)
+- `CN_full_article.md` — Chinese companion article (not the IJCM file)
+- `CN_full_article.docx` — Word, Chinese
+- `Study4_Concise_Manuscript.docx` — optional short English version
+- `CN_Concise_Manuscript.docx` — 可选中文精简稿
+- `tables_for_article.md` — all article tables
+- `FIGURES.md` — supplementary figures 1–23; only 5 are embedded in the main article
+- `figures/` — PNG files
+- `tables/` — CSV tables
+- `data/` — official series used in the paper
+- `scripts/` — all download, analysis, compilation and packaging scripts
+- `results.json`, `results_nlg.json`, `results_industry.json` — machine-readable experiment results
+- `EXPERIMENTS_RUN.md` — experiment record
+- `index.html` — compiled HTML (figures load from `figures/`)
+- `FIGURES.docx` — Word, supplementary figures 1–23
+- `tables_for_article.docx` — Word, all tables
+- `PACKAGE_INVENTORY.md` — package contents and file counts
+- `SHA256SUMS.txt` — checksums for every packaged file except the zip itself
 
-## Word (IJCM upload set)
+Zip in this folder: **`Study4.zip`**
 
-- [IJCM_Submission/01_Title_Page_Not_for_Review.docx](IJCM_Submission/01_Title_Page_Not_for_Review.docx)
-- [IJCM_Submission/02_Blinded_Manuscript_for_Review.docx](IJCM_Submission/02_Blinded_Manuscript_for_Review.docx)
-- [IJCM_Submission/02_Blinded_Manuscript_for_Review.html](IJCM_Submission/02_Blinded_Manuscript_for_Review.html)
-- [IJCM_Submission/03_Cover_Letter.docx](IJCM_Submission/03_Cover_Letter.docx)
-- [IJCM_Submission/04_Tables.docx](IJCM_Submission/04_Tables.docx)
-- [IJCM_Submission/05_Figure_Captions.docx](IJCM_Submission/05_Figure_Captions.docx)
-- [Study4_Manuscript.docx](Study4_Manuscript.docx)
-- [CN_full_article.docx](CN_full_article.docx)
-
-## Folders in this directory
-
-| Path | Contents |
-|---|---|
-| `figures/` | PNG figures used by the markdown/HTML articles |
-| `tables/` | CSV tables |
-| `data/` | Retrieved Eurostat / BaTIS / SBS series |
-| `IJCM_Submission/` | Title page, blinded manuscript, cover letter, 300 dpi Figure1–5 |
-| `scripts/` | Replication scripts |
-
-The same files also exist at repository root as `Study4_IJCM_Submission/` and `Study4_Article_Complete/`.
+Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` at the top. Cursor cannot preview zip files.

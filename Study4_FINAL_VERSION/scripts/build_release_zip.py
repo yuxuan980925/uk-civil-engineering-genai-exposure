@@ -178,7 +178,11 @@ Do not treat APS SOC 2121 as causing partner-country GDP.
             rel = str(p.relative_to(PACK)).replace("\\", "/")
             rows.append({"path": rel, "bytes": p.stat().st_size, "sha256": sha256(p)})
     with (PACK / "MANIFEST.csv").open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["path", "bytes", "sha256"])
+        w = csv.DictWriter(
+            f,
+            fieldnames=["path", "bytes", "sha256"],
+            lineterminator="\n",
+        )
         w.writeheader()
         w.writerows(rows)
     shutil.copy2(PACK / "MANIFEST.csv", ROOT / "MANIFEST.csv")

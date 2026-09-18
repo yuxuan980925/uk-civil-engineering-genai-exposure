@@ -57,8 +57,8 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 
 | series | usd_mn_2019 | usd_mn_2024 | pct |
 |---|---|---|---|
-| UK ← India SJ3 (Mode 1) | 2186.6 | 4979.3 | 127.7 |
-| UK ← China SE (Mode 3) | 118.5 | 179.8 | 51.7 |
+| UK ← India SJ3 (digitally deliverable proxy) | 2186.6 | 4979.3 | 127.7 |
+| UK ← China SE (project-based comparison) | 118.5 | 179.8 | 51.7 |
 | UK ← India SI (computer) | 2215.3 | 4723.0 | 113.2 |
 | US ← India SJ3 | 2398.0 | 2584.5 | 7.8 |
 | Germany ← India SJ3 | 659.6 | 925.9 | 40.4 |
@@ -75,10 +75,10 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | (2) Post × ΔM 2021–24 [headline] | 0.000 (0.006) | 336 | Preferred: GenAI window is the 2023–24 jump |
 | (3) Horse race: Post × ΔM | 0.001 (0.008) | 336 | Same regression as (4) |
 | (4) Horse race: Post × ΔF | -0.004 (0.029) | 336 | Construction AI change, controlling for M |
-| (5) Placebo SI Mode-1 | -0.002 (0.007) | 336 | Computer services from same partners |
-| (6) Placebo SE from China | -0.002 (0.007) | 112 | Mode-3 construction services |
+| (5) Placebo SI digital services | -0.002 (0.007) | 336 | Computer services from same partners |
+| (6) Placebo SE from China | -0.002 (0.007) | 112 | Project-based construction services; BaTIS does not identify mode |
 | (7) Placebo SJ3 from China | 0.009 (0.010) | 112 | SJ3 from China |
-| (8) Placebo SE from Mode-1 | -0.009 (0.014) | 336 | Construction services from IND/PHL/VNM |
+| (8) Placebo SE from SJ3 exporters | -0.009 (0.014) | 336 | Construction services from IND/PHL/VNM |
 | (9) Post × (M−F) 2024 gap | 0.003 (0.004) | 336 | Professional minus construction AI |
 | (10) Time-varying M-AI 2021/23/24 | 0.003 (0.003) | 150 | Eurostat years overlapping BaTIS |
 | (11) Placebo time-varying F-AI | -0.010 (0.010) | 153 | Construction AI |
@@ -217,7 +217,7 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | (N9) Placebo Post×ΔM TIR 2023–24 | -0.010 (0.020) | 357 | Image recognition |
 | (N10) Comparison Post×ΔM TANY 2021–24 | 0.000 (0.006) | 336 | Generic any-AI; mixes ML and GenAI |
 | (N11) Placebo SI Post×ΔM TNLG | -0.002 (0.006) | 357 | Computer services from same partners |
-| (N12) Placebo China SE Post×ΔM TNLG | -0.008 (0.009) | 119 | Mode-3 construction from China |
+| (N12) Placebo China SE Post×ΔM TNLG | -0.008 (0.009) | 119 | Project-based construction services from China; BaTIS does not identify mode |
 | (N13) Placebo China SJ3 Post×ΔM TNLG | 0.005 (0.010) | 119 | SJ3 from China |
 | (N14) Placebo Post×ΔJ TNLG 2023–24 | 0.009** (0.004) | 357 | ICT sector NLG (NACE J), not M71-containing M |
 | (N15) Placebo Post×ΔC TNLG 2023–24 | 0.017** (0.008) | 357 | Manufacturing NLG |

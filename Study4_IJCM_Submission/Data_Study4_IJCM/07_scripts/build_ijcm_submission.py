@@ -21,6 +21,7 @@ STUDY = ROOT / "Study4_FINAL_VERSION"
 SOURCE = STUDY / "manuscript" / "Study4_Manuscript.md"
 OUT = ROOT / "Study4_IJCM_Submission"
 DATA_ROOT = ROOT / "Data_Study4_IJCM"
+DELIVERY = ROOT / "uk-civil-engineering-genai-exposure"
 TITLE = (
     "How Does the Civil Engineering Industry Economy Change under an AI Shock? "
     "The United Kingdom’s Service Links with India and China"
@@ -44,11 +45,11 @@ MAIN_FIGURES = [
      "M71 and construction turnover growth, 2021–2024."),
 ]
 
-ABSTRACT = """This paper studies the civil-engineering economy under a generative-AI shock through two United Kingdom-centred relationships: UK–India and UK–China. Bilateral evidence covers technical and other business services (SJ3), construction services (SE), and computer and information services (SI). A panel of 17 EU importers supplies harmonised variation in enterprise use of natural-language-generation (NLG) AI. UK trends are descriptive; the panel tests whether importer adoption is associated with Indian Mode-1 services or Chinese project-based construction services. The shock is the 2023–24 change in Eurostat NLG use among professional-service enterprises. Domestic outcomes are turnover, employment, wages and value added in NACE M71 architectural and engineering activities; trade outcomes come from OECD–WTO BaTIS. Between 2019 and 2024, UK imports of Indian SJ3 rose 127.7% and UK imports of Chinese SJ3 rose 99.3%. In the importer panel, the India-only SJ3 coefficient is 0.021 (s.e. 0.008), whereas Chinese construction services are unrelated to importer NLG adoption (−0.008, s.e. 0.009). Domestic M71 turnover and wages grew more slowly in higher-adoption economies, while employment was unchanged. The evidence is consistent with generative tools changing the coordination of digitally deliverable services, especially between the UK and India. It does not show that AI caused the bilateral changes or that civil-engineering jobs or GDP relocated."""
+ABSTRACT = """This paper studies the civil-engineering economy under a generative-AI shock through two United Kingdom-centred relationships: UK–India and UK–China. Bilateral evidence covers technical and other business services (SJ3), construction services (SE), and computer and information services (SI). A panel of 17 EU importers supplies harmonised variation in enterprise use of natural-language-generation (NLG) AI. UK trends are descriptive; the panel tests whether importer adoption is associated with Indian SJ3 services or Chinese project-based construction services. The shock is the 2023–24 change in Eurostat NLG use among professional-service enterprises. Domestic outcomes are turnover, employment, wages and value added in NACE M71 architectural and engineering activities; trade outcomes come from OECD–WTO BaTIS. Between 2019 and 2024, UK imports of Indian SJ3 rose 127.7% and UK imports of Chinese SJ3 rose 99.3%. In the importer panel, the India-only SJ3 coefficient is 0.021 (s.e. 0.008), whereas Chinese construction services are unrelated to importer NLG adoption (−0.008, s.e. 0.009). Domestic M71 turnover and wages grew more slowly in higher-adoption economies, while employment was unchanged. The pattern is consistent with generative tools changing the coordination of digitally deliverable services, especially between the UK and India. It does not show that AI caused the bilateral changes or that civil-engineering jobs or GDP relocated."""
 
 KEYWORDS = (
     "generative AI; civil engineering; construction management; services trade; "
-    "NACE M71; Mode 1"
+    "NACE M71; digitally deliverable services"
 )
 
 TABLES = [
@@ -85,7 +86,7 @@ TABLES = [
         "headers": ["Outcome/specification", "Coefficient (s.e.)", "N"],
         "rows": [
             ["Indian SJ3, Post × ΔM TNLG", "0.021*** (0.008)", "119"],
-            ["Pooled Mode-1 SJ3, Post-2024 × ΔM TNLG", "0.007** (0.003)", "357"],
+            ["Pooled SJ3, Post-2024 × ΔM TNLG", "0.007** (0.003)", "357"],
             ["Chinese construction services (SE)", "−0.008 (0.009)", "119"],
             ["Chinese SJ3", "0.005 (0.010)", "119"],
             ["Indian computer services comparison", "−0.002 (0.006)", "357"],
@@ -398,7 +399,14 @@ def markdown_tables_and_figures() -> str:
 def format_source_manuscript() -> str:
     text = SOURCE.read_text(encoding="utf-8")
     start = text.index("## 1. Introduction")
-    end_markers = ["## Disclosure statement", "## Data availability statement", "## References"]
+    end_markers = [
+        "## Author contribution",
+        "## Funding",
+        "## Ethics statement",
+        "## Disclosure statement",
+        "## Data availability statement",
+        "## References",
+    ]
     end = min(text.index(m, start) for m in end_markers if m in text[start:])
     body = text[start:end].rstrip()
     body = body.replace(
@@ -434,7 +442,16 @@ def format_source_manuscript() -> str:
         f"**Keywords:** {KEYWORDS}\n\n"
     )
     back = (
-        "\n\n## Disclosure statement\n\n"
+        "\n\n## Author contribution\n\n"
+        "Yuxuan Chai is the sole author and was responsible for the study conception, "
+        "data curation, analysis, visualisation and manuscript preparation.\n\n"
+        "## Funding\n\n"
+        "This research received no specific grant from any funding agency in the "
+        "public, commercial or not-for-profit sectors.\n\n"
+        "## Ethics statement\n\n"
+        "The study analyses published aggregate statistical series and does not involve "
+        "human participants, personal data or animal subjects.\n\n"
+        "## Disclosure statement\n\n"
         "No potential conflict of interest was reported by the author.\n\n"
         "## Data availability statement\n\n"
         "The data that support the findings of this study are included in the "
@@ -654,7 +671,7 @@ def write_table_csvs(folder: Path) -> None:
     for i, table in enumerate(TABLES, 1):
         path = folder / f"Table{i}.csv"
         with path.open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.writer(handle)
+            writer = csv.writer(handle, lineterminator="\n")
             writer.writerow(table["headers"])
             writer.writerows(table["rows"])
             writer.writerow([])
@@ -841,7 +858,7 @@ An identified author copy is `00_Manuscript_as_Submitted.docx`.
 - Research article for the *{JOURNAL}* (Taylor & Francis, ISSN 1562-3599 / 2331-2327).
 - Unstructured abstract (about 230 words) and six keywords.
 - Numbered sections: Introduction; Literature review; Data; Empirical design; Results; Discussion; Limitations; Conclusion.
-- End matter required by recent IJCM papers: Disclosure statement; Data availability statement; References.
+- End matter: Author contribution; Funding; Ethics statement; Disclosure statement; Data availability statement; References.
 - In-text citations and reference list in APA 7th author–date form (accepted by Taylor & Francis format-free / Your Paper Your Way; production will apply the journal template after acceptance).
 - Tables numbered Table 1–Table 6 with titles above and notes below.
 - Figures numbered Figure 1–Figure 5, 300 dpi, captions listed separately.
@@ -850,6 +867,13 @@ An identified author copy is `00_Manuscript_as_Submitted.docx`.
 ## Required human check
 
 Confirm funding, competing-interest and originality statements in ScholarOne if any detail has changed.
+
+## Validate the package
+
+After rebuilding, run
+`python3 Study4_FINAL_VERSION/scripts/validate_submission.py` from the repository
+root checkout. The validator checks the article sections, figure links and
+resolution, anonymisation, data tables, checksums and zip integrity.
 
 ## Licence
 
@@ -879,6 +903,97 @@ def write_inventory(folder: Path) -> None:
         + "\n",
         encoding="utf-8",
     )
+
+
+def build_delivery_folder() -> Path:
+    """Create the single-folder, single-zip handoff requested by the author."""
+    if DELIVERY.exists():
+        shutil.rmtree(DELIVERY)
+    shutil.copytree(OUT, DELIVERY, ignore=shutil.ignore_patterns("*.zip"))
+
+    shutil.copy2(
+        OUT / "00_Manuscript_as_Submitted.docx",
+        DELIVERY / "Study4_Complete_Manuscript.docx",
+    )
+    shutil.copy2(
+        OUT / "00_Manuscript_as_Submitted.md",
+        DELIVERY / "Study4_Complete_Manuscript.md",
+    )
+    shutil.copy2(
+        OUT / "00_Manuscript_as_Submitted.html",
+        DELIVERY / "Study4_Complete_Manuscript.html",
+    )
+    article = ROOT / "Study4_Article_Complete"
+    shutil.copy2(article / "FIGURES.docx", DELIVERY / "06_Supplementary_Figures.docx")
+    shutil.copy2(article / "tables_for_article.docx", DELIVERY / "07_Supplementary_Tables.docx")
+    supplement = DELIVERY / "Supplementary_Results"
+    shutil.copytree(article / "figures", supplement / "figures")
+    shutil.copytree(article / "tables", supplement / "tables")
+    for name in [
+        "FIGURES.md",
+        "tables_for_article.md",
+        "results.json",
+        "results_nlg.json",
+        "results_industry.json",
+        "EXPERIMENTS_RUN.md",
+    ]:
+        shutil.copy2(article / name, supplement / name)
+    (DELIVERY / "00_OPEN_ME.md").write_text(
+        f"""# Study 4 complete submission
+
+Target journal: *{JOURNAL}*
+
+Open `Study4_Complete_Manuscript.docx` for the complete identified Word article.
+It contains the title, abstract, keywords, numbered body, full results, six
+tables, five figures, discussion, conclusion, declarations and references.
+
+Submission files in this folder:
+
+- `Study4_Complete_Manuscript.docx` — complete identified manuscript
+- `02_Blinded_Manuscript_for_Review.docx` — anonymous review manuscript
+- `01_Title_Page_Not_for_Review.docx` — author details and declarations
+- `03_Cover_Letter.docx` — cover letter
+- `04_Tables.docx` — editable Tables 1–6
+- `05_Figure_Captions.docx` — Figure 1–5 captions
+- `Figures/` — five separate 300 dpi figures
+- `06_Supplementary_Figures.docx` — all 23 generated figures
+- `07_Supplementary_Tables.docx` — all 34 generated tables
+- `Supplementary_Results/` — all figure/table files and machine-readable estimates
+- `Data_Study4_IJCM/` — complete numbered replication package
+- `ZIP_CONTENTS.md` — complete file list for the archive
+- `Study4_COMPLETE_SUBMISSION.zip` — all of the above in one archive
+
+Markdown and HTML copies are included for editor/browser preview.
+""",
+        encoding="utf-8",
+    )
+    contents = sorted(
+        path.relative_to(DELIVERY).as_posix()
+        for path in DELIVERY.rglob("*")
+        if path.is_file() and path.suffix != ".zip"
+    )
+    contents.append("ZIP_CONTENTS.md")
+    contents.sort()
+    (DELIVERY / "ZIP_CONTENTS.md").write_text(
+        "# Study 4 complete submission zip contents\n\n"
+        + "\n".join(f"- `{relative}`" for relative in contents)
+        + "\n",
+        encoding="utf-8",
+    )
+
+    zip_tmp = ROOT / "Study4_COMPLETE_SUBMISSION.zip"
+    zip_inside = DELIVERY / zip_tmp.name
+    for path in (zip_tmp, zip_inside):
+        if path.exists():
+            path.unlink()
+    subprocess.check_call(
+        ["zip", "-r", "-X", str(zip_tmp), ".", "-x", "*.zip"],
+        cwd=DELIVERY,
+        stdout=subprocess.DEVNULL,
+    )
+    shutil.move(zip_tmp, zip_inside)
+    subprocess.check_call(["unzip", "-t", str(zip_inside)], stdout=subprocess.DEVNULL)
+    return zip_inside
 
 
 def compile_html(md_path: Path, dest: Path) -> None:
@@ -990,10 +1105,12 @@ def main() -> None:
     )
     shutil.copy2(zip_root, zip_inside)
     subprocess.check_call(["unzip", "-t", str(zip_inside)], stdout=subprocess.DEVNULL)
+    delivery_zip = build_delivery_folder()
     print(OUT)
     print("abstract_words", abstract_words)
     print("word_count", wc)
     print(zip_inside)
+    print(delivery_zip)
 
 
 if __name__ == "__main__":
