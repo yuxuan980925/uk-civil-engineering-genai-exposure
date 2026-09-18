@@ -19,7 +19,7 @@ CAPTIONS = [
     (3, "figure3_uk_trade.png", "UK BaTIS: India SJ3, China SE, India SI."),
     (4, "figure4_event_study.png", "Event study, year × ΔM TANY."),
     (5, "figure5_ilo_M_vs_F.png", "ILO ISIC M vs F employment growth."),
-    (6, "figure6_eu_mode1_vs_china.png", "EU Mode-1 SJ3 vs China SE."),
+    (6, "figure6_eu_mode1_vs_china.png", "EU SJ3 imports vs Chinese construction services."),
     (7, "figure7_cross_section.png", "ΔM TANY vs Δ log India SJ3."),
     (8, "figure8_loo.png", "Leave-one-importer-out, TANY."),
     (9, "figure9_m71_vs_F_gva.png", "NACE M71 vs F GVA."),

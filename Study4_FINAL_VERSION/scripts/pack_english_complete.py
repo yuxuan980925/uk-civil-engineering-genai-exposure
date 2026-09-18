@@ -76,7 +76,7 @@ def main():
     copyf(SRC / "manuscript" / "CN_Main_Text.md", OUT / "CN_full_article.md")
     copyf(SRC / "manuscript" / "CN_Main_Text.md", OUT / "manuscript" / "CN_full_article.md")
 
-    figs_md = ["# Main-text figures\n", "AI exposure and the cross-country M71 / Mode-1 industry economy.\n"]
+    figs_md = ["# Main-text figures\n", "AI exposure and the cross-country M71 / engineering-adjacent services economy.\n"]
     captions = [
         (1, FIGS[0], "UK APS polarisation (exposure)."),
         (2, FIGS[1], "Eloundou vs Felten vs APS."),
@@ -95,7 +95,7 @@ def main():
     (OUT / "README.md").write_text(
         f"""# Study 4 main-text package (slim)
 
-AI exposure → cross-country civil engineering **industry economy** (NACE M71, Mode-1 SJ3).
+AI exposure → cross-country civil engineering **industry economy** (NACE M71, engineering-adjacent SJ3).
 
 Open Markdown, not the zip.
 

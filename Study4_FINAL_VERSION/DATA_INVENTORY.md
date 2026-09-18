@@ -7,7 +7,7 @@ The innovation is **not** “more countries in a generic AI-GDP regression.” I
 1. **Task exposure inside civil engineering** (drafters / technicians / licensed engineers)
 2. **Sectoral GenAI adoption** — preferred **E_AI_TNLG**, not generic TANY; M vs F vs J/C/N; M71 AI unpublished
 3. **Industry outcome at NACE M71** (architectural and engineering activities), not all of ISIC M and not ISIC F
-4. **Cross-border delivery by GATS mode** (Mode-1 SJ3 from India/PH/VN vs Mode-3 SE from China)
+4. **Cross-border delivery proxies** (digitally deliverable SJ3 from India/PH/VN vs project-based SE from China). BaTIS does not directly identify GATS modes of supply.
 5. **Placebos on the same importers** (SI computer, SJ1 R&D, SJ2 consulting, F AI, F GVA)
 
 If a series is missing, the inventory says so. That missingness is part of the contribution: it defines the claim boundary.
@@ -61,13 +61,13 @@ If a series is missing, the inventory says so. That missingness is part of the c
 
 | Object | Needed for | Status | File / result |
 |---|---|---|---|
-| BaTIS **SJ3** balanced | Finest official Mode-1 engineering-adjacent bilateral series | **Have** 2015–2024 | `data/batis_civil_related.csv` |
+| BaTIS **SJ3** balanced | Finest official engineering-adjacent bilateral service category; potentially digitally deliverable but not mode-identified | **Have** 2015–2024 | `data/batis_civil_related.csv` |
 | BaTIS **SJ311 / SJ312** engineering services | True civil trade | **Not in BaTIS** (404) | SJ3 is the ceiling |
 | BaTIS **SE** construction services | China Mode 3 | **Have** | same |
 | BaTIS **SI** computer | Digital placebo | **Have** | same |
 | BaTIS **SJ2** consulting, **SJ1** R&D | Professional placebos, not civil | **Have** | `data/batis_SJ1_SJ2.csv` |
 | ONS Pink Book / TIC by India × engineering | UK-official Mode 1 | **Not retrieved** (ONS file URL 404 in this environment) | use BaTIS GBR←IND SJ3 |
-| China SAFE construction vs other business | Mode-3 vs other | Not pulled; BaTIS SE used | — |
+| China SAFE construction vs other business | Direct mode-of-supply comparison | Not pulled; BaTIS SE used as a project-based service comparison only | — |
 | RBI/NITI India engineering-export totals | Institutional context | Not in this git snapshot | optional PDF, not used in regressions |
 
 **SJ2/SJ1 placebos:** Post×ΔM on log SJ2 = 0.007 (0.007); SJ1 = 0.003 (0.009); same N=336 as SJ3 null. The trade interaction is not hiding in neighbouring EBOPS headings.
@@ -81,7 +81,7 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 | A’s civil engineers fall because of GenAI | UK APS 2121 −14.3%; CAD 3120 −23.9%; technicians 3114 +214.5%. Consistent with **task polarisation**, not identified as caused by GenAI (no occupation-level AI adoption). |
 | That fall causes B’s civil-engineer counts to change | **Cannot test.** No bilateral ISCO 2142. |
 | That fall causes B’s GDP to change | **Cannot test** with APS 2121 as a shock (reverse causality / joint trends). |
-| A’s professional AI adoption raises Mode-1 engineering-related imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. SI, China SE/SJ3, SJ1/SJ2, construction TNLG remain null. |
+| A’s professional AI adoption is associated with engineering-adjacent imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. SI, China SE/SJ3, SJ1/SJ2, construction TNLG remain null. |
 | A’s professional AI raises A’s own M71 industry | GVA to 2023: −0.007*. **SBS 2021–24:** turnover −0.007**, wages −0.009***, VA −0.006***, employment null. F turnover also −0.010***. |
 | India Mode 1 vs China Mode 3 | **Have contrast** in levels (+128% vs +52%), not in the DiD. |
 

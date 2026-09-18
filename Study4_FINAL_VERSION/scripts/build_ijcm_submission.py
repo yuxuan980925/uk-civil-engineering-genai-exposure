@@ -44,11 +44,11 @@ MAIN_FIGURES = [
      "M71 and construction turnover growth, 2021–2024."),
 ]
 
-ABSTRACT = """This paper studies the civil-engineering economy under a generative-AI shock through two United Kingdom-centred relationships: UK–India and UK–China. Bilateral evidence covers technical and other business services (SJ3), construction services (SE), and computer and information services (SI). A panel of 17 EU importers supplies harmonised variation in enterprise use of natural-language-generation (NLG) AI. UK trends are descriptive; the panel tests whether importer adoption is associated with Indian Mode-1 services or Chinese project-based construction services. The shock is the 2023–24 change in Eurostat NLG use among professional-service enterprises. Domestic outcomes are turnover, employment, wages and value added in NACE M71 architectural and engineering activities; trade outcomes come from OECD–WTO BaTIS. Between 2019 and 2024, UK imports of Indian SJ3 rose 127.7% and UK imports of Chinese SJ3 rose 99.3%. In the importer panel, the India-only SJ3 coefficient is 0.021 (s.e. 0.008), whereas Chinese construction services are unrelated to importer NLG adoption (−0.008, s.e. 0.009). Domestic M71 turnover and wages grew more slowly in higher-adoption economies, while employment was unchanged. The evidence is consistent with generative tools changing the coordination of digitally deliverable services, especially between the UK and India. It does not show that AI caused the bilateral changes or that civil-engineering jobs or GDP relocated."""
+ABSTRACT = """This paper studies the civil-engineering economy under a generative-AI shock through two United Kingdom-centred relationships: UK–India and UK–China. Bilateral evidence covers technical and other business services (SJ3), construction services (SE), and computer and information services (SI). A panel of 17 EU importers supplies harmonised variation in enterprise use of natural-language-generation (NLG) AI. UK trends are descriptive; the panel tests whether importer adoption is associated with Indian SJ3 services or Chinese project-based construction services. The shock is the 2023–24 change in Eurostat NLG use among professional-service enterprises. Domestic outcomes are turnover, employment, wages and value added in NACE M71 architectural and engineering activities; trade outcomes come from OECD–WTO BaTIS. Between 2019 and 2024, UK imports of Indian SJ3 rose 127.7% and UK imports of Chinese SJ3 rose 99.3%. In the importer panel, the India-only SJ3 coefficient is 0.021 (s.e. 0.008), whereas Chinese construction services are unrelated to importer NLG adoption (−0.008, s.e. 0.009). Domestic M71 turnover and wages grew more slowly in higher-adoption economies, while employment was unchanged. The pattern is consistent with generative tools changing the coordination of digitally deliverable services, especially between the UK and India. It does not show that AI caused the bilateral changes or that civil-engineering jobs or GDP relocated."""
 
 KEYWORDS = (
     "generative AI; civil engineering; construction management; services trade; "
-    "NACE M71; Mode 1"
+    "NACE M71; digitally deliverable services"
 )
 
 TABLES = [
@@ -85,7 +85,7 @@ TABLES = [
         "headers": ["Outcome/specification", "Coefficient (s.e.)", "N"],
         "rows": [
             ["Indian SJ3, Post × ΔM TNLG", "0.021*** (0.008)", "119"],
-            ["Pooled Mode-1 SJ3, Post-2024 × ΔM TNLG", "0.007** (0.003)", "357"],
+            ["Pooled SJ3, Post-2024 × ΔM TNLG", "0.007** (0.003)", "357"],
             ["Chinese construction services (SE)", "−0.008 (0.009)", "119"],
             ["Chinese SJ3", "0.005 (0.010)", "119"],
             ["Indian computer services comparison", "−0.002 (0.006)", "357"],
@@ -398,7 +398,14 @@ def markdown_tables_and_figures() -> str:
 def format_source_manuscript() -> str:
     text = SOURCE.read_text(encoding="utf-8")
     start = text.index("## 1. Introduction")
-    end_markers = ["## Disclosure statement", "## Data availability statement", "## References"]
+    end_markers = [
+        "## Author contribution",
+        "## Funding",
+        "## Ethics statement",
+        "## Disclosure statement",
+        "## Data availability statement",
+        "## References",
+    ]
     end = min(text.index(m, start) for m in end_markers if m in text[start:])
     body = text[start:end].rstrip()
     body = body.replace(
@@ -434,7 +441,16 @@ def format_source_manuscript() -> str:
         f"**Keywords:** {KEYWORDS}\n\n"
     )
     back = (
-        "\n\n## Disclosure statement\n\n"
+        "\n\n## Author contribution\n\n"
+        "Yuxuan Chai is the sole author and was responsible for the study conception, "
+        "data curation, analysis, visualisation and manuscript preparation.\n\n"
+        "## Funding\n\n"
+        "This research received no specific grant from any funding agency in the "
+        "public, commercial or not-for-profit sectors.\n\n"
+        "## Ethics statement\n\n"
+        "The study analyses published aggregate statistical series and does not involve "
+        "human participants, personal data or animal subjects.\n\n"
+        "## Disclosure statement\n\n"
         "No potential conflict of interest was reported by the author.\n\n"
         "## Data availability statement\n\n"
         "The data that support the findings of this study are included in the "
@@ -841,7 +857,7 @@ An identified author copy is `00_Manuscript_as_Submitted.docx`.
 - Research article for the *{JOURNAL}* (Taylor & Francis, ISSN 1562-3599 / 2331-2327).
 - Unstructured abstract (about 230 words) and six keywords.
 - Numbered sections: Introduction; Literature review; Data; Empirical design; Results; Discussion; Limitations; Conclusion.
-- End matter required by recent IJCM papers: Disclosure statement; Data availability statement; References.
+- End matter: Author contribution; Funding; Ethics statement; Disclosure statement; Data availability statement; References.
 - In-text citations and reference list in APA 7th author–date form (accepted by Taylor & Francis format-free / Your Paper Your Way; production will apply the journal template after acceptance).
 - Tables numbered Table 1–Table 6 with titles above and notes below.
 - Figures numbered Figure 1–Figure 5, 300 dpi, captions listed separately.
@@ -850,6 +866,13 @@ An identified author copy is `00_Manuscript_as_Submitted.docx`.
 ## Required human check
 
 Confirm funding, competing-interest and originality statements in ScholarOne if any detail has changed.
+
+## Validate the package
+
+After rebuilding, run
+`python3 Study4_FINAL_VERSION/scripts/validate_submission.py` from the repository
+root checkout. The validator checks the article sections, figure links and
+resolution, anonymisation, data tables, checksums and zip integrity.
 
 ## Licence
 
