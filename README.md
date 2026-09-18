@@ -33,6 +33,7 @@ After `git pull`, open [`Study4_Global_AI_Civil_Engineering_Economy/`](Study4_Gl
 - Chinese Markdown: [`Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md`](Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md)
 - Folder index: [`Study4_Global_AI_Civil_Engineering_Economy/index.html`](Study4_Global_AI_Civil_Engineering_Economy/index.html)
 - IJCM Word set: [`Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/`](Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/)
+- Complete zip (unzip locally, not in the editor): [`Study4_zip_packages/Study4.zip`](Study4_zip_packages/Study4.zip)
 
 A second compiled copy remains in [`Study4_Article_Complete/`](Study4_Article_Complete/). Working copy of code and extra experiments: [`Study4_FINAL_VERSION/`](Study4_FINAL_VERSION/). Do not open zip files in the editor.
 

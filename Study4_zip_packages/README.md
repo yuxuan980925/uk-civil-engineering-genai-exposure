@@ -2,16 +2,22 @@
 
 These are **download/unzip backups only**. The editor cannot preview zip files.
 
-To read the paper, tables, and figures, open [`../Study4_FINAL_VERSION/00_OPEN_IN_EDITOR.md`](../Study4_FINAL_VERSION/00_OPEN_IN_EDITOR.md).
+To read the paper, tables, and figures in the editor, open [`../Study4_Global_AI_Civil_Engineering_Economy/README.md`](../Study4_Global_AI_Civil_Engineering_Economy/README.md).
 
 | File | Contents |
 |---|---|
-| `Study4_complete_package_YYYY-MM-DD.zip` | Full package |
+| **`Study4.zip`** | **Complete package (199 files).** Article, figures, tables, data, scripts, IJCM Word set. Files sit at the archive root (`Study4_Manuscript.md`). |
+| `Study4_complete_package_2026-09-18.zip` | Same bytes as `Study4.zip` (dated copy) |
+| `Study4_complete_package_2026-09-17.zip` | Previous complete package |
 | `Study4_00_previous_ijcm_data.zip` | Occupation-paper files (not the DiD shock) |
 | `Study4_01_data.zip` | Official Study 4 series |
 | `Study4_02_tables.zip` | Tables |
-| `Study4_03_figures.zip` | Figures 1–21 |
+| `Study4_03_figures.zip` | Figures |
 | `Study4_04_manuscript.zip` | Articles |
 | `Study4_05_scripts.zip` | Replication scripts |
 
-Rebuild from `Study4_FINAL_VERSION/scripts/build_release_zip.py`.
+Rebuild the complete zip:
+
+```bash
+python3 Study4_Global_AI_Civil_Engineering_Economy/scripts/pack_complete_zip.py
+```

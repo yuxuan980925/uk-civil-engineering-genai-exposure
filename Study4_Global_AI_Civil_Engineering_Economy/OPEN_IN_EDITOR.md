@@ -33,4 +33,6 @@ This folder is the **openable copy** of Study 4 (generative-AI shock, UK–India
 | `IJCM_Submission/` | Title page, blinded manuscript, cover letter, 300 dpi Figure1–5 |
 | `scripts/` | Replication scripts |
 
+Download-only zip (unzip in Finder / Explorer, not in the editor): [Study4.zip](Study4.zip)
+
 The same files also exist at repository root as `Study4_IJCM_Submission/` and `Study4_Article_Complete/`.
