@@ -50,6 +50,10 @@ Folder contents
   Fresh UK–India only pull: BaTIS GBR↔IND and world totals, World Bank context,
   measurement formulas and experiments. See UK_INDIA_MEASUREMENT.md.
 
+11_ai_shock_impact/
+  Redesigned AI-shock impact layer: size-class TNLG (GE10 only), job-vacancy
+  rates, STS M71 index, labour-productivity estimates. See AI_SHOCK_IMPACT.md.
+
 Third-party files (Eurostat, OECD–WTO, ILO, ONS, Felten, Eloundou) remain the
 property of their publishers and should be cited as in the manuscript reference
 list. They are included only as the versions used for the analysis.

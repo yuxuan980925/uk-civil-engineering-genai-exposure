@@ -1,0 +1,4 @@
+object,dataset,nace_r2,indic_bt,s_adj,unit,status,n,raw
+sts,sts_setu_a,M71,NETTUR,NSA,I21,ok,125,743
+sts,sts_setu_a,M,NETTUR,NSA,I21,empty,0,0
+sts,sts_setu_a,M71,VOL_SLS,NSA,I21,ok,13,16

@@ -1,0 +1,13 @@
+object,size_emp,status,n,nace,indic
+size_probe,GE10,ok,1.0,,
+size_probe,10TO49,empty,,,
+size_probe,50TO249,empty,,,
+size_probe,GE250,empty,,,
+size_probe,FROM_10_TO_49,empty,,,
+size_probe,FROM_50_TO_249,empty,,,
+size_probe,FROM10TO49,empty,,,
+size_probe,FROM50TO249,empty,,,
+tnlg_size,GE10,ok,72.0,M,E_AI_TNLG
+tnlg_size,GE10,ok,71.0,M,E_AI_TANY
+tnlg_size,GE10,ok,72.0,F,E_AI_TNLG
+tnlg_size,GE10,ok,72.0,F,E_AI_TANY

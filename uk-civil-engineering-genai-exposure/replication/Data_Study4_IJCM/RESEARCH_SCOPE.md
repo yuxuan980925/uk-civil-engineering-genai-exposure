@@ -2,13 +2,22 @@
 
 Short answer: **yes for a bounded association study of engineering-service supplier mix and M71 accounts; no for a causal account of civil-engineering job or GDP relocation.**
 
-The question “did generative AI move the civil engineering industry across countries?” is larger than the official series. After a new retrieval on 21 September 2026 (Eurostat ITS SJ312, LFS ISCO two-digit, ILO occupation attempts) and a UK–India-only BaTIS re-pull the same day, the identifiable object is still an **association** between importer NLG adoption and the mix of Indian versus Chinese engineering-related services, plus domestic M71 turnover/employment. For the UK–India pair itself there is **no NLG treatment**; the second design is a calendar break around public ChatGPT.
+The question “did generative AI move the civil engineering industry across countries?” is larger than the official series. The study is redesigned around a **realised NLG shock** in the EU-17 panel. UK–India remains a descriptive corridor without an NLG treatment.
 
-## Reset research question
+## Redesigned research question (AI-shock impact)
 
-> Among EU importers, is the 2023–24 professional-service NLG jump associated with faster Indian engineering-service imports (Eurostat SJ312 / BaTIS SJ3) relative to Chinese construction and Chinese engineering services, and with slower nominal M71 turnover but not falling M71 employment?
+> Among EU economies, is the 2023–24 professional-service NLG jump associated with slower nominal M71/M7112 turnover, wages and official labour productivity but not falling employment or vacancy rates, and with a shift toward Indian engineering services relative to Chinese construction and Chinese engineering services?
 
-That is a test of **task unbundling / supplier-mix shift**. It is not a test that generative AI moved ISCO 2142 jobs or national income.
+Design and formulas: `AI_SHOCK_IMPACT.md`. Headline impact estimates (Post-2024 × ΔTNLG unless noted):
+
+- M71 turnover **−0.007\*\***; employment **0.000**; wages **−0.009\*\*\***; VA **−0.006\*\*\***; LABPRY **−0.006\*\*\***; LC_EMP **−0.009\*\*\***
+- M7112 employment **0.000**; output **−0.008\*\***
+- NACE M job-vacancy rate **0.002 (0.006)**
+- M71 STS turnover index **−0.009\***
+- Indian SJ312 **0.034\*\* (0.013)**; Chinese SJ312 **−0.051\*\***; mix **0.095\*\*\***
+- Size-class TNLG other than GE10: **unpublished**. M71 hours (THS_HW): **unpublished**.
+
+That is a test of **task unbundling inside the firm and of supplier-mix abroad**. It is not a test that generative AI moved ISCO 2142 jobs or national income.
 
 A second, two-country question that the UK–India cells can answer:
 
@@ -63,5 +72,7 @@ A paper that stays inside the data would say:
 A second official retrieval (SBS M7112, ITS SJ312 placebos, FATS, independent India/China re-fetch) **corroborates** that association. Placebo partners are null; engineering-consultancy employment is flat. FATS cannot test Mode 3 in 2023–24. See `CORROBORATION.md`.
 
 A third retrieval isolates the **UK–India corridor** with new BaTIS cells and measurement formulas. It supports a growing, already-SJ3-heavy services link and a larger Indian share of UK SJ3. It does **not** identify a GenAI relocation of civil engineering. See `UK_INDIA_MEASUREMENT.md` and `10_uk_india/`.
+
+See `AI_SHOCK_IMPACT.md` and `11_ai_shock_impact/`.
 
 Do not interpolate the missing series. If a later draft needs ISCO 2142, GATS modes, UK/India/China enterprise NLG, or civil-only invoices, those files have to be retrieved (or shown not to exist), not filled.

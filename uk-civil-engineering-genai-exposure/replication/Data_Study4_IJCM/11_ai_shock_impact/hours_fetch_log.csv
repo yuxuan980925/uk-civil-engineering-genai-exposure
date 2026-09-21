@@ -1,0 +1,9 @@
+object,unit,na_item,status,n,nace
+hours_probe,THS_HW,EMP_DC,empty,0,
+hours_probe,THS_HW,SAL_DC,empty,0,
+hours_probe,THS_HW,EMP,empty,0,
+hours_probe,HW,EMP_DC,empty,0,
+hours_probe,THS_PER,EMP_DC,ok,1,
+hours,THS_PER,EMP_DC,ok,168,M71
+hours,THS_PER,EMP_DC,ok,187,F
+hours,THS_PER,EMP_DC,ok,187,M
