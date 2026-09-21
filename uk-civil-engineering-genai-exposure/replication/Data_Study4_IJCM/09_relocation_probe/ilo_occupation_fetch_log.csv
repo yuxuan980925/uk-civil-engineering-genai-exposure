@@ -1,0 +1,7 @@
+key,status,url
+OCU_ISCO08_2142,fail,"https://www.ilo.org/sdmx-service/rest/data/ILO,DF_EMP_TEMP_SEX_OCU_NB/A.GBR+IND+CHN+PHL+VNM+DEU+FRA+NLD.SEX_T.OCU_ISCO08_2142.NB?format=csv"
+OCU_ISCO08_214,fail,"https://www.ilo.org/sdmx-service/rest/data/ILO,DF_EMP_TEMP_SEX_OCU_NB/A.GBR+IND+CHN+PHL+VNM+DEU+FRA+NLD.SEX_T.OCU_ISCO08_214.NB?format=csv"
+OCU_ISCO08_21,fail,"https://www.ilo.org/sdmx-service/rest/data/ILO,DF_EMP_TEMP_SEX_OCU_NB/A.GBR+IND+CHN+PHL+VNM+DEU+FRA+NLD.SEX_T.OCU_ISCO08_21.NB?format=csv"
+OCU_ISCO08_2,fail,"https://www.ilo.org/sdmx-service/rest/data/ILO,DF_EMP_TEMP_SEX_OCU_NB/A.GBR+IND+CHN+PHL+VNM+DEU+FRA+NLD.SEX_T.OCU_ISCO08_2.NB?format=csv"
+OCU_ISCO08_OC2,fail,"https://www.ilo.org/sdmx-service/rest/data/ILO,DF_EMP_TEMP_SEX_OCU_NB/A.GBR+IND+CHN+PHL+VNM+DEU+FRA+NLD.SEX_T.OCU_ISCO08_OC2.NB?format=csv"
+OCU_ISCO08_TOTAL,fail,"https://www.ilo.org/sdmx-service/rest/data/ILO,DF_EMP_TEMP_SEX_OCU_NB/A.GBR+IND+CHN+PHL+VNM+DEU+FRA+NLD.SEX_T.OCU_ISCO08_TOTAL.NB?format=csv"

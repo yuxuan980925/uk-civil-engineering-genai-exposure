@@ -47,7 +47,8 @@ If a series is missing, the inventory says so. That missingness is part of the c
 | World Bank construction VA `NV.IND.CONS.ZS` | Macro construction | **Invalid indicator** (API 120) | do not invent |
 | World Bank GDP, services %, industry % | Macro background only | **Have** | `data/wb_*.json` |
 | ILO ISIC F vs M employment | Exporter labour markets | **Have** 17 areas; **China empty** | `data/ilo_emp_FM.csv` |
-| ILO ISCO 2142 by country, bilateral | “Engineers in A → engineers in B” | **Not published** | cannot identify |
+| ILO ISCO 2142 by country, bilateral | “Engineers in A → engineers in B” | **Not published** (SDMX 404 at 2142/214/21/2) | `09_relocation_probe/ilo_occupation_fetch_log.csv` |
+| Eurostat LFS ISCO-08 **two-digit** (`lfsa_egai2d`) | Closest published occupation group (OC21 science and engineering professionals) | **Have** 2015–2024 | `09_relocation_probe/eurostat_lfsa_occ2d.csv`. OC21 Post×ΔTNLG −0.001 (0.004) |
 | Eurostat NACE **M71 SBS** turnover, emp, wages, VA, GOS | Firm-level industry economy, **includes 2024** | **Have** 2021–24, 17 members | `data/eurostat_sbs_M71_F_M.csv` |
 | Eurostat NACE **M71 D1/P1** | Compensation and output | **Have**; UK D1 only to 2018 | `data/eurostat_nama_D1_P1_M71_F_M.csv` |
 | ILO ISIC **M71** employment | Engineering-industry jobs in IND/CHN | **Not published** (SDMX 404) | `ilo_m71_fetch_log.csv` |
@@ -62,11 +63,13 @@ If a series is missing, the inventory says so. That missingness is part of the c
 | Object | Needed for | Status | File / result |
 |---|---|---|---|
 | BaTIS **SJ3** balanced | Finest official engineering-adjacent bilateral service category; potentially digitally deliverable but not mode-identified | **Have** 2015–2024 | `data/batis_civil_related.csv` |
-| BaTIS **SJ311 / SJ312** engineering services | True civil trade | **Not in BaTIS** (404) | SJ3 is the ceiling |
+| BaTIS **SJ311 / SJ312** engineering services | True civil trade | **Not in BaTIS** (404) | Eurostat ITS is the source |
+| Eurostat ITS **SJ312 / SJ31 / SJ311** (`bop_its6_det`) | Reporter-published engineering / architectural services, 2015–2024 | **Have** IN, CN_X_HK, PH; **VN empty**; UK ITS to **2019** only | `09_relocation_probe/eurostat_its_engineering.csv` (6,338 cells). India SJ312 Post×ΔTNLG 0.026* (0.014), N=96; China SJ312 −0.062** (0.027) |
 | BaTIS **SE** construction services | Project-based construction comparison (not a measured GATS mode) | **Have** | same |
 | BaTIS **SI** computer | Digital placebo | **Have** | same |
 | BaTIS **SJ2** consulting, **SJ1** R&D | Professional placebos, not civil | **Have** | `data/batis_SJ1_SJ2.csv` |
-| ONS Pink Book / TIC by India × engineering | UK-official Mode 1 | **Not retrieved** (ONS file URL 404 in this environment) | use BaTIS GBR←IND SJ3 |
+| ONS Pink Book / TIC by India × engineering | UK-official Mode 1 | **Not retrieved** (ONS file URL 404 in this environment) | use BaTIS GBR←IND SJ3; Eurostat UK ITS ends 2019 |
+| BaTIS adjustment **N** (reported) vs **B** (balanced) | Robustness to imputation | **Have** in the existing extract. EU←India SJ3 reported **ends 2023** | `03_trade/batis_civil_related.csv`; `09_relocation_probe/tables/uk_corridors_B_vs_N.csv` |
 | China SAFE construction vs other business | Direct mode-of-supply comparison | Not pulled; BaTIS SE used as a project-based service comparison only | — |
 | RBI/NITI India engineering-export totals | Institutional context | Not in this git snapshot | optional PDF, not used in regressions |
 
@@ -81,9 +84,9 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 | A’s civil engineers fall because of GenAI | UK APS 2121 −14.3%; CAD 3120 −23.9%; technicians 3114 +214.5%. Consistent with **task polarisation**, not identified as caused by GenAI (no occupation-level AI adoption). |
 | That fall causes B’s civil-engineer counts to change | **Cannot test.** No bilateral ISCO 2142. |
 | That fall causes B’s GDP to change | **Cannot test** with APS 2121 as a shock (reverse causality / joint trends). |
-| A’s professional AI adoption is associated with engineering-adjacent imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. Pooled SI −0.002 (0.006); India-only SI −0.009* (0.005). China SE/SJ3, SJ1/SJ2, construction TNLG remain null or insignificant. |
+| A’s professional AI adoption is associated with engineering-adjacent imports from B | Generic **TANY**: EU-16 **null**. **TNLG 2023–24** India SJ3 (BaTIS B) **0.021\*\*\*** (0.008). Newly retrieved **Eurostat ITS SJ312** 0.026* (0.014), N=96. Chinese SJ312 **−0.062\*\*** (0.027). Architectural SJ311 null. Pooled SI −0.002; India-only SI −0.009*. |
+| Indian SJ3 vs Chinese SE | Level contrast remains (+128% vs +52%). **DiD relocation index** log(IN SJ3)−log(CN SE) **0.029\*\*** (0.013); ITS log(IN SJ312)−log(CN SJ312) **0.101\*\*\*** (0.035). 2022–24 cross-section of the BaTIS index is null; event-study 2019 is significant. Not mode-identified. |
 | A’s professional AI raises A’s own M71 industry | GVA to 2023: −0.007*. **SBS 2021–24:** turnover −0.007**, wages −0.009***, VA −0.006***, employment null. F turnover also −0.010***. |
-| Indian SJ3 vs Chinese SE | **Have contrast** in levels (+128% vs +52%), not in the DiD and not mode-identified. |
 
 ## E. Replication
 
@@ -93,4 +96,8 @@ python3 scripts/run_analysis.py
 python3 scripts/run_novelty_layer.py
 python3 scripts/run_nlg_shock.py
 python3 scripts/run_industry_economy.py
+python3 Data_Study4_IJCM/07_scripts/download_relocation_series.py
+python3 Data_Study4_IJCM/07_scripts/run_relocation_experiments.py
 ```
+
+Relocation probe (reset RQs): `RELOCATION_RESEARCH_DESIGN.md` and `09_relocation_probe/`.

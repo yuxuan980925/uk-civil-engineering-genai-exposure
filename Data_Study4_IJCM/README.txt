@@ -9,8 +9,8 @@ Preferred shock: Eurostat E_AI_TNLG, NACE M, 2024 minus 2023.
 Industry outcomes: Eurostat NACE M71. Trade: OECD–WTO BaTIS, adjustment B.
 Country focus: UK–India and UK–China; EU-17 is the estimation panel only.
 See DATA_COMPLIANCE_AUDIT.md for the independent recompute of Tables 1–6.
-See RESEARCH_SCOPE.md for what these series can and cannot identify
-for a transnational generative-AI civil-engineering study.
+See RESEARCH_SCOPE.md and RELOCATION_RESEARCH_DESIGN.md for the reset
+research question and what these series can and cannot identify.
 
 Folder contents
 ---------------
@@ -41,6 +41,11 @@ Folder contents
 
 08_figures/
   Figure1.png to Figure5.png (300 dpi), the figures embedded in the manuscript.
+
+09_relocation_probe/
+  New official retrievals for the reset relocation question: Eurostat ITS
+  engineering services (SJ312), LFS two-digit occupations, ILO 2142 attempts,
+  experiment tables and figures. Missing cells are logged, not filled.
 
 Third-party files (Eurostat, OECD–WTO, ILO, ONS, Felten, Eloundou) remain the
 property of their publishers and should be cited as in the manuscript reference

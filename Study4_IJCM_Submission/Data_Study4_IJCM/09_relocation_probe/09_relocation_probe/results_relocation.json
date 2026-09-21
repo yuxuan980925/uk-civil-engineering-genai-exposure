@@ -1,0 +1,366 @@
+{
+  "reset_question": "Among EU importers, is the 2023\u201324 professional-service NLG jump associated with a shift toward digitally deliverable Indian technical services relative to Chinese construction services, and with slower nominal M71 turnover but not falling M71 employment \u2014 a pattern that would be consistent with task unbundling rather than civil-engineer headcount relocation?",
+  "cannot_identify": [
+    "Generative AI caused ISCO 2142 jobs to move between countries",
+    "Civil-engineering GDP or national-income effects",
+    "GATS Mode 1 vs Mode 3 switching",
+    "UK, Indian or Chinese enterprise NLG as a treatment",
+    "Bilateral SJ312 in BaTIS"
+  ],
+  "rq1_coverage": {
+    "sj312_published_in_eurostat_its": true,
+    "sj312_india_debit_cells": 149,
+    "sj312_india_geos_2024": 16,
+    "sj312_india_geos_with_2022_and_2024": 15,
+    "uk_its_max_year": 2019,
+    "batis_sj312": "not published (OECD SDMX 404)",
+    "ilo_isco_2142": "not published in this pull"
+  },
+  "results": [
+    {
+      "rq": "RQ2",
+      "spec": "RQ2a Indian SJ3 Post\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": 0.021392100210455504,
+      "se": 0.007901340257604484,
+      "p": 0.006781219718980914,
+      "n": 119,
+      "r2": 0.9718823058173496,
+      "note": "Preferred balanced series; includes 2024",
+      "display": "0.021*** (0.008)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2b Indian SJ3 Post2024\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": 0.010647316478381139,
+      "se": 0.0065923496246609705,
+      "p": 0.1062886271468242,
+      "n": 119,
+      "r2": 0.9698331822425094,
+      "note": "Treat only 2024 as post",
+      "display": "0.011 (0.007)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2c Pooled SJ3 IND/PHL/VNM Post\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": 0.008612672617100125,
+      "se": 0.0053541011401950795,
+      "p": 0.10770115659738833,
+      "n": 357,
+      "r2": 0.9320736843738556,
+      "note": "Partner FE",
+      "display": "0.009 (0.005)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3a Chinese SE Post\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": -0.007900783316265151,
+      "se": 0.009333796499154513,
+      "p": 0.3972903283131669,
+      "n": 119,
+      "r2": 0.921465877973364,
+      "note": "Project-based comparison; not a GATS mode",
+      "display": "-0.008 (0.009)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3b Indian SI Post\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": -0.008975055638642699,
+      "se": 0.005289558516615685,
+      "p": 0.08974403452802335,
+      "n": 119,
+      "r2": 0.9901557760362221,
+      "note": "Computer-services placebo",
+      "display": "-0.009* (0.005)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3c Chinese SJ3 Post\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": 0.005418098611640176,
+      "se": 0.009532913472282651,
+      "p": 0.5697925457850879,
+      "n": 119,
+      "r2": 0.9702218200638855,
+      "note": "Same heading, different partner",
+      "display": "0.005 (0.010)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3d Indian SE Post\u00d7\u0394M TNLG (BaTIS B)",
+      "coef": -0.01504189939021957,
+      "se": 0.014723303590515472,
+      "p": 0.3069518487583416,
+      "n": 119,
+      "r2": 0.9346725643109015,
+      "note": "Indian construction services (thin corridor)",
+      "display": "-0.015 (0.015)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2d Indian engineering SJ312 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": 0.026276463901917145,
+      "se": 0.014073786490807079,
+      "p": 0.06189459753904663,
+      "n": 96,
+      "r2": 0.9323311888153563,
+      "note": "Official engineering heading; importers=16, years=10; missing years not filled",
+      "display": "0.026* (0.014)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3e Chinese engineering SJ312 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": -0.06229711951439509,
+      "se": 0.026633568034933403,
+      "p": 0.0193330942454992,
+      "n": 97,
+      "r2": 0.9249311819295729,
+      "note": "Same official heading from China except Hong Kong",
+      "display": "-0.062** (0.027)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2e Cross-section \u0394log IN engineering SJ312 22\u201324 on \u0394TNLG",
+      "coef": 0.0323350697529976,
+      "se": 0.03207699491495622,
+      "p": 0.31343262889462165,
+      "n": 14,
+      "r2": 0.08568877715332235,
+      "note": "No FE; only reporters with both 2022 and 2024 published",
+      "display": "0.032 (0.032)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2d Indian arch+eng SJ31 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": 0.024781674107753837,
+      "se": 0.015575537527704625,
+      "p": 0.11159521566716768,
+      "n": 88,
+      "r2": 0.9594610513758586,
+      "note": "Official engineering heading; importers=16, years=10; missing years not filled",
+      "display": "0.025 (0.016)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3e Chinese arch+eng SJ31 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": -0.04294219938115854,
+      "se": 0.016796522217928107,
+      "p": 0.010569687403791465,
+      "n": 94,
+      "r2": 0.9195844738043285,
+      "note": "Same official heading from China except Hong Kong",
+      "display": "-0.043** (0.017)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2e Cross-section \u0394log IN arch+eng SJ31 22\u201324 on \u0394TNLG",
+      "coef": 0.07038406347827739,
+      "se": 0.03723931761245535,
+      "p": 0.058751663909544866,
+      "n": 12,
+      "r2": 0.33673834670470704,
+      "note": "No FE; only reporters with both 2022 and 2024 published",
+      "display": "0.070* (0.037)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2d Indian architectural SJ311 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": -0.01156894731953201,
+      "se": 0.013862230640144349,
+      "p": 0.4039620738806081,
+      "n": 84,
+      "r2": 0.7791540414924105,
+      "note": "Official engineering heading; importers=16, years=10; missing years not filled",
+      "display": "-0.012 (0.014)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3e Chinese architectural SJ311 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": 0.08009822973785273,
+      "se": 0.06740626888397137,
+      "p": 0.2347189746236732,
+      "n": 78,
+      "r2": 0.6472366136868254,
+      "note": "Same official heading from China except Hong Kong",
+      "display": "0.080 (0.067)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2e Cross-section \u0394log IN architectural SJ311 22\u201324 on \u0394TNLG",
+      "coef": -0.013724641252246483,
+      "se": 0.022440474447133547,
+      "p": 0.5408010496717407,
+      "n": 12,
+      "r2": 0.012042977599552196,
+      "note": "No FE; only reporters with both 2022 and 2024 published",
+      "display": "-0.014 (0.022)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2d Indian ITS SJ3 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": 0.03500556003653445,
+      "se": 0.015203869980843634,
+      "p": 0.02131199577485105,
+      "n": 119,
+      "r2": 0.966943373324075,
+      "note": "Official engineering heading; importers=17, years=10; missing years not filled",
+      "display": "0.035** (0.015)"
+    },
+    {
+      "rq": "RQ3",
+      "spec": "RQ3e Chinese ITS SJ3 Post\u00d7\u0394M TNLG (Eurostat ITS)",
+      "coef": 0.008929407557895489,
+      "se": 0.0171237020359479,
+      "p": 0.6020430327019404,
+      "n": 110,
+      "r2": 0.9493825100726062,
+      "note": "Same official heading from China except Hong Kong",
+      "display": "0.009 (0.017)"
+    },
+    {
+      "rq": "RQ2",
+      "spec": "RQ2e Cross-section \u0394log IN ITS SJ3 22\u201324 on \u0394TNLG",
+      "coef": 0.051438361515986915,
+      "se": 0.02527824302111538,
+      "p": 0.041862270591752515,
+      "n": 17,
+      "r2": 0.3645080506766567,
+      "note": "No FE; only reporters with both 2022 and 2024 published",
+      "display": "0.051** (0.025)"
+    },
+    {
+      "rq": "RQ4",
+      "spec": "RQ4a Relocation index log(IN SJ3)\u2212log(CN SE) Post\u00d7\u0394TNLG",
+      "coef": 0.029292883526720655,
+      "se": 0.013279116692469707,
+      "p": 0.027388470776781217,
+      "n": 119,
+      "r2": 0.844489267877415,
+      "note": "Positive = Indian technical services rose relative to Chinese construction",
+      "display": "0.029** (0.013)"
+    },
+    {
+      "rq": "RQ4",
+      "spec": "RQ4b Same index, Post2024\u00d7\u0394TNLG",
+      "coef": 0.005883925403638033,
+      "se": 0.012311802586708137,
+      "p": 0.6327147359712052,
+      "n": 119,
+      "r2": 0.8370615060993807,
+      "note": "2024 only",
+      "display": "0.006 (0.012)"
+    },
+    {
+      "rq": "RQ4",
+      "spec": "RQ4d ITS index log(IN SJ312)\u2212log(CN SJ312) Post\u00d7\u0394TNLG",
+      "coef": 0.1006600547745032,
+      "se": 0.03487429174679749,
+      "p": 0.003897156500602111,
+      "n": 86,
+      "r2": 0.5652752133093291,
+      "note": "Engineering services only; unbalanced (missing years dropped, not filled)",
+      "display": "0.101*** (0.035)"
+    },
+    {
+      "rq": "RQ4",
+      "spec": "RQ4c Cross-section \u0394relocation index 22\u201324 on \u0394TNLG",
+      "coef": -0.0010006489124001477,
+      "se": 0.012346526876139194,
+      "p": 0.9354045781282964,
+      "n": 17,
+      "r2": 0.0003508506198025563,
+      "note": "One observation per importer",
+      "display": "-0.001 (0.012)"
+    },
+    {
+      "rq": "RQ5",
+      "spec": "RQ5 M71 turnover Post2024\u00d7\u0394M TNLG",
+      "coef": -0.006845248916273384,
+      "se": 0.003183200815697485,
+      "p": 0.031521257530458195,
+      "n": 68,
+      "r2": 0.9959561217645314,
+      "note": "SBS current prices; one complete post-shock year",
+      "display": "-0.007** (0.003)"
+    },
+    {
+      "rq": "RQ5",
+      "spec": "RQ5 M71 employment Post2024\u00d7\u0394M TNLG",
+      "coef": -0.00039351127708857705,
+      "se": 0.001685777053391885,
+      "p": 0.815427363522487,
+      "n": 68,
+      "r2": 0.9989570469926702,
+      "note": "SBS current prices; one complete post-shock year",
+      "display": "-0.000 (0.002)"
+    },
+    {
+      "rq": "RQ5",
+      "spec": "RQ5 M71 wages Post2024\u00d7\u0394M TNLG",
+      "coef": -0.009190364566735396,
+      "se": 0.003301280141125128,
+      "p": 0.005371306259207914,
+      "n": 68,
+      "r2": 0.9978671185365068,
+      "note": "SBS current prices; one complete post-shock year",
+      "display": "-0.009*** (0.003)"
+    },
+    {
+      "rq": "RQ6",
+      "spec": "RQ6a Indian SJ3 Post\u00d7\u0394M TNLG (BaTIS reported N, \u22642023)",
+      "coef": 0.02149159451762721,
+      "se": 0.012370160154968547,
+      "p": 0.08232117903390103,
+      "n": 102,
+      "r2": 0.9660749960422579,
+      "note": "Reported cells; sample max year=2023; 2024 unpublished so Post=2023 only",
+      "display": "0.021* (0.012)"
+    },
+    {
+      "rq": "RQ8",
+      "spec": "RQ8 Science and engineering professionals Post\u00d7\u0394M TNLG",
+      "coef": -0.0008664863706852243,
+      "se": 0.004175656217477313,
+      "p": 0.8356123413464287,
+      "n": 119,
+      "r2": 0.9937482376832685,
+      "note": "ISCO 2-digit; not civil engineers (2142)",
+      "display": "-0.001 (0.004)"
+    },
+    {
+      "rq": "RQ8",
+      "spec": "RQ8 Science and engineering associate professionals Post\u00d7\u0394M TNLG",
+      "coef": 0.002979721313269054,
+      "se": 0.0029786113859563428,
+      "p": 0.31713020916510337,
+      "n": 119,
+      "r2": 0.9924451099700072,
+      "note": "ISCO 2-digit; not civil engineers (2142)",
+      "display": "0.003 (0.003)"
+    },
+    {
+      "rq": "RQ8",
+      "spec": "RQ8 ICT professionals Post\u00d7\u0394M TNLG",
+      "coef": -0.0064255162687993006,
+      "se": 0.002935879496906896,
+      "p": 0.028624676976996905,
+      "n": 119,
+      "r2": 0.9921322803853679,
+      "note": "ISCO 2-digit; not civil engineers (2142)",
+      "display": "-0.006** (0.003)"
+    },
+    {
+      "rq": "RQ8",
+      "spec": "RQ8 Building trades workers Post\u00d7\u0394M TNLG",
+      "coef": -0.007102124764832904,
+      "se": 0.0016004450476628555,
+      "p": 9.09701509593258e-06,
+      "n": 119,
+      "r2": 0.9965229164125649,
+      "note": "ISCO 2-digit; not civil engineers (2142)",
+      "display": "-0.007*** (0.002)"
+    }
+  ],
+  "notes": [
+    "RQ1: Eurostat ITS publishes SJ312 but cells are sparse; BaTIS SJ312 unpublished; ILO 2142 unpublished.",
+    "RQ7: UK APS is a national occupation series; there is no importer NLG treatment and no Indian/Chinese ISCO counterpart."
+  ]
+}
