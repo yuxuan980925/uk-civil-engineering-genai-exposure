@@ -73,8 +73,6 @@ def main():
 
     copyf(SRC / "manuscript" / "Study4_Main_Text.md", OUT / "Study4_Manuscript.md")
     copyf(SRC / "manuscript" / "Study4_Main_Text.md", OUT / "manuscript" / "Study4_Manuscript.md")
-    copyf(SRC / "manuscript" / "CN_Main_Text.md", OUT / "CN_full_article.md")
-    copyf(SRC / "manuscript" / "CN_Main_Text.md", OUT / "manuscript" / "CN_full_article.md")
 
     figs_md = ["# Main-text figures\n", "AI exposure and the cross-country M71 / engineering-adjacent services economy.\n"]
     captions = [
@@ -102,7 +100,6 @@ Open Markdown, not the zip.
 | Path | Contents |
 |---|---|
 | `Study4_Manuscript.md` | English main text (8 figures, 6 tables) |
-| `CN_full_article.md` | Chinese main text, same figures |
 | `FIGURES.md` | Figures 1–8 |
 | `figures/` | 8 PNGs used in the main text |
 | `tables/` | CSV for those tables |

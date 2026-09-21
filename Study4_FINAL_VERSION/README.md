@@ -8,7 +8,6 @@ Start here: [`00_OPEN_IN_EDITOR.md`](00_OPEN_IN_EDITOR.md)
 
 | Path | Open in editor? |
 |---|---|
-| [`manuscript/CN_full_article.md`](manuscript/CN_full_article.md) | Yes — Chinese article |
 | [`manuscript/Study4_Manuscript.md`](manuscript/Study4_Manuscript.md) | Yes — English article |
 | [`FIGURES.md`](FIGURES.md) | Yes — figures 1–21 preview |
 | [`manuscript/tables_for_article.md`](manuscript/tables_for_article.md) | Yes — tables |
@@ -16,7 +15,7 @@ Start here: [`00_OPEN_IN_EDITOR.md`](00_OPEN_IN_EDITOR.md)
 | [`data/`](data/) | Yes — CSV |
 | [`zips/`](zips/) | No — download/unzip only |
 
-Title: *How Does the Civil Engineering Industry Economy Change under an AI Shock?* / 跨国背景下，受 AI 冲击的土木工程行业经济如何变动.
+Title: *How Does the Civil Engineering Industry Economy Change under an AI Shock?*
 
 Preferred shock: Eurostat **E_AI_TNLG**. Industry: NACE **M71**. Trade: BaTIS **SJ3**. LLM occupation scores are not the shock.
 

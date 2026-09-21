@@ -6,7 +6,6 @@ Cursor / GitHub **不能预览 zip、xlsx 等二进制文件**（会提示 *bina
 
 | 打开这个 | 内容 |
 |---|---|
-| [`manuscript/CN_full_article.md`](manuscript/CN_full_article.md) | 中文全文（图已嵌入） |
 | [`../Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md`](../Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md) | English article (restored folder; figures 1–5) |
 | [`manuscript/Study4_Manuscript.md`](manuscript/Study4_Manuscript.md) | English article in this working copy |
 | [`FIGURES.md`](FIGURES.md) | 全部 23 张图（Markdown 预览） |

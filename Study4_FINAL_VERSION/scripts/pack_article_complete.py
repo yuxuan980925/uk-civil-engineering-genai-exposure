@@ -83,9 +83,6 @@ def main():
         "Study4_Concise_Manuscript.md",
         "article_body.md",
         "tables_for_article.md",
-        "CN_full_article.md",
-        "CN_Concise_Manuscript.md",
-        "CN_novelty_and_claims.md",
     ]:
         src = SRC / "manuscript" / name
         if src.exists():
@@ -114,17 +111,15 @@ def main():
 After `git pull`, open:
 
 1. [`Study4_Manuscript.md`](Study4_Manuscript.md) — primary English article, about 8,000 words
-2. [`CN_full_article.md`](CN_full_article.md) — complete Chinese article
-3. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — optional short English version
-4. [`CN_Concise_Manuscript.md`](CN_Concise_Manuscript.md) — 可选中文精简稿
-5. [`FIGURES.md`](FIGURES.md) — supplementary figures 1–23 (the article embeds 5)
-6. [`tables_for_article.md`](tables_for_article.md) — all tables
+2. [`Study4_Concise_Manuscript.md`](Study4_Concise_Manuscript.md) — optional short English version
+3. [`FIGURES.md`](FIGURES.md) — supplementary figures 1–23 (the article embeds 5)
+4. [`tables_for_article.md`](tables_for_article.md) — all tables
 
 Folders: [`figures/`](figures/) · [`tables/`](tables/) · [`data/`](data/) · [`scripts/`](scripts/)
 
 Compiled HTML (browser): [`index.html`](index.html)
 
-Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx) · [`CN_full_article.docx`](CN_full_article.docx)
+Word (from HTML): [`Study4_Manuscript.docx`](Study4_Manuscript.docx)
 
 Package inventory: [`PACKAGE_INVENTORY.md`](PACKAGE_INVENTORY.md) · checksums: [`SHA256SUMS.txt`](SHA256SUMS.txt)
 
@@ -141,10 +136,7 @@ The United Kingdom’s Service Links with India and China — **complete article
 - `OPEN_IN_EDITOR.md` — this folder’s entry list
 - `Study4_Manuscript.docx` — English working copy used to compile this folder; the **journal submission files** are in [`../Study4_IJCM_Submission/`](../Study4_IJCM_Submission/)
 - `Study4_Manuscript.md` — editor-readable English article in IJCM layout (abstract, keywords, numbered sections, disclosure, data availability, tables, figures)
-- `CN_full_article.md` — Chinese companion article (not the IJCM file)
-- `CN_full_article.docx` — Word, Chinese
 - `Study4_Concise_Manuscript.docx` — optional short English version
-- `CN_Concise_Manuscript.docx` — 可选中文精简稿
 - `tables_for_article.md` — all article tables
 - `FIGURES.md` — supplementary figures 1–23; only 5 are embedded in the main article
 - `figures/` — PNG files
@@ -212,15 +204,8 @@ Unzip with Finder / Explorer. After unzip you should see `Study4_Manuscript.md` 
             "zip", "-r", "-X", str(zip_path),
             "README.md", "OPEN_IN_EDITOR.md", "ZIP_PATH.md",
             "PACKAGE_INVENTORY.md", "SHA256SUMS.txt", "Study4_Manuscript.md",
-            "Study4_Concise_Manuscript.md", "CN_Concise_Manuscript.md",
-            "article_body.md", "tables_for_article.md", "CN_full_article.md",
-            "CN_novelty_and_claims.md", "FIGURES.md",
             "DATA_INVENTORY.md", "DATA_SOURCES.md",
-            "index.html", "Study4_Manuscript.html", "CN_full_article.html",
-            "Study4_Concise_Manuscript.html", "CN_Concise_Manuscript.html",
             "FIGURES.html", "tables_for_article.html",
-            "Study4_Manuscript.docx", "CN_full_article.docx",
-            "Study4_Concise_Manuscript.docx", "CN_Concise_Manuscript.docx",
             "FIGURES.docx", "tables_for_article.docx",
             "figures", "tables", "data", "scripts", "manuscript",
             "results.json", "results_nlg.json", "results_industry.json",

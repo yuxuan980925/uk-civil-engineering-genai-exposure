@@ -9,6 +9,8 @@ Preferred shock: Eurostat E_AI_TNLG, NACE M, 2024 minus 2023.
 Industry outcomes: Eurostat NACE M71. Trade: OECD–WTO BaTIS, adjustment B.
 Country focus: UK–India and UK–China; EU-17 is the estimation panel only.
 See DATA_COMPLIANCE_AUDIT.md for the independent recompute of Tables 1–6.
+See RESEARCH_SCOPE.md for what these series can and cannot identify
+for a transnational generative-AI civil-engineering study.
 
 Folder contents
 ---------------

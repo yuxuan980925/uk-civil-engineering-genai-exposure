@@ -56,12 +56,11 @@ The journal upload set is [`Study4_IJCM_Submission/`](Study4_IJCM_Submission/), 
 | `Data_Study4_IJCM/` | Numbered replication data (01–08), matching `Data_IJCM/` |
 | `00_Manuscript_as_Submitted.docx` | Identified author copy |
 
-The same numbered data package is also at [`Data_Study4_IJCM/`](Data_Study4_IJCM/). See `Data_Study4_IJCM/README.txt` for the file-level inventory.
+The same numbered data package is also at [`Data_Study4_IJCM/`](Data_Study4_IJCM/). See `Data_Study4_IJCM/README.txt` for the file-level inventory. What the series can identify is catalogued in [`Data_Study4_IJCM/RESEARCH_SCOPE.md`](Data_Study4_IJCM/RESEARCH_SCOPE.md).
 
 | Open in editor | Path |
 |---|---|
 | English article | [`Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md`](Study4_Global_AI_Civil_Engineering_Economy/Study4_Manuscript.md) |
-| Chinese article | [`Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md`](Study4_Global_AI_Civil_Engineering_Economy/CN_full_article.md) |
 | Folder index | [`Study4_Global_AI_Civil_Engineering_Economy/index.html`](Study4_Global_AI_Civil_Engineering_Economy/index.html) |
 | Blinded Word | [`Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/02_Blinded_Manuscript_for_Review.docx`](Study4_Global_AI_Civil_Engineering_Economy/IJCM_Submission/02_Blinded_Manuscript_for_Review.docx) |
 

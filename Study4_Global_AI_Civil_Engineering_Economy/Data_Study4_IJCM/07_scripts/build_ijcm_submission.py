@@ -411,7 +411,7 @@ def format_source_manuscript() -> str:
     body = text[start:end].rstrip()
     body = body.replace(
         "Replication files are in `Study4_Article_Complete/` "
-        "(open `Study4_Manuscript.md`, `CN_full_article.md`, `FIGURES.md`, "
+        "(open `Study4_Manuscript.md`, `FIGURES.md`, "
         "and `tables_for_article.md` in the editor — not the zip). Figures, "
         "tables, and official data are in `figures/`, `tables/`, and `data/` "
         "in that folder. Missing series are catalogued in `DATA_INVENTORY.md`; "
