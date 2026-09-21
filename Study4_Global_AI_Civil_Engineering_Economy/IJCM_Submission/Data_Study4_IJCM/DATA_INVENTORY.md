@@ -104,11 +104,14 @@ python3 Data_Study4_IJCM/07_scripts/download_corroboration.py
 python3 Data_Study4_IJCM/07_scripts/run_corroboration_experiments.py
 python3 Data_Study4_IJCM/07_scripts/download_uk_india.py
 python3 Data_Study4_IJCM/07_scripts/run_uk_india_experiments.py
+python3 Data_Study4_IJCM/07_scripts/download_ai_impact.py
+python3 Data_Study4_IJCM/07_scripts/run_ai_impact_experiments.py
 ```
 
 Relocation probe (reset RQs): `RELOCATION_RESEARCH_DESIGN.md` and `09_relocation_probe/`.
 Corroboration (independent re-fetch + M7112 + placebos): `CORROBORATION.md`.
 UK–India two-country formulas: `UK_INDIA_MEASUREMENT.md` and `10_uk_india/`.
+AI-shock impact redesign: `AI_SHOCK_IMPACT.md` and `11_ai_shock_impact/`.
 
 ## F. UK–India two-country re-retrieval (21 September 2026)
 
