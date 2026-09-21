@@ -1,0 +1,25 @@
+Specification,Coefficient (s.e.),N,Note
+(N1) Post×ΔM TNLG 2023–24 [preferred GenAI shock],0.009 (0.005),357,NLG jump is the ChatGPT window; EU × IND/PHL/VNM
+(N2) Post2024×ΔM TNLG 2023–24,0.007** (0.003),357,Treat only 2024 as post (BaTIS ends 2024)
+(N3) Post×ΔM TNLG 2021–24,0.007 (0.005),357,Comparable window to generic TANY ΔM
+(N4) Post× TNLG M 2024 level,0.006 (0.004),357,Level not change
+(N5) Placebo Post×ΔF TNLG 2023–24,0.015 (0.020),357,Construction enterprises using NLG
+(N6) Horse: Post×ΔM TNLG,0.015*** (0.004),357,Same regression as N7
+(N7) Horse: Post×ΔM TML (ML placebo),-0.026* (0.014),357,"Machine learning, not generative NLG"
+(N8) Placebo Post×ΔM TTM 2023–24,0.004 (0.008),357,Text mining (also jumped; not NLG)
+(N9) Placebo Post×ΔM TIR 2023–24,-0.010 (0.020),357,Image recognition
+(N10) Comparison Post×ΔM TANY 2021–24,0.000 (0.006),336,Generic any-AI; mixes ML and GenAI
+(N11) Placebo SI Post×ΔM TNLG,-0.002 (0.006),357,Computer services from same partners
+(N12) Placebo China SE Post×ΔM TNLG,-0.008 (0.009),119,Project-based construction services from China; BaTIS does not identify mode
+(N13) Placebo China SJ3 Post×ΔM TNLG,0.005 (0.010),119,SJ3 from China
+(N14) Placebo Post×ΔJ TNLG 2023–24,0.009** (0.004),357,"ICT sector NLG (NACE J), not M71-containing M"
+(N15) Placebo Post×ΔC TNLG 2023–24,0.017** (0.008),357,Manufacturing NLG
+(N16) Placebo Post×ΔN TNLG 2023–24,0.015** (0.007),357,Administrative/support NLG
+(NH) India only Post×ΔM TNLG 2023–24,0.021*** (0.008),119,Partner = IND
+(NH) Philippines only Post×ΔM TNLG 2023–24,-0.007 (0.015),119,Partner = PHL
+(NH) Viet Nam only Post×ΔM TNLG 2023–24,0.011 (0.008),119,Partner = VNM
+(N17) EU-8 Post×ΔM TNLG 2023–24,0.029*** (0.006),168,Same fragile eight-country sample as TANY EU-8
+(N18) Cross-section Δlog IN SJ3 22–24 on ΔTNLG 23–24,0.017*** (0.004),17,No FE; one obs per importer
+(N19) log M71 GVA Post×ΔM TNLG 2023–24,-0.007* (0.004),96,Domestic architectural & engineering GVA; GVA only to 2023
+(N20) SJ2 consulting Post×ΔM TNLG,0.006 (0.011),357,Same importers/partners as SJ3
+(N20) SJ1 R&D Post×ΔM TNLG,0.007 (0.011),357,Same importers/partners as SJ3

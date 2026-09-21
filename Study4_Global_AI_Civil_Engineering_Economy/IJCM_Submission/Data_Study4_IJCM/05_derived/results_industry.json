@@ -1,0 +1,144 @@
+{
+  "identified_object": "Importer/domestic NACE M71 SBS economy associated with TNLG shock; F placebo",
+  "cannot_identify": "APS 2121 causing partner GDP or ISCO 2142",
+  "sbs_years": "2021-2024",
+  "ilo_m71": "not published (404)",
+  "bls_54133": "public API returned NAICS 54 only, not 54133",
+  "identification": [
+    {
+      "spec": "(I1) log M71 turnover Post2024\u00d7\u0394TNLG",
+      "coef": -0.006845248916273384,
+      "se": 0.0031832008156974846,
+      "p": 0.03152125753045818,
+      "n": 68,
+      "note": "SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE",
+      "display": "-0.007** (0.003)"
+    },
+    {
+      "spec": "(I2) log M71 employment Post2024\u00d7\u0394TNLG",
+      "coef": -0.00039351127708857705,
+      "se": 0.001685777053391885,
+      "p": 0.815427363522487,
+      "n": 68,
+      "note": "SBS sbs_ovw_act M71 EMP_NR; country+year FE",
+      "display": "-0.000 (0.002)"
+    },
+    {
+      "spec": "(I3) log M71 wages Post2024\u00d7\u0394TNLG",
+      "coef": -0.009190364566735398,
+      "se": 0.003301280141125128,
+      "p": 0.0053713062592079044,
+      "n": 68,
+      "note": "SBS sbs_ovw_act M71 WAGE_MEUR; country+year FE",
+      "display": "-0.009*** (0.003)"
+    },
+    {
+      "spec": "(I4) log M71 value added Post2024\u00d7\u0394TNLG",
+      "coef": -0.006273269564364935,
+      "se": 0.0023724819382778457,
+      "p": 0.00818890681062865,
+      "n": 68,
+      "note": "SBS sbs_ovw_act M71 AV_MEUR; country+year FE",
+      "display": "-0.006*** (0.002)"
+    },
+    {
+      "spec": "(I5) log M71 GOS Post2024\u00d7\u0394TNLG",
+      "coef": -0.00261803505393757,
+      "se": 0.005001911281352865,
+      "p": 0.6006910990324714,
+      "n": 68,
+      "note": "SBS sbs_ovw_act M71 GOS_MEUR; country+year FE",
+      "display": "-0.003 (0.005)"
+    },
+    {
+      "spec": "(I6) log F turnover Post2024\u00d7\u0394TNLG placebo",
+      "coef": -0.010006201509964627,
+      "se": 0.003107333938080033,
+      "p": 0.0012810625969751212,
+      "n": 68,
+      "note": "SBS sbs_sc_ovw F NETTUR_MEUR; country+year FE",
+      "display": "-0.010*** (0.003)"
+    },
+    {
+      "spec": "(I7) log F employment Post2024\u00d7\u0394TNLG placebo",
+      "coef": -0.0026482190290888405,
+      "se": 0.001950326567375026,
+      "p": 0.17451647682814475,
+      "n": 68,
+      "note": "SBS sbs_ovw_act F EMP_NR; country+year FE",
+      "display": "-0.003 (0.002)"
+    },
+    {
+      "spec": "(I8) log M turnover Post2024\u00d7\u0394TNLG placebo",
+      "coef": -0.0048534261087028645,
+      "se": 0.0020270784660065054,
+      "p": 0.016652298438661194,
+      "n": 68,
+      "note": "SBS sbs_sc_ovw M NETTUR_MEUR; country+year FE",
+      "display": "-0.005** (0.002)"
+    },
+    {
+      "spec": "(I9) log M71 turnover Post2023\u00d7\u0394TNLG",
+      "coef": -0.0088460831306339,
+      "se": 0.0038869872216106493,
+      "p": 0.022856787165584192,
+      "n": 68,
+      "note": "SBS sbs_sc_ovw M71 NETTUR_MEUR; country+year FE",
+      "display": "-0.009** (0.004)"
+    },
+    {
+      "spec": "(I10) \u0394log\u2248 M71 turnover 2023\u201324 on \u0394TNLG",
+      "coef": -0.001598127173807132,
+      "se": 0.0014955833867720976,
+      "p": 0.2852659942804805,
+      "n": 17,
+      "note": "Cross-section; LHS is percent/100",
+      "display": "-0.002 (0.001)"
+    },
+    {
+      "spec": "(I11) M71 employment % 2023\u201324 on \u0394TNLG",
+      "coef": -4.858671417261169e-05,
+      "se": 0.001044177482002436,
+      "p": 0.9628869563722717,
+      "n": 17,
+      "note": "Cross-section; LHS percent/100",
+      "display": "-0.000 (0.001)"
+    },
+    {
+      "spec": "(I12) log M71 compensation Post\u00d7\u0394TNLG",
+      "coef": -0.008963211529028212,
+      "se": 0.003751957479601312,
+      "p": 0.01689693625779777,
+      "n": 96,
+      "note": "nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year",
+      "display": "-0.009** (0.004)"
+    },
+    {
+      "spec": "(I12) log M71 output Post\u00d7\u0394TNLG",
+      "coef": -0.008857212356463607,
+      "se": 0.0033060851642044767,
+      "p": 0.0073828373786227666,
+      "n": 96,
+      "note": "nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year",
+      "display": "-0.009*** (0.003)"
+    },
+    {
+      "spec": "(I12) log F compensation Post\u00d7\u0394TNLG",
+      "coef": -0.011066148129721015,
+      "se": 0.004220639532762168,
+      "p": 0.008743784153463397,
+      "n": 102,
+      "note": "nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year",
+      "display": "-0.011*** (0.004)"
+    },
+    {
+      "spec": "(I12) log F output Post\u00d7\u0394TNLG",
+      "coef": -0.01395104062234848,
+      "se": 0.003709318013683134,
+      "p": 0.0001691815197150487,
+      "n": 102,
+      "note": "nama_10_a64 current EUR; series ends 2023 so misses 2024 NLG year",
+      "display": "-0.014*** (0.004)"
+    }
+  ]
+}

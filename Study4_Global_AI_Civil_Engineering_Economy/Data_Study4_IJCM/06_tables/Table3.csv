@@ -1,0 +1,9 @@
+Outcome/specification,Coefficient (s.e.),N
+"Indian SJ3, Post × ΔM TNLG",0.021*** (0.008),119
+"Pooled SJ3, Post-2024 × ΔM TNLG",0.007** (0.003),357
+Chinese construction services (SE),−0.008 (0.009),119
+Chinese SJ3,0.005 (0.010),119
+Indian computer services comparison,−0.002 (0.006),357
+Generic any-AI comparison,0.000 (0.006),336
+
+Note,"Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects. *p < 0.10, **p < 0.05, ***p < 0.01."
