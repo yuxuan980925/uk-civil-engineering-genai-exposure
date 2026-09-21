@@ -102,7 +102,26 @@ python3 Data_Study4_IJCM/07_scripts/download_relocation_series.py
 python3 Data_Study4_IJCM/07_scripts/run_relocation_experiments.py
 python3 Data_Study4_IJCM/07_scripts/download_corroboration.py
 python3 Data_Study4_IJCM/07_scripts/run_corroboration_experiments.py
+python3 Data_Study4_IJCM/07_scripts/download_uk_india.py
+python3 Data_Study4_IJCM/07_scripts/run_uk_india_experiments.py
 ```
 
 Relocation probe (reset RQs): `RELOCATION_RESEARCH_DESIGN.md` and `09_relocation_probe/`.
 Corroboration (independent re-fetch + M7112 + placebos): `CORROBORATION.md`.
+UK–India two-country formulas: `UK_INDIA_MEASUREMENT.md` and `10_uk_india/`.
+
+## F. UK–India two-country re-retrieval (21 September 2026)
+
+| Object | Status | File / result |
+|---|---|---|
+| BaTIS GBR↔IND and GBR/IND↔W, SJ3/SE/SI/SJ1/SJ2, B and N | **Have** B 2015–24; IND↔GBR N **404**; UK←IN SE N only 5 years | `10_uk_india/batis_uk_india.csv` |
+| World Bank GDP / services / industry / R&D / exports | **Have** (context) | `10_uk_india/wb_uk_india.csv` |
+| ONS Pink Book API | **Decommissioned** | `10_uk_india/ons_pinkbook_fetch_log.csv` |
+| DDI, NSP, TMI, partner share, DiG, stacked 2×2 | **Have**; no interpolation | `10_uk_india/tables/` |
+| UK←IN SJ3 2019→2024 | 2,187 → 4,979 (+128%); DDI 0.981 → 0.986; India share 4.2% → 6.9% | formula (1), (5) |
+| DiG 2019–24 / 2022–24 / 2019–22 | **+0.21 / −0.95 / +1.15** | formula (7) |
+| Stacked 2×2 UK←IN SJ3 vs SE | **0.112 (0.277)**, N=20, n.s. | formula (8) |
+| Stacked 2×2 IN←UK SJ3 vs SE | **0.292\*\* (0.148)** | formula (8) |
+| APS 2121 / 3120 / 3114 | −12.5% / −21.0% / +197% | formulas (9)–(10) |
+
+Claim: association / corridor mix. Not causal civil relocation.

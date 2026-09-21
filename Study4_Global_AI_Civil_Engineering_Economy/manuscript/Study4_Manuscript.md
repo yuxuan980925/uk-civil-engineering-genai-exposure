@@ -165,6 +165,67 @@ The event study is informative but not decisive. Coefficients before 2022 are st
 
 The comparison outcomes address different alternatives. Indian computer services test whether all Indian digital exports respond in the same way. Chinese SJ3 tests whether the result is common to suppliers, and Chinese construction services test the project-delivery margin. NACE F construction checks whether the domestic M71 estimate merely reflects a broad construction cycle. These comparisons narrow the interpretation, although none provides a perfect counterfactual.
 
+### 4.5 Two-country calendar-break design (UK–India)
+
+Neither the United Kingdom nor India is in the Eurostat enterprise-NLG panel, so a second design uses only the dated public release of ChatGPT (late 2022) as a common time break. Official OECD–WTO BaTIS cells for 2015–2024 are used without interpolation. Preferred values are adjustment B (balanced); adjustment N (reported) is the robustness extract. Missing reported cells, including all India↔UK N series, are left missing. Replication formulas and code are in `UK_INDIA_MEASUREMENT.md`.
+
+Let \(M^{i\leftarrow j}_{k,t}\) denote imports of service \(k\) by reporter \(i\) from partner \(j\) in year \(t\), USD million. Digitally deliverable intensity, net sourcing, the transnational mix and India’s share of the UK’s world SJ3 are:
+
+\[
+DDI^{i\leftarrow j}_{t}
+=
+\frac{M^{i\leftarrow j}_{SJ3,t}}{M^{i\leftarrow j}_{SJ3,t}+M^{i\leftarrow j}_{SE,t}},
+\quad
+NSP_{t}
+=
+\log M^{UK\leftarrow IN}_{SJ3,t}
+-
+\log M^{IN\leftarrow UK}_{SJ3,t},
+\]
+
+\[
+TMI^{i\leftarrow j}_{t}
+=
+\log M^{i\leftarrow j}_{SJ3,t}
+-
+\log M^{i\leftarrow j}_{SE,t},
+\quad
+S_{t}
+=
+\frac{M^{UK\leftarrow IN}_{SJ3,t}}{M^{UK\leftarrow W}_{SJ3,t}}.
+\]
+
+World counterpart code \(W\) is the BaTIS total. Event growth is \(g_{k}(t_{0},t_{1})=\log V_{k,t_{1}}-\log V_{k,t_{0}}\). The two-country mix contrast is the difference-in-growth
+
+\[
+DiG(t_{0},t_{1})
+=
+\bigl(g_{SJ3}-g_{SE}\bigr)^{UK\leftarrow IN}
+-
+\bigl(g_{SJ3}-g_{SE}\bigr)^{IN\leftarrow UK}.
+\]
+
+For a given flow, headings \(\{SJ3,SE\}\) are stacked over years with both cells published:
+
+\[
+\log M_{k,t}
+=
+\alpha
++
+\gamma\,\mathbf{1}[k=SJ3]
++
+\delta\,\mathbf{1}[t\ge 2023]
++
+\beta\,
+\mathbf{1}[k=SJ3]
+\times
+\mathbf{1}[t\ge 2023]
++
+\varepsilon_{k,t}.
+\]
+
+\(\beta\) is extra post-2022 growth of SJ3 relative to SE on that flow, with heteroskedasticity-robust standard errors. Specifications with fewer than eight overlapping years are not estimated. Placebos replace SE with SI or SJ2. UK occupation polarisation is \(\mathrm{Pol}_{t}=\log E^{3114}_{t}-\log E^{3120}_{t}\). These objects measure corridor mix, sourcing asymmetry and UK occupation composition around a dated event. They are not a country-level NLG treatment and do not identify civil-engineering invoices or GATS modes.
+
 ---
 
 ## 5. Results
@@ -181,7 +242,9 @@ The UK–India relationship is larger and grew faster. UK imports of Indian SJ3 
 
 Computer services followed a similar path: UK imports from India rose 113.2%, and Indian imports from the UK rose 81.8%. Construction services were far smaller in level terms but increased by 73.7% and 84.8%, respectively. Because the base values for construction were only about USD 40 million, percentage growth should not be compared with the multi-billion-dollar SJ3 and SI flows without considering scale.
 
-The UK–India findings establish a strong descriptive change, not its cause. Brexit, post-pandemic demand, exchange rates, service-sector growth and sourcing decisions may all contribute. The UK is outside the Eurostat enterprise-adoption panel, so the bilateral series cannot be assigned the same NLG treatment used in the regressions.
+A dedicated UK–India re-retrieval implements the Section 4.5 formulas on fresh BaTIS GBR↔IND and world totals. Digitally deliverable intensity was already 0.981 in 2019 and 0.986 in 2024: this corridor was almost entirely SJ3 before ChatGPT. India’s share of UK world SJ3 rose from 4.2% to 6.9%, and the net sourcing position rose from 1.02 to 1.16. The mix shift toward SJ3 relative to SE is concentrated in 2019–22 (\(DiG=+1.15\)), not in the 2022–24 generative window (\(DiG=-0.95\)), when UK imports of Indian construction services grew faster from a small base (SE +87% versus SJ3 +24%). The stacked heading×post coefficient for UK imports of Indian SJ3 versus SE is 0.112 (s.e. 0.277) and is not distinguishable from zero; the reverse flow is 0.292 (0.148). UK APS occupations polarised descriptively between 2021–22 and 2023–25 (civil engineers −12.5%, CAD −21.0%, technicians +197%), with no Indian ISCO 2142 counterpart. These objects corroborate a growing corridor and a larger Indian share of UK SJ3. They do not identify a generative-AI relocation of civil engineering.
+
+The UK–India findings therefore establish a strong descriptive change, not its cause. Brexit, post-pandemic demand, exchange rates, service-sector growth and sourcing decisions may all contribute. The UK is outside the Eurostat enterprise-adoption panel, so the bilateral series cannot be assigned the same NLG treatment used in the regressions.
 
 ### 5.3 Generic any-AI is the wrong shock (Table 3)
 
@@ -239,7 +302,7 @@ Several data constraints set the boundary of the study. Eurostat does not publis
 
 The trade category is also broad. BaTIS SJ3 includes technical, trade-related and other business services, while bilateral SJ312 architectural and engineering services are unavailable. The positive India estimate may therefore contain non-engineering activity. No bilateral series records employment in ISCO 2142, so the analysis cannot trace civil-engineering jobs between India, China and the UK.
 
-The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions.
+The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions. The UK–India calendar-break design does not repair this: it has no measured NLG rate, and the 2022–24 window is only two years.
 
 These limitations are not repaired by filling missing observations. No country, occupation, industry or GDP cell is interpolated. Unsuccessful retrievals, including M71-specific AI adoption and more detailed engineering trade and employment series, remain documented in the data inventory. Additional post-shock years and more precise service classifications are needed before the associations reported here can support stronger causal claims.
 

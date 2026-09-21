@@ -2,13 +2,19 @@
 
 Short answer: **yes for a bounded association study of engineering-service supplier mix and M71 accounts; no for a causal account of civil-engineering job or GDP relocation.**
 
-The question “did generative AI move the civil engineering industry across countries?” is larger than the official series. After a new retrieval on 21 September 2026 (Eurostat ITS SJ312, LFS ISCO two-digit, ILO occupation attempts), the identifiable object is still an **association** between importer NLG adoption and the mix of Indian versus Chinese engineering-related services, plus domestic M71 turnover/employment.
+The question “did generative AI move the civil engineering industry across countries?” is larger than the official series. After a new retrieval on 21 September 2026 (Eurostat ITS SJ312, LFS ISCO two-digit, ILO occupation attempts) and a UK–India-only BaTIS re-pull the same day, the identifiable object is still an **association** between importer NLG adoption and the mix of Indian versus Chinese engineering-related services, plus domestic M71 turnover/employment. For the UK–India pair itself there is **no NLG treatment**; the second design is a calendar break around public ChatGPT.
 
 ## Reset research question
 
 > Among EU importers, is the 2023–24 professional-service NLG jump associated with faster Indian engineering-service imports (Eurostat SJ312 / BaTIS SJ3) relative to Chinese construction and Chinese engineering services, and with slower nominal M71 turnover but not falling M71 employment?
 
 That is a test of **task unbundling / supplier-mix shift**. It is not a test that generative AI moved ISCO 2142 jobs or national income.
+
+A second, two-country question that the UK–India cells can answer:
+
+> In the UK–India corridor, did remotely deliverable technical business services (SJ3) grow faster than project-based construction services (SE) after 2022, and did UK civil occupations polarise?
+
+Formulas and experiments: `UK_INDIA_MEASUREMENT.md`. They measure mix and sourcing, not causal relocation.
 
 Eight rejectable sub-questions and their outcomes are in `RELOCATION_RESEARCH_DESIGN.md`. Headline associations:
 
@@ -32,6 +38,8 @@ Four empirical layers, kept separate:
 
 4. **Occupation composition, not bilateral jobs.** UK APS SOC 2020 (2121, 3120, 3114, …) and EU LFS ISCO-08 two-digit (OC21 science and engineering professionals). Neither is ISCO 2142 and neither is bilateral.
 
+5. **UK–India two-country calendar break (2015–2024).** Fresh BaTIS GBR↔IND and world totals, formulas (DDI, NSP, TMI, DiG, stacked 2×2) in `UK_INDIA_MEASUREMENT.md`. Shock is public ChatGPT, **not** a measured NLG rate. Headline: corridor already 98% SJ3 before 2023; 2022–24 DiG **−0.95**; UK←IN heading×post 0.112 (0.277).
+
 ## What the data cannot support
 
 | Desired object | Why it is missing |
@@ -53,5 +61,7 @@ A paper that stays inside the data would say:
 > Among EU importers, a larger 2023–24 jump in professional-service NLG use is associated with higher Indian SJ3 and Indian engineering-service (SJ312) imports, with lower Chinese engineering-service imports, and with slower nominal M71 turnover and wages, not with Chinese construction services or with M71 employment. UK civil occupations polarised over 2021–25, but that series has no AI treatment and no partner-country occupation counterpart. The pattern is consistent with a supplier-mix shift in digitally deliverable engineering services. It does not show that generative AI moved civil-engineering jobs or GDP between countries.
 
 A second official retrieval (SBS M7112, ITS SJ312 placebos, FATS, independent India/China re-fetch) **corroborates** that association. Placebo partners are null; engineering-consultancy employment is flat. FATS cannot test Mode 3 in 2023–24. See `CORROBORATION.md`.
+
+A third retrieval isolates the **UK–India corridor** with new BaTIS cells and measurement formulas. It supports a growing, already-SJ3-heavy services link and a larger Indian share of UK SJ3. It does **not** identify a GenAI relocation of civil engineering. See `UK_INDIA_MEASUREMENT.md` and `10_uk_india/`.
 
 Do not interpolate the missing series. If a later draft needs ISCO 2142, GATS modes, UK/India/China enterprise NLG, or civil-only invoices, those files have to be retrieved (or shown not to exist), not filled.

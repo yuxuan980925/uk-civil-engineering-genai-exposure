@@ -1,0 +1,11 @@
+flow,treated,control,adj,n,coef,se,p,note,display
+GBR←IND,SJ3,SE,B,20,0.11228181746422905,0.2774923372990707,0.6857492568780513,2x2 heading × post; not a country NLG treatment,0.112 (0.277)
+IND←GBR,SJ3,SE,B,20,0.29184956692027475,0.14819213176363785,0.048907189212130504,2x2 heading × post; not a country NLG treatment,0.292** (0.148)
+GBR←IND,SJ3,SI,B,20,0.03377610386534702,0.21599261286978888,0.8757364966199326,2x2 heading × post; not a country NLG treatment,0.034 (0.216)
+GBR←IND,SJ3,SJ2,B,20,-0.04041166086667847,0.2309812387199831,0.8611138422573456,2x2 heading × post; not a country NLG treatment,-0.040 (0.231)
+GBR←IND,SJ1,SE,B,20,-0.4783599778657459,0.24325197102278254,0.04923852133507282,2x2 heading × post; not a country NLG treatment,-0.478** (0.243)
+GBR←IND,SJ3,SE,N,8,,,,too few overlapping years (4); not estimated,—
+IND←GBR,SJ3,SE,N,0,,,,too few overlapping years (0); not estimated,—
+GBR←IND,SJ3,SI,N,18,0.003933193917963429,0.27691992750874433,0.9886677379354364,2x2 heading × post; not a country NLG treatment,0.004 (0.277)
+GBR←IND,SJ3,SJ2,N,18,-0.10295740859788616,0.2955799315338628,0.7275973174795864,2x2 heading × post; not a country NLG treatment,-0.103 (0.296)
+GBR←IND,SJ1,SE,N,8,,,,too few overlapping years (4); not estimated,—
