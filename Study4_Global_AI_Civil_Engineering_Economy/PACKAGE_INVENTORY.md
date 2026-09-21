@@ -11,13 +11,6 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 
 ## Included files
 
-- `CN_Concise_Manuscript.docx`
-- `CN_Concise_Manuscript.html`
-- `CN_Concise_Manuscript.md`
-- `CN_full_article.docx`
-- `CN_full_article.html`
-- `CN_full_article.md`
-- `CN_novelty_and_claims.md`
 - `DATA_INVENTORY.md`
 - `DATA_SOURCES.md`
 - `EXPERIMENTS_RUN.md`
@@ -99,9 +92,6 @@ Primary English article: `Study4_Manuscript.docx` / `Study4_Manuscript.md` / `St
 - `figures/figure8_loo.png`
 - `figures/figure9_m71_vs_F_gva.png`
 - `index.html`
-- `manuscript/CN_Concise_Manuscript.md`
-- `manuscript/CN_full_article.md`
-- `manuscript/CN_novelty_and_claims.md`
 - `manuscript/Study4_Concise_Manuscript.md`
 - `manuscript/Study4_Manuscript.md`
 - `manuscript/article_body.md`

@@ -115,11 +115,11 @@ Values are **current prices** where applicable. Nominal growth is not a GenAI ef
 
 OECD & WTO (n.d.) BaTIS, adjustment B, supplies annual bilateral values in USD million from 2015 to 2024 (Fortanier et al. 2017). The corridor extract contains 120 observations: four directed import flows, three service headings and ten years. The four flows are UK imports from India, India imports from the UK, UK imports from China and China imports from the UK. SJ3 is the closest available engineering-adjacent category, SE records construction services and SI provides a digital-services comparison.
 
-For the panel analysis, the headline outcome remains SJ3 imported from India. Chinese SE construction services are the project-delivery comparison. A pooled SJ3 sample containing two additional exporters is retained as a robustness exercise but is not part of the bilateral narrative.
+For the panel analysis, the headline outcome remains SJ3 imported from India. Chinese SE construction services are the project-delivery comparison. A pooled SJ3 sample adding the Philippines and Viet Nam is retained as a robustness exercise but is not part of the bilateral narrative.
 
 ### 3.5 Comparability and data quality
 
-BaTIS is chosen because it reconciles exporter and importer reports into a balanced bilateral series. This improves comparability when one side records a service differently or reports with a lag, but some observations are adjusted or imputed by the producing agencies. The paper therefore reports the adjustment code and observation status in the released corridor file. It does not treat a balanced estimate as a firm invoice.
+BaTIS is chosen because it reconciles exporter and importer reports into a balanced bilateral series. This improves comparability when one side records a service differently or reports with a lag, but the balanced extract used here is fully imputed by the producing agencies: every Table 1 cell and every SJ3/SE/SI observation in the EU importer panel carries OECD–WTO observation status I. Adjustment B is used for cross-country comparability; reported (status A) series exist under other adjustments but are incomplete. The authors do not interpolate missing cells and do not treat a balanced estimate as a firm invoice.
 
 The three service headings have different interpretive roles. SJ3 is the closest consistently available category to technical and engineering-adjacent work, but it also includes trade-related and other business services. SE is narrower in activity but does not itself reveal whether supply occurred through Mode 1 or Mode 3. SI is deliberately outside civil engineering and shows whether a pattern is common to digital services. No heading should be interpreted as a count of civil engineers or projects.
 
@@ -165,6 +165,67 @@ The event study is informative but not decisive. Coefficients before 2022 are st
 
 The comparison outcomes address different alternatives. Indian computer services test whether all Indian digital exports respond in the same way. Chinese SJ3 tests whether the result is common to suppliers, and Chinese construction services test the project-delivery margin. NACE F construction checks whether the domestic M71 estimate merely reflects a broad construction cycle. These comparisons narrow the interpretation, although none provides a perfect counterfactual.
 
+### 4.5 Two-country calendar-break design (UK–India)
+
+Neither the United Kingdom nor India is in the Eurostat enterprise-NLG panel, so a second design uses only the dated public release of ChatGPT (late 2022) as a common time break. Official OECD–WTO BaTIS cells for 2015–2024 are used without interpolation. Preferred values are adjustment B (balanced); adjustment N (reported) is the robustness extract. Missing reported cells, including all India↔UK N series, are left missing. Replication formulas and code are in `UK_INDIA_MEASUREMENT.md`.
+
+Let \(M^{i\leftarrow j}_{k,t}\) denote imports of service \(k\) by reporter \(i\) from partner \(j\) in year \(t\), USD million. Digitally deliverable intensity, net sourcing, the transnational mix and India’s share of the UK’s world SJ3 are:
+
+\[
+DDI^{i\leftarrow j}_{t}
+=
+\frac{M^{i\leftarrow j}_{SJ3,t}}{M^{i\leftarrow j}_{SJ3,t}+M^{i\leftarrow j}_{SE,t}},
+\quad
+NSP_{t}
+=
+\log M^{UK\leftarrow IN}_{SJ3,t}
+-
+\log M^{IN\leftarrow UK}_{SJ3,t},
+\]
+
+\[
+TMI^{i\leftarrow j}_{t}
+=
+\log M^{i\leftarrow j}_{SJ3,t}
+-
+\log M^{i\leftarrow j}_{SE,t},
+\quad
+S_{t}
+=
+\frac{M^{UK\leftarrow IN}_{SJ3,t}}{M^{UK\leftarrow W}_{SJ3,t}}.
+\]
+
+World counterpart code \(W\) is the BaTIS total. Event growth is \(g_{k}(t_{0},t_{1})=\log V_{k,t_{1}}-\log V_{k,t_{0}}\). The two-country mix contrast is the difference-in-growth
+
+\[
+DiG(t_{0},t_{1})
+=
+\bigl(g_{SJ3}-g_{SE}\bigr)^{UK\leftarrow IN}
+-
+\bigl(g_{SJ3}-g_{SE}\bigr)^{IN\leftarrow UK}.
+\]
+
+For a given flow, headings \(\{SJ3,SE\}\) are stacked over years with both cells published:
+
+\[
+\log M_{k,t}
+=
+\alpha
++
+\gamma\,\mathbf{1}[k=SJ3]
++
+\delta\,\mathbf{1}[t\ge 2023]
++
+\beta\,
+\mathbf{1}[k=SJ3]
+\times
+\mathbf{1}[t\ge 2023]
++
+\varepsilon_{k,t}.
+\]
+
+\(\beta\) is extra post-2022 growth of SJ3 relative to SE on that flow, with heteroskedasticity-robust standard errors. Specifications with fewer than eight overlapping years are not estimated. Placebos replace SE with SI or SJ2. UK occupation polarisation is \(\mathrm{Pol}_{t}=\log E^{3114}_{t}-\log E^{3120}_{t}\). These objects measure corridor mix, sourcing asymmetry and UK occupation composition around a dated event. They are not a country-level NLG treatment and do not identify civil-engineering invoices or GATS modes.
+
 ---
 
 ## 5. Results
@@ -181,7 +242,9 @@ The UK–India relationship is larger and grew faster. UK imports of Indian SJ3 
 
 Computer services followed a similar path: UK imports from India rose 113.2%, and Indian imports from the UK rose 81.8%. Construction services were far smaller in level terms but increased by 73.7% and 84.8%, respectively. Because the base values for construction were only about USD 40 million, percentage growth should not be compared with the multi-billion-dollar SJ3 and SI flows without considering scale.
 
-The UK–India findings establish a strong descriptive change, not its cause. Brexit, post-pandemic demand, exchange rates, service-sector growth and sourcing decisions may all contribute. The UK is outside the Eurostat enterprise-adoption panel, so the bilateral series cannot be assigned the same NLG treatment used in the regressions.
+A dedicated UK–India re-retrieval implements the Section 4.5 formulas on fresh BaTIS GBR↔IND and world totals. Digitally deliverable intensity was already 0.981 in 2019 and 0.986 in 2024: this corridor was almost entirely SJ3 before ChatGPT. India’s share of UK world SJ3 rose from 4.2% to 6.9%, and the net sourcing position rose from 1.02 to 1.16. The mix shift toward SJ3 relative to SE is concentrated in 2019–22 (\(DiG=+1.15\)), not in the 2022–24 generative window (\(DiG=-0.95\)), when UK imports of Indian construction services grew faster from a small base (SE +87% versus SJ3 +24%). The stacked heading×post coefficient for UK imports of Indian SJ3 versus SE is 0.112 (s.e. 0.277) and is not distinguishable from zero; the reverse flow is 0.292 (0.148). UK APS occupations polarised descriptively between 2021–22 and 2023–25 (civil engineers −12.5%, CAD −21.0%, technicians +197%), with no Indian ISCO 2142 counterpart. These objects corroborate a growing corridor and a larger Indian share of UK SJ3. They do not identify a generative-AI relocation of civil engineering.
+
+The UK–India findings therefore establish a strong descriptive change, not its cause. Brexit, post-pandemic demand, exchange rates, service-sector growth and sourcing decisions may all contribute. The UK is outside the Eurostat enterprise-adoption panel, so the bilateral series cannot be assigned the same NLG treatment used in the regressions.
 
 ### 5.3 Generic any-AI is the wrong shock (Table 3)
 
@@ -191,7 +254,7 @@ The generic any-AI measure produces little evidence of a trade relationship (Tab
 
 NLG use in professional services rose sharply between 2023 and 2024, although the size of the change differed substantially across EU members (Figure 3). This cross-sectional variation identifies the preferred specification. In the pooled SJ3 panel, the interaction for 2024 is 0.007 with a standard error of 0.003. When the sample is restricted to India, the estimate rises to 0.021 (0.008). The cross-sectional regression for the 2022–24 change in Indian SJ3 imports gives a similar positive relationship (Figure 4). Estimates for the earlier pre-period years are not statistically distinguishable from zero, although the very short post-period still calls for restraint.
 
-The comparison specifications make the interpretation more precise. The association is not reproduced for the other exporters in the pooled sample. It is also absent for computer services, Chinese SJ3, Chinese construction services, R&D and consulting. In a direct comparison with enterprise use of machine learning, the NLG interaction remains positive while the machine-learning interaction is negative. Measures for text mining and image recognition are not significant.
+The comparison specifications make the interpretation more precise. The association is not reproduced for the other exporters in the pooled sample. It is not reproduced for Indian computer services (−0.009, s.e. 0.005), Chinese SJ3, Chinese construction services, R&D or consulting. In a direct comparison with enterprise use of machine learning, the NLG interaction remains positive while the machine-learning interaction is negative. Measures for text mining and image recognition are not significant.
 
 Sector-level adoption measures are less discriminating. NLG changes in ICT, manufacturing and administrative services also predict SJ3 imports, while NLG use within construction does not. Thus the treatment should be understood as a national generative-AI wave observed through professional-service adoption, not as an M71-specific intervention. Within that wave, India is the corridor that carries the positive SJ3 relationship. This is consistent with the trade-in-tasks mechanism described by Grossman and Rossi-Hansberg (2008) and Baldwin (2019), but it does not establish that every remotely supplied service or every exporting economy responded in the same way.
 
@@ -239,7 +302,7 @@ Several data constraints set the boundary of the study. Eurostat does not publis
 
 The trade category is also broad. BaTIS SJ3 includes technical, trade-related and other business services, while bilateral SJ312 architectural and engineering services are unavailable. The positive India estimate may therefore contain non-engineering activity. No bilateral series records employment in ISCO 2142, so the analysis cannot trace civil-engineering jobs between India, China and the UK.
 
-The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions.
+The time dimension is short. BaTIS ends in 2024, and Structural Business Statistics provide only one complete post-shock year. The industry models rely on 17 country clusters, and their outcomes are in current prices. Construction turnover shares the negative association found for M71, making it difficult to separate an engineering-specific response from broader national conditions. The UK–India calendar-break design does not repair this: it has no measured NLG rate, and the 2022–24 window is only two years.
 
 These limitations are not repaired by filling missing observations. No country, occupation, industry or GDP cell is interpolated. Unsuccessful retrievals, including M71-specific AI adoption and more detailed engineering trade and employment series, remain documented in the data inventory. Additional post-shock years and more precise service classifications are needed before the associations reported here can support stronger causal claims.
 
@@ -383,10 +446,10 @@ WTO. (1994). *General Agreement on Trade in Services*. World Trade Organization.
 | Pooled SJ3, Post-2024 × ΔM TNLG | 0.007** (0.003) | 357 |
 | Chinese construction services (SE) | −0.008 (0.009) | 119 |
 | Chinese SJ3 | 0.005 (0.010) | 119 |
-| Indian computer services comparison | −0.002 (0.006) | 357 |
+| Indian computer services (SI) | −0.009* (0.005) | 119 |
 | Generic any-AI comparison | 0.000 (0.006) | 336 |
 
-*Note.* Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects. *p < 0.10, **p < 0.05, ***p < 0.01.
+*Note.* Importer and year fixed effects; standard errors clustered by importer. The pooled SJ3 model uses India, the Philippines and Viet Nam as exporters and includes partner fixed effects. Indian computer services are the India-only SI specification; the pooled SI analogue is −0.002 (0.006), N=357. *p < 0.10, **p < 0.05, ***p < 0.01.
 
 **Table 4.** M71 industry outcomes under the NLG shock
 
@@ -407,7 +470,7 @@ WTO. (1994). *General Agreement on Trade in Services*. World Trade Organization.
 | Lower ΔTNLG | 571.9 | 946.2 | 65.4% |
 | Higher ΔTNLG | 679.9 | 1,002.6 | 47.5% |
 
-*Note.* Source: OECD–WTO BaTIS SE. Groups split at the importer median change in NACE M TNLG.
+*Note.* Source: OECD–WTO BaTIS SE. Groups split at the importer-median ΔTNLG in NACE M. Spain equals the median and is assigned to the higher group (9 vs 8 importers). A strict greater-than split yields 54.9% versus 56.5%.
 
 **Table 6.** Interpretation boundary
 

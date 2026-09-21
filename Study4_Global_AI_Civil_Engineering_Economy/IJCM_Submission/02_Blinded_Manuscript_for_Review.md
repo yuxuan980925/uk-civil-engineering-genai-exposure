@@ -107,11 +107,11 @@ Values are **current prices** where applicable. Nominal growth is not a GenAI ef
 
 OECD & WTO (n.d.) BaTIS, adjustment B, supplies annual bilateral values in USD million from 2015 to 2024 (Fortanier et al. 2017). The corridor extract contains 120 observations: four directed import flows, three service headings and ten years. The four flows are UK imports from India, India imports from the UK, UK imports from China and China imports from the UK. SJ3 is the closest available engineering-adjacent category, SE records construction services and SI provides a digital-services comparison.
 
-For the panel analysis, the headline outcome remains SJ3 imported from India. Chinese SE construction services are the project-delivery comparison. A pooled SJ3 sample containing two additional exporters is retained as a robustness exercise but is not part of the bilateral narrative.
+For the panel analysis, the headline outcome remains SJ3 imported from India. Chinese SE construction services are the project-delivery comparison. A pooled SJ3 sample adding the Philippines and Viet Nam is retained as a robustness exercise but is not part of the bilateral narrative.
 
 ### 3.5 Comparability and data quality
 
-BaTIS is chosen because it reconciles exporter and importer reports into a balanced bilateral series. This improves comparability when one side records a service differently or reports with a lag, but some observations are adjusted or imputed by the producing agencies. The paper therefore reports the adjustment code and observation status in the released corridor file. It does not treat a balanced estimate as a firm invoice.
+BaTIS is chosen because it reconciles exporter and importer reports into a balanced bilateral series. This improves comparability when one side records a service differently or reports with a lag, but the balanced extract used here is fully imputed by the producing agencies: every Table 1 cell and every SJ3/SE/SI observation in the EU importer panel carries OECD–WTO observation status I. Adjustment B is used for cross-country comparability; reported (status A) series exist under other adjustments but are incomplete. The authors do not interpolate missing cells and do not treat a balanced estimate as a firm invoice.
 
 The three service headings have different interpretive roles. SJ3 is the closest consistently available category to technical and engineering-adjacent work, but it also includes trade-related and other business services. SE is narrower in activity but does not itself reveal whether supply occurred through Mode 1 or Mode 3. SI is deliberately outside civil engineering and shows whether a pattern is common to digital services. No heading should be interpreted as a count of civil engineers or projects.
 
@@ -183,7 +183,7 @@ The generic any-AI measure produces little evidence of a trade relationship (Tab
 
 NLG use in professional services rose sharply between 2023 and 2024, although the size of the change differed substantially across EU members (Figure 3). This cross-sectional variation identifies the preferred specification. In the pooled SJ3 panel, the interaction for 2024 is 0.007 with a standard error of 0.003. When the sample is restricted to India, the estimate rises to 0.021 (0.008). The cross-sectional regression for the 2022–24 change in Indian SJ3 imports gives a similar positive relationship (Figure 4). Estimates for the earlier pre-period years are not statistically distinguishable from zero, although the very short post-period still calls for restraint.
 
-The comparison specifications make the interpretation more precise. The association is not reproduced for the other exporters in the pooled sample. It is also absent for computer services, Chinese SJ3, Chinese construction services, R&D and consulting. In a direct comparison with enterprise use of machine learning, the NLG interaction remains positive while the machine-learning interaction is negative. Measures for text mining and image recognition are not significant.
+The comparison specifications make the interpretation more precise. The association is not reproduced for the other exporters in the pooled sample. It is not reproduced for Indian computer services (−0.009, s.e. 0.005), Chinese SJ3, Chinese construction services, R&D or consulting. In a direct comparison with enterprise use of machine learning, the NLG interaction remains positive while the machine-learning interaction is negative. Measures for text mining and image recognition are not significant.
 
 Sector-level adoption measures are less discriminating. NLG changes in ICT, manufacturing and administrative services also predict SJ3 imports, while NLG use within construction does not. Thus the treatment should be understood as a national generative-AI wave observed through professional-service adoption, not as an M71-specific intervention. Within that wave, India is the corridor that carries the positive SJ3 relationship. This is consistent with the trade-in-tasks mechanism described by Grossman and Rossi-Hansberg (2008) and Baldwin (2019), but it does not establish that every remotely supplied service or every exporting economy responded in the same way.
 
@@ -374,10 +374,10 @@ WTO. (1994). *General Agreement on Trade in Services*. World Trade Organization.
 | Pooled SJ3, Post-2024 × ΔM TNLG | 0.007** (0.003) | 357 |
 | Chinese construction services (SE) | −0.008 (0.009) | 119 |
 | Chinese SJ3 | 0.005 (0.010) | 119 |
-| Indian computer services comparison | −0.002 (0.006) | 357 |
+| Indian computer services (SI) | −0.009* (0.005) | 119 |
 | Generic any-AI comparison | 0.000 (0.006) | 336 |
 
-*Note.* Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects. *p < 0.10, **p < 0.05, ***p < 0.01.
+*Note.* Importer and year fixed effects; standard errors clustered by importer. The pooled SJ3 model uses India, the Philippines and Viet Nam as exporters and includes partner fixed effects. Indian computer services are the India-only SI specification; the pooled SI analogue is −0.002 (0.006), N=357. *p < 0.10, **p < 0.05, ***p < 0.01.
 
 **Table 4.** M71 industry outcomes under the NLG shock
 
@@ -398,7 +398,7 @@ WTO. (1994). *General Agreement on Trade in Services*. World Trade Organization.
 | Lower ΔTNLG | 571.9 | 946.2 | 65.4% |
 | Higher ΔTNLG | 679.9 | 1,002.6 | 47.5% |
 
-*Note.* Source: OECD–WTO BaTIS SE. Groups split at the importer median change in NACE M TNLG.
+*Note.* Source: OECD–WTO BaTIS SE. Groups split at the importer-median ΔTNLG in NACE M. Spain equals the median and is assigned to the higher group (9 vs 8 importers). A strict greater-than split yields 54.9% versus 56.5%.
 
 **Table 6.** Interpretation boundary
 

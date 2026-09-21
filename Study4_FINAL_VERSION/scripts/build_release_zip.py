@@ -79,10 +79,8 @@ def main():
         raise SystemExit(f"expected 30+ tables, found {len(tables)}")
     required_ms = {
         "Study4_Manuscript.md",
-        "CN_full_article.md",
         "article_body.md",
         "tables_for_article.md",
-        "CN_novelty_and_claims.md",
     }
     have_ms = {p.name for p in ms_files}
     missing = required_ms - have_ms
@@ -159,8 +157,6 @@ Layout (same as Study4_FINAL_VERSION/)
 data/          Official series + analysis panels
 tables/        Every CSV table
 figures/       Figures 1-21 PNG
-manuscript/    Study4_Manuscript.md, article_body.md, CN_full_article.md,
-               CN_novelty_and_claims.md, tables_for_article.md, plus figures/
 scripts/       Replication (run_all_experiments.py)
 00_previous_ijcm_data/  Occupation-paper files (not the DiD shock)
 results*.json  Estimates

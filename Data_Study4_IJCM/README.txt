@@ -8,6 +8,9 @@ The article uses retrieved official series. No country, industry or trade cell i
 Preferred shock: Eurostat E_AI_TNLG, NACE M, 2024 minus 2023.
 Industry outcomes: Eurostat NACE M71. Trade: OECD–WTO BaTIS, adjustment B.
 Country focus: UK–India and UK–China; EU-17 is the estimation panel only.
+See DATA_COMPLIANCE_AUDIT.md for the independent recompute of Tables 1–6.
+See RESEARCH_SCOPE.md, RELOCATION_RESEARCH_DESIGN.md, CORROBORATION.md and
+UK_INDIA_MEASUREMENT.md for what these series can and cannot identify.
 
 Folder contents
 ---------------
@@ -38,6 +41,14 @@ Folder contents
 
 08_figures/
   Figure1.png to Figure5.png (300 dpi), the figures embedded in the manuscript.
+
+09_relocation_probe/
+  Eurostat ITS SJ312, LFS occupations, SBS M7112, placebo partners, FATS logs.
+  See RELOCATION_RESEARCH_DESIGN.md and CORROBORATION.md.
+
+10_uk_india/
+  Fresh UK–India only pull: BaTIS GBR↔IND and world totals, World Bank context,
+  measurement formulas and experiments. See UK_INDIA_MEASUREMENT.md.
 
 Third-party files (Eurostat, OECD–WTO, ILO, ONS, Felten, Eloundou) remain the
 property of their publishers and should be cited as in the manuscript reference

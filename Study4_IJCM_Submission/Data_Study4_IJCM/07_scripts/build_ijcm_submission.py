@@ -90,7 +90,7 @@ TABLES = [
             ["Pooled SJ3, Post-2024 × ΔM TNLG", "0.007** (0.003)", "357"],
             ["Chinese construction services (SE)", "−0.008 (0.009)", "119"],
             ["Chinese SJ3", "0.005 (0.010)", "119"],
-            ["Indian computer services comparison", "−0.002 (0.006)", "357"],
+            ["Indian computer services (SI)", "−0.009* (0.005)", "119"],
             ["Generic any-AI comparison", "0.000 (0.006)", "336"],
         ],
         "note": "Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects. *p < 0.10, **p < 0.05, ***p < 0.01.",
@@ -432,7 +432,7 @@ def format_source_manuscript() -> str:
     body = text[start:end].rstrip()
     body = body.replace(
         "Replication files are in `Study4_Article_Complete/` "
-        "(open `Study4_Manuscript.md`, `CN_full_article.md`, `FIGURES.md`, "
+        "(open `Study4_Manuscript.md`, `FIGURES.md`, "
         "and `tables_for_article.md` in the editor — not the zip). Figures, "
         "tables, and official data are in `figures/`, `tables/`, and `data/` "
         "in that folder. Missing series are catalogued in `DATA_INVENTORY.md`; "

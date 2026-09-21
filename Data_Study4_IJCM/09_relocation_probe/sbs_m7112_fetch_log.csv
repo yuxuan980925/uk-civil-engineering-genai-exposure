@@ -1,0 +1,11 @@
+dataset,nace,status,raw,kept
+sbs_ovw_act,M7112,ok,5256,568
+sbs_ovw_act,M7111,ok,5254,568
+sbs_ovw_act,M711,ok,5363,568
+sbs_ovw_act,M712,ok,5245,568
+sbs_ovw_act,M71,ok,5356,568
+sbs_sc_ovw,M7112,fail,0,0
+sbs_sc_ovw,M7111,fail,0,0
+sbs_sc_ovw,M711,ok,3929,568
+sbs_sc_ovw,M712,ok,3842,568
+sbs_sc_ovw,M71,ok,3927,568

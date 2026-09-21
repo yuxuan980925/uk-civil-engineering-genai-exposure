@@ -75,7 +75,7 @@ Source: Eurostat `isoc_eb_ain2`, enterprises with at least ten persons.
 | Pooled SJ3, Post-2024 × ΔM TNLG | 0.007** (0.003) | 357 |
 | Chinese construction services (SE) | −0.008 (0.009) | 119 |
 | Chinese SJ3 | 0.005 (0.010) | 119 |
-| Indian computer services comparison | −0.002 (0.006) | 357 |
+| Indian computer services (SI) | −0.009* (0.005) | 119 |
 | Generic any-AI comparison | 0.000 (0.006) | 336 |
 
 Importer and year fixed effects; standard errors clustered by importer. The pooled model also contains partner fixed effects.

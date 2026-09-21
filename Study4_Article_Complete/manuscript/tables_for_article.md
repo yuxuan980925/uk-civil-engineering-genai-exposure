@@ -31,7 +31,7 @@ LLM occupation scores from the IJCM paper are **not** used. Exposure is Eloundou
 | 2152 | Environment professionals | 45,300 | 80,700 | 78.1 |  |
 | 3114 | Building and civil engineering technicians | 5,500 | 17,300 | 214.5 | 0.477 |
 
-### Table 3. Eurostat enterprise AI use, NACE M vs F (%)
+### Table 3. Eurostat enterprise any-AI use (E_AI_TANY), NACE M vs F (%)
 
 | country | iso3 | ai_F_2021 | ai_F_2023 | ai_F_2024 | ai_F_2025 | ai_M_2021 | ai_M_2023 | ai_M_2024 | ai_M_2025 |
 |---|---|---|---|---|---|---|---|---|---|

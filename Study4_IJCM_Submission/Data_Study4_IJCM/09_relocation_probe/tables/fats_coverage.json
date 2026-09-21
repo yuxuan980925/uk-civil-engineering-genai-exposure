@@ -1,0 +1,16 @@
+{
+  "exists": true,
+  "n_cells": 2660,
+  "max_year": 2020,
+  "min_year": 2008,
+  "controls": [
+    "CN_X_HK",
+    "EXT_EU27_2020",
+    "US",
+    "WORLD",
+    "WRL_X_REP"
+  ],
+  "india_cells": 0,
+  "china_cells": 547,
+  "us_cells": 624
+}

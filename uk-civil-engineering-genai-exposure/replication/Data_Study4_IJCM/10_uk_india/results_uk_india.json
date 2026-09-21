@@ -1,0 +1,258 @@
+{
+  "identification": "Calendar break around ChatGPT; not a measured UK/India NLG rate",
+  "cannot_identify": [
+    "Generative AI caused UK civil jobs to move to India",
+    "SJ312 civil invoices (not in BaTIS; UK ITS ends 2019)",
+    "GATS Mode 1 vs Mode 3"
+  ],
+  "indices_B_2019_2024": {
+    "M_UK_IN_SJ3": {
+      "2019": 2186.610935,
+      "2024": 4979.295577
+    },
+    "DDI_imp": {
+      "2019": 0.9811971764169122,
+      "2024": 0.9855958220562128
+    },
+    "NSP": {
+      "2019": 1.0210772000312058,
+      "2024": 1.1643364477572424
+    },
+    "India_share_UK_SJ3": {
+      "2019": 0.041769384368983885,
+      "2024": 0.06912711209332909
+    }
+  },
+  "DiG": [
+    {
+      "adjustment": "B",
+      "window": "2019-24",
+      "mix_UK_imports": 0.27096166875048056,
+      "mix_IN_imports": 0.0657592005042078,
+      "DiG": 0.20520246824627275,
+      "SJ3_minus_SI_UK_imports": 0.0658778423576063
+    },
+    {
+      "adjustment": "B",
+      "window": "2022-24",
+      "mix_UK_imports": -0.41058967167588634,
+      "mix_IN_imports": 0.5355579918616726,
+      "DiG": -0.946147663537559,
+      "SJ3_minus_SI_UK_imports": -0.14302980880993843
+    },
+    {
+      "adjustment": "B",
+      "window": "2015-19 pre",
+      "mix_UK_imports": -0.5888466581617755,
+      "mix_IN_imports": 0.5061092778051837,
+      "DiG": -1.0949559359669592,
+      "SJ3_minus_SI_UK_imports": 0.36460435348316445
+    },
+    {
+      "adjustment": "B",
+      "window": "2019-22",
+      "mix_UK_imports": 0.6815513404263669,
+      "mix_IN_imports": -0.46979879135746483,
+      "DiG": 1.1513501317838317,
+      "SJ3_minus_SI_UK_imports": 0.20890765116754473
+    },
+    {
+      "adjustment": "N",
+      "window": "2019-24",
+      "mix_UK_imports": NaN,
+      "mix_IN_imports": NaN,
+      "DiG": NaN,
+      "SJ3_minus_SI_UK_imports": 0.06565644529287429
+    },
+    {
+      "adjustment": "N",
+      "window": "2022-24",
+      "mix_UK_imports": NaN,
+      "mix_IN_imports": NaN,
+      "DiG": NaN,
+      "SJ3_minus_SI_UK_imports": -0.3065519831496264
+    },
+    {
+      "adjustment": "N",
+      "window": "2015-19 pre",
+      "mix_UK_imports": NaN,
+      "mix_IN_imports": NaN,
+      "DiG": NaN,
+      "SJ3_minus_SI_UK_imports": NaN
+    },
+    {
+      "adjustment": "N",
+      "window": "2019-22",
+      "mix_UK_imports": NaN,
+      "mix_IN_imports": NaN,
+      "DiG": NaN,
+      "SJ3_minus_SI_UK_imports": 0.3722084284425007
+    }
+  ],
+  "stacked_did": [
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ3",
+      "control": "SE",
+      "adj": "B",
+      "n": 20,
+      "coef": 0.11228181746422905,
+      "se": 0.2774923372990707,
+      "p": 0.6857492568780513,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "0.112 (0.277)"
+    },
+    {
+      "flow": "IND\u2190GBR",
+      "treated": "SJ3",
+      "control": "SE",
+      "adj": "B",
+      "n": 20,
+      "coef": 0.29184956692027475,
+      "se": 0.14819213176363785,
+      "p": 0.048907189212130504,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "0.292** (0.148)"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ3",
+      "control": "SI",
+      "adj": "B",
+      "n": 20,
+      "coef": 0.03377610386534702,
+      "se": 0.21599261286978888,
+      "p": 0.8757364966199326,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "0.034 (0.216)"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ3",
+      "control": "SJ2",
+      "adj": "B",
+      "n": 20,
+      "coef": -0.04041166086667847,
+      "se": 0.2309812387199831,
+      "p": 0.8611138422573456,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "-0.040 (0.231)"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ1",
+      "control": "SE",
+      "adj": "B",
+      "n": 20,
+      "coef": -0.4783599778657459,
+      "se": 0.24325197102278254,
+      "p": 0.04923852133507282,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "-0.478** (0.243)"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ3",
+      "control": "SE",
+      "adj": "N",
+      "n": 8,
+      "coef": NaN,
+      "se": NaN,
+      "p": NaN,
+      "note": "too few overlapping years (4); not estimated",
+      "display": "\u2014"
+    },
+    {
+      "flow": "IND\u2190GBR",
+      "treated": "SJ3",
+      "control": "SE",
+      "adj": "N",
+      "n": 0,
+      "coef": NaN,
+      "se": NaN,
+      "p": NaN,
+      "note": "too few overlapping years (0); not estimated",
+      "display": "\u2014"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ3",
+      "control": "SI",
+      "adj": "N",
+      "n": 18,
+      "coef": 0.003933193917963429,
+      "se": 0.27691992750874433,
+      "p": 0.9886677379354364,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "0.004 (0.277)"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ3",
+      "control": "SJ2",
+      "adj": "N",
+      "n": 18,
+      "coef": -0.10295740859788616,
+      "se": 0.2955799315338628,
+      "p": 0.7275973174795864,
+      "note": "2x2 heading \u00d7 post; not a country NLG treatment",
+      "display": "-0.103 (0.296)"
+    },
+    {
+      "flow": "GBR\u2190IND",
+      "treated": "SJ1",
+      "control": "SE",
+      "adj": "N",
+      "n": 8,
+      "coef": NaN,
+      "se": NaN,
+      "p": NaN,
+      "note": "too few overlapping years (4); not estimated",
+      "display": "\u2014"
+    }
+  ],
+  "occupation_prepost": [
+    {
+      "metric": "E_2121",
+      "pre_2021_22": 115062.5,
+      "post_2023_25": 100730.55555555556,
+      "pct_or_diff": -12.455790934878387
+    },
+    {
+      "metric": "E_3120",
+      "pre_2021_22": 75625.0,
+      "post_2023_25": 59727.77777777778,
+      "pct_or_diff": -21.021120293847563
+    },
+    {
+      "metric": "E_3114",
+      "pre_2021_22": 6325.0,
+      "post_2023_25": 18769.44444444444,
+      "pct_or_diff": 196.75010979358802
+    },
+    {
+      "metric": "E_2455",
+      "pre_2021_22": 102625.0,
+      "post_2023_25": 93136.11111111111,
+      "pct_or_diff": -9.246176749221814
+    },
+    {
+      "metric": "E_2114",
+      "pre_2021_22": 26762.5,
+      "post_2023_25": 30847.22222222222,
+      "pct_or_diff": 15.26285743941045
+    },
+    {
+      "metric": "Pol_tech_minus_CAD",
+      "pre_2021_22": -2.4892070794361505,
+      "post_2023_25": -1.1733604617214806,
+      "pct_or_diff": 1.31584661771467
+    },
+    {
+      "metric": "exposure_weighted_logE",
+      "pre_2021_22": 10.482358565504454,
+      "post_2023_25": 10.729907544916962,
+      "pct_or_diff": 0.24754897941250853
+    }
+  ]
+}

@@ -27,7 +27,6 @@ nav a { margin-right: 1rem; }
 NAV = """<nav>
 <a href="index.html">Index</a>
 <a href="Study4_Manuscript.html">English article</a>
-<a href="CN_full_article.html">Chinese</a>
 <a href="FIGURES.html">Supplementary figures</a>
 <a href="tables_for_article.html">Tables</a>
 </nav><hr>
@@ -38,8 +37,6 @@ NAV_RE = re.compile(r"<nav>.*?</nav>\s*(<hr\s*/?>)?", re.S | re.I)
 MD_FILES = [
     "Study4_Manuscript.md",
     "Study4_Concise_Manuscript.md",
-    "CN_full_article.md",
-    "CN_Concise_Manuscript.md",
     "FIGURES.md",
     "tables_for_article.md",
 ]
@@ -112,16 +109,12 @@ def write_index(out_dir: Path) -> None:
 <p>Compiled HTML (figures load from <code>figures/</code>). In the editor, open the <strong>.md</strong> files — not the zip.</p>
 <p>Word: <a href="Study4_Manuscript.docx">Study4_Manuscript.docx</a> ·
 <a href="Study4_Concise_Manuscript.docx">Concise English</a> ·
-<a href="CN_full_article.docx">CN_full_article.docx</a> ·
-<a href="CN_Concise_Manuscript.docx">精简中文</a> ·
 <a href="FIGURES.docx">FIGURES.docx</a> ·
 <a href="tables_for_article.docx">tables_for_article.docx</a></p>
 {NAV}
 <ul>
 <li><a href="Study4_Concise_Manuscript.html"><strong>Concise English manuscript</strong></a> — focused on UK, India and China</li>
-<li><a href="CN_Concise_Manuscript.html"><strong>中文精简稿</strong></a> — 聚焦英国、印度和中国</li>
 <li><a href="Study4_Manuscript.html">English full article</a> ← <code>Study4_Manuscript.md</code></li>
-<li><a href="CN_full_article.html">Chinese article</a> ← <code>CN_full_article.md</code></li>
 <li><a href="FIGURES.html">Supplementary figures</a> ← <code>FIGURES.md</code></li>
 <li><a href="tables_for_article.html">All tables</a> ← <code>tables_for_article.md</code></li>
 </ul>
