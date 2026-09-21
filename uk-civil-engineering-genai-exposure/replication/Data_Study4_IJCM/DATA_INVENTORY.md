@@ -63,7 +63,7 @@ If a series is missing, the inventory says so. That missingness is part of the c
 |---|---|---|---|
 | BaTIS **SJ3** balanced | Finest official engineering-adjacent bilateral service category; potentially digitally deliverable but not mode-identified | **Have** 2015–2024 | `data/batis_civil_related.csv` |
 | BaTIS **SJ311 / SJ312** engineering services | True civil trade | **Not in BaTIS** (404) | SJ3 is the ceiling |
-| BaTIS **SE** construction services | China Mode 3 | **Have** | same |
+| BaTIS **SE** construction services | Project-based construction comparison (not a measured GATS mode) | **Have** | same |
 | BaTIS **SI** computer | Digital placebo | **Have** | same |
 | BaTIS **SJ2** consulting, **SJ1** R&D | Professional placebos, not civil | **Have** | `data/batis_SJ1_SJ2.csv` |
 | ONS Pink Book / TIC by India × engineering | UK-official Mode 1 | **Not retrieved** (ONS file URL 404 in this environment) | use BaTIS GBR←IND SJ3 |
@@ -81,9 +81,9 @@ UK←India SJ3 2019→2024: 2,187 → 4,979 USD million (+128%). UK←China SE: 
 | A’s civil engineers fall because of GenAI | UK APS 2121 −14.3%; CAD 3120 −23.9%; technicians 3114 +214.5%. Consistent with **task polarisation**, not identified as caused by GenAI (no occupation-level AI adoption). |
 | That fall causes B’s civil-engineer counts to change | **Cannot test.** No bilateral ISCO 2142. |
 | That fall causes B’s GDP to change | **Cannot test** with APS 2121 as a shock (reverse causality / joint trends). |
-| A’s professional AI adoption is associated with engineering-adjacent imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. SI, China SE/SJ3, SJ1/SJ2, construction TNLG remain null. |
+| A’s professional AI adoption is associated with engineering-adjacent imports from B | Generic **TANY**: EU-16 **null** 0.000 (0.006). **TNLG 2023–24** (preferred): 0.009 (0.005), p=0.108, N=357; Post-2024 0.007**; India-only 0.021***. Event-study pre-2022 coefficients are insignificant (unlike TANY). ICT/manufacturing/admin TNLG also predict SJ3 — a **national GenAI wave**, not an M71-only shock. Pooled SI −0.002 (0.006); India-only SI −0.009* (0.005). China SE/SJ3, SJ1/SJ2, construction TNLG remain null or insignificant. |
 | A’s professional AI raises A’s own M71 industry | GVA to 2023: −0.007*. **SBS 2021–24:** turnover −0.007**, wages −0.009***, VA −0.006***, employment null. F turnover also −0.010***. |
-| India Mode 1 vs China Mode 3 | **Have contrast** in levels (+128% vs +52%), not in the DiD. |
+| Indian SJ3 vs Chinese SE | **Have contrast** in levels (+128% vs +52%), not in the DiD and not mode-identified. |
 
 ## E. Replication
 

@@ -3,7 +3,7 @@
 Yuxuan Chai · University of Strathclyde · `yuxuanchai98@outlook.com`  
 Working paper · 17 September 2026
 
-Main text only: AI *exposure* inside civil occupations, a generative adoption shock (Eurostat E_AI_TNLG), and measured effects on the cross-country civil-engineering **industry economy** (NACE M71 and Mode-1 SJ3). No interpolated cells. LLM occupation scores from the IJCM paper are not the shock.
+Main text only: AI *exposure* inside civil occupations, a generative adoption shock (Eurostat E_AI_TNLG), and measured effects on the cross-country civil-engineering **industry economy** (NACE M71 and BaTIS SJ3 as a digitally deliverable proxy, not a measured GATS mode). No interpolated cells. LLM occupation scores from the IJCM paper are not the shock.
 
 **Claim boundary.** A decline in UK SOC 2121 does **not** identify another country’s civil-engineer counts or GDP.
 
@@ -15,7 +15,7 @@ Does generative AI exposure change the *civil engineering industry economy*, and
 
 Exposure is polarised, not uniform. Eloundou β_human is 0.52 for architectural and civil drafters, 0.477 for civil engineering technicians, and 0.375 for civil engineers. UK APS, December 2021–September 2025: CAD technicians (3120) −23.9%, civil engineers (2121) −14.3%, building and civil technicians (3114) +214.5%.
 
-The industry did not boom where NLG jumped. EU-27 professional NLG rose from 4.55% of enterprises (2023) to 11.51% (2024) and 17.74% (2025); construction NLG stayed at 0.58, 2.42, 3.25. On 17 EU members, post-2024 × ΔTNLG is **−0.007** (s.e. 0.003) on log M71 turnover and **−0.009** on log wages; M71 employment is a precise null. The cross-border association that moves is India Mode-1 SJ3 (**0.021\*\*\***), not China Mode 3, and not generic any-AI (TANY **0.000**).
+The industry did not boom where NLG jumped. EU-27 professional NLG rose from 4.55% of enterprises (2023) to 11.51% (2024) and 17.74% (2025); construction NLG stayed at 0.58, 2.42, 3.25. On 17 EU members, post-2024 × ΔTNLG is **−0.007** (s.e. 0.003) on log M71 turnover and **−0.009** on log wages; M71 employment is a precise null. The cross-border association that moves is Indian SJ3 (**0.021\*\*\***), not Chinese construction services, and not generic any-AI (TANY **0.000**). BaTIS does not identify GATS modes of supply.
 
 **Keywords:** generative AI; AI exposure; civil engineering; NACE M71; Mode 1; Eurostat TNLG.
 
@@ -47,7 +47,7 @@ Eurostat E_AI_TANY mixes pre-ChatGPT machine learning with language generation. 
 
 **Domestic M71 (Table 6, Figures 7–8).** Nominal M71 turnover rose in almost every member in 2021–24 (Table 7); that path is recovery and prices, not GenAI. DiD: where ΔTNLG was larger, log M71 turnover grew **more slowly** (−0.007**), as did wages (−0.009***); employment **0.000**. Construction turnover is also negative (−0.010***). High-NLG Europe did not expand its engineering-consultancy industry.
 
-**Mode 1 (Table 5, Figure 6).** Post-2024 × ΔTNLG on log SJ3 is 0.007**; India only 0.021***. Philippines and Viet Nam are not significant. China SE (Mode 3) is null. Computer services SI is null. Generic TANY is null. The cross-border movement that lines up with NLG is India Mode-1 SJ3, not partner GDP identified from UK 2121.
+**SJ3 (Table 5, Figure 6).** Post-2024 × ΔTNLG on log SJ3 is 0.007**; India only 0.021***. Philippines and Viet Nam are not significant. China SE is null. India-only computer services SI is −0.009* (0.005). Generic TANY is null. BaTIS does not identify GATS modes of supply. The association is not partner GDP identified from UK 2121.
 
 ---
 
@@ -155,7 +155,7 @@ Full 16-group ranking is in `tables/article_T2_uk_aps_all_soc.csv`.
 | F construction | 0.99 | 0.58 | 2.42 | 3.25 |
 | J ICT | 6.34 | 11.14 | 25.83 | 42.23 |
 
-### Table 5. TNLG and Mode-1 SJ3 (selected)
+### Table 5. TNLG and SJ3 (selected; SJ3 is not a measured GATS mode)
 
 | Specification | Coefficient (s.e.) | N |
 |---|---|---|

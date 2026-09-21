@@ -128,7 +128,7 @@ def main():
     show["change_pct"] = show.change_pct.map(lambda x: f"{x:.1f}")
     show["Eloundou β_human"] = show["Eloundou β_human"].map(lambda x: "" if pd.isna(x) else f"{x:.3f}")
     blocks.append(md_table(show, cols=["SOC2020", "occupation", "emp_2021_12", "emp_2025_09", "change_pct", "Eloundou β_human"]))
-    blocks.append("\n### Table 3. Eurostat enterprise AI use, NACE M vs F (%)\n")
+    blocks.append("\n### Table 3. Eurostat enterprise any-AI use (E_AI_TANY), NACE M vs F (%)\n")
     blocks.append(md_table(euro.round(2)))
     blocks.append("\n### Table 4. BaTIS balanced corridors (USD million)\n")
     c2 = cor.copy()

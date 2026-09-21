@@ -8,7 +8,7 @@ No interpolated occupation or GDP cells. Construction value added `NV.IND.CONS.Z
 | GenAI types TNLG/TML/TTM/TIR/TPVSG, NACE F/M/C/J/N | Eurostat `isoc_eb_ain2` | Same API; TNLG is the preferred shock |
 | M71 / F / M enterprise turnover, employment, wages | Eurostat SBS `sbs_ovw_act`, `sbs_sc_ovw` | 2021–2024 |
 | Compensation D1 and output P1 | Eurostat `nama_10_a64` | Current EUR |
-| Balanced trade in services SJ3, SE, SI, USD_EXC, adjustment B | OECD–WTO BaTIS | SDMX CSV `OECD.SDD.TPS,DSD_BATIS@DF_BATIS` |
+| Balanced trade in services SJ3, SE, SI, USD_EXC, adjustment B | OECD–WTO BaTIS | SDMX CSV `OECD.SDD.TPS,DSD_BATIS@DF_BATIS`. In the UK–India–China extract and the EU SJ3/SE/SI estimation panels used here, every cell is observation status I (publisher-imputed). Authors do not interpolate. |
 | Employment by sex and economic activity, ISIC F/M | ILOSTAT `DF_EMP_TEMP_SEX_ECO_NB` | SDMX CSV |
 | GDP, services share, industry share (archived context; not used in main estimates) | World Bank WDI | `NY.GDP.MKTP.CD`, `NV.SRV.TOTL.ZS`, `NV.IND.TOTL.ZS` |
 | AI user share H1 2025–Q1 2026 (archived context; not used in main estimates) | Microsoft AI Diffusion Report | `data/AI_Diffusion_Q12026_Update.csv` |
