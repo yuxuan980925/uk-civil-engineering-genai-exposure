@@ -45,11 +45,24 @@ They still do not show that generative AI *caused* that shift. Eurostat ITS is r
 
 Do not interpolate Viet Nam ITS, ILO 2142, BaTIS SJ312, UK post-2019 ITS, or 2024 reported BaTIS for the EU panel.
 
+## Corroboration (independent re-collection, 21 September 2026)
+
+A second Eurostat pull was used to support the association, not to manufacture a causal relocation result. Details: `CORROBORATION.md`.
+
+- Re-fetch of India and China-except-HK SJ312: **598/598 cells identical** (DE←IN 2024 = 390 EUR million).
+- SJ312 from the United States, United Kingdom, Switzerland, Japan and extra-EU: **all null**. The India coefficient is not a generic engineering-import boom.
+- Indian share of extra-EU SJ312: **0.382\* (0.202)** pp, N=93.
+- Dropping Finland: India SJ312 **0.020\* (0.012)**.
+- NACE **M7112** engineering consultancy (not all of M71): employment **0.000**, output **−0.008**, wages **−0.009** (output and wages p<0.05).
+- Inward FATS M71 by controlling country **ends in 2020**; India-controlled affiliates unpublished. Mode 3 cannot be tested against the NLG shock.
+
 ## Replication
 
 ```bash
 python3 Data_Study4_IJCM/07_scripts/download_relocation_series.py
 python3 Data_Study4_IJCM/07_scripts/run_relocation_experiments.py
+python3 Data_Study4_IJCM/07_scripts/download_corroboration.py
+python3 Data_Study4_IJCM/07_scripts/run_corroboration_experiments.py
 ```
 
 Machine-readable estimates: `Data_Study4_IJCM/09_relocation_probe/results_relocation.json`.

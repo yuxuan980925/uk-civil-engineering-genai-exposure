@@ -45,7 +45,8 @@ Folder contents
 09_relocation_probe/
   New official retrievals for the reset relocation question: Eurostat ITS
   engineering services (SJ312), LFS two-digit occupations, ILO 2142 attempts,
-  experiment tables and figures. Missing cells are logged, not filled.
+  SBS M7112, ITS placebo partners, FATS coverage, experiment tables and figures.
+  Missing cells are logged, not filled. See CORROBORATION.md.
 
 Third-party files (Eurostat, OECD–WTO, ILO, ONS, Felten, Eloundou) remain the
 property of their publishers and should be cited as in the manuscript reference

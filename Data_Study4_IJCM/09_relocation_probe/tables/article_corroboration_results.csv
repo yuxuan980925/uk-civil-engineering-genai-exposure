@@ -1,0 +1,26 @@
+RQ,Specification,Coefficient (s.e.),N,Note
+C2,C2 Indian SJ312 (re-fetch) Post×ΔM TNLG,0.026* (0.014),96,Independent Eurostat pull
+C2,C2 Chinese SJ312 (re-fetch) Post×ΔM TNLG,-0.062** (0.027),97,Independent Eurostat pull
+C3,C3 US SJ312 placebo Post×ΔM TNLG,-0.020 (0.018),101,"Same heading, different partner; importers=17"
+C3,C3 UK SJ312 placebo Post×ΔM TNLG,0.007 (0.019),99,"Same heading, different partner; importers=16"
+C3,C3 Swiss SJ312 placebo Post×ΔM TNLG,-0.033 (0.038),87,"Same heading, different partner; importers=16"
+C3,C3 Japan SJ312 placebo Post×ΔM TNLG,0.052 (0.061),100,"Same heading, different partner; importers=16"
+C3,C3 Extra-EU SJ312 total Post×ΔM TNLG,0.003 (0.012),115,"Same heading, different partner; importers=17"
+C4,C4 Indian share of extra-EU SJ312 Post×ΔM TNLG,0.382* (0.202),93,"Outcome is percentage points, not log; missing years dropped"
+C5,C5 Indian SJ312 drop Finland Post×ΔM TNLG,0.020* (0.012),89,Finland 2022–24 SJ312 21→145 EUR m is an outlier
+C6,C6 M7112 engineering consultancy employment Post2024×ΔTNLG,-0.000 (0.002),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7112 engineering consultancy output Post2024×ΔTNLG,-0.008** (0.003),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7112 engineering consultancy wages Post2024×ΔTNLG,-0.009** (0.004),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7112 engineering consultancy value added Post2024×ΔTNLG,-0.007** (0.003),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7111 architectural activities employment Post2024×ΔTNLG,-0.004 (0.003),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7111 architectural activities output Post2024×ΔTNLG,-0.010** (0.004),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7111 architectural activities wages Post2024×ΔTNLG,-0.015*** (0.005),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M7111 architectural activities value added Post2024×ΔTNLG,-0.009 (0.006),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M712 technical testing employment Post2024×ΔTNLG,-0.000 (0.001),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M712 technical testing output Post2024×ΔTNLG,-0.003 (0.002),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M712 technical testing wages Post2024×ΔTNLG,-0.008*** (0.002),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M712 technical testing value added Post2024×ΔTNLG,-0.005*** (0.001),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M71 (repeat) employment Post2024×ΔTNLG,-0.000 (0.002),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M71 (repeat) output Post2024×ΔTNLG,-0.007** (0.003),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M71 (repeat) wages Post2024×ΔTNLG,-0.009*** (0.003),68,SBS current prices 2021–24; tighter industry than all M71
+C6,C6 M71 (repeat) value added Post2024×ΔTNLG,-0.006*** (0.002),68,SBS current prices 2021–24; tighter industry than all M71

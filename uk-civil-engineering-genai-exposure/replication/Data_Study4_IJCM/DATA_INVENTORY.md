@@ -50,6 +50,8 @@ If a series is missing, the inventory says so. That missingness is part of the c
 | ILO ISCO 2142 by country, bilateral | “Engineers in A → engineers in B” | **Not published** (SDMX 404 at 2142/214/21/2) | `09_relocation_probe/ilo_occupation_fetch_log.csv` |
 | Eurostat LFS ISCO-08 **two-digit** (`lfsa_egai2d`) | Closest published occupation group (OC21 science and engineering professionals) | **Have** 2015–2024 | `09_relocation_probe/eurostat_lfsa_occ2d.csv`. OC21 Post×ΔTNLG −0.001 (0.004) |
 | Eurostat NACE **M71 SBS** turnover, emp, wages, VA, GOS | Firm-level industry economy, **includes 2024** | **Have** 2021–24, 17 members | `data/eurostat_sbs_M71_F_M.csv` |
+| Eurostat SBS **M7112** engineering consultancy | Tighter domestic industry than M71 | **Have** 2021–24 employment, output, wages, VA | `09_relocation_probe/eurostat_sbs_M7112_engineering.csv`. Employment 0.000; output −0.008** |
+| Inward FATS M71 by controlling country | Mode 3 / commercial presence | **Ends 2020**; India unpublished | `09_relocation_probe/eurostat_fats_M71.csv` |
 | Eurostat NACE **M71 D1/P1** | Compensation and output | **Have**; UK D1 only to 2018 | `data/eurostat_nama_D1_P1_M71_F_M.csv` |
 | ILO ISIC **M71** employment | Engineering-industry jobs in IND/CHN | **Not published** (SDMX 404) | `ilo_m71_fetch_log.csv` |
 | BLS NAICS **54133** | US engineering services | Public API returned **NAICS 54 only** | `bls_engineering_ces.csv` |
@@ -65,7 +67,7 @@ If a series is missing, the inventory says so. That missingness is part of the c
 | BaTIS **SJ3** balanced | Finest official engineering-adjacent bilateral service category; potentially digitally deliverable but not mode-identified | **Have** 2015–2024 | `data/batis_civil_related.csv` |
 | BaTIS **SJ311 / SJ312** engineering services | True civil trade | **Not in BaTIS** (404) | Eurostat ITS is the source |
 | Eurostat ITS **SJ312 / SJ31 / SJ311** (`bop_its6_det`) | Reporter-published engineering / architectural services, 2015–2024 | **Have** IN, CN_X_HK, PH; **VN empty**; UK ITS to **2019** only | `09_relocation_probe/eurostat_its_engineering.csv` (6,338 cells). India SJ312 Post×ΔTNLG 0.026* (0.014), N=96; China SJ312 −0.062** (0.027) |
-| BaTIS **SE** construction services | Project-based construction comparison (not a measured GATS mode) | **Have** | same |
+| Eurostat ITS SJ312 placebo partners (US, UK, CH, JP, extra-EU) | Generic engineering-import boom? | **Have**; all Post×ΔTNLG **null** | `09_relocation_probe/eurostat_its_sj312_placebos.csv` |
 | BaTIS **SI** computer | Digital placebo | **Have** | same |
 | BaTIS **SJ2** consulting, **SJ1** R&D | Professional placebos, not civil | **Have** | `data/batis_SJ1_SJ2.csv` |
 | ONS Pink Book / TIC by India × engineering | UK-official Mode 1 | **Not retrieved** (ONS file URL 404 in this environment) | use BaTIS GBR←IND SJ3; Eurostat UK ITS ends 2019 |
@@ -98,6 +100,9 @@ python3 scripts/run_nlg_shock.py
 python3 scripts/run_industry_economy.py
 python3 Data_Study4_IJCM/07_scripts/download_relocation_series.py
 python3 Data_Study4_IJCM/07_scripts/run_relocation_experiments.py
+python3 Data_Study4_IJCM/07_scripts/download_corroboration.py
+python3 Data_Study4_IJCM/07_scripts/run_corroboration_experiments.py
 ```
 
 Relocation probe (reset RQs): `RELOCATION_RESEARCH_DESIGN.md` and `09_relocation_probe/`.
+Corroboration (independent re-fetch + M7112 + placebos): `CORROBORATION.md`.

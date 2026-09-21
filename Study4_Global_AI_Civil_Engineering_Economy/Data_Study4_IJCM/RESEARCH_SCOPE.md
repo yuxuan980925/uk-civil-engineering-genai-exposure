@@ -52,4 +52,6 @@ A paper that stays inside the data would say:
 
 > Among EU importers, a larger 2023–24 jump in professional-service NLG use is associated with higher Indian SJ3 and Indian engineering-service (SJ312) imports, with lower Chinese engineering-service imports, and with slower nominal M71 turnover and wages, not with Chinese construction services or with M71 employment. UK civil occupations polarised over 2021–25, but that series has no AI treatment and no partner-country occupation counterpart. The pattern is consistent with a supplier-mix shift in digitally deliverable engineering services. It does not show that generative AI moved civil-engineering jobs or GDP between countries.
 
+A second official retrieval (SBS M7112, ITS SJ312 placebos, FATS, independent India/China re-fetch) **corroborates** that association. Placebo partners are null; engineering-consultancy employment is flat. FATS cannot test Mode 3 in 2023–24. See `CORROBORATION.md`.
+
 Do not interpolate the missing series. If a later draft needs ISCO 2142, GATS modes, UK/India/China enterprise NLG, or civil-only invoices, those files have to be retrieved (or shown not to exist), not filled.

@@ -1,0 +1,308 @@
+{
+  "conclusion_tested": "Importer NLG jump is associated with Indian engineering-service imports and not with Chinese engineering/construction services, while engineering-industry employment does not fall.",
+  "its_refetch_audit": {
+    "refetch_file": true,
+    "n_matched": 598,
+    "n_differ": 0,
+    "max_abs_diff": 0.0,
+    "de_in_2024_prior": 390.0,
+    "de_in_2024_refetch": 390.0
+  },
+  "fats_coverage": {
+    "exists": true,
+    "n_cells": 2660,
+    "max_year": 2020,
+    "min_year": 2008,
+    "controls": [
+      "CN_X_HK",
+      "EXT_EU27_2020",
+      "US",
+      "WORLD",
+      "WRL_X_REP"
+    ],
+    "india_cells": 0,
+    "china_cells": 547,
+    "us_cells": 624
+  },
+  "results": [
+    {
+      "rq": "C2",
+      "spec": "C2 Indian SJ312 (re-fetch) Post\u00d7\u0394M TNLG",
+      "coef": 0.026276463901917145,
+      "se": 0.014073786490807079,
+      "p": 0.06189459753904663,
+      "n": 96,
+      "r2": 0.9323311888153563,
+      "note": "Independent Eurostat pull",
+      "display": "0.026* (0.014)"
+    },
+    {
+      "rq": "C2",
+      "spec": "C2 Chinese SJ312 (re-fetch) Post\u00d7\u0394M TNLG",
+      "coef": -0.06229711951439509,
+      "se": 0.026633568034933403,
+      "p": 0.0193330942454992,
+      "n": 97,
+      "r2": 0.9249311819295729,
+      "note": "Independent Eurostat pull",
+      "display": "-0.062** (0.027)"
+    },
+    {
+      "rq": "C3",
+      "spec": "C3 US SJ312 placebo Post\u00d7\u0394M TNLG",
+      "coef": -0.020205847321914897,
+      "se": 0.018219725197408616,
+      "p": 0.26742610765593144,
+      "n": 101,
+      "r2": 0.9304699054130902,
+      "note": "Same heading, different partner; importers=17",
+      "display": "-0.020 (0.018)"
+    },
+    {
+      "rq": "C3",
+      "spec": "C3 UK SJ312 placebo Post\u00d7\u0394M TNLG",
+      "coef": 0.006906341966857526,
+      "se": 0.019422799685291307,
+      "p": 0.722155784862629,
+      "n": 99,
+      "r2": 0.9258287478489694,
+      "note": "Same heading, different partner; importers=16",
+      "display": "0.007 (0.019)"
+    },
+    {
+      "rq": "C3",
+      "spec": "C3 Swiss SJ312 placebo Post\u00d7\u0394M TNLG",
+      "coef": -0.03313830792852145,
+      "se": 0.03798375135577312,
+      "p": 0.3829717767422174,
+      "n": 87,
+      "r2": 0.825072659486658,
+      "note": "Same heading, different partner; importers=16",
+      "display": "-0.033 (0.038)"
+    },
+    {
+      "rq": "C3",
+      "spec": "C3 Japan SJ312 placebo Post\u00d7\u0394M TNLG",
+      "coef": 0.0520886315245402,
+      "se": 0.060742978964840405,
+      "p": 0.3911547272408522,
+      "n": 100,
+      "r2": 0.8074759426076552,
+      "note": "Same heading, different partner; importers=16",
+      "display": "0.052 (0.061)"
+    },
+    {
+      "rq": "C3",
+      "spec": "C3 Extra-EU SJ312 total Post\u00d7\u0394M TNLG",
+      "coef": 0.0033042429507615574,
+      "se": 0.01223937597509084,
+      "p": 0.7871846774195117,
+      "n": 115,
+      "r2": 0.9541538508779502,
+      "note": "Same heading, different partner; importers=17",
+      "display": "0.003 (0.012)"
+    },
+    {
+      "rq": "C4",
+      "spec": "C4 Indian share of extra-EU SJ312 Post\u00d7\u0394M TNLG",
+      "coef": 0.3816951160926187,
+      "se": 0.20151757715336585,
+      "p": 0.05821129440620926,
+      "n": 93,
+      "r2": 0.7163453610089872,
+      "note": "Outcome is percentage points, not log; missing years dropped",
+      "display": "0.382* (0.202)"
+    },
+    {
+      "rq": "C5",
+      "spec": "C5 Indian SJ312 drop Finland Post\u00d7\u0394M TNLG",
+      "coef": 0.02010769073832436,
+      "se": 0.011831240072961578,
+      "p": 0.08921708697748343,
+      "n": 89,
+      "r2": 0.933103883020706,
+      "note": "Finland 2022\u201324 SJ312 21\u2192145 EUR m is an outlier",
+      "display": "0.020* (0.012)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7112 engineering consultancy employment Post2024\u00d7\u0394TNLG",
+      "coef": -1.3334778982495358e-05,
+      "se": 0.0018790703466083853,
+      "p": 0.9943378783077851,
+      "n": 68,
+      "r2": 0.9985961703995399,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.000 (0.002)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7112 engineering consultancy output Post2024\u00d7\u0394TNLG",
+      "coef": -0.007553481748434987,
+      "se": 0.0033058953509722314,
+      "p": 0.022321504823549658,
+      "n": 68,
+      "r2": 0.9952078315250867,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.008** (0.003)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7112 engineering consultancy wages Post2024\u00d7\u0394TNLG",
+      "coef": -0.009144680970793958,
+      "se": 0.003685150126346147,
+      "p": 0.013083260979726275,
+      "n": 68,
+      "r2": 0.9974753285825546,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.009** (0.004)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7112 engineering consultancy value added Post2024\u00d7\u0394TNLG",
+      "coef": -0.006819053211970313,
+      "se": 0.0028038330440694685,
+      "p": 0.015013766811866867,
+      "n": 68,
+      "r2": 0.9954766597969422,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.007** (0.003)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7111 architectural activities employment Post2024\u00d7\u0394TNLG",
+      "coef": -0.004441892156730392,
+      "se": 0.002769868768715789,
+      "p": 0.1087918514605388,
+      "n": 68,
+      "r2": 0.9984928706319868,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.004 (0.003)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7111 architectural activities output Post2024\u00d7\u0394TNLG",
+      "coef": -0.010140181019531022,
+      "se": 0.004496516024001043,
+      "p": 0.024125828249389244,
+      "n": 68,
+      "r2": 0.9935273532523242,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.010** (0.004)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7111 architectural activities wages Post2024\u00d7\u0394TNLG",
+      "coef": -0.015217449508332065,
+      "se": 0.004842471738517475,
+      "p": 0.0016751383181890732,
+      "n": 68,
+      "r2": 0.9951360898741989,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.015*** (0.005)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M7111 architectural activities value added Post2024\u00d7\u0394TNLG",
+      "coef": -0.008760495436525,
+      "se": 0.005928242459538799,
+      "p": 0.13947311865705453,
+      "n": 68,
+      "r2": 0.9923594751716627,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.009 (0.006)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M712 technical testing employment Post2024\u00d7\u0394TNLG",
+      "coef": -0.0004173412845565432,
+      "se": 0.0010382515185249383,
+      "p": 0.6877094211234357,
+      "n": 68,
+      "r2": 0.9992318346619695,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.000 (0.001)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M712 technical testing output Post2024\u00d7\u0394TNLG",
+      "coef": -0.0028086562951567216,
+      "se": 0.0019203894737720181,
+      "p": 0.14359188354899335,
+      "n": 68,
+      "r2": 0.9983387915285651,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.003 (0.002)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M712 technical testing wages Post2024\u00d7\u0394TNLG",
+      "coef": -0.007686254232231414,
+      "se": 0.0018819759855104238,
+      "p": 4.424026973499123e-05,
+      "n": 68,
+      "r2": 0.9983947722127443,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.008*** (0.002)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M712 technical testing value added Post2024\u00d7\u0394TNLG",
+      "coef": -0.004593147121574775,
+      "se": 0.0014291956867847084,
+      "p": 0.001309915101042204,
+      "n": 68,
+      "r2": 0.9986140086498478,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.005*** (0.001)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M71 (repeat) employment Post2024\u00d7\u0394TNLG",
+      "coef": -0.00039351127708857705,
+      "se": 0.001685777053391885,
+      "p": 0.815427363522487,
+      "n": 68,
+      "r2": 0.9989570469926702,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.000 (0.002)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M71 (repeat) output Post2024\u00d7\u0394TNLG",
+      "coef": -0.006921382567587593,
+      "se": 0.002912989211565079,
+      "p": 0.017499505725706,
+      "n": 68,
+      "r2": 0.9962893747260954,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.007** (0.003)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M71 (repeat) wages Post2024\u00d7\u0394TNLG",
+      "coef": -0.009190364566735396,
+      "se": 0.003301280141125128,
+      "p": 0.005371306259207914,
+      "n": 68,
+      "r2": 0.9978671185365068,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.009*** (0.003)"
+    },
+    {
+      "rq": "C6",
+      "spec": "C6 M71 (repeat) value added Post2024\u00d7\u0394TNLG",
+      "coef": -0.006273269564364935,
+      "se": 0.0023724819382778457,
+      "p": 0.00818890681062865,
+      "n": 68,
+      "r2": 0.9968576641633791,
+      "note": "SBS current prices 2021\u201324; tighter industry than all M71",
+      "display": "-0.006*** (0.002)"
+    }
+  ],
+  "notes": [
+    "ITS re-fetch audit: {'refetch_file': True, 'n_matched': 598, 'n_differ': 0, 'max_abs_diff': 0.0, 'de_in_2024_prior': 390.0, 'de_in_2024_refetch': 390.0}",
+    "FATS inward M71 by controlling country ends in 2020, before the NLG window. India-controlled M71 affiliates are unpublished. Mode 3 cannot be tested against the 2023\u201324 shock."
+  ]
+}
