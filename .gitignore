@@ -1,5 +1,7 @@
 .DS_Store
 ~$*
+__pycache__/
+*.pyc
 *.zip
 !Study4_zip_packages/*.zip
 !Study4_zip_packages/Study4_FINAL_VERSION/*.zip
